@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Instrument_Serif, DM_Sans } from "next/font/google";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import "./globals.css";
 
 const heading = Instrument_Serif({
@@ -71,7 +73,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${heading.variable} ${body.variable}`}>
       <body className="font-body bg-surface text-copy antialiased">
-        {children}
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
