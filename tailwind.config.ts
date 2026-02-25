@@ -3,11 +3,11 @@ import type { Config } from 'tailwindcss'
 export const brand = {
   colors: {
     accent: {
-      DEFAULT: '#C8842F',
-      hover: '#B47428',
-      soft: '#E8C992',
-      tint: '#F9F0E0',
-      whisper: '#FBF6ED',
+      DEFAULT: '#C45B28',
+      hover: '#A84D22',
+      soft: '#E8A882',
+      tint: '#F9E8DC',
+      whisper: '#FBF3ED',
     },
     surface: {
       DEFAULT: '#F7F7F5',

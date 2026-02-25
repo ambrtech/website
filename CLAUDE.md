@@ -97,7 +97,7 @@ src/
 
 ### OG Images
 - Dynamic OG images generated via `@vercel/og` at `/og?title=...&subtitle=...`
-- Uses brand colours and typography (Instrument Serif heading on surface background)
+- Uses brand colours and typography (Lora heading on surface background)
 - Shared frequently on LinkedIn — branded OG images are critical for professional appearance
 - For blog posts, pass the post title as `title` and a short description as `subtitle`
 
@@ -119,12 +119,12 @@ src/
 - **No hex codes in page/component files.** If a file contains a colour value, it's bypassing the system.
 - **No `font-family` declarations in page/component files.** Use `font-heading` or `font-body` classes only.
 - **No magic spacing numbers.** Use the Tailwind spacing scale or section component defaults.
-- **Every heading** on the site uses `font-heading` (Instrument Serif). No exceptions.
-- **Every body text** uses `font-body` (DM Sans). No exceptions.
+- **Every heading** on the site uses `font-heading` (Lora). No exceptions.
+- **Every body text** uses `font-body` (Karla). No exceptions.
 
 ### Styling
 - Tailwind CSS v4 with `@config` directive in `globals.css` loading `tailwind.config.ts`
-- Fonts: Instrument Serif (headings, weight 400) and DM Sans (body, weights 400/500), loaded via `next/font/google`
+- Fonts: Lora (headings, weight 400) and Karla (body, weights 400/500), loaded via `next/font/google`
 - Font CSS variables: `--font-heading`, `--font-body` — set on `<html>` via next/font `variable` prop
 
 ### TypeScript

@@ -52,12 +52,9 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="border-t border-dark-mid pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-dark-mid pt-8">
           <p className="text-xs">
-            &copy; {new Date().getFullYear()} Ambr AI. All rights reserved.
-          </p>
-          <p className="text-xs">
-            London, United Kingdom
+            &copy; {new Date().getFullYear()} Ambr Technologies Limited. All rights reserved.
           </p>
         </div>
       </div>

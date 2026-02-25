@@ -1,17 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, DM_Sans } from "next/font/google";
+import { Lora, Karla } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import "./globals.css";
 
-const heading = Instrument_Serif({
+const heading = Lora({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
 });
 
-const body = DM_Sans({
+const body = Karla({
   weight: ["400", "500"],
   subsets: ["latin"],
   variable: "--font-body",
