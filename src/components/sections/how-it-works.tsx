@@ -1,49 +1,69 @@
-import { Section } from './section'
+import { Reveal } from '@/components/reveal'
 
-const steps = [
+const features = [
   {
-    number: '01',
-    heading: 'We learn your world',
-    body: 'We work with your team to understand the conversations that matter — the scenarios, the nuance, the organisational context. This is the foundation everything is built on.',
+    label: 'Custom scenarios',
+    description: 'Built around your products, sales methodology, and real-world challenges',
   },
   {
-    number: '02',
-    heading: 'We build your simulations',
-    body: 'Our team designs and builds voice-based simulations tailored to your specific use cases. Each one is reviewed, refined, and validated with your subject matter experts.',
+    label: 'Realistic AI characters',
+    description: 'Sub-second voice responses that force the same thinking as a real conversation',
   },
   {
-    number: '03',
-    heading: 'Your people practise and grow',
-    body: 'Learners practise conversations in a safe, private environment — as many times as they need. Structured feedback and analytics track development over time.',
+    label: 'Team-wide insights',
+    description: 'Capability tracking, gap identification, and readiness certification',
+  },
+  {
+    label: '12 languages',
+    description: 'Native fluency for global teams, not translated templates',
   },
 ]
 
 export function HowItWorks() {
   return (
-    <Section className="bg-surface-white">
-      <div className="mb-16 md:mb-20 max-w-2xl">
-        <p className="text-xs font-body-medium uppercase tracking-eyebrow text-accent mb-4">
-          How it works
-        </p>
-        <h2 className="font-heading text-3xl md:text-5xl tracking-heading text-dark leading-tight">
-          From your challenges to their confidence
-        </h2>
-      </div>
-      <div className="grid md:grid-cols-3 gap-12 md:gap-10">
-        {steps.map((step) => (
-          <div key={step.number} className="relative">
-            <span className="block font-heading text-6xl text-accent-tint mb-6 select-none">
-              {step.number}
-            </span>
-            <h3 className="font-heading text-xl md:text-2xl tracking-heading text-dark mb-4 leading-snug">
-              {step.heading}
-            </h3>
-            <p className="text-copy-mid leading-relaxed">
-              {step.body}
-            </p>
+    <section className="px-container-mobile md:px-container pb-section-mobile md:pb-section-lg">
+      <div className="mx-auto max-w-site">
+        <Reveal>
+          <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-24 items-start">
+            <div>
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+                How it works
+              </p>
+              <h2 className="font-heading text-section leading-[1.2] tracking-heading">
+                From brief to <em>live</em> in days.
+              </h2>
+            </div>
+            <div>
+              <div className="space-y-4 mb-10">
+                <p className="text-body text-copy-mid leading-[1.75]">
+                  Share your context — playbooks, objection guides, product materials — and our
+                  team builds realistic AI characters that know your business. Custom simulations
+                  ready for rollout in days, not months.
+                </p>
+                <p className="text-body text-copy-mid leading-[1.75]">
+                  Your team practises against realistic pressure. You see clear progress and
+                  readiness data across every individual.
+                </p>
+              </div>
+              <ul>
+                {features.map((feature) => (
+                  <li
+                    key={feature.label}
+                    className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-1 md:gap-8 py-5 border-t border-border items-baseline last:border-b"
+                  >
+                    <span className="text-label font-body-medium text-dark">
+                      {feature.label}
+                    </span>
+                    <span className="text-body-sm text-copy-light leading-relaxed">
+                      {feature.description}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        ))}
+        </Reveal>
       </div>
-    </Section>
+    </section>
   )
 }

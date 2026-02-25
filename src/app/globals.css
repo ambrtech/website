@@ -1,2 +1,104 @@
 @import "tailwindcss";
-@config "../../tailwind.config.ts";
+
+@theme {
+  /* Colors — accent */
+  --color-accent: #C45B28;
+  --color-accent-hover: #A84D22;
+  --color-accent-soft: #E8A882;
+  --color-accent-tint: #F9E8DC;
+  --color-accent-whisper: #FBF3ED;
+
+  /* Colors — surface */
+  --color-surface: #F7F7F5;
+  --color-surface-alt: #F0EFEB;
+  --color-surface-white: #FFFFFF;
+
+  /* Colors — dark */
+  --color-dark: #1C1C1A;
+  --color-dark-mid: #2E2E2B;
+
+  /* Colors — copy */
+  --color-copy: #1C1C1A;
+  --color-copy-mid: #5C5B56;
+  --color-copy-light: #8A8983;
+  --color-copy-faint: #B2B1AB;
+
+  /* Colors — border */
+  --color-border: rgba(28, 28, 26, 0.08);
+
+  /* Fonts */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  /* Font weight */
+  --font-weight-heading: 400;
+  --font-weight-body-normal: 400;
+  --font-weight-body-medium: 500;
+
+  /* Letter spacing */
+  --tracking-heading: -0.025em;
+  --tracking-tight: -0.03em;
+  --tracking-eyebrow: 0.12em;
+
+  /* Font sizes — fixed */
+  --text-badge: 0.5rem;
+  --text-detail: 0.55rem;
+  --text-eyebrow-sm: 0.6rem;
+  --text-eyebrow: 0.65rem;
+  --text-caption: 0.7rem;
+  --text-ui: 0.78rem;
+  --text-nav: 0.8rem;
+  --text-body-sm: 0.85rem;
+  --text-label: 0.9rem;
+  --text-body: 0.95rem;
+  --text-logo: 1.65rem;
+  --text-quote-mark: 5rem;
+
+  /* Font sizes — responsive */
+  --text-display: clamp(3rem, 6.5vw, 6.5rem);
+  --text-headline: clamp(2.5rem, 5vw, 4.5rem);
+  --text-title: clamp(2rem, 3.5vw, 3.2rem);
+  --text-section: clamp(1.75rem, 3vw, 2.5rem);
+  --text-quote: clamp(1.5rem, 2.5vw, 2.2rem);
+  --text-stat: clamp(5rem, 10vw, 9rem);
+  --text-stat-label: clamp(1.2rem, 2.5vw, 2rem);
+
+  /* Border radius */
+  --radius-brand-sm: 6px;
+  --radius-brand: 12px;
+  --radius-brand-lg: 1rem;
+
+  /* Max width */
+  --container-site: 1240px;
+
+  /* Spacing / padding */
+  --spacing-section-mobile: 3.5rem;
+  --spacing-section: 6rem;
+  --spacing-section-lg: 8rem;
+  --spacing-section-xl: 10rem;
+  --spacing-section-2xl: 13rem;
+  --spacing-header: 4.5rem;
+  --spacing-container: 2.5rem;
+  --spacing-container-mobile: 1.5rem;
+
+  /* Shadows */
+  --shadow-card: 0 40px 120px rgba(28, 28, 26, 0.07), 0 1px 3px rgba(28, 28, 26, 0.04);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 650ms;
+  --duration-reveal: 900ms;
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --translate-reveal: 12px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes waveAnim {
+  0% { transform: scaleY(0.3); opacity: 0.2; }
+  100% { transform: scaleY(1); opacity: 0.5; }
+}

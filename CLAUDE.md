@@ -109,22 +109,23 @@ src/
 - Use `next/link` for all internal navigation to enable client-side transitions and prefetching
 
 ### Design Tokens
-- `tailwind.config.ts` is the single source of truth — exports `brand` object and extends Tailwind theme from it
-- `src/lib/tokens.ts` re-exports `brand` for use in app code (`import { brand } from '@/lib/tokens'`)
+- Brand values are defined in two places that must stay in sync:
+  - `tailwind.config.ts` — exports the `brand` object for use in app code (`@/lib/tokens`)
+  - `src/app/globals.css` `@theme` block — defines Tailwind CSS theme variables (what generates utility classes)
+- If a brand value changes, update both `tailwind.config.ts` and the `@theme` block in `globals.css`
 - Semantic class names: `bg-surface`, `text-accent`, `font-heading`, `rounded-brand`, etc.
 - **No raw hex codes, font names, or spacing values anywhere else in the codebase** — always use token-derived Tailwind classes or reference `brand.*` from tokens
-- If a brand value changes, update `tailwind.config.ts` and everything propagates
 
 ### Component Rules
 - **No hex codes in page/component files.** If a file contains a colour value, it's bypassing the system.
 - **No `font-family` declarations in page/component files.** Use `font-heading` or `font-body` classes only.
 - **No magic spacing numbers.** Use the Tailwind spacing scale or section component defaults.
 - **Every heading** on the site uses `font-heading` (Lora). No exceptions.
-- **Every body text** uses `font-body` (Karla). No exceptions.
+- **Every body text** uses `font-body` (Outfit). No exceptions.
 
 ### Styling
-- Tailwind CSS v4 with `@config` directive in `globals.css` loading `tailwind.config.ts`
-- Fonts: Lora (headings, weight 400) and Karla (body, weights 400/500), loaded via `next/font/google`
+- Tailwind CSS v4 with native `@theme` directive in `globals.css` (no `@config` — more reliable with Turbopack)
+- Fonts: Lora (headings, weight 400) and Outfit (body, weights 400/500), loaded via `next/font/google`
 - Font CSS variables: `--font-heading`, `--font-body` — set on `<html>` via next/font `variable` prop
 
 ### TypeScript

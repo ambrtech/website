@@ -1,24 +1,24 @@
 import Link from 'next/link'
-import { Section } from './section'
+import { Reveal } from '@/components/reveal'
 
 export function CTA() {
   return (
-    <Section>
-      <div className="max-w-2xl mx-auto text-center">
-        <h2 className="font-heading text-3xl md:text-5xl tracking-heading text-dark leading-tight mb-6">
-          Ready to see what bespoke training looks like?
+    <section className="py-section-xl md:py-section-2xl px-container-mobile md:px-container text-center border-t border-border">
+      <Reveal>
+        <h2 className="font-heading text-headline leading-[1.1] tracking-heading mb-6">
+          See what Ambr AI looks like<br />
+          for <em className="text-accent">your</em> team.
         </h2>
-        <p className="text-copy-mid text-lg leading-relaxed mb-10 max-w-lg mx-auto">
-          Every engagement starts with a conversation. Tell us about your
-          training challenges and we&apos;ll show you what&apos;s possible.
+        <p className="text-base text-copy-light max-w-[440px] mx-auto leading-[1.7] mb-10">
+          We&apos;ll build a custom simulation using your real scenarios. No generic demos.
         </p>
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center rounded-brand bg-accent text-surface-white px-10 py-4 text-sm font-body-medium transition-colors hover:bg-accent-hover"
+          className="inline-block rounded-brand-sm bg-dark text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent hover:-translate-y-px hover:shadow-lg"
         >
-          Book a conversation
+          Request a Demo
         </Link>
-      </div>
-    </Section>
+      </Reveal>
+    </section>
   )
 }

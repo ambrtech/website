@@ -1,37 +1,35 @@
 import Link from 'next/link'
 
 const nav = [
-  { label: 'Solutions', href: '/solutions' },
-  { label: 'How it works', href: '/how-it-works' },
+  { label: 'Platform', href: '/platform' },
   { label: 'Customers', href: '/customers' },
-  { label: 'About', href: '/about' },
-  { label: 'Blog', href: '/blog' },
+  { label: 'Security', href: '/security' },
 ]
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-surface-white/90 backdrop-blur-md border-b border-border">
-      <div className="mx-auto max-w-site px-container-mobile md:px-container flex items-center justify-between h-16 md:h-18">
-        <Link href="/" className="font-heading text-xl text-dark">
-          Ambr
+    <header className="fixed top-0 left-0 right-0 z-50 bg-surface-white/90 backdrop-blur-xl border-b border-transparent transition-all">
+      <div className="mx-auto max-w-site px-container-mobile md:px-container flex items-center justify-between h-16 md:h-header">
+        <Link href="/" className="font-heading text-logo text-dark tracking-heading">
+          Ambr AI
         </Link>
-        <nav className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-copy-mid transition-colors hover:text-dark"
+              className="text-nav text-copy-mid transition-colors hover:text-dark"
             >
               {item.label}
             </Link>
           ))}
-        </nav>
-        <Link
-          href="/contact"
-          className="hidden md:inline-flex items-center justify-center rounded-brand bg-dark text-surface-white px-5 py-2 text-sm font-body-medium transition-colors hover:bg-dark-mid"
-        >
-          Get in touch
-        </Link>
+          <Link
+            href="/contact"
+            className="text-nav border border-dark text-dark rounded-brand-sm px-5 py-2 transition-all hover:bg-dark hover:text-surface-white"
+          >
+            Request a Demo
+          </Link>
+        </div>
       </div>
     </header>
   )

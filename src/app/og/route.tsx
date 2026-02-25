@@ -1,5 +1,6 @@
 import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
+import { brand } from '@/lib/tokens'
 
 export const runtime = 'edge'
 
@@ -18,7 +19,7 @@ export async function GET(request: NextRequest) {
           flexDirection: 'column',
           justifyContent: 'center',
           padding: '80px',
-          backgroundColor: '#F7F7F5',
+          backgroundColor: brand.colors.surface.DEFAULT,
           fontFamily: 'serif',
         }}
       >
@@ -33,8 +34,8 @@ export async function GET(request: NextRequest) {
             style={{
               fontSize: 28,
               fontWeight: 500,
-              color: '#C8842F',
-              letterSpacing: '0.12em',
+              color: brand.colors.accent.DEFAULT,
+              letterSpacing: brand.letterSpacing.eyebrow,
               textTransform: 'uppercase',
               fontFamily: 'sans-serif',
             }}
@@ -45,9 +46,9 @@ export async function GET(request: NextRequest) {
             style={{
               fontSize: 64,
               fontWeight: 400,
-              color: '#1C1C1A',
+              color: brand.colors.dark.DEFAULT,
               lineHeight: 1.15,
-              letterSpacing: '-0.025em',
+              letterSpacing: brand.letterSpacing.heading,
               maxWidth: '900px',
             }}
           >
@@ -57,7 +58,7 @@ export async function GET(request: NextRequest) {
             <div
               style={{
                 fontSize: 24,
-                color: '#5C5B56',
+                color: brand.colors.copy.mid,
                 fontFamily: 'sans-serif',
                 maxWidth: '800px',
               }}
@@ -75,7 +76,7 @@ export async function GET(request: NextRequest) {
             alignItems: 'center',
             gap: '12px',
             fontSize: 20,
-            color: '#8A8983',
+            color: brand.colors.copy.light,
             fontFamily: 'sans-serif',
           }}
         >

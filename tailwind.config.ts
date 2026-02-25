@@ -1,5 +1,3 @@
-import type { Config } from 'tailwindcss'
-
 export const brand = {
   colors: {
     accent: {
@@ -35,6 +33,27 @@ export const brand = {
     bodyNormal: '400',
     bodyMedium: '500',
   },
+  fontSize: {
+    badge: '0.5rem',
+    detail: '0.55rem',
+    eyebrowSm: '0.6rem',
+    eyebrow: '0.65rem',
+    caption: '0.7rem',
+    ui: '0.78rem',
+    nav: '0.8rem',
+    bodySm: '0.85rem',
+    label: '0.9rem',
+    body: '0.95rem',
+    logo: '1.65rem',
+    quoteMark: '5rem',
+    display: 'clamp(3rem, 6.5vw, 6.5rem)',
+    headline: 'clamp(2.5rem, 5vw, 4.5rem)',
+    title: 'clamp(2rem, 3.5vw, 3.2rem)',
+    section: 'clamp(1.75rem, 3vw, 2.5rem)',
+    quote: 'clamp(1.5rem, 2.5vw, 2.2rem)',
+    stat: 'clamp(5rem, 10vw, 9rem)',
+    statLabel: 'clamp(1.2rem, 2.5vw, 2rem)',
+  },
   letterSpacing: {
     heading: '-0.025em',
     tight: '-0.03em',
@@ -43,56 +62,28 @@ export const brand = {
   radius: {
     sm: '6px',
     md: '12px',
+    lg: '1rem',
   },
   spacing: {
-    section: '6rem',
     sectionMobile: '3.5rem',
+    section: '6rem',
+    sectionLg: '8rem',
+    sectionXl: '10rem',
+    section2xl: '13rem',
+    header: '4.5rem',
     containerMax: '1240px',
     containerPadding: '2.5rem',
     containerPaddingMobile: '1.5rem',
   },
-} as const
-
-const config: Config = {
-  content: ['./src/**/*.{ts,tsx}'],
-  theme: {
-    extend: {
-      colors: {
-        accent: brand.colors.accent,
-        surface: brand.colors.surface,
-        dark: brand.colors.dark,
-        copy: brand.colors.copy,
-        border: brand.colors.border,
-      },
-      fontFamily: {
-        heading: [brand.fonts.heading],
-        body: [brand.fonts.body],
-      },
-      fontWeight: {
-        heading: brand.fontWeight.heading,
-        'body-normal': brand.fontWeight.bodyNormal,
-        'body-medium': brand.fontWeight.bodyMedium,
-      },
-      letterSpacing: {
-        heading: brand.letterSpacing.heading,
-        tight: brand.letterSpacing.tight,
-        eyebrow: brand.letterSpacing.eyebrow,
-      },
-      maxWidth: {
-        site: brand.spacing.containerMax,
-      },
-      borderRadius: {
-        brand: brand.radius.md,
-        'brand-sm': brand.radius.sm,
-      },
-      padding: {
-        section: brand.spacing.section,
-        'section-mobile': brand.spacing.sectionMobile,
-        container: brand.spacing.containerPadding,
-        'container-mobile': brand.spacing.containerPaddingMobile,
-      },
-    },
+  shadow: {
+    card: '0 40px 120px rgba(28, 28, 26, 0.07), 0 1px 3px rgba(28, 28, 26, 0.04)',
   },
-}
-
-export default config
+  animation: {
+    durationFast: '150ms',
+    durationNormal: '300ms',
+    durationSlow: '650ms',
+    durationReveal: '900ms',
+    easeReveal: 'cubic-bezier(0.16, 1, 0.3, 1)',
+    translateReveal: '12px',
+  },
+} as const

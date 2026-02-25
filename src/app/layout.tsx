@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Lora, Karla } from "next/font/google";
+import { Lora, Outfit } from "next/font/google";
+import { brand } from "@/lib/tokens";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Analytics, GTMNoScript, LinkedInNoScript, ClickCeaseNoScript } from "@/components/analytics";
 import "./globals.css";
 
 const heading = Lora({
@@ -11,8 +13,8 @@ const heading = Lora({
   display: "swap",
 });
 
-const body = Karla({
-  weight: ["400", "500"],
+const body = Outfit({
+  weight: ["300", "400", "500"],
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -22,8 +24,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ambr.ai";
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F7F7F5" },
-    { media: "(prefers-color-scheme: dark)", color: "#1C1C1A" },
+    { media: "(prefers-color-scheme: light)", color: brand.colors.surface.DEFAULT },
+    { media: "(prefers-color-scheme: dark)", color: brand.colors.dark.DEFAULT },
   ],
   width: "device-width",
   initialScale: 1,
@@ -72,7 +74,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${heading.variable} ${body.variable}`}>
+      <head>
+        <Analytics />
+      </head>
       <body className="font-body bg-surface text-copy antialiased">
+        <GTMNoScript />
+        <LinkedInNoScript />
+        <ClickCeaseNoScript />
         <Header />
         <main>{children}</main>
         <Footer />
