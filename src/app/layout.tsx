@@ -1,16 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Instrument_Serif, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const heading = Instrument_Serif({
+  weight: "400",
   subsets: ["latin"],
+  variable: "--font-heading",
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const body = DM_Sans({
+  weight: ["400", "500"],
   subsets: ["latin"],
+  variable: "--font-body",
   display: "swap",
 });
 
@@ -18,8 +20,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ambr.ai";
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    { media: "(prefers-color-scheme: light)", color: "#F7F7F5" },
+    { media: "(prefers-color-scheme: dark)", color: "#1C1C1A" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -67,10 +69,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${heading.variable} ${body.variable}`}>
+      <body className="font-body bg-surface text-copy antialiased">
         {children}
       </body>
     </html>
