@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Reveal } from '@/components/reveal'
+import { Grid } from '@/components/grid'
 
 const badges = [
   { icon: 'ISO', label: 'ISO 27001' },
@@ -10,8 +11,9 @@ const badges = [
 
 export function Security() {
   return (
-    <section className="bg-dark text-surface-white py-section-mobile md:py-section-lg px-container-mobile md:px-container">
-      <div className="mx-auto max-w-site">
+    <section className="relative bg-dark text-surface-white py-section-mobile md:py-section-lg px-container-mobile md:px-container overflow-hidden">
+      <Grid className="text-surface-white/[0.03]" dotSize={1} gap={24} />
+      <div className="relative z-10 mx-auto max-w-site">
         <Reveal>
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-12 md:gap-20 items-start">
             <div>

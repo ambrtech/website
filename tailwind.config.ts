@@ -44,7 +44,7 @@ export const brand = {
     bodySm: '0.85rem',
     label: '0.9rem',
     body: '0.95rem',
-    logo: '1.65rem',
+    logo: '2rem',
     quoteMark: '5rem',
     display: 'clamp(3rem, 6.5vw, 6.5rem)',
     headline: 'clamp(2.5rem, 5vw, 4.5rem)',

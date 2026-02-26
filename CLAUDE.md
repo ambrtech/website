@@ -4,26 +4,32 @@
 Marketing/company website for Ambr AI. Built with Next.js (App Router), TypeScript, and Tailwind CSS. Deployed on Vercel.
 
 ## About Ambr AI
-Ambr AI builds bespoke voice-based AI conversation simulations for enterprise workplace training. The product is invisible (voice, not visual), highly customised per client, and sold to L&D leaders, sales enablement teams, and HR directors at organisations like Deloitte, Skyscanner, and IWG.
+Ambr AI builds bespoke voice-based AI conversation simulations for enterprise workplace training. The product is highly customised per client, and sold to L&D leaders, sales enablement teams, and HR directors at organisations like Deloitte, Skyscanner, and IWG.
 
 ## Brand
 
 ### Personality
+The human is the hero, not the technology. Everything in the visual system should communicate that AI exists to serve people, not the other way around.
+
+Warm, soft, slightly romantic. Think "a good friend who happens to be very capable" rather than "powerful system you should be impressed by." There should be zero intimidation in anything we produce. The brand should feel like it could exist in a Sunday supplement.
+
 Quiet authority with warmth. Evidence over empathy. Show, don't tell. Sophisticated enough for a CISO review, warm enough for an L&D champion to feel excited about.
 
+**The litmus test:** If someone saw this brand with no context, they should think "this company cares about people" before they think "this is an AI company." The technology should feel like background infrastructure, not the point.
+
 ### Pillars
-- **Critical:** Trustworthy, Credible, Expert
-- **Valued:** Boutique, Innovative, Approachable
+- **Critical Pillars To Bear In Mind:** Trustworthy, Credible, Expert
+- **Note on Innovative:** The product and company name are inherently innovative — branding doesn't need to push this. Over-signalling "innovation" can feel risky to enterprise buyers saturated with AI marketing. Let the product speak; the brand signals trust.
 
 ### Core Differentiator
-Customisation. Lead with it in almost every context. Every simulation is bespoke to the client's scenarios, language, and culture. This is not off-the-shelf.
+Customisation. Lead with it in most contexts. Every simulation can be bespoke to the client's scenarios, language, culture and other context. This is not off-the-shelf.
 
 ### Voice Guidelines
 - Lead with evidence and outcomes, not hype
 - Confident but never boastful — let the work speak
 - Warm and human, never corporate or generic
 - Speak to practitioners (L&D, sales enablement, HR) as peers, not prospects
-- AI is mentioned contextually but never positioned as the primary value proposition — the value is the training outcome, not the technology
+- AI is mentioned contextually but never positioned as the primary value proposition — the value is the training outcome, not the technology. Enterprise buyers are saturated with AI marketing; many who don't understand AI assume we're "just ChatGPT." Don't big up AI. It's the means, never the message.
 
 ### Design & Content Rules
 - **Never:** gimmicky, techy, childish, generic, or bland
@@ -31,10 +37,23 @@ Customisation. Lead with it in almost every context. Every simulation is bespoke
 - Quality must match the calibre of our clients — never punch below our weight
 - Must be distinctive and memorable — if it could belong to any other company, it's not good enough
 
+### Visual Direction
+- **Serif headings** — sophisticated, editorial feel
+- **Generous white space** — deliberate breathing room signals confidence. Don't fill every gap. Emptiness is intentional.
+- **Palette:** Built on off-whites, creams, and warm beiges as the foundation. Accent colours should feel organic and slightly muted — never saturated or electric. If a colour feels like it belongs on a screen, pull it back. If it feels like it belongs on linen or watercolour paper, you're closer.
+- **Lead with proof, not persuasion** — client logos, testimonials with photos, stats, and security badges should be prominent and matter-of-fact, not hard-sell.
+
+### Imagery
+- **Human-first, always.** When photography is used, it should feel candid and analog — lomography, film grain, natural light. The AI product should rarely if ever be the visual subject.
+- Never use: dark palettes, neon, high-contrast tech aesthetics, abstract 3D shapes, morphing blobs, generative patterns, corporate polish, stock-photo perfection, sci-fi or space imagery.
+
+### Key Risk: Blandness
+The risk with this direction is blandness through excessive warmth. The brands that do it well (Pi, Notion) find a distinctive visual hook within the softness rather than just defaulting to beige everything. When designing pages and components, always ask: is this warm AND distinctive, or just warm?
+
 ### Brand Enemies (avoid at all costs)
-1. **Too startup-y for enterprise** — every page should hold up if a client dropped us into a vendor shortlist deck
-2. **Punching below our weight** — does the quality match the calibre of clients like Deloitte, Skyscanner, IWG?
-3. **Forgettable** — would anyone remember us tomorrow? Is there anything distinctive?
+1. **Too startup-y for enterprise** (PRIMARY ENEMY) — every page should hold up if a client dropped us into a vendor shortlist deck. This encompasses "too playful" and "too casual." At World of Learning, people assumed we were smaller than we are. The brand must never contribute to that perception. Imagine a buyer with Ambr AI and Yoodli open in two browser tabs — we must look like the grown-up option.
+2. **Punching below our weight** — does the quality match the calibre of clients like Deloitte, Skyscanner, IWG? This is closely linked to #1. Our current customers would be impressed by a brand that signals "Ambr AI is really growing up." The credibility of our client list must be reflected in the brand.
+3. **Forgettable** — would anyone remember us tomorrow? Is there anything distinctive? Note: there is a productive tension between #1 and #3. Optimising purely against "too startup-y" risks becoming bland. The brand must be sophisticated AND distinctive. Memorability through craft and confidence.
 
 ## Tech Stack
 - **Framework:** Next.js 16 (App Router) with Static Site Generation
@@ -208,6 +227,11 @@ Content must be optimised for both traditional search engines and AI/LLM citatio
 - Photography stored in `/public/images/photography/` with descriptive kebab-case names indicating scene and page context (e.g. `hero-solo-conversation.jpg`, `solutions-phone-booth-practice.jpg`)
 - Blog images in `/public/images/blog/`
 
+### Style
+- **Human-first, always.** People are the subject, not the product. The AI should be invisible in imagery.
+- Photography should feel candid and analog — natural light, film grain, warmth. Think lomography, not studio lighting.
+- Never use: corporate stock photography, staged/perfect compositions, tech-aesthetic imagery, abstract AI visuals, sci-fi tropes.
+
 ### Usage
 - **Always use `next/image`** — never raw `<img>` tags. Provides automatic WebP/AVIF conversion, responsive srcset, lazy loading, and layout shift prevention.
 - Use `priority` prop only for above-fold hero images
@@ -221,7 +245,7 @@ Content must be optimised for both traditional search engines and AI/LLM citatio
 
 ### Optimisation
 - Vercel's built-in image optimisation via `next/image` is sufficient — no external image CDN needed
-- If consistent post-processing (warmth/grain) is later needed across all photos, Cloudinary's free tier is an option
+- If consistent post-processing (warmth/grain) is needed across all photos, Cloudinary's free tier is an option
 
 ## Performance Budgets
 Every page must meet these targets:

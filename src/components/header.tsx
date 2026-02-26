@@ -11,7 +11,13 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-surface-white/90 backdrop-blur-xl border-b border-transparent transition-all">
       <div className="mx-auto max-w-site px-container-mobile md:px-container flex items-center justify-between h-16 md:h-header">
         <Link href="/" className="font-heading text-logo text-dark tracking-heading">
-          Ambr AI
+          Ambr{' '}
+            <span className="relative inline-block text-accent">
+              AI
+              <span className="absolute inset-0 bg-noise bg-clip-text text-transparent mix-blend-multiply opacity-50 select-none pointer-events-none" aria-hidden="true">
+                AI
+              </span>
+            </span>
         </Link>
         <div className="hidden md:flex items-center gap-10">
           {nav.map((item) => (

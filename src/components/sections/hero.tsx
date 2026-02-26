@@ -1,9 +1,11 @@
 import Link from 'next/link'
+import { Grid } from '@/components/grid'
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center bg-surface-white">
-      <div className="mx-auto w-full max-w-site px-container-mobile md:px-container">
+    <section className="relative min-h-screen flex flex-col justify-center bg-surface-white overflow-hidden">
+      <Grid className="text-dark/[0.02]" dotSize={1} gap={40} />
+      <div className="relative z-10 mx-auto w-full max-w-site px-container-mobile md:px-container">
         <p className="text-caption font-body-medium uppercase tracking-eyebrow text-copy-light mb-10 animate-[fadeIn_0.7s_ease_0.3s_both]">
           AI voice simulation for enterprise teams
         </p>
@@ -19,9 +21,10 @@ export function Hero() {
         <div className="animate-[fadeIn_0.7s_ease_0.75s_both]">
           <Link
             href="/contact"
-            className="inline-block rounded-brand-sm bg-dark text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent hover:-translate-y-px hover:shadow-lg"
+            className="group relative inline-block rounded-brand-sm bg-dark text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent hover:-translate-y-px hover:shadow-lg overflow-hidden"
           >
-            Request a Demo
+            <span className="relative z-10">Request a Demo</span>
+            <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-10 bg-noise mix-blend-overlay transition-opacity" />
           </Link>
         </div>
       </div>

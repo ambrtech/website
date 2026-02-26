@@ -27,7 +27,13 @@ export function Footer() {
       <div className="mx-auto max-w-site grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 md:gap-12">
         <div className="col-span-2 md:col-span-1">
           <Link href="/" className="font-heading text-logo text-dark tracking-heading">
-            Ambr AI
+            Ambr{' '}
+              <span className="relative inline-block text-accent">
+                AI
+                <span className="absolute inset-0 bg-noise bg-clip-text text-transparent mix-blend-multiply opacity-50 select-none pointer-events-none" aria-hidden="true">
+                  AI
+                </span>
+              </span>
           </Link>
           <p className="text-nav text-copy-light max-w-[280px] leading-relaxed mt-3">
             Realistic AI voice simulations, custom-built for enterprise teams.
