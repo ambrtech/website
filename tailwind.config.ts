@@ -1,11 +1,11 @@
 export const brand = {
   colors: {
     accent: {
-      DEFAULT: '#C45B28',
-      hover: '#A84D22',
-      soft: '#E8A882',
-      tint: '#F9E8DC',
-      whisper: '#FBF3ED',
+      DEFAULT: '#D47234',
+      hover: '#B4612C',
+      soft: '#EAB99A',
+      tint: '#F9EAE1',
+      whisper: '#FCF5F1',
     },
     surface: {
       DEFAULT: '#F7F7F5',

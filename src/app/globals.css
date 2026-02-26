@@ -2,11 +2,11 @@
 
 @theme {
   /* Colors — accent */
-  --color-accent: #C45B28;
-  --color-accent-hover: #A84D22;
-  --color-accent-soft: #E8A882;
-  --color-accent-tint: #F9E8DC;
-  --color-accent-whisper: #FBF3ED;
+  --color-accent: #D47234;
+  --color-accent-hover: #B4612C;
+  --color-accent-soft: #EAB99A;
+  --color-accent-tint: #F9EAE1;
+  --color-accent-whisper: #FCF5F1;
 
   /* Colors — surface */
   --color-surface: #F7F7F5;
