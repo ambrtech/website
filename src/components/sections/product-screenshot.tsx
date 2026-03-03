@@ -120,10 +120,10 @@ export function MockScenarioCard() {
 /** A mock showing organizational context transformed into a custom simulation. */
 export function MockCustomizationFlow() {
   const contextItems = [
-    'Return policy',
-    'EMEA pricing tiers',
-    'Escalation framework',
-    'Brand tone guide',
+    'Sales methodology',
+    'Buyer personas',
+    'Pricing & packaging',
+    'Competitive landscape',
   ]
 
   return (
@@ -160,20 +160,20 @@ export function MockCustomizationFlow() {
           </p>
           <div className="p-3 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
             <p className="text-caption font-body-medium text-dark mb-1">
-              Difficult refund negotiation
+              Enterprise renewal negotiation
             </p>
             <p className="text-caption text-copy-light leading-relaxed">
-              Customer references your EMEA return policy and escalates using
-              company-specific language...
+              CFO pushes back on pricing using your competitor&apos;s offer,
+              referencing your packaging structure by name...
             </p>
           </div>
           <div className="mt-2 p-3 rounded-brand-sm bg-surface border border-border">
             <p className="text-caption font-body-medium text-dark mb-1">
-              Enterprise pricing pushback
+              Discovery call — cold prospect
             </p>
             <p className="text-caption text-copy-light leading-relaxed">
-              Prospect questions your tiered pricing and compares to a competitor
-              they&apos;ve been evaluating...
+              VP of Ops has 15 minutes and no context. Qualify the opportunity
+              using your methodology...
             </p>
           </div>
         </div>
