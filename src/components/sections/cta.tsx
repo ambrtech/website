@@ -3,7 +3,7 @@ import { Reveal } from '@/components/reveal'
 
 export function CTA() {
   return (
-    <section className="py-section-xl md:py-section-2xl px-container-mobile md:px-container text-center bg-dark text-surface">
+    <section className="py-section-lg md:py-section-xl px-container-mobile md:px-container text-center bg-dark text-surface">
       <Reveal>
         <h2 className="font-heading text-headline leading-[1.1] tracking-heading mb-6 text-surface">
           See what Ambr AI looks like<br />
