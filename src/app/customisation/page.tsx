@@ -9,7 +9,6 @@ import { NumberedSteps } from '@/components/sections/numbered-steps'
 import { PullQuote } from '@/components/sections/pull-quote'
 import { TestimonialGrid } from '@/components/sections/testimonial-grid'
 import { FeatureGrid } from '@/components/sections/feature-grid'
-import { EditorialImage } from '@/components/sections/editorial-image'
 import { CTA } from '@/components/sections/cta'
 import { Reveal } from '@/components/reveal'
 
@@ -208,16 +207,7 @@ export default function CustomisationPage() {
         ]}
       />
 
-      {/* ── 9. Editorial image — visual pause before CTA ── */}
-      <EditorialImage
-        src="/images/photography/editorial-light-window.png"
-        alt="Warm natural light streaming through a window onto a wooden desk surface, soft film grain"
-        width={1600}
-        height={640}
-        caption="Every simulation is shaped by the people who use it."
-      />
-
-      {/* ── 10. Buying process ── */}
+      {/* ── 9. Buying process ── */}
       <NumberedSteps
         eyebrow="Getting started"
         heading="What happens next"
