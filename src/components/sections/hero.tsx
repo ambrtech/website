@@ -34,8 +34,8 @@ export function Hero() {
 
           <div className="hidden lg:block animate-[fadeIn_1s_ease_0.5s_both]">
             <Image
-              src="/images/photography/hero-quiet-reflection.png"
-              alt="A woman sitting at a desk near a window, holding headphones with a quiet, reflective smile after a practice session"
+              src="/images/photography/hero-quiet-reflection.jpeg"
+              alt="A woman at her desk in quiet reflection after a practice session, seen through indoor plant leaves with warm window light"
               width={720}
               height={480}
               priority
