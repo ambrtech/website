@@ -3,9 +3,9 @@ import { Reveal } from '@/components/reveal'
 
 export function CTA() {
   return (
-    <section className="py-section-xl md:py-section-2xl px-container-mobile md:px-container text-center border-t border-border">
+    <section className="py-section-xl md:py-section-2xl px-container-mobile md:px-container text-center bg-dark text-surface">
       <Reveal>
-        <h2 className="font-heading text-headline leading-[1.1] tracking-heading mb-6">
+        <h2 className="font-heading text-headline leading-[1.1] tracking-heading mb-6 text-surface">
           See what Ambr AI looks like<br />
           for <em className="text-accent">your</em> team.
         </h2>
@@ -14,7 +14,7 @@ export function CTA() {
         </p>
         <Link
           href="/contact"
-          className="inline-block rounded-brand-sm bg-dark text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent hover:-translate-y-px hover:shadow-lg"
+          className="inline-block rounded-brand-sm bg-accent text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent-hover hover:-translate-y-px hover:shadow-lg"
         >
           Request a Demo
         </Link>

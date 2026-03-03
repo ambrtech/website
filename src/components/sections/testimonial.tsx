@@ -5,6 +5,13 @@ export function Testimonial() {
   return (
     <section className="relative py-section-mobile md:py-section-lg px-container-mobile md:px-container border-t border-border bg-surface-alt overflow-hidden">
       <Grid className="text-dark/[0.02]" dotSize={1} gap={20} />
+      <span
+        className="absolute font-heading leading-none text-accent opacity-[0.04] z-0 pointer-events-none select-none"
+        style={{ fontSize: '24rem', top: '-3rem', left: '-1rem' }}
+        aria-hidden="true"
+      >
+        &ldquo;
+      </span>
       <div className="relative z-10 mx-auto max-w-[1000px]">
         <Reveal>
           <p className="font-heading text-quote-mark text-accent/50 leading-[0.5] mb-6 select-none">

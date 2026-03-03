@@ -10,6 +10,7 @@ import { Security } from '@/components/sections/security'
 import { WhyAmbr } from '@/components/sections/why-ambr'
 import { Testimonial } from '@/components/sections/testimonial'
 import { CTA } from '@/components/sections/cta'
+import { TexturePanel } from '@/components/texture-panel'
 
 export const metadata = createMetadata({
   title: 'Ambr AI',
@@ -22,16 +23,17 @@ export default function Home() {
   return (
     <>
       <OrganizationJsonLd />
-      <Hero />
-      <LogoBar />
-      <Statement />
-      <HowItWorks />
-      <Impact />
-      <ProductMock />
-      <Security />
-      <WhyAmbr />
-      <Testimonial />
-      <CTA />
+      <div data-section="hero"><Hero /></div>
+      <div data-section="logo-bar"><LogoBar /></div>
+      <div data-section="statement"><Statement /></div>
+      <div data-section="how-it-works"><HowItWorks /></div>
+      <div data-section="impact"><Impact /></div>
+      <div data-section="product-mock"><ProductMock /></div>
+      <div data-section="security"><Security /></div>
+      <div data-section="why-ambr"><WhyAmbr /></div>
+      <div data-section="testimonial"><Testimonial /></div>
+      <div data-section="cta"><CTA /></div>
+      <TexturePanel />
     </>
   )
 }
