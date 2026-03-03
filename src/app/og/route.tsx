@@ -2,8 +2,6 @@ import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
 import { brand } from '@/lib/tokens'
 
-export const runtime = 'edge'
-
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl
   const title = searchParams.get('title') || 'Ambr AI'

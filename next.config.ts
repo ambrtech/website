@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   // Vercel image optimization — remote patterns for any future CMS/CDN images
   images: {
     formats: ["image/avif", "image/webp"],

@@ -1,25 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Lora, Outfit } from "next/font/google";
 import { brand } from "@/lib/tokens";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Grain } from "@/components/grain";
 import { Analytics, GTMNoScript, LinkedInNoScript, ClickCeaseNoScript } from "@/components/analytics";
 import "./globals.css";
-
-const heading = Lora({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-heading",
-  display: "swap",
-});
-
-const body = Outfit({
-  weight: ["300", "400", "500"],
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ambr.ai";
 
@@ -74,8 +59,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${heading.variable} ${body.variable}`}>
+    <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Outfit:wght@300;400;500&display=swap"
+        />
         <Analytics />
       </head>
       <body className="font-body bg-surface text-copy antialiased">

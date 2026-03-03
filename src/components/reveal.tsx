@@ -6,9 +6,10 @@ interface RevealProps {
   children: React.ReactNode
   className?: string
   slow?: boolean
+  delay?: number
 }
 
-export function Reveal({ children, className = '', slow }: RevealProps) {
+export function Reveal({ children, className = '', slow, delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
 
@@ -33,6 +34,7 @@ export function Reveal({ children, className = '', slow }: RevealProps) {
   return (
     <div
       ref={ref}
+      style={{ transitionDelay: `${delay}ms` }}
       className={`transition-all ease-out ${
         slow ? 'duration-reveal' : 'duration-slow'
       } ${

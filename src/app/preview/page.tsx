@@ -12,6 +12,7 @@ import { PullQuote } from '@/components/sections/pull-quote'
 import { ProductScreenshot, MockFeedbackPanel, MockScenarioCard, MockDashboard } from '@/components/sections/product-screenshot'
 import { BentoShowcase } from '@/components/sections/bento-showcase'
 import { SplitContent } from '@/components/sections/split-content'
+import { VisualFeatureCards } from '@/components/sections/visual-feature-cards'
 
 export const metadata = createMetadata({
   title: 'Component Preview',
@@ -208,6 +209,10 @@ export default function PreviewPage() {
         heading={<>Everything your team needs, in <em className="text-accent">one place</em></>}
         subtitle="Voice simulations, structured feedback, team analytics, and 30+ languages — all from a single dashboard."
       />
+
+      {/* ── 13. Visual Feature Cards ── */}
+      <SectionLabel name="VisualFeatureCards" />
+      <VisualFeatureCards />
     </>
   )
 }
