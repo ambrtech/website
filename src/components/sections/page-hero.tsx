@@ -1,13 +1,20 @@
+import Link from 'next/link'
 import { Reveal } from '@/components/reveal'
+
+interface PageHeroCta {
+  label: string
+  href: string
+}
 
 interface PageHeroProps {
   eyebrow?: string
   heading: React.ReactNode
   subtitle: string
   compact?: boolean
+  cta?: PageHeroCta
 }
 
-export function PageHero({ eyebrow, heading, subtitle, compact }: PageHeroProps) {
+export function PageHero({ eyebrow, heading, subtitle, compact, cta }: PageHeroProps) {
   return (
     <section
       className={`${
@@ -27,6 +34,14 @@ export function PageHero({ eyebrow, heading, subtitle, compact }: PageHeroProps)
           <p className="text-body text-copy-mid leading-[1.75] max-w-[580px]">
             {subtitle}
           </p>
+          {cta && (
+            <Link
+              href={cta.href}
+              className="inline-block mt-8 rounded-brand-sm bg-dark text-surface-white px-8 py-3.5 text-body-sm font-body-medium transition-all hover:bg-accent hover:-translate-y-px hover:shadow-lg"
+            >
+              {cta.label}
+            </Link>
+          )}
         </Reveal>
       </div>
     </section>
