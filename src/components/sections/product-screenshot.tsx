@@ -117,6 +117,71 @@ export function MockScenarioCard() {
   )
 }
 
+/** A mock showing organizational context transformed into a custom simulation. */
+export function MockCustomizationFlow() {
+  const contextItems = [
+    'Return policy',
+    'EMEA pricing tiers',
+    'Escalation framework',
+    'Brand tone guide',
+  ]
+
+  return (
+    <div className="space-y-5">
+      <div className="flex items-center gap-2 mb-4">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Customization
+        </span>
+      </div>
+
+      <div className="grid grid-cols-[1fr_auto_1fr] gap-3 items-start">
+        <div>
+          <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">
+            Your context
+          </p>
+          <div className="space-y-1.5">
+            {contextItems.map((item) => (
+              <div
+                key={item}
+                className="text-caption px-2.5 py-1.5 rounded-brand-sm border border-border bg-surface text-copy-mid"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex items-center pt-8 text-copy-faint">→</div>
+
+        <div>
+          <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">
+            Your simulation
+          </p>
+          <div className="p-3 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
+            <p className="text-caption font-body-medium text-dark mb-1">
+              Difficult refund negotiation
+            </p>
+            <p className="text-caption text-copy-light leading-relaxed">
+              Customer references your EMEA return policy and escalates using
+              company-specific language...
+            </p>
+          </div>
+          <div className="mt-2 p-3 rounded-brand-sm bg-surface border border-border">
+            <p className="text-caption font-body-medium text-dark mb-1">
+              Enterprise pricing pushback
+            </p>
+            <p className="text-caption text-copy-light leading-relaxed">
+              Prospect questions your tiered pricing and compares to a competitor
+              they&apos;ve been evaluating...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 /** A mock admin dashboard summary. */
 export function MockDashboard() {
   return (

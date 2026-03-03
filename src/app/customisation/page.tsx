@@ -2,49 +2,23 @@ import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
-import { Section } from '@/components/sections/section'
-import { Reveal } from '@/components/reveal'
-import { FeatureGrid } from '@/components/sections/feature-grid'
+import { SplitContent } from '@/components/sections/split-content'
+import { ProductScreenshot, MockCustomizationFlow } from '@/components/sections/product-screenshot'
+import { ActionPicker } from '@/components/sections/action-picker'
 import { NumberedSteps } from '@/components/sections/numbered-steps'
-import { StatBar } from '@/components/sections/stat-bar'
 import { PullQuote } from '@/components/sections/pull-quote'
+import { TestimonialGrid } from '@/components/sections/testimonial-grid'
+import { FeatureGrid } from '@/components/sections/feature-grid'
+import { EditorialImage } from '@/components/sections/editorial-image'
 import { CTA } from '@/components/sections/cta'
+import { Reveal } from '@/components/reveal'
 
 export const metadata = createMetadata({
-  title: 'Customisation',
+  title: 'Customization',
   description:
-    'Every Ambr AI simulation is bespoke to your organisation. Custom scenarios, language, culture, and context built specifically for your teams.',
+    'Every Ambr AI simulation is bespoke to your organization. Custom scenarios, language, culture, and context — built around your teams, not templates.',
   path: '/customisation',
 })
-
-const customisationMethods = [
-  {
-    heading: 'Admin Customisation',
-    description:
-      'Create and edit simulations directly in the platform. Define the scenario, set the AI character\u2019s personality and objectives, and tailor the experience to specific teams or roles. No technical skills required. Scale a single scenario globally or build targeted simulations for individual departments.',
-  },
-  {
-    heading: 'In-House Customisation Service',
-    description:
-      'Our expert team builds fully tailored simulations for you. Share a few minutes of context \u2014 the scenario, the learner profile, the desired outcomes \u2014 and we deliver a simulation that matches your exact needs.',
-  },
-  {
-    heading: 'Personal Scenario Creator',
-    description:
-      'Individual team members create their own private simulations for specific upcoming conversations. They build the scenario, train on their own terms, and receive confidential feedback.',
-  },
-]
-
-const scenarioExamples = [
-  'Giving Performance Feedback',
-  'Handling a Pricing Objection',
-  'De-escalating a Customer Complaint',
-  'Navigating a Restructure Conversation',
-  'Client Renewal Negotiation',
-  'Onboarding a New Hire',
-  'Delivering Difficult News',
-  'Cross-selling to an Existing Client',
-]
 
 export default function CustomisationPage() {
   return (
@@ -52,206 +26,243 @@ export default function CustomisationPage() {
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Customisation', href: '/customisation' },
+          { name: 'Customization', href: '/customisation' },
         ]}
       />
 
-      {/* ── Hero ── */}
+      {/* ── 1. Hero — flagship energy, no compact ── */}
       <PageHero
-        compact
         heading={
           <>
-            Customised to your exact{' '}
-            <em className="text-accent">training needs</em>
+            Customized to your{' '}
+            <em className="text-accent">exact</em> training needs
           </>
         }
-        subtitle="Every organisation runs differently. Ambr AI is built to match your specific scenarios, internal language, and team structure, so your training reflects reality from day one."
-        cta={{ label: 'Try for Free', href: '/try-for-free' }}
+        subtitle="Every Ambr AI simulation is built around your organization — your scenarios, your language, your culture, your success criteria. Not templates. Not approximations. Yours."
       />
 
-      {/* ── Three customisation methods ── */}
-      <Section>
-        <Reveal>
-          <div className="mb-12">
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
-              How it works
-            </p>
-            <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[600px]">
-              Three ways to customise
-            </h2>
-          </div>
-        </Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          {customisationMethods.map((method, index) => (
-            <Reveal key={method.heading}>
-              <div className="flex flex-col h-full border-t border-border pt-8">
-                <span className="font-heading text-section tracking-heading text-accent-soft leading-none mb-5">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <h3 className="font-heading text-label tracking-heading text-dark mb-3">
-                  {method.heading}
-                </h3>
-                <p className="text-body-sm text-copy-mid leading-relaxed">
-                  {method.description}
+      {/* ── 2. Customization visual — show, don't tell ── */}
+      <SplitContent
+        eyebrow="Your world, built in"
+        heading={
+          <>
+            We don&apos;t start from a template.
+            We start from <em className="text-accent">you</em>.
+          </>
+        }
+        visualContent={
+          <ProductScreenshot tint>
+            <MockCustomizationFlow />
+          </ProductScreenshot>
+        }
+      >
+        <p>
+          Share your playbooks, objection guides, product materials, compliance
+          requirements, and cultural context. Our team transforms them into
+          realistic AI characters that know your business as well as your
+          best people do.
+        </p>
+        <p>
+          The result is a simulation your team actually recognizes — the same
+          pressure, the same terminology, the same dynamics they face every day.
+        </p>
+      </SplitContent>
+
+      {/* ── 3. Impact stat — evidence before methods ── */}
+      <section className="border-y border-border py-section-mobile md:py-section px-container-mobile md:px-container">
+        <div className="mx-auto max-w-site">
+          <Reveal>
+            <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+              <div>
+                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">
+                  Proven impact
+                </p>
+                <p className="text-body text-copy-mid leading-[1.7]">
+                  When practice feels real, people take it seriously. Customization
+                  isn&apos;t a nice-to-have — it&apos;s the difference between
+                  training people tolerate and training they ask for more of.
                 </p>
               </div>
-            </Reveal>
-          ))}
+              <div className="text-right">
+                <p className="font-heading text-stat leading-none tracking-tight">
+                  93%
+                </p>
+                <p className="text-copy-light mt-2 text-stat-label">
+                  of learners rate simulations as realistic
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
-      </Section>
+      </section>
 
-      {/* ── Speed: brief → build → live ── */}
+      {/* ── 4. Three customization methods — equal weight, no hierarchy ── */}
+      <ActionPicker
+        heading="Three ways to customize"
+        subtitle="Choose the approach that fits your team. All three deliver the same quality of simulation — they differ in who does the building."
+        items={[
+          {
+            heading: 'Admin Customization',
+            description:
+              'Your L&D team builds and iterates on simulations directly through a guided admin interface. No technical skills required. Ideal for teams that want hands-on control and fast iteration.',
+            href: '/product/admin-experience',
+            ctaLabel: 'Learn more',
+          },
+          {
+            heading: 'In-House Service',
+            description:
+              'Our simulation designers work alongside your team to build bespoke scenarios from your materials. White-glove setup, ongoing refinement, and dedicated support.',
+            href: '/find-out-more',
+            ctaLabel: 'Talk to us',
+          },
+          {
+            heading: 'Personal Scenarios',
+            description:
+              'Individual team members create their own practice scenarios for conversations they\'re preparing for right now. Private, self-directed, confidential feedback.',
+            href: '/product/ai-roleplay',
+            ctaLabel: 'See how it works',
+          },
+        ]}
+      />
+
+      {/* ── 5. Speed — defuse timeline anxiety ── */}
       <NumberedSteps
         eyebrow="Speed"
         heading="From brief to live simulation in days"
         items={[
           {
-            title: 'Share your brief',
+            title: 'Share your context',
             description:
-              'A few minutes of context about your scenarios, learner profiles, and desired outcomes.',
+              'Send us your playbooks, scenario briefs, or product materials. We work with whatever you have — polished or rough.',
           },
           {
-            title: 'We build your simulations',
+            title: 'We build your simulation',
             description:
-              'Admins can build scenarios in minutes. Our in-house team delivers tailored simulations within days.',
+              'Our team designs realistic AI characters, calibrates difficulty, and configures evaluation criteria around your framework.',
           },
           {
-            title: 'Your team is live',
+            title: 'Your team starts practicing',
             description:
-              'No lengthy onboarding, no complex implementation project, and no waiting for the next release cycle.',
+              'Simulations go live across your organization. Iterate based on learner feedback and performance data as your needs evolve.',
           },
         ]}
       />
 
-      {/* ── Pre-built scenario library ── */}
-      <Section className="bg-surface-alt">
-        <Reveal>
-          <div className="mb-12">
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
-              Scenario library
-            </p>
-            <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[600px]">
-              Ready-made scenarios across every use case
-            </h2>
-            <p className="text-body text-copy-mid leading-[1.75] max-w-[520px] mt-4">
-              Not starting from scratch? Browse an extensive library of pre-built scenarios.
-              Use them immediately, or as starting points for customised simulations.
-            </p>
-          </div>
-        </Reveal>
-        <Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            {scenarioExamples.map((title) => (
-              <div
-                key={title}
-                className="bg-surface-white border border-border rounded-brand-sm p-5 md:p-6"
-              >
-                <p className="font-heading text-body-sm tracking-heading text-dark leading-snug">
-                  {title}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-      </Section>
+      {/* ── 6. Pull quote — single dramatic voice ── */}
+      <PullQuote
+        quote="They built everything around our specific needs — our terminology, our escalation paths, our tone of voice. It felt like our company, not a generic simulation."
+        role="Head of Learning & Development"
+        company="Enterprise client"
+      />
 
-      {/* ── Partner quotes ── */}
-      <Section>
-        <Reveal>
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-section leading-[1.2] tracking-heading">
-              A partner, not just a platform
-            </h2>
-            <p className="text-body text-copy-mid mt-4 max-w-[480px] mx-auto leading-[1.75]">
-              Real people who learn your business, respond quickly, and care about getting the details right.
-            </p>
-          </div>
-        </Reveal>
-        <Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {[
-              'They built everything around our specific needs.',
-              'It\u2019s not off the shelf.',
-              'The team is incredibly responsive.',
-            ].map((quote) => (
-              <blockquote
-                key={quote}
-                className="border-t border-border pt-6"
-              >
-                <p className="font-heading text-body leading-[1.5] tracking-heading text-dark italic">
-                  &ldquo;{quote}&rdquo;
-                </p>
-                <p className="text-caption text-copy-light mt-3">
-                  Enterprise client
-                </p>
-              </blockquote>
-            ))}
-          </div>
-        </Reveal>
-      </Section>
+      {/* ── 7. More social proof — breadth of evidence ── */}
+      <TestimonialGrid
+        eyebrow="From our clients"
+        heading="Partner, not platform."
+        testimonials={[
+          {
+            quote:
+              'The customization process was remarkably fast. We expected months of back-and-forth — instead, our first scenarios were live within a week.',
+            role: 'Sales Enablement Lead',
+            company: 'Technology company',
+          },
+          {
+            quote:
+              'What surprised us was the depth. They didn\'t just change the names and scenarios — they captured how our customers actually speak, object, and negotiate.',
+            role: 'Director of People Development',
+            company: 'Financial services',
+          },
+        ]}
+      />
 
-      {/* ── What your organisation gets ── */}
+      {/* ── 8. What your organization gets ── */}
       <FeatureGrid
-        eyebrow="The outcome"
-        heading="What your organisation gets"
+        eyebrow="What your organization gets"
+        heading={
+          <>
+            Built for teams, not{' '}
+            <em className="text-accent">individuals</em>
+          </>
+        }
         items={[
           {
             heading: 'Scalable rollout',
             description:
-              'Deploy customised training to specific teams, departments, or the entire organisation from a single dashboard.',
+              'Deploy simulations across departments, regions, and languages from a single dashboard. Scale from a pilot team to the entire organization without rebuilding.',
           },
           {
             heading: 'Aggregated insights',
             description:
-              'Understand what your people are strong and weak at. Surface capability gaps and shape your broader training strategy.',
+              'See capability trends across your workforce — where teams are strong, where gaps exist, and how readiness evolves over time.',
           },
           {
             heading: 'Structured feedback',
             description:
-              'Every session delivers detailed, personalised feedback on tone, pacing, word choice, structure, and approach.',
+              'Every practice session generates detailed, actionable coaching on tone, structure, word choice, and approach. Not a score — a development plan.',
           },
           {
             heading: 'Consistent quality',
             description:
-              'Every team member receives the same standard of training and feedback, regardless of location or language.',
+              'Every learner gets the same caliber of practice partner. No facilitator variability, no scheduling constraints, no quality drop-off at scale.',
           },
         ]}
       />
 
-      {/* ── 93% stat ── */}
-      <StatBar
-        items={[
-          {
-            value: '93%',
-            label: 'of users report feeling better prepared for real conversations after using Ambr AI',
-            source: 'Ambr AI user survey',
-          },
-        ]}
+      {/* ── 9. Editorial image — visual pause before CTA ── */}
+      <EditorialImage
+        src="/images/photography/editorial-light-window.png"
+        alt="Warm natural light streaming through a window onto a wooden desk surface, soft film grain"
+        width={1600}
+        height={640}
+        caption="Every simulation is shaped by the people who use it."
       />
 
-      {/* ── Buying process ── */}
+      {/* ── 10. Buying process ── */}
       <NumberedSteps
         eyebrow="Getting started"
-        heading="What the buying process looks like"
+        heading="What happens next"
         items={[
           {
-            title: 'Tell us what you need',
+            title: 'Tell us about your team',
             description:
-              'A short conversation about your use cases, team size, and goals.',
+              'A 30-minute conversation about your training goals, scenarios, and success criteria. No preparation needed.',
           },
           {
-            title: 'See it in action',
+            title: 'See your simulation',
             description:
-              'Try customised simulations built for your actual scenarios. Not a generic demo.',
+              'We build a working prototype using your real context. You evaluate it with your team before committing to anything.',
           },
           {
             title: 'Go live',
             description:
-              'Rollout support, admin setup, and your first scenarios \u2014 ready in days.',
+              'Roll out across your organization with dedicated support. Iterate and expand as your needs evolve.',
           },
         ]}
       />
 
+      {/* ── 11. Dual CTA ── */}
+      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
+        <div className="mx-auto max-w-site">
+          <Reveal>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/find-out-more"
+                className="inline-block rounded-brand-sm bg-dark text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent hover:-translate-y-px hover:shadow-lg"
+              >
+                Request a Demo
+              </Link>
+              <Link
+                href="/try-for-free"
+                className="inline-block rounded-brand-sm border border-border text-dark px-8 py-3.5 text-sm font-body-medium transition-all hover:border-accent-soft hover:text-accent hover:-translate-y-px"
+              >
+                Try for Free
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── 12. Standard CTA close ── */}
       <CTA />
     </>
   )

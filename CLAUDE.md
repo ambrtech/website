@@ -25,6 +25,7 @@ Quiet authority with warmth. Evidence over empathy. Show, don't tell. Sophistica
 Customisation. Lead with it in most contexts. Every simulation can be bespoke to the client's scenarios, language, culture and other context. This is not off-the-shelf.
 
 ### Voice Guidelines
+- **American English** — use US spelling throughout all copy (customize, organization, color, etc.)
 - Lead with evidence and outcomes, not hype
 - Confident but never boastful — let the work speak
 - Warm and human, never corporate or generic
