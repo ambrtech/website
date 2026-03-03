@@ -9,7 +9,7 @@ export function CTA() {
           See what Ambr AI looks like<br />
           for <em className="text-accent">your</em> team.
         </h2>
-        <p className="text-base text-copy-light max-w-[440px] mx-auto leading-[1.7] mb-10">
+        <p className="text-body text-copy-light max-w-[440px] mx-auto leading-[1.7] mb-10">
           We&apos;ll build a custom simulation using your real scenarios. No generic demos.
         </p>
         <Link

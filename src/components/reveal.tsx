@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 interface RevealProps {
   children: React.ReactNode
@@ -10,6 +10,7 @@ interface RevealProps {
 
 export function Reveal({ children, className = '', slow }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const el = ref.current
@@ -18,7 +19,7 @@ export function Reveal({ children, className = '', slow }: RevealProps) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add('opacity-100', 'translate-y-0')
+          setVisible(true)
           observer.unobserve(el)
         }
       },
@@ -32,8 +33,10 @@ export function Reveal({ children, className = '', slow }: RevealProps) {
   return (
     <div
       ref={ref}
-      className={`opacity-0 translate-y-5 transition-all ease-out ${
+      className={`transition-all ease-out ${
         slow ? 'duration-reveal' : 'duration-slow'
+      } ${
+        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
       } ${className}`}
     >
       {children}
