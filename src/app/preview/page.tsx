@@ -9,6 +9,9 @@ import { ActionPicker } from '@/components/sections/action-picker'
 import { NumberedSteps } from '@/components/sections/numbered-steps'
 import { DetailCards } from '@/components/sections/detail-cards'
 import { PullQuote } from '@/components/sections/pull-quote'
+import { ProductScreenshot, MockFeedbackPanel, MockScenarioCard, MockDashboard } from '@/components/sections/product-screenshot'
+import { BentoShowcase } from '@/components/sections/bento-showcase'
+import { SplitContent } from '@/components/sections/split-content'
 
 export const metadata = createMetadata({
   title: 'Component Preview',
@@ -145,6 +148,65 @@ export default function PreviewPage() {
         quote="Incredibly realistic, providing a safe and convenient environment for practice."
         role="Director"
         company="Media Company"
+      />
+
+      {/* ── 11. Product Screenshot (3 variants via SplitContent) ── */}
+      <SectionLabel name="ProductScreenshot — Feedback Panel" />
+      <SplitContent
+        eyebrow="Coaching"
+        heading={<>Feedback that actually changes <em className="text-accent">behaviour</em></>}
+        visualContent={
+          <ProductScreenshot tint>
+            <MockFeedbackPanel />
+          </ProductScreenshot>
+        }
+      >
+        <p>
+          Every conversation ends with structured, personalised coaching: tone, pacing,
+          word choice, approach, and delivery. Not a score. Actionable insight your
+          people can apply immediately.
+        </p>
+      </SplitContent>
+
+      <SectionLabel name="ProductScreenshot — Scenario Card" />
+      <SplitContent
+        reversed
+        eyebrow="Simulations"
+        heading={<>Scenarios built around <em className="text-accent">your</em> reality</>}
+        visualContent={
+          <ProductScreenshot>
+            <MockScenarioCard />
+          </ProductScreenshot>
+        }
+      >
+        <p>
+          Every simulation is bespoke. Your terminology, your stakeholders, your
+          version of a difficult conversation — not generic templates.
+        </p>
+      </SplitContent>
+
+      <SectionLabel name="ProductScreenshot — Dashboard" />
+      <SplitContent
+        eyebrow="Admin"
+        heading={<>Visibility across your <em className="text-accent">entire</em> team</>}
+        visualContent={
+          <ProductScreenshot tint>
+            <MockDashboard />
+          </ProductScreenshot>
+        }
+      >
+        <p>
+          Track engagement, monitor capability trends, and identify where
+          targeted coaching will have the biggest impact.
+        </p>
+      </SplitContent>
+
+      {/* ── 12. Bento Showcase ── */}
+      <SectionLabel name="BentoShowcase" />
+      <BentoShowcase
+        eyebrow="The platform"
+        heading={<>Everything your team needs, in <em className="text-accent">one place</em></>}
+        subtitle="Voice simulations, structured feedback, team analytics, and 30+ languages — all from a single dashboard."
       />
     </>
   )
