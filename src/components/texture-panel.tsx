@@ -61,9 +61,6 @@ const experiments: Experiment[] = [
   },
 ]
 
-/* Experiments in the "motion" group are mutually exclusive */
-const MOTION_GROUP = experiments.filter((e) => e.group === 'motion').map((e) => e.id)
-
 const STORAGE_KEY = 'texture-lab-active'
 
 /* ─────────────────────────────────────────────────────
@@ -256,7 +253,7 @@ function Toggle({
       }}
     >
       <span
-        className="block rounded-full bg-white shadow-sm transition-transform"
+        className="block rounded-full bg-surface-white shadow-sm transition-transform"
         style={{
           width: 16,
           height: 16,
