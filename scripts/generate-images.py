@@ -24,7 +24,11 @@ import mimetypes
 import os
 import re
 import sys
+import time
 from pathlib import Path
+
+MAX_RETRIES = 5
+INITIAL_BACKOFF_SECONDS = 2
 
 # ---------------------------------------------------------------------------
 # Config
@@ -169,35 +173,55 @@ def generate_image(prompt_data: dict, model: str) -> Path | None:
     print(f"  Generating with {model}...")
     print(f"  Aspect ratio: {prompt_data['aspect_ratio'] or 'default'}")
 
-    saved_path = None
-    for chunk in client.models.generate_content_stream(
-        model=model,
-        contents=contents,
-        config=config,
-    ):
-        if chunk.parts is None:
-            continue
+    for attempt in range(MAX_RETRIES):
+        try:
+            saved_path = None
+            for chunk in client.models.generate_content_stream(
+                model=model,
+                contents=contents,
+                config=config,
+            ):
+                if chunk.parts is None:
+                    continue
 
-        part = chunk.parts[0]
-        if part.inline_data and part.inline_data.data:
-            # Determine file extension from MIME type
-            ext = mimetypes.guess_extension(part.inline_data.mime_type) or ".jpeg"
-            # Normalise .jpe to .jpeg
-            if ext in (".jpe", ".jpg"):
-                ext = ".jpeg"
+                part = chunk.parts[0]
+                if part.inline_data and part.inline_data.data:
+                    ext = mimetypes.guess_extension(part.inline_data.mime_type) or ".jpeg"
+                    if ext in (".jpe", ".jpg"):
+                        ext = ".jpeg"
 
-            filename = f"{prompt_data['base_name']}{ext}"
-            filepath = OUTPUT_DIR / filename
-            filepath.write_bytes(part.inline_data.data)
+                    filename = f"{prompt_data['base_name']}{ext}"
+                    filepath = OUTPUT_DIR / filename
+                    filepath.write_bytes(part.inline_data.data)
 
-            size_kb = len(part.inline_data.data) / 1024
-            saved_path = filepath
-            print(f"  Saved: {filepath.relative_to(REPO_ROOT)} ({size_kb:.0f}KB)")
-        elif hasattr(part, "text") and part.text:
-            # The model sometimes returns text alongside the image
-            print(f"  Model note: {part.text[:200]}")
+                    size_kb = len(part.inline_data.data) / 1024
+                    saved_path = filepath
+                    print(f"  Saved: {filepath.relative_to(REPO_ROOT)} ({size_kb:.0f}KB)")
+                elif hasattr(part, "text") and part.text:
+                    print(f"  Model note: {part.text[:200]}")
 
-    return saved_path
+            return saved_path
+
+        except Exception as e:
+            error_str = str(e).lower()
+            is_rate_limit = "429" in error_str or "rate" in error_str or "quota" in error_str or "resource_exhausted" in error_str
+            is_server_error = "500" in error_str or "503" in error_str or "unavailable" in error_str
+
+            if (is_rate_limit or is_server_error) and attempt < MAX_RETRIES - 1:
+                wait = INITIAL_BACKOFF_SECONDS * (2 ** attempt)
+                print(f"  Rate limited / server error. Retrying in {wait}s (attempt {attempt + 1}/{MAX_RETRIES})...")
+                time.sleep(wait)
+            else:
+                print(f"  Error: {e}")
+                if attempt < MAX_RETRIES - 1:
+                    wait = INITIAL_BACKOFF_SECONDS * (2 ** attempt)
+                    print(f"  Retrying in {wait}s (attempt {attempt + 1}/{MAX_RETRIES})...")
+                    time.sleep(wait)
+                else:
+                    print(f"  Failed after {MAX_RETRIES} attempts.")
+                    return None
+
+    return None
 
 
 # ---------------------------------------------------------------------------
