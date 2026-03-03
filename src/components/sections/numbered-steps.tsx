@@ -15,7 +15,7 @@ export interface NumberedStepsProps {
 export function NumberedSteps({ eyebrow, heading, items }: NumberedStepsProps) {
   return (
     <Section>
-      <div className="max-w-3xl mb-16 md:mb-20">
+      <div className="max-w-3xl mb-12 md:mb-16">
         {eyebrow && (
           <Reveal>
             <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
@@ -25,7 +25,7 @@ export function NumberedSteps({ eyebrow, heading, items }: NumberedStepsProps) {
         )}
         {heading && (
           <Reveal>
-            <h2 className="font-heading text-headline leading-[1.1] tracking-heading text-dark">
+            <h2 className="font-heading text-section leading-[1.2] tracking-heading text-dark">
               {heading}
             </h2>
           </Reveal>
@@ -43,7 +43,7 @@ export function NumberedSteps({ eyebrow, heading, items }: NumberedStepsProps) {
                 index !== 0 ? 'md:border-l md:border-border md:pl-8 lg:pl-12' : ''
               }`}
             >
-              <span className="font-heading text-section tracking-heading text-accent-soft leading-none mb-6">
+              <span className="font-heading text-title tracking-heading text-accent-soft leading-none mb-4">
                 {String(index + 1).padStart(2, '0')}
               </span>
               <h3 className="font-heading text-label tracking-heading text-dark mb-3">

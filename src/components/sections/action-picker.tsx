@@ -56,7 +56,7 @@ export function ActionPicker({ heading, subtitle, items }: ActionPickerProps) {
               href={item.href}
               className="group flex flex-col h-full p-10 md:p-14 hover:bg-surface transition-colors duration-normal text-center"
             >
-              <h3 className="font-heading text-title leading-tight mb-6 text-dark group-hover:text-accent transition-colors duration-normal">
+              <h3 className="font-heading text-section leading-[1.2] tracking-heading mb-6 text-dark group-hover:text-accent transition-colors duration-normal">
                 {item.heading}
               </h3>
               <p className="text-body-sm text-copy-mid leading-relaxed mb-10">
