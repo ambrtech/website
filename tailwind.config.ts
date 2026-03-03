@@ -77,6 +77,7 @@ export const brand = {
   },
   shadow: {
     card: '0 40px 120px rgba(28, 28, 26, 0.07), 0 1px 3px rgba(28, 28, 26, 0.04)',
+    dropdown: '0 20px 60px rgba(28, 28, 26, 0.06)',
   },
   animation: {
     durationFast: '150ms',
