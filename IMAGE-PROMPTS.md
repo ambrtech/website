@@ -1,8 +1,53 @@
 # Image Generation Prompts
 
-All images go in `/public/images/photography/`. Generate at high resolution (at least 2400px on the long edge).
+All images go in `/public/images/photography/`. Generate at high resolution (at least 2400px on the long edge). Filenames use kebab-case describing scene and page context (e.g. `hero-quiet-reflection.jpeg`, `manager-one-to-one.jpeg`).
 
-**Style notes for all prompts:** Every image should feel like it was taken by someone who happened to be in the room, not a photographer directing a scene. Key ingredients: shoot through foreground elements (plants, glass, door frames), allow soft/slightly missed focus, include environmental clutter at frame edges (furniture, lamp arms, bag straps), and let the colour balance be imperfect (warm cast from mixed lighting, uncorrected white balance).
+---
+
+## Prompt Writing Guide
+
+Use this guide when writing new image prompts for the Ambr AI site. The goal is photography that feels human, analog, and imperfect — the opposite of AI-generated stock imagery.
+
+### The core principle
+
+Every image should feel like it was taken by someone who happened to be in the room with a film camera, not a photographer directing a scene. The viewer should think "who took this?" not "this was made for a website."
+
+### What to include in every prompt
+
+**1. Foreground obstruction.** Shoot *through* something — plant leaves, a glass partition, a door frame, a water glass on a desk, someone's shoulder. This creates depth and the feeling that the camera is an observer, not the subject's focus. The obstruction should be out of focus and partially block the frame.
+
+**2. Slightly missed focus.** The focus should land near but not perfectly on the subject's eyes. On the tip of the nose instead of the iris. On the gesturing hand instead of the face. On the glass surface instead of the people behind it. This is how real film photography works when shooting wide open — and it reads as authenticity, not error.
+
+**3. Environmental clutter at frame edges.** Real rooms have stuff. A desk lamp arm intruding from the right. A chair back at the bottom edge. A bag strap. A coat draped over something. A phone face-down on a table. These details should feel unintentional — the photographer didn't tidy the scene.
+
+**4. Uncorrected colour balance.** Specify mixed lighting and say the white balance is uncorrected. Window light pushes warm amber. Overhead fluorescents add a cool undertone. Skin tones should be golden, not neutral. Shadows should be slightly cool. Highlights should bloom warm. This is what film actually does under real office lighting.
+
+**5. Film stock and lens.** Always specify a real film stock (Fuji Pro 400H, Kodak Portra 160/400, Kodak Gold 200) and a real lens (35mm, 50mm, 85mm, 105mm) at a wide aperture (f/1.8–f/4). Mention visible film grain, matte contrast, low contrast. Vary the film stock between prompts for natural variation.
+
+**6. Accidental composition.** The framing should feel slightly off — a degree or two of tilt, subjects not perfectly centred, someone cut at the frame edge. Describe it as "the photographer glanced through the door" or "took one frame before she looked up" or "the photographer is an observer, not a director."
+
+### What NOT to do
+
+- **Never describe a perfectly composed scene.** No centred subjects, no symmetrical framing, no "the subject is positioned in the left third of the frame" (unless something is blocking the right third).
+- **Never ask for clean white balance.** No "natural colours" or "accurate skin tones." Always uncorrected, always warm-shifted.
+- **Never describe a tidy environment.** No empty desks, no clean backgrounds, no "minimal setting." Real workplaces have stuff.
+- **Never use the word "professional" to describe the photography style.** The photography is intentionally un-professional. It's documentary, candid, accidental.
+- **Never ask for sharp focus across the frame.** Always wide aperture, always some softness, always a specific focus point that isn't the obvious one.
+- **Never ask for dramatic film artefacts.** No heavy light leaks, no extreme vignetting, no cross-processing. The film feel should be subtle — grain, colour cast, halation on highlights — not Instagram-filter obvious.
+- **Never include avatars, screens, UI, or product imagery.** The AI product should be invisible in all photography. People are the subject.
+- **Never use dark, neon, high-contrast, or sci-fi aesthetics.** The palette is always warm: cream, amber, golden, honeyed wood, muted earth tones.
+
+### Prompt structure template
+
+```
+A candid lomography-style photograph [shot through / from behind / over the shoulder of] [foreground element]. [Scene description — who, where, what they're doing]. [Environmental detail — objects, clutter, lived-in quality]. [Lighting — window light, mixed sources, uncorrected]. Shot on [film stock] with a [focal length] lens at [wide aperture]. [Colour description — uncorrected white balance, warm cast, specific tone shifts]. Visible film grain. [Contrast — low, matte]. [Composition description — accidental framing, slight tilt, intrusions at edges]. [Mood — one sentence]. [Aspect ratio]. No text, no logos[, no screens].
+```
+
+### Aspect ratios by use
+
+- **16:9** — hero images, editorial landscape breaks
+- **3:2** — statement/split content images, general use
+- **4:5** — portrait orientation, testimonial headshots
 
 ---
 
