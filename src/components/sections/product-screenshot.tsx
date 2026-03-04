@@ -182,6 +182,115 @@ export function MockCustomizationFlow() {
   )
 }
 
+/** A mock journey grid showing training categories — 2x2 card layout. */
+export function MockJourneyGrid() {
+  const journeys = [
+    {
+      title: 'Performance Feedback',
+      description: 'Deliver constructive feedback that drives improvement.',
+      items: ['Address underperformance', 'Set clear expectations', 'Recognize strong work'],
+      progress: 7,
+    },
+    {
+      title: 'Conflict Resolution',
+      description: 'Handle team tensions with confidence.',
+      items: ['Mediate disagreements', 'Clarify responsibilities', 'Manage difficult dynamics'],
+      progress: 2,
+    },
+    {
+      title: 'Difficult Conversations',
+      description: 'Navigate sensitive situations with professionalism.',
+      items: ['Deliver hard news', 'Manage emotional responses', 'Maintain trust'],
+      progress: 0,
+    },
+    {
+      title: 'Inclusive Leadership',
+      description: 'Build a culture where every voice is heard.',
+      items: ['Challenge assumptions', 'Create psychological safety', 'Adapt your approach'],
+      progress: 1,
+    },
+  ]
+
+  return (
+    <div className="grid grid-cols-2 gap-4">
+      {journeys.map((journey) => (
+        <div
+          key={journey.title}
+          className="rounded-brand bg-surface border border-border p-5 space-y-3"
+        >
+          <p className="text-body-sm font-body-medium text-dark leading-snug">
+            {journey.title}
+          </p>
+          <p className="text-caption text-copy-light leading-relaxed">
+            {journey.description}
+          </p>
+          <ul className="space-y-1">
+            {journey.items.map((item) => (
+              <li
+                key={item}
+                className="text-caption text-copy-mid pl-3 relative before:content-[''] before:absolute before:left-0 before:top-[0.5em] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent-soft/50"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p className="text-caption text-copy-faint pt-1.5 border-t border-border">
+            {journey.progress} {journey.progress === 1 ? 'scenario' : 'scenarios'} completed
+          </p>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+/** A mock context selector showing simulation configuration options. */
+export function MockContextSelector() {
+  const options = [
+    { label: 'First meeting', detail: 'No prior history', selected: false },
+    { label: 'Ongoing relationship', detail: 'Regular contact', selected: true },
+    { label: 'Escalated situation', detail: 'Previous attempts failed', selected: false },
+    { label: 'Custom context', detail: 'Define your own', selected: false },
+  ]
+
+  return (
+    <div className="space-y-5">
+      <p className="text-body-sm font-body-medium text-dark">
+        Relationship Context
+      </p>
+      <div className="space-y-2.5">
+        {options.map((option) => (
+          <div
+            key={option.label}
+            className={`flex items-center gap-4 px-5 py-4 rounded-brand border ${
+              option.selected
+                ? 'border-accent-soft bg-accent-whisper'
+                : 'border-border bg-surface'
+            }`}
+          >
+            <div
+              className={`w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
+                option.selected ? 'border-accent' : 'border-copy-faint'
+              }`}
+            >
+              {option.selected && (
+                <div className="w-2.5 h-2.5 rounded-full bg-accent" />
+              )}
+            </div>
+            <div className="min-w-0">
+              <span className="text-body-sm font-body-medium text-dark">
+                {option.label}
+              </span>
+              <span className="text-caption text-copy-light ml-3">
+                {option.detail}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 /** A mock admin dashboard summary. */
 export function MockDashboard() {
   return (

@@ -9,10 +9,12 @@ import { ActionPicker } from '@/components/sections/action-picker'
 import { NumberedSteps } from '@/components/sections/numbered-steps'
 import { DetailCards } from '@/components/sections/detail-cards'
 import { PullQuote } from '@/components/sections/pull-quote'
-import { ProductScreenshot, MockFeedbackPanel, MockScenarioCard, MockDashboard } from '@/components/sections/product-screenshot'
+import { ProductScreenshot, MockFeedbackPanel, MockScenarioCard, MockDashboard, MockJourneyGrid, MockContextSelector } from '@/components/sections/product-screenshot'
 import { BentoShowcase } from '@/components/sections/bento-showcase'
 import { SplitContent } from '@/components/sections/split-content'
 import { VisualFeatureCards } from '@/components/sections/visual-feature-cards'
+import { ShowcaseSplit } from '@/components/sections/showcase-split'
+import { StatStack } from '@/components/sections/stat-stack'
 
 export const metadata = createMetadata({
   title: 'Component Preview',
@@ -213,6 +215,124 @@ export default function PreviewPage() {
       {/* ── 13. Visual Feature Cards ── */}
       <SectionLabel name="VisualFeatureCards" />
       <VisualFeatureCards />
+
+      {/* ── 14. Showcase Split ── */}
+      {/* ── 14a. ShowcaseSplit — image left, dark tint, top-left crop ── */}
+      <SectionLabel name="ShowcaseSplit — left / dark / top-left" />
+      <ShowcaseSplit
+        heading={
+          <>
+            Lorem ipsum dolor sit amet,{' '}
+            <em className="text-accent">consectetur</em> adipiscing elit
+          </>
+        }
+        subtitle="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+        tint="dark"
+        cropFocus="top-left"
+        visualContent={<MockJourneyGrid />}
+        features={[
+          {
+            heading: 'Structured feedback',
+            description:
+              'Receive detailed, actionable coaching after every practice session. Tone, pacing, word choice, and approach — broken down so you know exactly what to work on.',
+          },
+          {
+            heading: 'Adaptive scenarios',
+            description:
+              'Simulations that respond to your choices in real time. No two conversations play out the same way, so every session builds genuine capability.',
+          },
+          {
+            heading: 'Custom to your context',
+            description:
+              'Your terminology, your stakeholders, your version of a difficult conversation. Built around the way your organization actually works.',
+          },
+        ]}
+      />
+
+      {/* ── 14b. ShowcaseSplit — image right, warm tint, bottom-right crop ── */}
+      <SectionLabel name="ShowcaseSplit — right / warm / bottom-right" />
+      <ShowcaseSplit
+        layout="right"
+        tint="warm"
+        cropFocus="bottom-right"
+        visualContent={<MockContextSelector />}
+        heading={
+          <>
+            Ut enim ad minim veniam,{' '}
+            <em className="text-accent">quis nostrud</em> exercitation
+          </>
+        }
+        subtitle="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        features={[
+          {
+            heading: 'Evidence-based insights',
+            description:
+              'Aggregated data across simulations surfaces patterns in how teams communicate, negotiate, and respond to pressure.',
+          },
+          {
+            heading: 'Progressive learning paths',
+            description:
+              'Sequence simulations into structured development tracks. Each step unlocked by demonstrated capability, not time served.',
+          },
+          {
+            heading: 'Global deployment',
+            description:
+              'Roll out programs across functions, geographies, and 30+ languages from a single dashboard.',
+          },
+        ]}
+      />
+
+      {/* ── 14c. ShowcaseSplit — image left, soft tint, center crop ── */}
+      <SectionLabel name="ShowcaseSplit — left / soft / center" />
+      <ShowcaseSplit
+        tint="soft"
+        cropFocus="center"
+        visualContent={<MockFeedbackPanel />}
+        heading={
+          <>
+            Excepteur sint occaecat{' '}
+            <em className="text-accent">cupidatat</em> non proident
+          </>
+        }
+        subtitle="Sunt in culpa qui officia deserunt mollit anim id est laborum."
+        features={[
+          {
+            heading: 'Capability mapping',
+            description:
+              'Aggregate individual simulation results into team-level capability views. Identify where communication breaks down.',
+          },
+          {
+            heading: 'Certifications with substance',
+            description:
+              'Award certifications based on observed performance, not quiz scores. Reflects what people can actually do.',
+          },
+          {
+            heading: 'Engagement visibility',
+            description:
+              'See who is practicing, how often, and how they are progressing. Spot disengagement early.',
+          },
+        ]}
+      />
+
+      {/* ── 15. Stat Stack ── */}
+      <SectionLabel name="StatStack" />
+      <StatStack
+        heading="Lorem ipsum dolor sit amet"
+        items={[
+          {
+            value: '93%',
+            label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore',
+          },
+          {
+            value: '78%',
+            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
+          },
+          {
+            value: '4.8x',
+            label: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
+          },
+        ]}
+      />
     </>
   )
 }

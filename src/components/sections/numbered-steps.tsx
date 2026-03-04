@@ -41,7 +41,7 @@ export function NumberedSteps({ eyebrow, heading, items }: NumberedStepsProps) {
               key={item.title}
               className={`flex flex-col ${
                 index !== 0 ? 'md:border-l md:border-border md:pl-8 lg:pl-12' : ''
-              }`}
+              } ${index !== items.length - 1 ? 'md:pr-8 lg:pr-12' : ''}`}
             >
               <span className="font-heading text-title tracking-heading text-accent-soft leading-none mb-4">
                 {String(index + 1).padStart(2, '0')}
