@@ -3,6 +3,7 @@ import { brand } from "@/lib/tokens";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Grain } from "@/components/grain";
+import { SVGFilters } from "@/components/svg-filters";
 import { Analytics, GTMNoScript, LinkedInNoScript, ClickCeaseNoScript } from "@/components/analytics";
 import "./globals.css";
 
@@ -70,6 +71,7 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body className="font-body bg-surface text-copy antialiased">
+        <SVGFilters />
         <Grain />
         <GTMNoScript />
         <LinkedInNoScript />

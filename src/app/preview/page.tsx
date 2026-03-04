@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { createMetadata } from '@/lib/metadata'
 import { ComparisonLayout } from '@/components/sections/comparison-layout'
 import { UseCaseCards } from '@/components/sections/use-case-cards'
@@ -15,12 +16,44 @@ import { SplitContent } from '@/components/sections/split-content'
 import { VisualFeatureCards } from '@/components/sections/visual-feature-cards'
 import { ShowcaseSplit } from '@/components/sections/showcase-split'
 import { StatStack } from '@/components/sections/stat-stack'
+import { AccordionShowcase } from '@/components/sections/accordion-showcase'
 
 export const metadata = createMetadata({
   title: 'Component Preview',
   description: 'All section components in one view.',
   path: '/preview',
 })
+
+const FILTER_PRESETS = [
+  { name: 'None', className: '', crop: 'origin-center' },
+  { name: 'Film Grain', className: 'filter-film-grain', crop: 'origin-top-left' },
+  { name: 'Muted Warm', className: 'filter-muted-warm', crop: 'origin-bottom-right' },
+  { name: 'Muted Cool', className: 'filter-muted-cool', crop: 'origin-top-right' },
+  { name: 'Editorial', className: 'filter-editorial', crop: 'origin-bottom-left' },
+  { name: 'Faded', className: 'filter-faded', crop: 'origin-top-left' },
+  { name: 'Duotone', className: 'filter-duotone', crop: 'origin-top-right' },
+] as const
+
+const PHOTO_FILTERS = [
+  {
+    label: 'editorial-hands-detail.png',
+    src: '/images/photography/editorial-hands-detail.png',
+    filters: [
+      { name: 'None', className: '' },
+      { name: 'Duotone', className: 'filter-duotone' },
+      { name: 'Faded', className: 'filter-faded' },
+    ],
+  },
+  {
+    label: 'practice-phone-booth.png',
+    src: '/images/photography/practice-phone-booth.png',
+    filters: [
+      { name: 'None', className: '' },
+      { name: 'Duotone', className: 'filter-duotone' },
+      { name: 'Faded', className: 'filter-faded' },
+    ],
+  },
+] as const
 
 export default function PreviewPage() {
   return (
@@ -30,6 +63,57 @@ export default function PreviewPage() {
         <div className="mx-auto max-w-site">
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-2">Component Preview</p>
           <h1 className="font-heading text-headline tracking-heading">All sections</h1>
+        </div>
+      </div>
+
+      {/* ── SVG Filter Comparison — texture ── */}
+      <SectionLabel name="SVG Filter Presets — Texture" />
+      <div className="px-container-mobile md:px-container py-8">
+        <div className="mx-auto max-w-site">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {FILTER_PRESETS.map((preset) => (
+              <div key={preset.name}>
+                <div className="relative w-full aspect-[4/3] rounded-brand-lg overflow-hidden mb-3">
+                  <Image
+                    src="/images/textures/feature-texture.jpg"
+                    alt=""
+                    fill
+                    className={`object-cover scale-[1.5] ${preset.crop} ${preset.className}`}
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                </div>
+                <p className="text-caption text-copy-mid font-body">{preset.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── SVG Filter Comparison — photography ── */}
+      <SectionLabel name="SVG Filter Presets — Photography" />
+      <div className="px-container-mobile md:px-container py-8">
+        <div className="mx-auto max-w-site">
+          {PHOTO_FILTERS.map((group) => (
+            <div key={group.src} className="mb-12 last:mb-0">
+              <p className="text-caption text-copy-light font-body mb-4">{group.label}</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {group.filters.map((f) => (
+                  <div key={f.name}>
+                    <div className="relative w-full aspect-[3/4] rounded-brand-lg overflow-hidden mb-3">
+                      <Image
+                        src={group.src}
+                        alt=""
+                        fill
+                        className={`object-cover ${f.className}`}
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                    </div>
+                    <p className="text-caption text-copy-mid font-body">{f.name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -217,8 +301,8 @@ export default function PreviewPage() {
       <VisualFeatureCards />
 
       {/* ── 14. Showcase Split ── */}
-      {/* ── 14a. ShowcaseSplit — image left, dark tint, top-left crop ── */}
-      <SectionLabel name="ShowcaseSplit — left / dark / top-left" />
+      {/* ── 14a. ShowcaseSplit — editorial filter, top-left crop ── */}
+      <SectionLabel name="ShowcaseSplit — left / editorial / top-left" />
       <ShowcaseSplit
         heading={
           <>
@@ -227,7 +311,7 @@ export default function PreviewPage() {
           </>
         }
         subtitle="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
-        tint="dark"
+        filter="editorial"
         cropFocus="top-left"
         visualContent={<MockJourneyGrid />}
         features={[
@@ -249,11 +333,11 @@ export default function PreviewPage() {
         ]}
       />
 
-      {/* ── 14b. ShowcaseSplit — image right, warm tint, bottom-right crop ── */}
-      <SectionLabel name="ShowcaseSplit — right / warm / bottom-right" />
+      {/* ── 14b. ShowcaseSplit — muted-warm filter, bottom-right crop ── */}
+      <SectionLabel name="ShowcaseSplit — right / muted-warm / bottom-right" />
       <ShowcaseSplit
         layout="right"
-        tint="warm"
+        filter="muted-warm"
         cropFocus="bottom-right"
         visualContent={<MockContextSelector />}
         heading={
@@ -282,10 +366,10 @@ export default function PreviewPage() {
         ]}
       />
 
-      {/* ── 14c. ShowcaseSplit — image left, soft tint, center crop ── */}
-      <SectionLabel name="ShowcaseSplit — left / soft / center" />
+      {/* ── 14c. ShowcaseSplit — faded filter, center crop ── */}
+      <SectionLabel name="ShowcaseSplit — left / faded / center" />
       <ShowcaseSplit
-        tint="soft"
+        filter="faded"
         cropFocus="center"
         visualContent={<MockFeedbackPanel />}
         heading={
@@ -330,6 +414,94 @@ export default function PreviewPage() {
           {
             value: '4.8x',
             label: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
+          },
+        ]}
+      />
+
+      {/* ── 16a. Accordion Showcase — dark ── */}
+      <SectionLabel name="AccordionShowcase — dark" />
+      <AccordionShowcase
+        variant="dark"
+        heading="Lorem ipsum dolor sit amet consectetur"
+        items={[
+          {
+            heading: 'Performance conversations',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            cropFocus: 'top-left',
+            filter: 'muted-cool',
+            visualContent: <MockFeedbackPanel />,
+          },
+          {
+            heading: 'Conflict resolution',
+            description:
+              'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            cropFocus: 'top-right',
+            filter: 'muted-warm',
+            visualContent: <MockContextSelector />,
+          },
+          {
+            heading: 'Negotiation practice',
+            description:
+              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            cropFocus: 'bottom-left',
+            filter: 'faded',
+            visualContent: <MockScenarioCard />,
+          },
+          {
+            heading: 'Onboarding conversations',
+            description:
+              'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            cropFocus: 'center',
+            filter: 'editorial',
+          },
+          {
+            heading: 'Customer escalations',
+            description:
+              'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
+            cropFocus: 'bottom-right',
+            filter: 'muted-warm',
+            visualContent: <MockJourneyGrid />,
+          },
+        ]}
+      />
+
+      {/* ── 16b. Accordion Showcase — light ── */}
+      <SectionLabel name="AccordionShowcase — light" />
+      <AccordionShowcase
+        variant="light"
+        heading="Lorem ipsum dolor sit amet consectetur"
+        items={[
+          {
+            heading: 'Capability mapping',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            cropFocus: 'top-right',
+            filter: 'faded',
+            visualContent: <MockDashboard />,
+          },
+          {
+            heading: 'Structured learning paths',
+            description:
+              'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            cropFocus: 'center',
+            filter: 'muted-warm',
+            visualContent: <MockJourneyGrid />,
+          },
+          {
+            heading: 'Engagement analytics',
+            description:
+              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            cropFocus: 'bottom-left',
+            filter: 'editorial',
+            visualContent: <MockFeedbackPanel />,
+          },
+          {
+            heading: 'Certification tracking',
+            description:
+              'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            cropFocus: 'top-left',
+            filter: 'muted-cool',
           },
         ]}
       />

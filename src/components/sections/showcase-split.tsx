@@ -8,12 +8,14 @@ interface ShowcaseSplitFeature {
 }
 
 type CropFocus = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center'
-type Tint = 'warm' | 'soft' | 'dark'
+type ImageFilter = 'film-grain' | 'muted-warm' | 'muted-cool' | 'editorial' | 'faded'
 
-const tintColors: Record<Tint, string> = {
-  warm: 'rgba(212, 114, 52, 0.04)',
-  soft: 'rgba(234, 185, 154, 0.05)',
-  dark: 'rgba(28, 28, 26, 0.04)',
+const filterClass: Record<ImageFilter, string> = {
+  'film-grain': 'filter-film-grain',
+  'muted-warm': 'filter-muted-warm',
+  'muted-cool': 'filter-muted-cool',
+  editorial: 'filter-editorial',
+  faded: 'filter-faded',
 }
 
 const cropOrigin: Record<CropFocus, string> = {
@@ -30,7 +32,7 @@ interface ShowcaseSplitProps {
   features: ShowcaseSplitFeature[]
   layout?: 'left' | 'right'
   cropFocus?: CropFocus
-  tint?: Tint
+  filter?: ImageFilter
   textureImage?: string
   visualContent?: React.ReactNode
 }
@@ -41,7 +43,7 @@ export function ShowcaseSplit({
   features,
   layout = 'left',
   cropFocus = 'center',
-  tint = 'dark',
+  filter = 'editorial',
   textureImage = '/images/textures/feature-texture.jpg',
   visualContent,
 }: ShowcaseSplitProps) {
@@ -51,18 +53,12 @@ export function ShowcaseSplit({
         src={textureImage}
         alt=""
         fill
-        className={`object-cover scale-[1.5] saturate-[0.3] ${cropOrigin[cropFocus]}`}
+        className={`object-cover scale-[1.5] ${filterClass[filter]} ${cropOrigin[cropFocus]}`}
         sizes="(max-width: 768px) 100vw, 55vw"
       />
-      <div
-        className="absolute inset-0"
-        style={{ backgroundColor: tintColors[tint] }}
-      />
-      {/* Film grain */}
-      <div className="absolute inset-0 bg-noise opacity-[0.12] mix-blend-overlay" />
       {/* Vignette */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         style={{
           background:
             'radial-gradient(ellipse at center, transparent 35%, rgba(28, 28, 26, 0.45) 100%)',
