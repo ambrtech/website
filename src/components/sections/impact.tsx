@@ -7,7 +7,7 @@ export function Impact() {
         <Reveal>
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-3 eyebrow-hairline">
                 Impact
               </p>
               <p className="text-body text-copy-mid leading-[1.7]">

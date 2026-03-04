@@ -2,22 +2,22 @@ import { Section } from './section'
 import { Reveal } from '@/components/reveal'
 
 const practiceScenarios = [
-  'Performance Reviews',
-  'Objection Handling',
-  'Sales Discovery',
-  'Salary Negotiation',
-  'De-escalation',
-  'Client Onboarding',
-  'Compliance Training',
+  'Lorem ipsum dolor',
+  'Sit amet consectetur',
+  'Adipiscing elit sed',
+  'Eiusmod tempor',
+  'Incididunt ut labore',
+  'Et dolore magna',
+  'Aliqua minim veniam',
 ]
 
 const capabilities = [
-  { icon: '🇬🇧', label: 'English' },
-  { icon: '🇩🇪', label: 'German' },
-  { icon: 'sf', label: 'Salesforce' },
-  { icon: 'W', label: 'Workday' },
-  { icon: '🇫🇷', label: 'French' },
-  { icon: '🇯🇵', label: 'Japanese' },
+  { icon: 'LA', label: 'Lorem' },
+  { icon: 'IP', label: 'Ipsum' },
+  { icon: 'DO', label: 'Dolor' },
+  { icon: 'SI', label: 'Sitamet' },
+  { icon: 'AM', label: 'Amet' },
+  { icon: 'EL', label: 'Elit' },
 ]
 
 export function VisualFeatureCards() {
@@ -26,7 +26,7 @@ export function VisualFeatureCards() {
       <div className="mb-16 md:mb-20">
         <Reveal>
           <h2 className="max-w-3xl font-heading text-headline leading-[1.1] tracking-heading text-dark">
-            Why the top performers choose Ambr
+            Lorem ipsum dolor sit amet
           </h2>
         </Reveal>
       </div>
@@ -39,7 +39,7 @@ export function VisualFeatureCards() {
 
             <div className="relative z-10 flex w-full select-none flex-col gap-3 text-center">
               {practiceScenarios.map((scenario) => {
-                const isPrimary = scenario === 'Salary Negotiation'
+                const isPrimary = scenario === 'Eiusmod tempor'
                 return (
                   <p
                     key={scenario}
@@ -58,9 +58,9 @@ export function VisualFeatureCards() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark opacity-80" />
           </div>
 
-          <h3 className="font-heading text-section leading-[1.2] tracking-heading text-dark mb-3">Move fast, stay sharp</h3>
+          <h3 className="font-heading text-section leading-[1.2] tracking-heading text-dark mb-3">Lorem ipsum dolor</h3>
           <p className="text-body text-copy-mid leading-relaxed">
-            Streamline your entire process, from researching and drafting to reviewing. Your teams will stay focused on delivering world-class interactions with confidence.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </Reveal>
 
@@ -71,8 +71,8 @@ export function VisualFeatureCards() {
 
             <div className="relative z-10 flex w-full max-w-xs aspect-square flex-col rounded-brand bg-surface-white p-6 shadow-card">
               <div className="absolute left-8 top-8 z-20 flex items-center gap-2 rounded-brand-sm bg-copy-mid px-3 py-1.5 text-caption font-body-medium text-surface-white shadow-sm">
-                <div className="flex h-5 w-5 items-center justify-center rounded-full bg-surface-alt text-detail font-body-medium text-dark">M</div>
-                Manager
+                <div className="flex h-5 w-5 items-center justify-center rounded-full bg-surface-alt text-detail font-body-medium text-dark">L</div>
+                Magister
               </div>
 
               <svg className="pointer-events-none absolute inset-0 h-full w-full text-border" viewBox="0 0 240 240">
@@ -82,19 +82,19 @@ export function VisualFeatureCards() {
               </svg>
 
               <div className="absolute bottom-14 right-6 z-20 flex items-center gap-2 rounded-brand-sm border border-border bg-surface-alt px-3 py-1.5 text-caption font-body-medium text-dark shadow-sm">
-                <div className="flex h-5 w-5 items-center justify-center rounded-full bg-accent text-detail font-body-medium text-surface-white">AI</div>
-                Employee
+                <div className="flex h-5 w-5 items-center justify-center rounded-full bg-accent text-detail font-body-medium text-surface-white">LX</div>
+                Discipulus
               </div>
 
               <p className="absolute bottom-4 left-6 text-detail font-body-medium uppercase tracking-eyebrow text-copy-light">
-                Feedback shared by hr@company.com
+                Annotatio missa per lorem@ipsum.com
               </p>
             </div>
           </div>
 
-          <h3 className="font-heading text-section leading-[1.2] tracking-heading text-dark mb-3">Collaborate with confidence</h3>
+          <h3 className="font-heading text-section leading-[1.2] tracking-heading text-dark mb-3">Consectetur adipiscing</h3>
           <p className="text-body text-copy-mid leading-relaxed">
-            One platform for firms and corporations to collaborate securely across every simulation, workflow, and email. Connect internally and externally without sacrificing control.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </Reveal>
 
@@ -121,9 +121,9 @@ export function VisualFeatureCards() {
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-dark to-transparent" />
           </div>
 
-          <h3 className="font-heading text-section leading-[1.2] tracking-heading text-dark mb-3">Put your knowledge to work</h3>
+          <h3 className="font-heading text-section leading-[1.2] tracking-heading text-dark mb-3">Sed do eiusmod</h3>
           <p className="text-body text-copy-mid leading-relaxed">
-            Your institutional knowledge, from onboarding documents to trusted third-party LMS sources, unified in one environment built for precision.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
         </Reveal>
       </div>

@@ -21,7 +21,7 @@ export function BentoShowcase({ eyebrow, heading, subtitle }: BentoShowcaseProps
         <div className="max-w-3xl mb-16 md:mb-20">
           <Reveal>
             {eyebrow && (
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
                 {eyebrow}
               </p>
             )}

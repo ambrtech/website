@@ -35,7 +35,7 @@ export function UseCaseCards({ eyebrow, heading, items }: UseCaseCardsProps) {
       <div className="max-w-3xl mb-16 md:mb-24">
         {eyebrow && (
           <Reveal>
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5 eyebrow-hairline">
               {eyebrow}
             </p>
           </Reveal>

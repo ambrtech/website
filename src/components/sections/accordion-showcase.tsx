@@ -115,7 +115,7 @@ export function AccordionShowcase({
                 }`}
               />
               {activeItem?.visualContent && (
-                <div className="absolute top-[20%] left-4 right-[-15%] bottom-[-10%] transition-opacity duration-normal">
+                <div className="absolute top-[20%] left-4 right-4 bottom-4 transition-opacity duration-normal">
                   <div className="bg-surface-white rounded-brand border border-border shadow-card p-5 md:p-6 h-full overflow-hidden">
                     {activeItem.visualContent}
                   </div>

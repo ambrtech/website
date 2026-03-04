@@ -37,17 +37,17 @@ export function ScenarioCards({ heading, subtitle, items }: ScenarioCardsProps) 
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         {items.map((item) => (
-          <Reveal key={item.scenarioTitle} className="h-full">
-            <div className="group flex flex-col h-full bg-surface-white border border-border rounded-brand p-8 transition-all duration-normal hover:shadow-card hover:border-accent-soft">
-              <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent mb-6">
+          <Reveal key={item.scenarioTitle} className="h-full min-w-0">
+            <div className="group flex min-w-0 flex-col h-full bg-surface-white border border-border rounded-brand p-8 transition-all duration-normal hover:shadow-card hover:border-accent-soft">
+              <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent mb-6 [overflow-wrap:anywhere]">
                 {item.category}
               </p>
 
-              <h3 className="font-heading text-section leading-[1.2] tracking-heading mb-4 text-dark">
+              <h3 className="font-heading text-section leading-[1.2] tracking-heading mb-4 text-dark break-words [overflow-wrap:anywhere]">
                 {item.scenarioTitle}
               </h3>
 
-              <p className="text-body-sm text-copy-mid leading-relaxed mb-8">
+              <p className="text-body-sm text-copy-mid leading-relaxed mb-8 break-words [overflow-wrap:anywhere]">
                 {item.description}
               </p>
 

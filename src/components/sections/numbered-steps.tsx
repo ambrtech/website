@@ -18,7 +18,7 @@ export function NumberedSteps({ eyebrow, heading, items }: NumberedStepsProps) {
       <div className="max-w-3xl mb-12 md:mb-16">
         {eyebrow && (
           <Reveal>
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
               {eyebrow}
             </p>
           </Reveal>

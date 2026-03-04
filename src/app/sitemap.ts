@@ -1,9 +1,30 @@
 import type { MetadataRoute } from 'next'
+import { getAllPostSummaries, getAllTags } from '@/lib/blog'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ambr.ai'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
+
+  const posts = getAllPostSummaries()
+  const activeTags = getAllTags()
+
+  const blogEntries: MetadataRoute.Sitemap = [
+    { url: `${siteUrl}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    ...posts.map((post) => ({
+      url: `${siteUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.publishedAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+    ...activeTags.map((tag) => ({
+      url: `${siteUrl}/blog/tag/${tag}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.5,
+    })),
+  ]
+
   return [
     { url: siteUrl, lastModified: now, changeFrequency: 'weekly', priority: 1 },
     { url: `${siteUrl}/customisation`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
@@ -14,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/product/how-it-works`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${siteUrl}/product/admin-experience`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${siteUrl}/product/integrations`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${siteUrl}/product/languages`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${siteUrl}/industries/professional-services`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/industries/consulting-advisory`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/industries/accounting-audit-tax`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
@@ -25,8 +47,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/solutions/sales-negotiations`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/solutions/customer-service`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/solutions/other`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${siteUrl}/trust/security-certifications`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${siteUrl}/trust/data-management`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${siteUrl}/trust/ai-ethics`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${siteUrl}/security/compliance`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${siteUrl}/security/data-protection`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${siteUrl}/security/responsible-ai`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    ...blogEntries,
   ]
 }

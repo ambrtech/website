@@ -8,11 +8,10 @@ import { Impact } from '@/components/sections/impact'
 import { SplitContent } from '@/components/sections/split-content'
 import { ProductScreenshot, MockFeedbackPanel } from '@/components/sections/product-screenshot'
 import { BentoShowcase } from '@/components/sections/bento-showcase'
-import { Security } from '@/components/sections/security'
+import { SecurityBadges } from '@/components/sections/security-badges'
 import { WhyAmbr } from '@/components/sections/why-ambr'
 import { Testimonial } from '@/components/sections/testimonial'
 import { CTA } from '@/components/sections/cta'
-import { TexturePanel } from '@/components/texture-panel'
 
 export const metadata = createMetadata({
   title: 'Ambr AI',
@@ -54,11 +53,22 @@ export default function Home() {
           subtitle="Voice simulations, structured feedback, team analytics, and 30+ languages — all from a single dashboard."
         />
       </div>
-      <div data-section="security"><Security /></div>
+      <div data-section="security">
+        <SecurityBadges
+          variant="dark"
+          heading="Enterprise-grade security and controls."
+          description="Ambr AI meets the highest industry standards for security and compliance. Complete data isolation, role-based access controls, and full audit trails. Your conversation data is yours — always."
+          href="/security/compliance"
+          badges={[
+            { icon: '/icons/badge-iso.svg', label: 'ISO 27001', href: '/security/compliance' },
+            { icon: '/icons/badge-gdpr.svg', label: 'GDPR', href: '/security/compliance' },
+            { icon: '/icons/badge-eu-ai-act.png', label: 'EU AI Act', href: '/security/compliance', wide: true },
+          ]}
+        />
+      </div>
       <div data-section="why-ambr"><WhyAmbr /></div>
       <div data-section="testimonial"><Testimonial /></div>
       <div data-section="cta"><CTA /></div>
-      <TexturePanel />
     </>
   )
 }

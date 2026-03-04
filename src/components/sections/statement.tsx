@@ -12,8 +12,8 @@ export function Statement() {
         </Reveal>
         <Reveal slow>
           <Image
-            src="/images/photography/statement-team-conversation.png"
-            alt="Two colleagues in genuine conversation at a cafe table, one gesturing while explaining, the other listening over coffee"
+            src="/images/photography/practice-phone-booth.png"
+            alt="A woman mid-conversation in a glass phone booth, gesturing naturally as she speaks"
             width={800}
             height={533}
             className="w-full h-auto rounded-brand-lg"

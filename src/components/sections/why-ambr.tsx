@@ -26,7 +26,7 @@ export function WhyAmbr() {
         <Reveal>
           <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-24 items-start">
             <div>
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
                 Why Ambr AI
               </p>
               <h2 className="font-heading text-section leading-[1.2] tracking-heading">

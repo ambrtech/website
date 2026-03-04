@@ -142,6 +142,27 @@ src/
 - **No magic spacing numbers.** Use the Tailwind spacing scale or section component defaults.
 - **Every heading** on the site uses `font-heading` (Lora). No exceptions.
 - **Every body text** uses `font-body` (Outfit). No exceptions.
+- **Accent emphasis in headings:** Use `<em className="text-accent">` to mark the single word (occasionally two) that carries the emotional weight of a heading. Think of it as the word you'd lean on if reading the sentence aloud. It should feel hand-picked, not formulaic.
+  - **One per heading, max.** Two accent spans in the same heading kills the effect.
+  - **Not every heading needs one.** Selectivity is what makes it work. Reserve it for hero headings, section titles, and CTAs — not subheadings or labels.
+  - **Pick the landing word** — usually the human, emotional, or outcome-oriented word, not the technical or structural one.
+  - Examples:
+    ```tsx
+    // Good — "behaviour" is the outcome, the thing that actually matters
+    <>Feedback that actually changes <em className="text-accent">behaviour</em></>
+
+    // Good — "your" makes it personal, pulls the reader in
+    <>Built around <em className="text-accent">your</em> world</>
+
+    // Good — "matter" is the payoff word at the end of the thought
+    <>Conversations that <em className="text-accent">matter</em></>
+
+    // Bad — accenting the generic/structural word
+    <>Feedback that actually <em className="text-accent">changes</em> behaviour</>
+
+    // Bad — too many accented words
+    <><em className="text-accent">Feedback</em> that changes <em className="text-accent">behaviour</em></>
+    ```
 
 ### Styling
 - Tailwind CSS v4 with native `@theme` directive in `globals.css` (no `@config` — more reliable with Turbopack)

@@ -9,7 +9,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-site px-container-mobile md:px-container">
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
-            <p className="text-caption font-body-medium uppercase tracking-eyebrow text-copy-light mb-10 animate-[fadeIn_0.7s_ease_0.3s_both]">
+            <p className="text-caption font-body-medium uppercase tracking-eyebrow text-copy-light mb-10 animate-[fadeIn_0.7s_ease_0.3s_both] eyebrow-hairline">
               AI voice simulation for enterprise teams
             </p>
             <h1 className="font-heading text-display leading-[0.95] tracking-tight mb-12 animate-[fadeIn_0.8s_ease_0.45s_both]">

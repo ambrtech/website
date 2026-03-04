@@ -19,7 +19,7 @@ export function FeatureGrid({ eyebrow, heading, items }: FeatureGridProps) {
         {(eyebrow || heading) && (
           <div className="mb-12">
             {eyebrow && (
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
                 {eyebrow}
               </p>
             )}

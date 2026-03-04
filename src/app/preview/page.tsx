@@ -17,6 +17,18 @@ import { VisualFeatureCards } from '@/components/sections/visual-feature-cards'
 import { ShowcaseSplit } from '@/components/sections/showcase-split'
 import { StatStack } from '@/components/sections/stat-stack'
 import { AccordionShowcase } from '@/components/sections/accordion-showcase'
+import { CustomerStory } from '@/components/sections/customer-story'
+import { PartnerShowcase } from '@/components/sections/partner-showcase'
+import { SecurityBadges } from '@/components/sections/security-badges'
+import { ValueCards } from '@/components/sections/value-cards'
+import { PostGrid } from '@/components/blog/post-grid'
+import { TagPills } from '@/components/blog/tag-pills'
+import { Callout } from '@/components/mdx/callout'
+import { StatHighlight } from '@/components/mdx/stat-highlight'
+import { ComparisonTable } from '@/components/mdx/comparison-table'
+import { CTAInline } from '@/components/mdx/cta-inline'
+import { AuthorBio } from '@/components/mdx/author-bio'
+import type { PostSummary } from '@/lib/blog'
 
 export const metadata = createMetadata({
   title: 'Component Preview',
@@ -24,13 +36,49 @@ export const metadata = createMetadata({
   path: '/preview',
 })
 
+const SAMPLE_POSTS: PostSummary[] = [
+  {
+    slug: 'why-ai-roleplay-works-for-sales-training',
+    title: 'Why AI Roleplay Works for Sales Training',
+    description: 'Traditional sales training struggles to build real conversational skill. AI-powered roleplay simulations offer a scalable alternative.',
+    publishedAt: '2026-02-18',
+    tags: ['sales-training', 'ai-simulation'],
+    featuredImage: '/images/blog/ai-roleplay-sales-training.jpg',
+    featuredImageAlt: 'A sales professional reviewing notes at a cafe table',
+    readingTime: 7,
+    author: 'Jamie Wood',
+    authorRole: 'CTO & Co-Founder',
+  },
+  {
+    slug: 'example-leadership-post',
+    title: 'Building Confident Leaders Through Practice',
+    description: 'Leadership development programs often focus on theory. Here is how simulation-based practice closes the gap.',
+    publishedAt: '2026-02-10',
+    tags: ['leadership-development'],
+    readingTime: 5,
+    author: 'Jamie Wood',
+  },
+  {
+    slug: 'example-enterprise-post',
+    title: 'Scaling Training Across Global Teams',
+    description: 'When you need consistent quality across geographies, traditional approaches hit a wall. AI simulation solves the distribution problem.',
+    publishedAt: '2026-01-28',
+    tags: ['enterprise-training', 'ld-strategy'],
+    readingTime: 6,
+    author: 'Jamie Wood',
+  },
+]
+
+const TEXTURE_ORIGINAL = '/images/textures/feature-texture.jpg'
+const TEXTURE_ALT = '/images/textures/feature-texture-alt.jpg'
+
 const FILTER_PRESETS = [
-  { name: 'None', className: '', crop: 'origin-center' },
-  { name: 'Faded', className: 'filter-faded', crop: 'origin-top-left' },
-  { name: 'Duotone', className: 'filter-duotone', crop: 'origin-bottom-right' },
-  { name: 'Duotone Cream', className: 'filter-duotone-cream', crop: 'origin-bottom-left' },
-  { name: 'Duotone Blush', className: 'filter-duotone-blush', crop: 'origin-center' },
-  { name: 'Duotone Copper', className: 'filter-duotone-copper', crop: 'origin-top-left' },
+  { name: 'None', className: '', crop: 'origin-center', src: TEXTURE_ORIGINAL },
+  { name: 'Faded', className: 'filter-faded', crop: 'origin-top-left', src: TEXTURE_ALT },
+  { name: 'Duotone', className: 'filter-duotone', crop: 'origin-bottom-right', src: TEXTURE_ORIGINAL },
+  { name: 'Duotone Cream', className: 'filter-duotone-cream', crop: 'origin-bottom-left', src: TEXTURE_ALT },
+  { name: 'Duotone Blush', className: 'filter-duotone-blush', crop: 'origin-center', src: TEXTURE_ORIGINAL },
+  { name: 'Duotone Copper', className: 'filter-duotone-copper', crop: 'origin-top-left', src: TEXTURE_ALT },
 ] as const
 
 const PHOTO_FILTERS = [
@@ -63,7 +111,7 @@ const PHOTO_FILTERS = [
 export default function PreviewPage() {
   return (
     <>
-      {/* ── Label ── */}
+      {/* ── Page header ── */}
       <div className="pt-32 pb-8 px-container-mobile md:px-container">
         <div className="mx-auto max-w-site">
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-2">Component Preview</p>
@@ -71,7 +119,12 @@ export default function PreviewPage() {
         </div>
       </div>
 
-      {/* ── SVG Filter Comparison — texture ── */}
+      {/* ╔══════════════════════════════════════════════════╗
+         ║  DESIGN SYSTEM                                   ║
+         ╚══════════════════════════════════════════════════╝ */}
+
+      <GroupLabel name="Design System" />
+
       <SectionLabel name="SVG Filter Presets — Texture" />
       <div className="px-container-mobile md:px-container py-8">
         <div className="mx-auto max-w-site">
@@ -80,7 +133,7 @@ export default function PreviewPage() {
               <div key={preset.name}>
                 <div className="relative w-full aspect-[4/3] rounded-brand-lg overflow-hidden mb-3">
                   <Image
-                    src="/images/textures/feature-texture.jpg"
+                    src={preset.src}
                     alt=""
                     fill
                     className={`object-cover scale-[1.5] ${preset.crop} ${preset.className}`}
@@ -94,7 +147,6 @@ export default function PreviewPage() {
         </div>
       </div>
 
-      {/* ── SVG Filter Comparison — photography ── */}
       <SectionLabel name="SVG Filter Presets — Photography" />
       <div className="px-container-mobile md:px-container py-8">
         <div className="mx-auto max-w-site">
@@ -122,7 +174,12 @@ export default function PreviewPage() {
         </div>
       </div>
 
-      {/* ── 1. Comparison Layout ── */}
+      {/* ╔══════════════════════════════════════════════════╗
+         ║  CONTENT & NARRATIVE                             ║
+         ╚══════════════════════════════════════════════════╝ */}
+
+      <GroupLabel name="Content & Narrative" />
+
       <SectionLabel name="ComparisonLayout" />
       <ComparisonLayout
         eyebrow="The landscape"
@@ -136,7 +193,6 @@ export default function PreviewPage() {
         ]}
       />
 
-      {/* ── 2. Use Case Cards ── */}
       <SectionLabel name="UseCaseCards" />
       <UseCaseCards
         eyebrow="Solutions"
@@ -149,7 +205,6 @@ export default function PreviewPage() {
         ]}
       />
 
-      {/* ── 3. Scenario Cards ── */}
       <SectionLabel name="ScenarioCards" />
       <ScenarioCards
         heading="Choose a Scenario"
@@ -161,7 +216,96 @@ export default function PreviewPage() {
         ]}
       />
 
-      {/* ── 4. Testimonial Grid ── */}
+      <SectionLabel name="NumberedSteps" />
+      <NumberedSteps
+        eyebrow="Getting started"
+        heading="What the buying process looks like"
+        items={[
+          { title: 'Tell us what you need', description: 'A short conversation about your use cases, team size, and goals. We listen first.' },
+          { title: 'See it in action', description: 'Try customized simulations built for your actual scenarios. Not a generic demo.' },
+          { title: 'Go live', description: 'Rollout support, admin setup, and your first scenarios — ready in days, not months.' },
+        ]}
+      />
+
+      <SectionLabel name="DetailCards" />
+      <DetailCards
+        eyebrow="Built for consulting"
+        heading="Scenarios your consultants will practice"
+        items={[
+          { heading: 'Client pitch preparation', description: 'Practice presenting recommendations, handling pushback, and defending methodology — before the real meeting.' },
+          { heading: 'New joiner acceleration', description: 'Get junior consultants client-ready faster. Realistic practice with partner-level feedback, without tying up senior staff.' },
+          { heading: 'Difficult client conversations', description: 'Scope creep. Budget overruns. Missed expectations. Your people need to handle these with confidence, not scripts.' },
+          { heading: 'Business development', description: 'From initial chemistry meetings to formal proposals — practice the conversations that grow your pipeline.' },
+        ]}
+      />
+
+      <SectionLabel name="ValueCards" />
+      <ValueCards
+        items={[
+          {
+            icon: (
+              <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full max-w-40">
+                <rect x="10" y="10" width="100" height="100" rx="4" />
+                <path d="M10 55h40l10-10 10 10h40" />
+                <path d="M10 65h40l10 10 10-10h40" />
+                <path d="M75 55l30 0" strokeWidth="2.5" />
+                <polygon points="100,50 110,60 100,70" fill="currentColor" stroke="none" />
+              </svg>
+            ),
+            heading: 'Lorem ipsum dolor sit',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+            filter: 'duotone',
+            texture: TEXTURE_ORIGINAL,
+            cropFocus: 'origin-top-left',
+          },
+          {
+            icon: (
+              <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full max-w-40">
+                <circle cx="60" cy="60" r="50" />
+                <circle cx="60" cy="60" r="35" />
+                <circle cx="60" cy="60" r="20" />
+                <circle cx="60" cy="60" r="8" fill="currentColor" stroke="none" />
+                <line x1="60" y1="2" x2="60" y2="10" />
+                <line x1="60" y1="110" x2="60" y2="118" />
+                <line x1="2" y1="60" x2="10" y2="60" />
+                <line x1="110" y1="60" x2="118" y2="60" />
+              </svg>
+            ),
+            heading: 'Consectetur adipiscing',
+            description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+            filter: 'duotone-copper',
+            texture: TEXTURE_ALT,
+            cropFocus: 'origin-center',
+          },
+          {
+            icon: (
+              <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full max-w-40">
+                <path d="M60 10l30 17.3v34.6L60 79.2 30 61.9V27.3z" />
+                <path d="M60 30l15 8.7v17.3L60 64.7 45 56V38.7z" />
+                <path d="M60 10v20M90 27.3L75 38.7M90 61.9L75 56M60 79.2V64.7M30 61.9l15-5.9M30 27.3l15 11.4" />
+                <circle cx="60" cy="10" r="3" fill="currentColor" stroke="none" />
+                <circle cx="90" cy="27.3" r="3" fill="currentColor" stroke="none" />
+                <circle cx="90" cy="61.9" r="3" fill="currentColor" stroke="none" />
+                <circle cx="60" cy="79.2" r="3" fill="currentColor" stroke="none" />
+                <circle cx="30" cy="61.9" r="3" fill="currentColor" stroke="none" />
+                <circle cx="30" cy="27.3" r="3" fill="currentColor" stroke="none" />
+              </svg>
+            ),
+            heading: 'Sed do eiusmod tempor',
+            description: 'Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.',
+            filter: 'duotone',
+            texture: TEXTURE_ALT,
+            cropFocus: 'origin-bottom-right',
+          },
+        ]}
+      />
+
+      {/* ╔══════════════════════════════════════════════════╗
+         ║  SOCIAL PROOF                                    ║
+         ╚══════════════════════════════════════════════════╝ */}
+
+      <GroupLabel name="Social Proof" />
+
       <SectionLabel name="TestimonialGrid" />
       <TestimonialGrid
         eyebrow="What people say"
@@ -175,7 +319,24 @@ export default function PreviewPage() {
         ]}
       />
 
-      {/* ── 5. Stat Bar ── */}
+      <SectionLabel name="PullQuote" />
+      <PullQuote
+        quote="Incredibly realistic, providing a safe and convenient environment for practice."
+        role="Director"
+        company="Media Company"
+      />
+
+      <SectionLabel name="CustomerStory" />
+      <CustomerStory
+        imageSrc="/images/photography/testimonial-woman-smiling.png"
+        imageAlt="A woman mid-laugh, caught in a genuine moment of warmth, looking slightly off-camera"
+        quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, et focus on delivering strategic value."
+        name="Lorem Ipsum"
+        role="Vice President, Learning & Development"
+        company="Acme Corporation"
+        href="#"
+      />
+
       <SectionLabel name="StatBar" />
       <StatBar
         items={[
@@ -185,64 +346,22 @@ export default function PreviewPage() {
         ]}
       />
 
-      {/* ── 6. Trust Badges ── */}
-      <SectionLabel name="TrustBadges" />
-      <TrustBadges
-        badges={[
-          { label: 'ISO 27001', description: 'Certified information security management' },
-          { label: 'GDPR', description: 'EU data protection compliant' },
-          { label: 'EU AI Act', description: 'Aligned with regulatory framework' },
-          { label: 'Aikido Security', description: 'Continuous automated auditing' },
-        ]}
-        cta={{ label: 'Learn more about AI Trust & Safety', href: '/trust/security-certifications' }}
-      />
-
-      {/* ── 7. Action Picker ── */}
-      <SectionLabel name="ActionPicker" />
-      <ActionPicker
-        heading="Let's Talk"
-        subtitle="Whether you are exploring AI roleplay training for the first time or ready to discuss a specific deployment, we are here to help."
+      <SectionLabel name="StatStack" />
+      <StatStack
+        heading="Lorem ipsum dolor sit amet"
         items={[
-          { heading: 'Book a Meeting', description: 'A 30-minute conversation with someone from the Ambr AI team.', href: '/find-out-more', ctaLabel: 'Book a Meeting' },
-          { heading: 'Ask Us a Question', description: 'Not ready for a meeting? Send us a question and we\'ll get back to you within one business day.', href: '/find-out-more', ctaLabel: 'Ask a Question' },
-          { heading: 'Get a Quote', description: 'If you have a clear sense of your requirements, we can put together a proposal.', href: '/find-out-more', ctaLabel: 'Request a Quote' },
+          { value: '93%', label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore' },
+          { value: '78%', label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo' },
+          { value: '4.8x', label: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur' },
         ]}
       />
 
-      {/* ── 8. Numbered Steps ── */}
-      <SectionLabel name="NumberedSteps" />
-      <NumberedSteps
-        eyebrow="Getting started"
-        heading="What the buying process looks like"
-        items={[
-          { title: 'Tell us what you need', description: 'A short conversation about your use cases, team size, and goals. We listen first.' },
-          { title: 'See it in action', description: 'Try customized simulations built for your actual scenarios. Not a generic demo.' },
-          { title: 'Go live', description: 'Rollout support, admin setup, and your first scenarios — ready in days, not months.' },
-        ]}
-      />
+      {/* ╔══════════════════════════════════════════════════╗
+         ║  PRODUCT                                         ║
+         ╚══════════════════════════════════════════════════╝ */}
 
-      {/* ── 9. Detail Cards ── */}
-      <SectionLabel name="DetailCards" />
-      <DetailCards
-        eyebrow="Built for consulting"
-        heading="Scenarios your consultants will practice"
-        items={[
-          { heading: 'Client pitch preparation', description: 'Practice presenting recommendations, handling pushback, and defending methodology — before the real meeting.' },
-          { heading: 'New joiner acceleration', description: 'Get junior consultants client-ready faster. Realistic practice with partner-level feedback, without tying up senior staff.' },
-          { heading: 'Difficult client conversations', description: 'Scope creep. Budget overruns. Missed expectations. Your people need to handle these with confidence, not scripts.' },
-          { heading: 'Business development', description: 'From initial chemistry meetings to formal proposals — practice the conversations that grow your pipeline.' },
-        ]}
-      />
+      <GroupLabel name="Product" />
 
-      {/* ── 10. Pull Quote ── */}
-      <SectionLabel name="PullQuote" />
-      <PullQuote
-        quote="Incredibly realistic, providing a safe and convenient environment for practice."
-        role="Director"
-        company="Media Company"
-      />
-
-      {/* ── 11. Product Screenshot (3 variants via SplitContent) ── */}
       <SectionLabel name="ProductScreenshot — Feedback Panel" />
       <SplitContent
         eyebrow="Coaching"
@@ -293,7 +412,6 @@ export default function PreviewPage() {
         </p>
       </SplitContent>
 
-      {/* ── 12. Bento Showcase ── */}
       <SectionLabel name="BentoShowcase" />
       <BentoShowcase
         eyebrow="The platform"
@@ -301,215 +419,253 @@ export default function PreviewPage() {
         subtitle="Voice simulations, structured feedback, team analytics, and 30+ languages — all from a single dashboard."
       />
 
-      {/* ── 13. Visual Feature Cards ── */}
       <SectionLabel name="VisualFeatureCards" />
       <VisualFeatureCards />
 
-      {/* ── 14a. ShowcaseSplit — duotone, top-left crop ── */}
       <SectionLabel name="ShowcaseSplit — left / duotone / top-left" />
       <ShowcaseSplit
-        heading={
-          <>
-            Lorem ipsum dolor sit amet,{' '}
-            <em className="text-accent">consectetur</em> adipiscing elit
-          </>
-        }
+        heading={<>Lorem ipsum dolor sit amet, <em className="text-accent">consectetur</em> adipiscing elit</>}
         subtitle="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
         filter="duotone"
         cropFocus="top-left"
         visualContent={<MockJourneyGrid />}
         features={[
-          {
-            heading: 'Structured feedback',
-            description:
-              'Receive detailed, actionable coaching after every practice session. Tone, pacing, word choice, and approach — broken down so you know exactly what to work on.',
-          },
-          {
-            heading: 'Adaptive scenarios',
-            description:
-              'Simulations that respond to your choices in real time. No two conversations play out the same way, so every session builds genuine capability.',
-          },
-          {
-            heading: 'Custom to your context',
-            description:
-              'Your terminology, your stakeholders, your version of a difficult conversation. Built around the way your organization actually works.',
-          },
+          { heading: 'Structured feedback', description: 'Receive detailed, actionable coaching after every practice session. Tone, pacing, word choice, and approach — broken down so you know exactly what to work on.' },
+          { heading: 'Adaptive scenarios', description: 'Simulations that respond to your choices in real time. No two conversations play out the same way, so every session builds genuine capability.' },
+          { heading: 'Custom to your context', description: 'Your terminology, your stakeholders, your version of a difficult conversation. Built around the way your organization actually works.' },
         ]}
       />
 
-      {/* ── 14b. ShowcaseSplit — duotone-blush, bottom-right crop ── */}
       <SectionLabel name="ShowcaseSplit — right / duotone-blush / bottom-right" />
       <ShowcaseSplit
         layout="right"
         filter="duotone-blush"
         cropFocus="bottom-right"
         visualContent={<MockContextSelector />}
-        heading={
-          <>
-            Ut enim ad minim veniam,{' '}
-            <em className="text-accent">quis nostrud</em> exercitation
-          </>
-        }
+        heading={<>Ut enim ad minim veniam, <em className="text-accent">quis nostrud</em> exercitation</>}
         subtitle="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         features={[
-          {
-            heading: 'Evidence-based insights',
-            description:
-              'Aggregated data across simulations surfaces patterns in how teams communicate, negotiate, and respond to pressure.',
-          },
-          {
-            heading: 'Progressive learning paths',
-            description:
-              'Sequence simulations into structured development tracks. Each step unlocked by demonstrated capability, not time served.',
-          },
-          {
-            heading: 'Global deployment',
-            description:
-              'Roll out programs across functions, geographies, and 30+ languages from a single dashboard.',
-          },
+          { heading: 'Evidence-based insights', description: 'Aggregated data across simulations surfaces patterns in how teams communicate, negotiate, and respond to pressure.' },
+          { heading: 'Progressive learning paths', description: 'Sequence simulations into structured development tracks. Each step unlocked by demonstrated capability, not time served.' },
+          { heading: 'Global deployment', description: 'Roll out programs across functions, geographies, and 30+ languages from a single dashboard.' },
         ]}
       />
 
-      {/* ── 14c. ShowcaseSplit — faded, center crop ── */}
       <SectionLabel name="ShowcaseSplit — left / faded / center" />
       <ShowcaseSplit
         filter="faded"
         cropFocus="center"
         visualContent={<MockFeedbackPanel />}
-        heading={
-          <>
-            Excepteur sint occaecat{' '}
-            <em className="text-accent">cupidatat</em> non proident
-          </>
-        }
+        heading={<>Excepteur sint occaecat <em className="text-accent">cupidatat</em> non proident</>}
         subtitle="Sunt in culpa qui officia deserunt mollit anim id est laborum."
         features={[
-          {
-            heading: 'Capability mapping',
-            description:
-              'Aggregate individual simulation results into team-level capability views. Identify where communication breaks down.',
-          },
-          {
-            heading: 'Certifications with substance',
-            description:
-              'Award certifications based on observed performance, not quiz scores. Reflects what people can actually do.',
-          },
-          {
-            heading: 'Engagement visibility',
-            description:
-              'See who is practicing, how often, and how they are progressing. Spot disengagement early.',
-          },
+          { heading: 'Capability mapping', description: 'Aggregate individual simulation results into team-level capability views. Identify where communication breaks down.' },
+          { heading: 'Certifications with substance', description: 'Award certifications based on observed performance, not quiz scores. Reflects what people can actually do.' },
+          { heading: 'Engagement visibility', description: 'See who is practicing, how often, and how they are progressing. Spot disengagement early.' },
         ]}
       />
 
-      {/* ── 15. Stat Stack ── */}
-      <SectionLabel name="StatStack" />
-      <StatStack
-        heading="Lorem ipsum dolor sit amet"
-        items={[
-          {
-            value: '93%',
-            label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore',
-          },
-          {
-            value: '78%',
-            label: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
-          },
-          {
-            value: '4.8x',
-            label: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
-          },
-        ]}
-      />
-
-      {/* ── 16a. Accordion Showcase — dark ── */}
       <SectionLabel name="AccordionShowcase — dark" />
       <AccordionShowcase
         variant="dark"
         heading="Lorem ipsum dolor sit amet consectetur"
         items={[
-          {
-            heading: 'Performance conversations',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            cropFocus: 'top-left',
-            filter: 'duotone-cream',
-            visualContent: <MockFeedbackPanel />,
-          },
-          {
-            heading: 'Conflict resolution',
-            description:
-              'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            cropFocus: 'top-right',
-            filter: 'duotone-copper',
-            visualContent: <MockContextSelector />,
-          },
-          {
-            heading: 'Negotiation practice',
-            description:
-              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-            cropFocus: 'bottom-left',
-            filter: 'faded',
-            visualContent: <MockScenarioCard />,
-          },
-          {
-            heading: 'Onboarding conversations',
-            description:
-              'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            cropFocus: 'center',
-            filter: 'duotone',
-          },
-          {
-            heading: 'Customer escalations',
-            description:
-              'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
-            cropFocus: 'bottom-right',
-            filter: 'duotone-blush',
-            visualContent: <MockJourneyGrid />,
-          },
+          { heading: 'Performance conversations', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', cropFocus: 'top-left', filter: 'duotone-cream', visualContent: <MockFeedbackPanel /> },
+          { heading: 'Conflict resolution', description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', cropFocus: 'top-right', filter: 'duotone-copper', visualContent: <MockContextSelector /> },
+          { heading: 'Negotiation practice', description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', cropFocus: 'bottom-left', filter: 'faded', visualContent: <MockScenarioCard /> },
+          { heading: 'Onboarding conversations', description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', cropFocus: 'center', filter: 'duotone' },
+          { heading: 'Customer escalations', description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.', cropFocus: 'bottom-right', filter: 'duotone-blush', visualContent: <MockJourneyGrid /> },
         ]}
       />
 
-      {/* ── 16b. Accordion Showcase — light ── */}
       <SectionLabel name="AccordionShowcase — light" />
       <AccordionShowcase
         variant="light"
         heading="Lorem ipsum dolor sit amet consectetur"
         items={[
-          {
-            heading: 'Capability mapping',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            cropFocus: 'top-right',
-            filter: 'faded',
-            visualContent: <MockDashboard />,
-          },
-          {
-            heading: 'Structured learning paths',
-            description:
-              'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            cropFocus: 'center',
-            filter: 'duotone-cream',
-            visualContent: <MockJourneyGrid />,
-          },
-          {
-            heading: 'Engagement analytics',
-            description:
-              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-            cropFocus: 'bottom-left',
-            filter: 'duotone',
-            visualContent: <MockFeedbackPanel />,
-          },
-          {
-            heading: 'Certification tracking',
-            description:
-              'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            cropFocus: 'top-left',
-            filter: 'duotone-cream',
-          },
+          { heading: 'Capability mapping', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', cropFocus: 'top-right', filter: 'faded', visualContent: <MockDashboard /> },
+          { heading: 'Structured learning paths', description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', cropFocus: 'center', filter: 'duotone-cream', visualContent: <MockJourneyGrid /> },
+          { heading: 'Engagement analytics', description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', cropFocus: 'bottom-left', filter: 'duotone', visualContent: <MockFeedbackPanel /> },
+          { heading: 'Certification tracking', description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', cropFocus: 'top-left', filter: 'duotone-cream' },
+        ]}
+      />
+
+      {/* ╔══════════════════════════════════════════════════╗
+         ║  TRUST & PARTNERS                                ║
+         ╚══════════════════════════════════════════════════╝ */}
+
+      <GroupLabel name="Trust & Partners" />
+
+      <SectionLabel name="TrustBadges" />
+      <TrustBadges
+        badges={[
+          { label: 'ISO 27001', description: 'Certified information security management' },
+          { label: 'GDPR', description: 'EU data protection compliant' },
+          { label: 'EU AI Act', description: 'Aligned with regulatory framework' },
+          { label: 'Aikido Security', description: 'Continuous automated auditing' },
+        ]}
+        cta={{ label: 'Learn more about AI Trust & Safety', href: '/security/compliance' }}
+      />
+
+      <SectionLabel name="SecurityBadges — dark" />
+      <SecurityBadges
+        variant="dark"
+        heading="Lorem ipsum dolor sit amet consectetur"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        href="#"
+        badges={[
+          { icon: '/icons/badge-iso.svg', label: 'ISO 27001', href: '#' },
+          { icon: '/icons/badge-gdpr.svg', label: 'GDPR', href: '#' },
+          { icon: '/icons/badge-eu-ai-act.png', label: 'EU AI Act', href: '#', wide: true },
+        ]}
+      />
+
+      <SectionLabel name="SecurityBadges — light" />
+      <SecurityBadges
+        variant="light"
+        heading="Lorem ipsum dolor sit amet consectetur"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        href="#"
+        badges={[
+          { icon: '/icons/badge-iso.svg', label: 'ISO 27001', href: '#' },
+          { icon: '/icons/badge-gdpr.svg', label: 'GDPR', href: '#' },
+          { icon: '/icons/badge-eu-ai-act.png', label: 'EU AI Act', href: '#', wide: true },
+        ]}
+      />
+
+      <SectionLabel name="PartnerShowcase" />
+      <PartnerShowcase
+        heading="Lorem Ipsum Dolor"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam."
+        href="#"
+        heroLogo={{ alt: 'Ambr AI', serif: true }}
+        partners={[
+          { alt: 'Google' },
+          { alt: 'Anthropic' },
+          { alt: 'Helios' },
+          { alt: 'Arcline' },
+        ]}
+      />
+
+      {/* ╔══════════════════════════════════════════════════╗
+         ║  CTA                                             ║
+         ╚══════════════════════════════════════════════════╝ */}
+
+      <GroupLabel name="CTA" />
+
+      {/* ╔══════════════════════════════════════════════════╗
+         ║  BLOG                                            ║
+         ╚══════════════════════════════════════════════════╝ */}
+
+      <GroupLabel name="Blog" />
+
+      <SectionLabel name="TagPills" />
+      <div className="px-container-mobile md:px-container py-6">
+        <div className="mx-auto max-w-site">
+          <TagPills />
+        </div>
+      </div>
+
+      <SectionLabel name="TagPills — active" />
+      <div className="px-container-mobile md:px-container py-6">
+        <div className="mx-auto max-w-site">
+          <TagPills activeTag="sales-training" />
+        </div>
+      </div>
+
+      <SectionLabel name="PostGrid" />
+      <div className="px-container-mobile md:px-container py-6">
+        <div className="mx-auto max-w-site">
+          <PostGrid posts={SAMPLE_POSTS} />
+        </div>
+      </div>
+
+      <SectionLabel name="Callout — info" />
+      <div className="px-container-mobile md:px-container py-6">
+        <div className="mx-auto max-w-[720px]">
+          <Callout type="info">
+            A 12-week pilot with Skyscanner found that 78% of participating managers felt more comfortable navigating difficult conversations after regular AI roleplay practice.
+          </Callout>
+        </div>
+      </div>
+
+      <SectionLabel name="Callout — warning" />
+      <div className="px-container-mobile md:px-container py-6">
+        <div className="mx-auto max-w-[720px]">
+          <Callout type="warning">
+            ROI calculations should account for both direct outcomes and indirect benefits such as reduced manager time spent on remedial coaching.
+          </Callout>
+        </div>
+      </div>
+
+      <SectionLabel name="StatHighlight" />
+      <div className="px-container-mobile md:px-container py-6">
+        <div className="mx-auto max-w-[720px]">
+          <StatHighlight value="78%" label="of managers felt more comfortable navigating difficult conversations" />
+        </div>
+      </div>
+
+      <SectionLabel name="ComparisonTable" />
+      <div className="px-container-mobile md:px-container py-6">
+        <div className="mx-auto max-w-[720px]">
+          <ComparisonTable
+            headers={['Factor', 'Traditional', 'AI Simulation']}
+            rows={[
+              ['Availability', 'Scheduled, limited', 'On-demand, unlimited'],
+              ['Consistency', 'Varies by facilitator', 'Standardized scenarios'],
+              ['Feedback', 'Subjective, delayed', 'Immediate, structured'],
+            ]}
+          />
+        </div>
+      </div>
+
+      <SectionLabel name="CTAInline" />
+      <div className="px-container-mobile md:px-container py-6">
+        <div className="mx-auto max-w-[720px]">
+          <CTAInline
+            text="Every Ambr AI simulation is built around your real scenarios."
+            href="/customisation"
+            label="See how customization works"
+          />
+        </div>
+      </div>
+
+      <SectionLabel name="AuthorBio" />
+      <div className="px-container-mobile md:px-container py-6">
+        <div className="mx-auto max-w-[720px]">
+          <AuthorBio name="Jamie Wood" role="CTO & Co-Founder" />
+        </div>
+      </div>
+
+      {/* ╔══════════════════════════════════════════════════╗
+         ║  CTA                                             ║
+         ╚══════════════════════════════════════════════════╝ */}
+
+      <GroupLabel name="CTA" />
+
+      <SectionLabel name="ActionPicker" />
+      <ActionPicker
+        heading="Let's Talk"
+        subtitle="Whether you are exploring AI roleplay training for the first time or ready to discuss a specific deployment, we are here to help."
+        items={[
+          { heading: 'Book a Meeting', description: 'A 30-minute conversation with someone from the Ambr AI team.', href: '/find-out-more', ctaLabel: 'Book a Meeting' },
+          { heading: 'Ask Us a Question', description: 'Not ready for a meeting? Send us a question and we\'ll get back to you within one business day.', href: '/find-out-more', ctaLabel: 'Ask a Question' },
+          { heading: 'Get a Quote', description: 'If you have a clear sense of your requirements, we can put together a proposal.', href: '/find-out-more', ctaLabel: 'Request a Quote' },
         ]}
       />
     </>
+  )
+}
+
+function GroupLabel({ name }: { name: string }) {
+  return (
+    <div className="px-container-mobile md:px-container pt-20 pb-2">
+      <div className="mx-auto max-w-site">
+        <p className="font-heading text-label tracking-heading text-dark border-b border-dark/10 pb-3">
+          {name}
+        </p>
+      </div>
+    </div>
   )
 }
 

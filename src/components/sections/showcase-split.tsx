@@ -40,7 +40,7 @@ export function ShowcaseSplit({
       />
       <div className="absolute inset-0 pointer-events-none vignette-dark" />
       {visualContent && (
-        <div className="absolute top-[20%] left-4 right-[-15%] bottom-[-10%]">
+        <div className="absolute top-[20%] left-4 right-4 bottom-4">
           <div className="bg-surface-white rounded-brand border border-border shadow-card p-5 md:p-6 h-full overflow-hidden">
             {visualContent}
           </div>

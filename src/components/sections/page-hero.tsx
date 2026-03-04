@@ -17,7 +17,7 @@ export function PageHero({ eyebrow, heading, subtitle, compact }: PageHeroProps)
       <div className="mx-auto max-w-site">
         <Reveal>
           {eyebrow && (
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
               {eyebrow}
             </p>
           )}

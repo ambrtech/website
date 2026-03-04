@@ -13,10 +13,10 @@ const footerNav = {
     { label: 'Blog', href: '/blog' },
     { label: 'Careers', href: '/careers' },
   ],
-  Trust: [
-    { label: 'Security', href: '/security' },
-    { label: 'Privacy', href: '/privacy' },
-    { label: 'Trust Centre', href: '/trust' },
+  Security: [
+    { label: 'Compliance', href: '/security/compliance' },
+    { label: 'Data Protection', href: '/security/data-protection' },
+    { label: 'Responsible AI', href: '/security/responsible-ai' },
     { label: 'Contact', href: '/contact' },
   ],
 }

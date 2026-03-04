@@ -20,7 +20,7 @@ export function ProductMock() {
         <Reveal>
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-end mb-16">
             <div>
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
                 The Platform
               </p>
               <h2 className="font-heading text-section leading-[1.2] tracking-heading">

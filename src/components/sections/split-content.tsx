@@ -31,7 +31,7 @@ export function SplitContent({
   const textBlock = (
     <div>
       {eyebrow && (
-        <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+        <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
           {eyebrow}
         </p>
       )}

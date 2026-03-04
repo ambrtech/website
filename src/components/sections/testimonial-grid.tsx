@@ -21,7 +21,7 @@ export function TestimonialGrid({ eyebrow, heading, testimonials }: TestimonialG
         <div className="max-w-xl mb-16 md:mb-20">
           <Reveal>
             {eyebrow && (
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5 eyebrow-hairline">
                 {eyebrow}
               </p>
             )}

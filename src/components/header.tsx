@@ -67,6 +67,11 @@ const navigation: NavItem[] = [
         href: '/product/integrations',
         description: 'Connect with your existing LMS and tools',
       },
+      {
+        label: 'Languages',
+        href: '/product/languages',
+        description: '30+ languages with cultural adaptation',
+      },
     ],
   },
   {
@@ -115,22 +120,22 @@ const navigation: NavItem[] = [
   },
   {
     type: 'dropdown',
-    label: 'AI Trust & Safety',
+    label: 'Security',
     content: [
       {
-        label: 'Security Certifications',
-        href: '/trust/security-certifications',
-        description: 'Our compliance and security standards',
+        label: 'Compliance',
+        href: '/security/compliance',
+        description: 'ISO 27001, GDPR, and EU AI Act',
       },
       {
-        label: 'How we manage data',
-        href: '/trust/data-management',
-        description: 'Transparency in data handling',
+        label: 'Data Protection',
+        href: '/security/data-protection',
+        description: 'How we handle and protect your data',
       },
       {
-        label: 'AI & Ethics',
-        href: '/trust/ai-ethics',
-        description: 'Our approach to responsible AI',
+        label: 'Responsible AI',
+        href: '/security/responsible-ai',
+        description: 'Our approach to ethical AI',
       },
     ],
   },
