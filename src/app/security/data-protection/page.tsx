@@ -87,7 +87,7 @@ export default function DataProtectionPage() {
       <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
         <div className="mx-auto max-w-site">
           <Reveal>
-            <div className="max-w-[720px] mb-10">
+            <div className="max-w-[720px] mb-12">
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
                 Data and Purpose
               </p>
@@ -105,7 +105,7 @@ export default function DataProtectionPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {dataTypes.map((item, i) => (
               <Reveal key={item.label} delay={i * 80}>
-                <div className="border border-border rounded-brand p-7 h-full">
+                <div className="bg-surface-alt rounded-brand p-7 h-full">
                   <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-4">
                     {item.label}
                   </p>
@@ -133,11 +133,11 @@ export default function DataProtectionPage() {
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-2 gap-x-16">
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-0">
             {commitments.map((item, i) => (
               <Reveal key={item.heading} delay={i * 60}>
-                <div className="py-6 border-t border-surface-white/10">
-                  <h3 className="font-heading text-label tracking-heading mb-2">
+                <div className="py-7 border-t border-surface-white/10">
+                  <h3 className="font-heading text-label tracking-heading mb-3">
                     {item.heading}
                   </h3>
                   <p className="text-body-sm text-copy-light leading-[1.75]">
@@ -170,79 +170,92 @@ export default function DataProtectionPage() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <ul className="space-y-3 pt-2">
-              {retentionPoints.map((point) => (
-                <li
-                  key={point}
-                  className="text-body-sm text-copy-mid leading-[1.7] pl-5 relative before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent-soft"
-                >
-                  {point}
-                </li>
-              ))}
-            </ul>
+            <div className="border border-border rounded-brand p-7 md:p-8">
+              <ul className="space-y-3">
+                {retentionPoints.map((point) => (
+                  <li
+                    key={point}
+                    className="text-body-sm text-copy-mid leading-[1.7] pl-5 relative before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent-soft"
+                  >
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      {/* ── Breach Notification + Sub-processors + Cross-links ── */}
+      {/* ── Breach Notification + Sub-processors ── */}
       <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt">
-        <div className="mx-auto max-w-site max-w-[720px]">
+        <div className="mx-auto max-w-[720px]">
           <Reveal>
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-              Breach Notification
-            </p>
-            <p className="text-body text-copy-mid leading-[1.75] mb-8">
-              Ambr AI maintains a formal incident response and breach notification
-              process. In the event of a data incident, affected clients are
-              notified in accordance with contractual and regulatory obligations.
-            </p>
+            <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+              <div>
+                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+                  Breach Notification
+                </p>
+                <p className="text-body text-copy-mid leading-[1.75]">
+                  Ambr AI maintains a formal incident response and breach notification
+                  process. In the event of a data incident, affected clients are
+                  notified in accordance with contractual and regulatory obligations.
+                </p>
+              </div>
 
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-              Sub-processors &amp; DPA
-            </p>
-            <p className="text-body text-copy-mid leading-[1.75]">
-              A full list of sub-processors is available through our trust portal at{' '}
-              <a
-                href="https://security.ambr.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
-              >
-                security.ambr.ai
-              </a>
-              . Our standard Data Processing Agreement is available for review at{' '}
-              <a
-                href="https://ambr.ai/dpa"
-                className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
-              >
-                ambr.ai/dpa
-              </a>
+              <div>
+                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+                  Sub-processors &amp; DPA
+                </p>
+                <p className="text-body text-copy-mid leading-[1.75]">
+                  A full list of sub-processors is available through our trust portal at{' '}
+                  <a
+                    href="https://security.ambr.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
+                  >
+                    security.ambr.ai
+                  </a>
+                  . Our standard Data Processing Agreement is available for review at{' '}
+                  <a
+                    href="https://ambr.ai/dpa"
+                    className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
+                  >
+                    ambr.ai/dpa
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Cross-links ── */}
+      <section className="py-section-mobile md:py-section px-container-mobile md:px-container border-t border-border">
+        <div className="mx-auto max-w-site text-center">
+          <Reveal>
+            <p className="font-heading text-label leading-[1.3] tracking-heading mb-6">
+              Have a specific data handling question?{' '}
+              <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors">
+                Talk to us
+              </Link>
               .
             </p>
-
-            <div className="mt-12 pt-10 border-t border-border text-center">
-              <p className="font-heading text-label leading-[1.3] tracking-heading mb-6">
-                Have a specific data handling question?{' '}
-                <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors">
-                  Talk to us
-                </Link>
-                .
-              </p>
-              <div className="flex items-center justify-center gap-6 flex-wrap">
-                <Link
-                  href="/security/compliance"
-                  className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
-                >
-                  Review our compliance certifications &rarr;
-                </Link>
-                <span className="text-copy-faint" aria-hidden="true">&middot;</span>
-                <Link
-                  href="/security/responsible-ai"
-                  className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
-                >
-                  Our approach to responsible AI &rarr;
-                </Link>
-              </div>
+            <div className="flex items-center justify-center gap-6 flex-wrap">
+              <Link
+                href="/security/compliance"
+                className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
+              >
+                Review our compliance certifications &rarr;
+              </Link>
+              <span className="text-copy-faint" aria-hidden="true">&middot;</span>
+              <Link
+                href="/security/responsible-ai"
+                className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
+              >
+                Our approach to responsible AI &rarr;
+              </Link>
             </div>
           </Reveal>
         </div>

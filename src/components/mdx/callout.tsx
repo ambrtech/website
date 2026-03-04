@@ -9,13 +9,13 @@ export function Callout({ type = 'info', children }: CalloutProps) {
   return (
     <aside
       role="note"
-      className={`rounded-brand-sm border-l-[3px] px-5 py-4 my-6 text-body-sm leading-[1.7] ${
+      className={`rounded-brand border-l-[3px] px-6 py-5 my-8 text-body-sm leading-[1.75] ${
         isWarning
-          ? 'border-copy-light bg-surface-alt text-copy-mid'
+          ? 'border-copy-faint bg-surface-alt text-copy-mid'
           : 'border-accent-soft bg-accent-whisper text-copy'
       }`}
     >
-      {children}
+      <div className="[&>p]:mb-0 [&>p:last-child]:mb-0">{children}</div>
     </aside>
   )
 }

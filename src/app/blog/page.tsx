@@ -37,7 +37,7 @@ export default function BlogIndexPage() {
       />
       <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
         <div className="mx-auto max-w-site">
-          <div className="mb-10">
+          <div className="mb-12 pb-6 border-b border-border">
             <TagPills activeTags={activeTags} />
           </div>
           <PostGrid posts={posts} />

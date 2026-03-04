@@ -62,9 +62,14 @@ export default function ResponsibleAIPage() {
       {/* ── Three principle cards ── */}
       <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
         <div className="mx-auto max-w-site">
+          <Reveal>
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-8 eyebrow-hairline">
+              Our Principles
+            </p>
+          </Reveal>
           <div className="grid md:grid-cols-3 gap-6">
             <Reveal>
-              <div className="border border-border rounded-brand p-8 md:p-10 h-full">
+              <div className="bg-surface-alt rounded-brand p-8 md:p-10 h-full">
                 <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
                   Transparency
                 </p>
@@ -79,7 +84,7 @@ export default function ResponsibleAIPage() {
             </Reveal>
 
             <Reveal delay={80}>
-              <div className="border border-border rounded-brand p-8 md:p-10 h-full">
+              <div className="bg-surface-alt rounded-brand p-8 md:p-10 h-full">
                 <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
                   Cultural context
                 </p>
@@ -101,7 +106,7 @@ export default function ResponsibleAIPage() {
             </Reveal>
 
             <Reveal delay={160}>
-              <div className="border border-border rounded-brand p-8 md:p-10 h-full">
+              <div className="bg-surface-alt rounded-brand p-8 md:p-10 h-full">
                 <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
                   Bias &amp; Fairness
                 </p>
@@ -125,7 +130,7 @@ export default function ResponsibleAIPage() {
       </section>
 
       {/* ── Cross-links ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt">
+      <section className="py-section-mobile md:py-section px-container-mobile md:px-container border-t border-border">
         <div className="mx-auto max-w-site text-center">
           <Reveal>
             <p className="font-heading text-label leading-[1.3] tracking-heading mb-6">

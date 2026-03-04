@@ -10,13 +10,13 @@ export function TagPills({ activeTags, activeTag }: TagPillsProps) {
   const displayTags = activeTags ?? (Object.keys(tags) as TagSlug[])
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-2.5">
       <Link
         href="/blog"
-        className={`rounded-full px-4 py-1.5 text-caption font-body-medium transition-colors ${
+        className={`rounded-full px-4 py-1.5 text-caption font-body-medium transition-all border ${
           !activeTag
-            ? 'bg-dark text-surface-white'
-            : 'bg-surface-alt text-copy-mid hover:text-copy'
+            ? 'bg-dark text-surface-white border-dark'
+            : 'bg-transparent text-copy-mid border-border hover:border-copy-faint hover:text-copy'
         }`}
       >
         All
@@ -25,10 +25,10 @@ export function TagPills({ activeTags, activeTag }: TagPillsProps) {
         <Link
           key={slug}
           href={`/blog/tag/${slug}`}
-          className={`rounded-full px-4 py-1.5 text-caption font-body-medium transition-colors ${
+          className={`rounded-full px-4 py-1.5 text-caption font-body-medium transition-all border ${
             activeTag === slug
-              ? 'bg-dark text-surface-white'
-              : 'bg-surface-alt text-copy-mid hover:text-copy'
+              ? 'bg-dark text-surface-white border-dark'
+              : 'bg-transparent text-copy-mid border-border hover:border-copy-faint hover:text-copy'
           }`}
         >
           {tags[slug].label}

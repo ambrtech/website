@@ -149,36 +149,28 @@ export default function IntegrationsPage() {
 
       {/* ── Slack ── */}
       <section className="py-section-mobile md:py-section px-container-mobile md:px-container">
-        <div className="mx-auto max-w-site grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-20 items-start">
+        <div className="mx-auto max-w-site">
           <Reveal>
-            <div>
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                Messaging
-              </p>
-              <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-5">
-                Keep training visible where your team already works.
-              </h2>
-              <p className="text-body text-copy-mid leading-[1.75]">
-                Surface Ambr AI notifications and training nudges in Slack,
-                keeping practice visible where your team already communicates.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <div className="border border-border rounded-brand p-8 md:p-10">
-              <div className="flex items-start justify-between gap-4 mb-4">
-                <p className="font-heading text-label tracking-heading text-dark">
-                  Slack
-                </p>
-                <span className="inline-block text-caption font-body-medium uppercase tracking-eyebrow text-accent border border-accent-soft rounded-brand-sm px-3 py-1 shrink-0">
-                  Supported
-                </span>
+            <div className="border border-border rounded-brand p-8 md:p-12">
+              <div className="grid md:grid-cols-[1fr_1.5fr] gap-8 md:gap-16 items-start">
+                <div>
+                  <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+                    Messaging
+                  </p>
+                  <h2 className="font-heading text-section leading-[1.2] tracking-heading">
+                    Slack
+                  </h2>
+                </div>
+                <div className="md:pt-2">
+                  <p className="text-body text-copy-mid leading-[1.75]">
+                    Surface Ambr AI notifications and training nudges in Slack,
+                    keeping practice visible where your team already
+                    communicates. Automated reminders, completion notifications,
+                    and nudges delivered directly into the channels your team
+                    uses every day.
+                  </p>
+                </div>
               </div>
-              <p className="text-body-sm text-copy-mid leading-[1.75]">
-                Automated reminders, completion notifications, and nudges
-                delivered directly into Slack channels. No context-switching
-                required.
-              </p>
             </div>
           </Reveal>
         </div>

@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
-import { PageHero } from '@/components/sections/page-hero'
 import { Reveal } from '@/components/reveal'
 import { CTA } from '@/components/sections/cta'
 
@@ -89,6 +88,26 @@ const regions: LanguageRegion[] = [
   },
 ]
 
+/* Greetings in native scripts — decorative typographic element */
+const greetings = [
+  'Hello',
+  'Bonjour',
+  'Hallo',
+  'Ciao',
+  'Hola',
+  'Ol\u00e1',
+  'Hej',
+  '\u3053\u3093\u306b\u3061\u306f',
+  '\uc548\ub155\ud558\uc138\uc694',
+  '\u0928\u092e\u0938\u094d\u0924\u0947',
+  '\u0645\u0631\u062d\u0628\u0627',
+  '\u4f60\u597d',
+  'Jambo',
+  'Merhaba',
+  'Xin ch\u00e0o',
+  'Sawasdee',
+]
+
 /* ────────────────────────────────────────────────────────────
    Page
    ──────────────────────────────────────────────────────────── */
@@ -104,23 +123,56 @@ export default function LanguagesPage() {
         ]}
       />
 
-      <PageHero
-        compact
-        eyebrow="Languages"
-        heading={
-          <>
-            Culturally adjusted. Not just{' '}
-            <em className="text-accent">translated</em>.
-          </>
-        }
-        subtitle="A difficult conversation in Tokyo doesn't follow the same norms as one in Mumbai, S&atilde;o Paulo, or New York. Ambr AI adapts to the culture, not just the language."
-      />
+      {/* ── Hero with decorative greetings ── */}
+      <section className="relative pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container overflow-hidden">
+        {/* Decorative greetings — positioned behind hero text */}
+        <div
+          className="absolute inset-0 pointer-events-none select-none overflow-hidden"
+          aria-hidden="true"
+        >
+          <div className="absolute -right-8 top-8 md:right-12 md:top-12 lg:right-24 lg:top-16 flex flex-col items-end gap-3 opacity-[0.045]">
+            {greetings.slice(0, 8).map((greeting) => (
+              <span
+                key={greeting}
+                className="font-heading text-title md:text-headline leading-none tracking-heading whitespace-nowrap"
+              >
+                {greeting}
+              </span>
+            ))}
+          </div>
+          <div className="absolute -left-4 bottom-4 md:left-8 md:bottom-8 lg:left-16 lg:bottom-12 flex flex-col items-start gap-3 opacity-[0.035]">
+            {greetings.slice(8).map((greeting) => (
+              <span
+                key={greeting}
+                className="font-heading text-section md:text-title leading-none tracking-heading whitespace-nowrap"
+              >
+                {greeting}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-site relative">
+          <Reveal>
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+              Languages
+            </p>
+            <h1 className="font-heading text-headline leading-[1.1] tracking-heading max-w-[800px] mb-6">
+              Culturally adjusted. Not just{' '}
+              <em className="text-accent">translated</em>.
+            </h1>
+            <p className="text-body text-copy-mid leading-[1.75] max-w-[580px]">
+              A difficult conversation in Tokyo doesn&apos;t follow the same norms as one in Mumbai, S&atilde;o Paulo, or New York. Ambr AI adapts to the culture, not just the language.
+            </p>
+          </Reveal>
+        </div>
+      </section>
 
       {/* ── How Simulations Adapt ── */}
-      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
+      <section className="py-section-mobile md:py-section px-container-mobile md:px-container border-t border-border">
         <div className="mx-auto max-w-site">
           <Reveal>
-            <div className="mb-10 md:mb-12">
+            <div className="mb-12 md:mb-16">
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
                 How Simulations Adapt
               </p>
@@ -130,13 +182,22 @@ export default function LanguagesPage() {
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-0">
             {adaptations.map((item, i) => (
               <Reveal key={item.heading} delay={i * 80}>
-                <div className="border border-border rounded-brand p-8 h-full">
-                  <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-4">
+                <div
+                  className={`h-full py-8 md:py-0 ${
+                    i !== 0
+                      ? 'border-t md:border-t-0 md:border-l border-border md:pl-8 lg:pl-12'
+                      : ''
+                  } ${i !== adaptations.length - 1 ? 'md:pr-8 lg:pr-12' : ''}`}
+                >
+                  <span className="font-heading text-title tracking-heading text-accent-soft leading-none mb-5 block">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="font-heading text-label tracking-heading text-dark mb-3">
                     {item.heading}
-                  </p>
+                  </h3>
                   <p className="text-body-sm text-copy-mid leading-[1.75]">
                     {item.description}
                   </p>
@@ -148,7 +209,7 @@ export default function LanguagesPage() {
       </section>
 
       {/* ── Supported Languages ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt">
+      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt border-y border-border">
         <div className="mx-auto max-w-site">
           <Reveal>
             <div className="mb-12 md:mb-16">
@@ -161,21 +222,32 @@ export default function LanguagesPage() {
             </div>
           </Reveal>
 
-          <div className="space-y-12 md:space-y-16">
-            {regions.map((group) => (
-              <Reveal key={group.region}>
-                <div>
-                  <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
-                    {group.region}
-                  </p>
-                  <div className="flex flex-wrap gap-2.5">
+          <div className="space-y-16 md:space-y-20">
+            {regions.map((group, groupIndex) => (
+              <Reveal key={group.region} delay={groupIndex * 60}>
+                <div className="grid md:grid-cols-[200px_1fr] lg:grid-cols-[240px_1fr] gap-6 md:gap-12">
+                  {/* Region label — large serif anchor */}
+                  <div className="md:pt-1">
+                    <h3 className="font-heading text-section md:text-title leading-[1.1] tracking-heading text-dark">
+                      {group.region}
+                    </h3>
+                    <p className="text-caption text-copy-faint mt-2">
+                      {group.languages.length} language{group.languages.length !== 1 ? 's' : ''}
+                    </p>
+                  </div>
+
+                  {/* Language list — structured grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-0">
                     {group.languages.map((lang) => (
-                      <span
+                      <div
                         key={lang}
-                        className="inline-block bg-surface-white border border-border rounded-brand-sm px-4 py-2 text-body-sm text-dark"
+                        className="border-t border-border py-3.5 flex items-center gap-3"
                       >
-                        {lang}
-                      </span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent-soft shrink-0" />
+                        <span className="text-body-sm text-dark">
+                          {lang}
+                        </span>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -185,7 +257,7 @@ export default function LanguagesPage() {
 
           {/* Growing callout */}
           <Reveal>
-            <div className="mt-12 md:mt-16 border-l-[3px] border-accent-soft pl-6 py-1">
+            <div className="mt-16 md:mt-20 border-l-[3px] border-accent-soft pl-6 py-1">
               <p className="text-body text-copy-mid leading-[1.75]">
                 This list is growing. If you need a language not listed here,{' '}
                 <Link
@@ -202,10 +274,12 @@ export default function LanguagesPage() {
       </section>
 
       {/* ── For Global Organizations ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container">
-        <div className="mx-auto max-w-site max-w-[720px] text-center">
+      <section className="py-section-lg md:py-section-xl px-container-mobile md:px-container">
+        <div className="mx-auto max-w-[720px] text-center">
           <Reveal>
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+            {/* Decorative centered hairline */}
+            <div className="w-12 h-px bg-accent-soft mx-auto mb-8" aria-hidden="true" />
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
               For Global Organizations
             </p>
             <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-6">

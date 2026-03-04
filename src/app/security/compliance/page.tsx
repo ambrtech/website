@@ -89,11 +89,64 @@ export default function CompliancePage() {
       {/* ── Certifications ── */}
       <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
         <div className="mx-auto max-w-site">
-          <div className="grid gap-6">
-            {certifications.map((cert, i) => (
-              <Reveal key={cert.title} delay={i * 60}>
-                <div className="border border-border rounded-brand p-8 md:p-10">
-                  {/* Header row */}
+          {/* Primary certification: ISO 27001 — featured layout */}
+          <Reveal>
+            <div className="bg-surface-alt rounded-brand p-8 md:p-12 mb-6">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                <div className="flex items-center gap-4">
+                  {certifications[0].icon && (
+                    <div className="w-10 h-10 relative shrink-0">
+                      <Image
+                        src={certifications[0].icon}
+                        alt=""
+                        fill
+                        className="object-contain filter-badge-light"
+                        sizes="56px"
+                        unoptimized={certifications[0].icon.endsWith('.svg')}
+                      />
+                    </div>
+                  )}
+                  <h2 className="font-heading text-label tracking-heading text-dark">
+                    {certifications[0].title}
+                  </h2>
+                </div>
+                <span className="inline-block text-caption font-body-medium uppercase tracking-eyebrow text-accent border border-accent-soft bg-surface-white rounded-brand-sm px-3 py-1 shrink-0 self-start">
+                  {certifications[0].badge}
+                </span>
+              </div>
+
+              <p className="text-body-sm text-copy-mid leading-[1.75] max-w-[720px] mb-4">
+                {certifications[0].body}
+              </p>
+
+              {certifications[0].footnote && (
+                <p className="text-caption text-copy-light leading-[1.7] mt-4">
+                  {certifications[0].footnote}
+                </p>
+              )}
+
+              {certifications[0].details && (
+                <div className="flex flex-wrap gap-x-10 gap-y-2 mt-6 pt-6 border-t border-dark/[0.06]">
+                  {certifications[0].details.map((d) => (
+                    <div key={d.label}>
+                      <span className="text-caption text-copy-light">
+                        {d.label}:{' '}
+                      </span>
+                      <span className="text-caption text-copy-mid font-body-medium">
+                        {d.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </Reveal>
+
+          {/* Secondary certifications: 2-column grid */}
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            {certifications.slice(1, 3).map((cert, i) => (
+              <Reveal key={cert.title} delay={(i + 1) * 60}>
+                <div className="border border-border rounded-brand p-8 md:p-10 h-full">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                     <div className="flex items-center gap-4">
                       {cert.icon && (
@@ -117,12 +170,10 @@ export default function CompliancePage() {
                     </span>
                   </div>
 
-                  {/* Body */}
                   <p className="text-body-sm text-copy-mid leading-[1.75] max-w-[720px] mb-4">
                     {cert.body}
                   </p>
 
-                  {/* Bullet list (GDPR) */}
                   {cert.bullets && (
                     <ul className="mb-4 space-y-2">
                       {cert.bullets.map((item) => (
@@ -136,39 +187,42 @@ export default function CompliancePage() {
                     </ul>
                   )}
 
-                  {/* Footnote */}
                   {cert.footnote && (
                     <p className="text-caption text-copy-light leading-[1.7] mt-4">
                       {cert.footnote}
                     </p>
                   )}
-
-                  {/* Key-value details (ISO) */}
-                  {cert.details && (
-                    <div className="flex flex-wrap gap-x-10 gap-y-2 mt-5 pt-5 border-t border-border">
-                      {cert.details.map((d) => (
-                        <div key={d.label}>
-                          <span className="text-caption text-copy-light">
-                            {d.label}:{' '}
-                          </span>
-                          <span className="text-caption text-copy-mid font-body-medium">
-                            {d.value}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </Reveal>
             ))}
           </div>
+
+          {/* Penetration testing — full width, subtle accent left border */}
+          <Reveal delay={180}>
+            <div className="border border-border rounded-brand p-8 md:p-10 border-l-2 border-l-accent-soft">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                <h2 className="font-heading text-label tracking-heading text-dark">
+                  {certifications[3].title}
+                </h2>
+                <span className="inline-block text-caption font-body-medium uppercase tracking-eyebrow text-accent border border-accent-soft rounded-brand-sm px-3 py-1 shrink-0 self-start">
+                  {certifications[3].badge}
+                </span>
+              </div>
+              <p className="text-body-sm text-copy-mid leading-[1.75] max-w-[720px]">
+                {certifications[3].body}
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── Client logos ── */}
-      <div className="border-y border-border px-container-mobile md:px-container py-12">
+      <section className="px-container-mobile md:px-container py-section-mobile md:py-section bg-surface-alt">
         <div className="mx-auto max-w-site">
           <Reveal>
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-8 text-center">
+              Trusted by
+            </p>
             <div className="flex items-center justify-center gap-10 md:gap-16 flex-wrap">
               {clients.map((client) => (
                 <span
@@ -185,9 +239,9 @@ export default function CompliancePage() {
             </div>
           </Reveal>
         </div>
-      </div>
+      </section>
 
-      {/* ── Trust Portal + Cross-links ── */}
+      {/* ── Trust Portal ── */}
       <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-dark text-surface-white">
         <div className="mx-auto max-w-site text-center">
           <Reveal>
@@ -210,30 +264,35 @@ export default function CompliancePage() {
             >
               Visit security.ambr.ai
             </a>
+          </Reveal>
+        </div>
+      </section>
 
-            <div className="mt-12 pt-10 border-t border-surface-white/10">
-              <p className="font-heading text-label leading-[1.3] tracking-heading mb-6">
-                Need something specific for your security review?{' '}
-                <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors">
-                  Talk to us
-                </Link>
-                .
-              </p>
-              <div className="flex items-center justify-center gap-6 flex-wrap">
-                <Link
-                  href="/security/data-protection"
-                  className="text-body-sm font-body-medium text-copy-light hover:text-accent transition-colors"
-                >
-                  Read how we protect your data &rarr;
-                </Link>
-                <span className="text-surface-white/20" aria-hidden="true">&middot;</span>
-                <Link
-                  href="/security/responsible-ai"
-                  className="text-body-sm font-body-medium text-copy-light hover:text-accent transition-colors"
-                >
-                  Our approach to responsible AI &rarr;
-                </Link>
-              </div>
+      {/* ── Cross-links ── */}
+      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt">
+        <div className="mx-auto max-w-site text-center">
+          <Reveal>
+            <p className="font-heading text-label leading-[1.3] tracking-heading mb-6">
+              Need something specific for your security review?{' '}
+              <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors">
+                Talk to us
+              </Link>
+              .
+            </p>
+            <div className="flex items-center justify-center gap-6 flex-wrap">
+              <Link
+                href="/security/data-protection"
+                className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
+              >
+                Read how we protect your data &rarr;
+              </Link>
+              <span className="text-copy-faint" aria-hidden="true">&middot;</span>
+              <Link
+                href="/security/responsible-ai"
+                className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
+              >
+                Our approach to responsible AI &rarr;
+              </Link>
             </div>
           </Reveal>
         </div>

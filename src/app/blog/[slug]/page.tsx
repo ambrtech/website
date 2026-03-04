@@ -84,42 +84,52 @@ export default async function BlogPostPage({ params }: PageProps) {
       <article className="pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container">
         <div className="mx-auto max-w-[720px]">
           <Reveal>
-            <div className="mb-8">
-              <div className="flex flex-wrap gap-1.5 mb-4">
+            <header className="mb-10">
+              <div className="flex flex-wrap gap-2 mb-5">
                 {fm.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-badge uppercase tracking-eyebrow font-body-medium text-copy-light bg-surface-alt rounded-full px-2.5 py-0.5"
+                    className="text-eyebrow-sm uppercase tracking-eyebrow font-body-medium text-accent bg-accent-whisper rounded-full px-3 py-1"
                   >
                     {tags[tag].label}
                   </span>
                 ))}
               </div>
-              <h1 className="font-heading text-title leading-[1.15] tracking-heading mb-4">
+              <h1 className="font-heading text-title leading-[1.15] tracking-heading mb-5">
                 {fm.title}
               </h1>
-              <p className="text-body text-copy-mid leading-[1.7] mb-6">
+              <p className="text-body text-copy-mid leading-[1.75] mb-6 max-w-[620px]">
                 {fm.description}
               </p>
-              <div className="flex items-center gap-3 text-caption text-copy-light">
-                <span className="font-body-medium text-copy-mid">{fm.author}</span>
-                <span aria-hidden="true">&middot;</span>
-                <time dateTime={fm.publishedAt}>
-                  {new Date(fm.publishedAt).toLocaleDateString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric',
-                  })}
-                </time>
-                <span aria-hidden="true">&middot;</span>
-                <span>{fm.readingTime} min read</span>
+              <div className="flex items-center gap-3 text-caption text-copy-light pt-5 border-t border-border">
+                <div className="w-8 h-8 rounded-full bg-surface-alt flex items-center justify-center flex-shrink-0">
+                  <span className="font-heading text-[0.6rem] text-copy-mid">
+                    {fm.author
+                      .split(' ')
+                      .map((n) => n[0])
+                      .join('')}
+                  </span>
+                </div>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <span className="font-body-medium text-copy-mid">{fm.author}</span>
+                  <span aria-hidden="true" className="text-copy-faint">&middot;</span>
+                  <time dateTime={fm.publishedAt}>
+                    {new Date(fm.publishedAt).toLocaleDateString('en-US', {
+                      month: 'long',
+                      day: 'numeric',
+                      year: 'numeric',
+                    })}
+                  </time>
+                  <span aria-hidden="true" className="text-copy-faint">&middot;</span>
+                  <span>{fm.readingTime} min read</span>
+                </div>
               </div>
-            </div>
+            </header>
           </Reveal>
 
           {fm.featuredImage && (
             <Reveal>
-              <div className="relative aspect-[16/9] rounded-brand-lg overflow-hidden mb-10">
+              <figure className="relative aspect-[16/9] rounded-brand-lg overflow-hidden mb-12">
                 <Image
                   src={fm.featuredImage}
                   alt={fm.featuredImageAlt || ''}
@@ -128,7 +138,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 720px"
                 />
-              </div>
+              </figure>
             </Reveal>
           )}
 
