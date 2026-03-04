@@ -20,7 +20,7 @@ import {
 export const metadata = createMetadata({
   title: 'How It Works',
   description:
-    'From scenario selection to structured feedback and team-wide reporting. See how Ambr AI delivers measurable conversation training at scale.',
+    'Deploy customized conversation simulations, let your team practice through realistic voice roleplay, and get structured capability data back — for every session, every team, every time.',
   path: '/product/how-it-works',
 })
 
@@ -41,11 +41,11 @@ export default function HowItWorksPage() {
         eyebrow="How It Works"
         heading={
           <>
-            Choose a scenario. Have the conversation.
-            {' '}See the <em className="text-accent">results</em>.
+            Deploy a scenario. Your team practices.
+            {' '}You see the <em className="text-accent">results</em>.
           </>
         }
-        subtitle="Realistic voice-based conversation practice, structured around your scenarios and designed to produce measurable improvement across your team."
+        subtitle="Configure realistic conversation training around your scenarios, deploy it in minutes, and get structured capability data back — for every session, every team member, every time."
       />
 
       {/* ── Stats ── */}
@@ -68,23 +68,23 @@ export default function HowItWorksPage() {
 
       {/* ── Three Steps ── */}
       <NumberedSteps
-        eyebrow="The learner experience"
-        heading="Three steps. No scheduling. No awkward pairs."
+        eyebrow="Your deployment workflow"
+        heading="Three steps to measurable improvement"
         items={[
           {
-            title: 'Choose a scenario',
+            title: 'Deploy a scenario',
             description:
-              'Learners browse a library of simulations tailored to your organization, or admins assign specific scenarios directly. Each one defines the AI character, their personality, objectives, and the context your people actually face at work.',
+              'Choose from a library of ready-made simulations or commission scenarios built around your specific conversations, culture, and success criteria. Define the AI character, set the difficulty, and assign it to your team — all from a single dashboard.',
           },
           {
-            title: 'Have a real conversation',
+            title: 'Your team practices through voice',
             description:
-              'No scripts. No predetermined paths. The AI adapts in real time via natural voice interaction, responding to what your learner actually says. It feels like talking to a real person — because that is the whole point.',
+              'Team members have realistic, unscripted voice conversations with an AI that adapts in real time. No scheduling, no pairing, no facilitator required. They practice whenever they are ready, in any of 30+ languages.',
           },
           {
-            title: 'Receive structured feedback',
+            title: 'You see structured results',
             description:
-              'Immediately after the conversation, learners receive detailed, personalized insights: conversation structure, word choice, tone, pace, strengths, and specific areas to improve. On-demand coaching, available every single time.',
+              'Every session generates detailed capability data: conversation structure, word choice, tone, pace, and specific areas for improvement. Aggregated trends across your teams show where skills are developing, where gaps persist, and where to invest next.',
           },
         ]}
       />
@@ -104,16 +104,16 @@ export default function HowItWorksPage() {
         }
       >
         <p>
-          Every simulation is grounded in the situations your people actually
-          encounter. Difficult client conversations. High-stakes negotiations.
-          Performance reviews. Onboarding calls. Whatever the scenario, the AI
-          character has a defined role, personality, and objectives that mirror
-          the real thing.
+          Every simulation mirrors the situations your organization actually
+          faces. Difficult client conversations. High-stakes negotiations.
+          Performance reviews. Onboarding calls. The AI character has a defined
+          role, personality, and objectives that reflect the real thing.
         </p>
         <p>
-          Admins can deploy from a shared library or commission fully custom
-          simulations — built around your terminology, your processes, and the
-          nuances that make your organization different.
+          Deploy from a shared library, build your own in the scenario editor,
+          or brief our team and we will create fully custom simulations —
+          designed around your terminology, your processes, and the nuances
+          that make your organization different.
         </p>
       </SplitContent>
 
@@ -121,7 +121,7 @@ export default function HowItWorksPage() {
       <SplitContent
         reversed
         eyebrow="Step 2"
-        heading="Voice-first. No scripts. No guardrails."
+        heading="Realistic, unscripted, voice-first"
         visualContent={
           <div className="w-full aspect-[4/3] rounded-brand bg-accent-whisper border border-border relative overflow-hidden flex items-center justify-center">
             <div className="text-center px-8">
@@ -145,16 +145,16 @@ export default function HowItWorksPage() {
         }
       >
         <p>
-          The conversation unfolds naturally through voice. Your learner speaks,
-          the AI listens and responds in real time — with ultra-low latency that
-          keeps the exchange feeling human. No clicking through options. No
-          reading from a screen.
+          The conversation unfolds naturally through voice. The AI listens and
+          responds in real time — with near-instant latency that keeps the
+          exchange feeling human. No scripts. No predetermined paths. No
+          clicking through options.
         </p>
         <p>
-          The AI adapts to what is actually said: it pushes back, changes tack,
-          gets emotional, or concedes — just like a real counterpart would. Over
-          thirty languages are supported natively, with optional screensharing
-          and body language analysis for an even richer experience.
+          The AI pushes back, changes tack, gets emotional, or concedes — just
+          like a real counterpart would. Over thirty languages are supported
+          natively, with optional screensharing for demo practice and body
+          language analysis for a complete picture of how people come across.
         </p>
       </SplitContent>
 
@@ -163,7 +163,7 @@ export default function HowItWorksPage() {
         eyebrow="Step 3"
         heading={
           <>
-            Feedback that actually <em className="text-accent">develops</em> people
+            Data that actually <em className="text-accent">develops</em> people
           </>
         }
         visualContent={
@@ -173,64 +173,65 @@ export default function HowItWorksPage() {
         }
       >
         <p>
-          Immediately after the conversation ends, learners receive a detailed
-          breakdown: how they structured the discussion, the words they chose,
-          their tone and pace, where they excelled, and specific guidance on what
-          to try differently next time.
+          Every session produces structured, personalized feedback — not a
+          generic scorecard. Learners see exactly how they structured the
+          conversation, the words they chose, their tone and pace, where they
+          excelled, and specific guidance on what to try differently.
         </p>
         <p>
-          This is not a generic scorecard. The feedback is personalized to the
-          conversation that just happened, grounded in the scenario objectives,
-          and designed to build genuine skill — not just awareness.
+          For you, the value goes further. Aggregated data across your teams
+          reveals patterns in communication strengths and gaps — the
+          intelligence you need to design targeted interventions and prove
+          that training is actually shifting behavior.
         </p>
       </SplitContent>
 
       {/* ── Testimonial ── */}
       <PullQuote
-        quote="The feedback our people get after each session is more detailed than what most managers give in a quarterly review. And they can access it whenever they want."
-        name="Head of Learning"
-        company="Global Professional Services Firm"
+        quote="We write scripts for managers but it's not sustainable. Ambr AI gives them a self-sustaining skill."
+        role="Head of L&D"
+        company="Global Logistics Company"
       />
 
       {/* ── Key Capabilities Grid ── */}
       <FeatureGrid
-        eyebrow="Capabilities"
+        eyebrow="Platform capabilities"
         heading={
           <>
-            Everything your team needs to practice{' '}
-            <em className="text-accent">well</em>
+            Everything you need to run{' '}
+            <em className="text-accent">structured</em> training programs
           </>
         }
         items={[
           {
             heading: 'Presentation training',
             description:
-              'Practice delivering presentations with real-time feedback on clarity, pacing, and audience engagement. Ideal for pitch prep, all-hands, and client-facing decks.',
+              'Team members rehearse presentations and pitches with a simulated audience that reacts, asks questions, and challenges delivery. Ideal for pitch prep, all-hands, and client-facing decks.',
           },
           {
             heading: 'Scenario library',
             description:
-              'A growing library of ready-to-deploy simulations across sales, leadership, customer service, and more — all customizable to your context.',
+              'A growing library of ready-to-deploy simulations across management, sales, customer service, and more — all customizable to your context and ready to use immediately.',
           },
           {
             heading: 'Learning journeys',
             description:
-              'Sequence simulations into structured programs with progressive difficulty. Guide learners through a curriculum, not just isolated sessions.',
+              'Structure training into guided paths that build skills progressively. Assign sequences of scenarios so your team develops systematically, not randomly.',
           },
           {
             heading: 'Certifications',
             description:
-              'Set pass/fail benchmarks and issue certifications when learners demonstrate competency. Ideal for onboarding gates and compliance requirements.',
+              'Set competency benchmarks and issue certifications when team members demonstrate capability. Ideal for onboarding gates, compliance requirements, and skills verification.',
           },
           {
             heading: 'Screensharing',
             description:
-              'Learners can share their screen during the simulation — perfect for demo practice, technical walkthroughs, and solution presentations.',
+              'For scenarios involving product walkthroughs, presentations, or demos, team members can share their screen during the simulation — and the AI responds to what it sees.',
           },
           {
             heading: 'Body language analysis',
             description:
-              'Optional video analysis gives learners feedback on eye contact, posture, and non-verbal communication alongside their conversation performance.',
+              'Optional video analysis provides feedback on eye contact, posture, and non-verbal communication — so your team knows how they come across, not just what they say.',
           },
         ]}
       />
@@ -241,22 +242,22 @@ export default function HowItWorksPage() {
           <Reveal>
             <div>
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
-                For admins
+                Built for you
               </p>
               <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-6">
                 Full visibility. Total control.
               </h2>
               <div className="text-body text-copy-mid leading-[1.75] space-y-4">
                 <p>
-                  While learners practice, you see the bigger picture. Ambr AI
-                  gives L&amp;D leaders, sales enablement teams, and HR directors
-                  the reporting, customization tools, and integrations to run
-                  conversation training as a managed program — not a side project.
+                  While your team practices, you see the bigger picture. Track
+                  adoption across regions, identify capability gaps before they
+                  become performance problems, measure improvement over time,
+                  and connect it all to the systems you already use.
                 </p>
                 <p>
-                  Track adoption, identify skill gaps across teams, measure
-                  improvement over time, and connect it all to the systems you
-                  already use.
+                  Dashboard reporting, customization tools, certification
+                  tracking, and integrations with your LMS and HRIS — everything
+                  you need to run conversation training as a managed program.
                 </p>
               </div>
               <Link
@@ -281,27 +282,27 @@ export default function HowItWorksPage() {
       {/* ── Admin Capabilities Grid ── */}
       <FeatureGrid
         eyebrow="Admin tools"
-        heading="Built for the people who manage learning"
+        heading="Built for the people who manage training"
         items={[
           {
             heading: 'Dashboard and reporting',
             description:
-              'See who is practicing, how often, and how they are improving. Filter by team, scenario, time period, or individual. Export data for stakeholder reporting.',
+              'Track usage, monitor engagement, and view aggregated learning insights across teams. Filter by scenario, team, time period, or individual. Export data for stakeholder reporting.',
           },
           {
             heading: 'Customization tools',
             description:
-              'Create, edit, and refine simulations without engineering support. Define characters, objectives, evaluation criteria, and difficulty levels through an intuitive admin interface.',
+              'Build and edit simulations with no technical expertise. Define characters, objectives, evaluation criteria, and difficulty levels through an intuitive admin interface.',
           },
           {
-            heading: 'Certification tracking',
+            heading: 'Certifications and tracking',
             description:
-              'Assign required simulations, set passing thresholds, and track completion across your organization. Ideal for onboarding, compliance, and skills verification.',
+              'Manage completion, follow up with team members, and validate competence at scale. Set passing thresholds and track certification status across your organization.',
           },
           {
             heading: 'Integrations',
             description:
-              'Connect Ambr AI to your LMS, HRIS, or SSO provider. SCORM support, API access, and pre-built integrations with the platforms enterprise teams already use.',
+              'Connect Ambr AI with your LMS, HRIS, or SSO provider. SCORM, xAPI, and pre-built integrations with the platforms enterprise teams already use.',
           },
         ]}
       />

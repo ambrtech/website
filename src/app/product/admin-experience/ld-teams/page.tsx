@@ -4,7 +4,6 @@ import { PageHero } from '@/components/sections/page-hero'
 import { SplitContent } from '@/components/sections/split-content'
 import { FeatureGrid } from '@/components/sections/feature-grid'
 import { StatBar } from '@/components/sections/stat-bar'
-import { NumberedSteps } from '@/components/sections/numbered-steps'
 import { CTA } from '@/components/sections/cta'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
@@ -37,22 +36,22 @@ export default function LDTeamsPage() {
             <em className="text-accent">development strategy</em>
           </>
         }
-        subtitle="Every simulation generates structured data on how your people communicate under pressure. Ambr AI turns that into the capability intelligence L&D leaders actually need."
+        subtitle="Aggregated, anonymized data on how your people communicate under pressure: where they hesitate, where they excel, and what patterns emerge across cohorts. The insight that shapes your training strategy, not just your completion rates."
       />
 
       <StatBar
         items={[
           {
-            value: '1,000+',
-            label: 'Conversations analyzed per organization, per month',
-          },
-          {
             value: '30+',
-            label: 'Languages supported for global rollout',
+            label: 'Languages for global rollout',
           },
           {
             value: '100%',
-            label: 'Of simulations produce structured capability data',
+            label: 'Of sessions produce structured capability data',
+          },
+          {
+            value: 'Real-time',
+            label: 'Aggregated insights across teams and regions',
           },
         ]}
       />
@@ -123,42 +122,38 @@ export default function LDTeamsPage() {
         }
       >
         <p>
-          Your competency models. Your behavioral indicators. Your scoring
-          criteria. Ambr AI maps directly to the frameworks your organization
-          already uses — so insights land in language stakeholders recognize, and
-          capability data feeds into existing talent processes without
-          translation.
+          Your competency models. Your behavioral indicators. Your language.
+          Ambr AI scenarios are built around the way your organization actually
+          talks about development, not generic off-the-shelf content.
         </p>
         <p>
-          This is not a one-size-fits-all assessment. Every simulation is built
-          around your specific scenarios, culture, and performance standards.
+          Build them yourself in the platform, or brief our team and we will
+          create them for you. Either way, insights land in language
+          stakeholders recognize and capability data feeds into existing
+          talent processes without translation.
         </p>
       </SplitContent>
 
-      <NumberedSteps
-        eyebrow="Global scale"
-        heading="Scale with full control"
-        items={[
-          {
-            title: 'Single dashboard',
-            description:
-              'Manage every team, region, and program from one place. No spreadsheets, no siloed tools, no chasing local admins for data.',
-          },
-          {
-            title: '30+ languages',
-            description:
-              'Deploy simulations in the languages your teams actually work in. Learners practice in their own language — the data rolls up into one unified view.',
-          },
-          {
-            title: 'Role-based access',
-            description:
-              'Give regional L&D leads visibility into their teams without exposing the full picture. Control access at the level of detail that makes sense for each stakeholder.',
-          },
-        ]}
-      />
-
-      {/* Evidence section — custom inline */}
+      {/* Scale and evidence — combined section */}
       <Section className="bg-surface-alt border-y border-border">
+        <Reveal>
+          <div className="max-w-3xl mb-16">
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+              Global scale
+            </p>
+            <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-6">
+              Scale with <em className="text-accent">full control</em>
+            </h2>
+            <div className="text-body text-copy-mid leading-[1.75] space-y-4">
+              <p>
+                Roll out programs across functions, geographies, and languages
+                from a single dashboard. Ambr AI supports 30+ languages with
+                culturally adjusted simulations, so your global teams get the
+                same quality of training regardless of location.
+              </p>
+            </div>
+          </div>
+        </Reveal>
         <Reveal>
           <div className="max-w-3xl">
             <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">

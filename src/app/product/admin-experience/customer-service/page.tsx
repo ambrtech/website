@@ -40,7 +40,7 @@ export default function CustomerServicePage() {
             <em className="text-accent">consistent training</em>
           </>
         }
-        subtitle="Every customer interaction reflects your brand. Ambr AI gives frontline teams a way to practice the conversations that matter most — and gives you visibility into whether the training is landing."
+        subtitle="Every customer interaction reflects your brand. But most customer service training is a one-time onboarding exercise. Ambr AI gives frontline teams structured, repeatable practice on escalations, complaints, and complex inquiries — and gives you visibility into whether the training is landing."
       />
 
       <StatBar
@@ -70,24 +70,24 @@ export default function CustomerServicePage() {
         }
         items={[
           {
-            heading: 'Complaint handling',
+            heading: 'Complaint handling and de-escalation',
             description:
-              'Agents practice de-escalation, empathetic responses, and resolution conversations with realistic, emotionally charged scenarios. They build confidence before facing a real frustrated customer.',
+              'Train your team to stay composed, empathetic, and solution-oriented under pressure. They build confidence before facing a real frustrated customer.',
           },
           {
-            heading: 'Upsell and retention',
+            heading: 'Upsell and retention conversations',
             description:
-              'Train agents to recognize and act on upsell opportunities naturally — without sounding scripted. Practice retention conversations where every word matters.',
+              'Build confidence in value-led conversations that feel natural, not scripted. Practice retention conversations where every word matters.',
           },
           {
-            heading: 'Multilingual support',
+            heading: 'Multilingual support teams',
             description:
-              'Deploy simulations in 30+ languages so agents practice in the language they support. Capability data rolls up into a single unified view regardless of language.',
+              'Train in 30+ languages with culturally adjusted scenarios, not just translations. Capability data rolls up into a single unified view regardless of language.',
           },
           {
             heading: 'Onboarding at speed',
             description:
-              'New agents start practicing from day one. Structured Journeys take them from brand fundamentals through complex scenarios — so they reach the floor faster with less risk.',
+              'New agents start training from their first week. Certification workflows set and verify standards across your team, so they reach the floor faster with less risk.',
           },
         ]}
       />
@@ -102,17 +102,15 @@ export default function CustomerServicePage() {
         }
       >
         <p>
-          Call recordings tell you what happened. Ambr AI tells you what your
-          team can handle. Aggregated simulation data reveals patterns across
-          your entire frontline — which conversation types cause the most
-          difficulty, where confidence drops, and which teams need targeted
-          development.
+          Ambr AI gives you aggregated insight into communication patterns
+          across your team: where people excel, where consistency breaks down,
+          and which conversation types need more attention.
         </p>
         <p>
-          Use capability data to direct coaching resources where they matter
-          most. Identify the gap between your best-performing agents and the
-          rest, then build targeted programs to close it. Generate QA-ready
-          evidence that training is driving measurable improvement.
+          Use that data to target development, refine training programs, and
+          build evidence for quality assurance reviews. Identify the gap
+          between your best-performing agents and the rest, then build
+          targeted programs to close it.
         </p>
       </SplitContent>
 
@@ -147,17 +145,17 @@ export default function CustomerServicePage() {
           {
             title: 'Structured Journeys',
             description:
-              'Sequence simulations into progressive learning paths. New agents build skills step by step. Experienced agents tackle advanced scenarios that stretch their capabilities.',
+              'Guide team members through progressively complex scenarios, building the skills that turn training into habit. New agents build foundations; experienced agents tackle advanced challenges.',
           },
           {
             title: 'Certifications',
             description:
-              'Award certifications based on demonstrated performance, not attendance. When an agent is certified, you know they can handle the conversation — because they already have.',
+              'Set and verify standards, so quality is consistent across every shift and every location. When an agent is certified, you know they can handle the conversation — because they already have.',
           },
           {
             title: 'Consistent across every shift',
             description:
-              'Whether your team is in Manila, Manchester, or Montreal, everyone trains against the same standard. No variation in quality based on who runs the training session.',
+              'Whether your team is in Manila, Manchester, or Montreal, everyone trains against the same standard. No variation in quality based on who runs the session.',
           },
         ]}
       />

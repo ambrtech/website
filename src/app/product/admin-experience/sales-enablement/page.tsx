@@ -40,7 +40,7 @@ export default function SalesEnablementPage() {
             <em className="text-accent">See the results.</em>
           </>
         }
-        subtitle="Sales training shouldn't end when the workshop does. Ambr AI gives your reps a place to practice the conversations that actually close deals — and gives you the data to prove it's working."
+        subtitle="Sales training should not end with a workshop. Your team needs to train on the conversations that actually close deals — discovery, objection handling, negotiation, expansion — in conditions that build real skills."
       />
 
       <StatBar
@@ -70,24 +70,24 @@ export default function SalesEnablementPage() {
         }
         items={[
           {
-            heading: 'Scenario library',
+            heading: 'Scenario library for sales',
             description:
-              'Discovery calls, objection handling, competitive positioning, renewal conversations. Build a library of the exact situations your reps face — and let them practice until they are ready.',
+              'Prospecting, discovery, objection handling, negotiation, closing, account expansion. A library of the exact conversation types your reps face — ready to use or customize.',
           },
           {
-            heading: 'Custom scenarios in hours',
+            heading: 'Custom scenarios for your pipeline',
             description:
-              'Launching a new product? Entering a new vertical? Create custom simulations around your real use cases, buyer personas, and competitive landscape. No months-long development cycles.',
+              'Build simulations around your products, buyer personas, and competitive landscape. New product launch? New vertical? Deploy targeted practice in hours, not months.',
           },
           {
-            heading: 'Pitch and presentation practice',
+            heading: 'Presentation and pitch training',
             description:
-              'Reps can practice delivering presentations and pitches with screensharing enabled. The simulation responds to their delivery in real time — just like a prospect would.',
+              'Reps rehearse pitches and demos with AI-driven audience interaction. With screensharing enabled, the simulation responds to their delivery in real time — just like a prospect would.',
           },
           {
-            heading: 'Body language and delivery',
+            heading: 'Body language analysis',
             description:
-              'With webcam enabled, simulations capture non-verbal signals alongside conversation content. Reps get feedback on presence and delivery, not just what they said.',
+              'Feedback on non-verbal communication alongside voice, so your team knows how they come across on camera. Presence and delivery, not just what they said.',
           },
         ]}
       />
@@ -101,17 +101,17 @@ export default function SalesEnablementPage() {
         }
       >
         <p>
-          New hires don&apos;t need to wait for scheduled roleplays or shadow
-          experienced reps for weeks. From day one, they can practice your
-          core sales conversations — discovery, demo, negotiation — in
-          realistic simulations built around your actual deal stages and buyer
-          personas.
+          New hires start training from day one. No scheduling, no pairing,
+          no waiting for a senior team member to be available. From their
+          first week, they can practice your core sales conversations —
+          discovery, demo, negotiation — in realistic simulations built
+          around your actual deal stages and buyer personas.
         </p>
         <p>
-          Use Journeys to structure onboarding into a progressive sequence.
-          Each rep builds skills in the right order. You see exactly when
-          they&apos;re ready for live conversations — no guessing, no premature
-          deployment.
+          Structured Journeys take them through a progressive sequence of
+          scenarios, building competency before they ever get on a live
+          call. You see exactly when they are ready — no guessing, no
+          premature deployment.
         </p>
       </SplitContent>
 
@@ -148,15 +148,15 @@ export default function SalesEnablementPage() {
         }
       >
         <p>
-          See exactly where your team is strong and where they struggle.
-          Ambr AI surfaces patterns across hundreds of simulated
-          conversations — which objections trip reps up, where discovery
-          falls short, and which segments of your team need targeted coaching.
+          Stop guessing where your team is struggling. Ambr AI surfaces
+          patterns across your organization — which stages of the
+          conversation break down, where confidence drops, and which
+          skills need reinforcement.
         </p>
         <p>
-          Stop relying on manager observations and call recording reviews.
-          Structured capability data shows you what&apos;s working, what
-          isn&apos;t, and where to focus your next enablement investment.
+          Use that data to focus your development investment where it
+          matters most and to shape enablement programs around real
+          evidence, not manager anecdotes.
         </p>
       </SplitContent>
 

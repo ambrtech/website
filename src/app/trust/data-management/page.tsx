@@ -83,7 +83,7 @@ export default function DataManagementPage() {
             Your data. Your <em className="text-accent">control</em>.
           </>
         }
-        subtitle="We believe organizations deserve a clear, complete understanding of how their data is handled. This page provides that in plain language — no legalese, no ambiguity."
+        subtitle="Ambr AI processes sensitive conversation data. We treat that with the seriousness it deserves. This page explains, in plain terms, what data we collect, how we handle it, and what we will never do with it."
         compact
       />
 

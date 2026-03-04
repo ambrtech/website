@@ -103,7 +103,7 @@ export default function IntegrationsPage() {
             <em className="text-accent">you already use</em>
           </>
         }
-        subtitle="Ambr AI connects with your LMS, HRIS, identity provider, and collaboration tools. No migration, no disruption, no new workflows for your teams to learn."
+        subtitle="Ambr AI connects to the learning platforms and enterprise tools your organization relies on. No migration, no disruption. Your teams access training through the environments they already know."
       />
 
       {/* ── Overview bar ── */}

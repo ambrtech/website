@@ -83,7 +83,7 @@ export default function AIEthicsPage() {
             Responsible AI, by <em className="text-accent">design</em>.
           </>
         }
-        subtitle="Building AI for workplace training carries specific responsibilities. These are our principles, how we implement them, and how we hold ourselves accountable."
+        subtitle="AI roleplay involves real people training on real conversations: moments of vulnerability, uncertainty, and growth. That responsibility shapes every decision we make about how our AI operates."
         compact
       />
 
@@ -95,7 +95,7 @@ export default function AIEthicsPage() {
               Our Principles
             </p>
             <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[640px]">
-              Five commitments that guide every product decision.
+              A training platform with a defined purpose — not a general-purpose AI tool.
             </h2>
           </div>
         </Reveal>

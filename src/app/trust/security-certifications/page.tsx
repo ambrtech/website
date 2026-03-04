@@ -107,7 +107,7 @@ export default function SecurityCertificationsPage() {
             <em className="text-accent">Independently</em> verified.
           </>
         }
-        subtitle="Our security posture is built for organizations where data protection is non-negotiable. Certified, audited, and continuously monitored."
+        subtitle="Ambr AI is built for organizations where security is non-negotiable. Our certifications and compliance posture reflect the standards our clients — including global consulting firms, financial services companies, and publicly listed enterprises — require."
         compact
       />
 
