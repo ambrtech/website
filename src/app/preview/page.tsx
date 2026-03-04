@@ -26,7 +26,6 @@ export const metadata = createMetadata({
 
 const FILTER_PRESETS = [
   { name: 'None', className: '', crop: 'origin-center' },
-  { name: 'Muted Cool', className: 'filter-muted-cool', crop: 'origin-top-right' },
   { name: 'Faded', className: 'filter-faded', crop: 'origin-top-left' },
   { name: 'Duotone', className: 'filter-duotone', crop: 'origin-bottom-right' },
   { name: 'Duotone Cream', className: 'filter-duotone-cream', crop: 'origin-bottom-left' },
@@ -434,7 +433,7 @@ export default function PreviewPage() {
             description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             cropFocus: 'top-left',
-            filter: 'muted-cool',
+            filter: 'duotone-cream',
             visualContent: <MockFeedbackPanel />,
           },
           {
@@ -506,7 +505,7 @@ export default function PreviewPage() {
             description:
               'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             cropFocus: 'top-left',
-            filter: 'muted-cool',
+            filter: 'duotone-cream',
           },
         ]}
       />

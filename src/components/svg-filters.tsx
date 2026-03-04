@@ -6,32 +6,6 @@ export function SVGFilters() {
   return (
     <svg className="absolute w-0 h-0 overflow-hidden" aria-hidden="true">
       <defs>
-        {/* ── Muted Cool ── */}
-        <filter id="filter-muted-cool" x="0%" y="0%" width="100%" height="100%">
-          <feColorMatrix
-            in="SourceGraphic"
-            type="matrix"
-            values="0.35 0.30 0.25 0 -0.02
-                    0.20 0.42 0.28 0 0.00
-                    0.15 0.25 0.50 0 0.04
-                    0    0    0    1 0"
-            result="graded"
-          />
-          <feComponentTransfer in="graded" result="toned">
-            <feFuncR type="linear" slope="0.88" intercept="0.04" />
-            <feFuncG type="linear" slope="0.88" intercept="0.05" />
-            <feFuncB type="linear" slope="0.88" intercept="0.07" />
-          </feComponentTransfer>
-          <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="5" stitchTiles="stitch" result="grain" />
-          <feColorMatrix in="grain" type="saturate" values="0" result="grainMono" />
-          <feComponentTransfer in="grainMono" result="grainFaint">
-            <feFuncR type="linear" slope="0.4" intercept="0.3" />
-            <feFuncG type="linear" slope="0.4" intercept="0.3" />
-            <feFuncB type="linear" slope="0.4" intercept="0.3" />
-          </feComponentTransfer>
-          <feBlend in="toned" in2="grainFaint" mode="soft-light" />
-        </filter>
-
         {/* ── Faded ── */}
         <filter id="filter-faded" x="0%" y="0%" width="100%" height="100%">
           <feColorMatrix in="SourceGraphic" type="saturate" values="0.4" result="desat" />

@@ -9,7 +9,6 @@
 export type CropFocus = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center'
 
 export type ImageFilter =
-  | 'muted-cool'
   | 'faded'
   | 'duotone'
   | 'duotone-cream'
@@ -17,7 +16,6 @@ export type ImageFilter =
   | 'duotone-copper'
 
 export const filterClass: Record<ImageFilter, string> = {
-  'muted-cool': 'filter-muted-cool',
   faded: 'filter-faded',
   duotone: 'filter-duotone',
   'duotone-cream': 'filter-duotone-cream',
