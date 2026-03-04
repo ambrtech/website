@@ -26,12 +26,12 @@ export const metadata = createMetadata({
 
 const FILTER_PRESETS = [
   { name: 'None', className: '', crop: 'origin-center' },
-  { name: 'Film Grain', className: 'filter-film-grain', crop: 'origin-top-left' },
-  { name: 'Muted Warm', className: 'filter-muted-warm', crop: 'origin-bottom-right' },
   { name: 'Muted Cool', className: 'filter-muted-cool', crop: 'origin-top-right' },
-  { name: 'Editorial', className: 'filter-editorial', crop: 'origin-bottom-left' },
   { name: 'Faded', className: 'filter-faded', crop: 'origin-top-left' },
-  { name: 'Duotone', className: 'filter-duotone', crop: 'origin-top-right' },
+  { name: 'Duotone', className: 'filter-duotone', crop: 'origin-bottom-right' },
+  { name: 'Duotone Cream', className: 'filter-duotone-cream', crop: 'origin-bottom-left' },
+  { name: 'Duotone Blush', className: 'filter-duotone-blush', crop: 'origin-center' },
+  { name: 'Duotone Copper', className: 'filter-duotone-copper', crop: 'origin-top-left' },
 ] as const
 
 const PHOTO_FILTERS = [
@@ -41,6 +41,9 @@ const PHOTO_FILTERS = [
     filters: [
       { name: 'None', className: '' },
       { name: 'Duotone', className: 'filter-duotone' },
+      { name: 'Duotone Cream', className: 'filter-duotone-cream' },
+      { name: 'Duotone Blush', className: 'filter-duotone-blush' },
+      { name: 'Duotone Copper', className: 'filter-duotone-copper' },
       { name: 'Faded', className: 'filter-faded' },
     ],
   },
@@ -50,6 +53,9 @@ const PHOTO_FILTERS = [
     filters: [
       { name: 'None', className: '' },
       { name: 'Duotone', className: 'filter-duotone' },
+      { name: 'Duotone Cream', className: 'filter-duotone-cream' },
+      { name: 'Duotone Blush', className: 'filter-duotone-blush' },
+      { name: 'Duotone Copper', className: 'filter-duotone-copper' },
       { name: 'Faded', className: 'filter-faded' },
     ],
   },
@@ -70,7 +76,7 @@ export default function PreviewPage() {
       <SectionLabel name="SVG Filter Presets — Texture" />
       <div className="px-container-mobile md:px-container py-8">
         <div className="mx-auto max-w-site">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {FILTER_PRESETS.map((preset) => (
               <div key={preset.name}>
                 <div className="relative w-full aspect-[4/3] rounded-brand-lg overflow-hidden mb-3">
@@ -79,7 +85,7 @@ export default function PreviewPage() {
                     alt=""
                     fill
                     className={`object-cover scale-[1.5] ${preset.crop} ${preset.className}`}
-                    sizes="(max-width: 768px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 50vw, 25vw"
                   />
                 </div>
                 <p className="text-caption text-copy-mid font-body">{preset.name}</p>
@@ -96,7 +102,7 @@ export default function PreviewPage() {
           {PHOTO_FILTERS.map((group) => (
             <div key={group.src} className="mb-12 last:mb-0">
               <p className="text-caption text-copy-light font-body mb-4">{group.label}</p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
                 {group.filters.map((f) => (
                   <div key={f.name}>
                     <div className="relative w-full aspect-[3/4] rounded-brand-lg overflow-hidden mb-3">
@@ -105,7 +111,7 @@ export default function PreviewPage() {
                         alt=""
                         fill
                         className={`object-cover ${f.className}`}
-                        sizes="(max-width: 768px) 50vw, 25vw"
+                        sizes="(max-width: 768px) 33vw, 16vw"
                       />
                     </div>
                     <p className="text-caption text-copy-mid font-body">{f.name}</p>
@@ -300,9 +306,8 @@ export default function PreviewPage() {
       <SectionLabel name="VisualFeatureCards" />
       <VisualFeatureCards />
 
-      {/* ── 14. Showcase Split ── */}
-      {/* ── 14a. ShowcaseSplit — editorial filter, top-left crop ── */}
-      <SectionLabel name="ShowcaseSplit — left / editorial / top-left" />
+      {/* ── 14a. ShowcaseSplit — duotone, top-left crop ── */}
+      <SectionLabel name="ShowcaseSplit — left / duotone / top-left" />
       <ShowcaseSplit
         heading={
           <>
@@ -311,7 +316,7 @@ export default function PreviewPage() {
           </>
         }
         subtitle="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
-        filter="editorial"
+        filter="duotone"
         cropFocus="top-left"
         visualContent={<MockJourneyGrid />}
         features={[
@@ -333,11 +338,11 @@ export default function PreviewPage() {
         ]}
       />
 
-      {/* ── 14b. ShowcaseSplit — muted-warm filter, bottom-right crop ── */}
-      <SectionLabel name="ShowcaseSplit — right / muted-warm / bottom-right" />
+      {/* ── 14b. ShowcaseSplit — duotone-blush, bottom-right crop ── */}
+      <SectionLabel name="ShowcaseSplit — right / duotone-blush / bottom-right" />
       <ShowcaseSplit
         layout="right"
-        filter="muted-warm"
+        filter="duotone-blush"
         cropFocus="bottom-right"
         visualContent={<MockContextSelector />}
         heading={
@@ -366,7 +371,7 @@ export default function PreviewPage() {
         ]}
       />
 
-      {/* ── 14c. ShowcaseSplit — faded filter, center crop ── */}
+      {/* ── 14c. ShowcaseSplit — faded, center crop ── */}
       <SectionLabel name="ShowcaseSplit — left / faded / center" />
       <ShowcaseSplit
         filter="faded"
@@ -437,7 +442,7 @@ export default function PreviewPage() {
             description:
               'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             cropFocus: 'top-right',
-            filter: 'muted-warm',
+            filter: 'duotone-copper',
             visualContent: <MockContextSelector />,
           },
           {
@@ -453,14 +458,14 @@ export default function PreviewPage() {
             description:
               'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             cropFocus: 'center',
-            filter: 'editorial',
+            filter: 'duotone',
           },
           {
             heading: 'Customer escalations',
             description:
               'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
             cropFocus: 'bottom-right',
-            filter: 'muted-warm',
+            filter: 'duotone-blush',
             visualContent: <MockJourneyGrid />,
           },
         ]}
@@ -485,7 +490,7 @@ export default function PreviewPage() {
             description:
               'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             cropFocus: 'center',
-            filter: 'muted-warm',
+            filter: 'duotone-cream',
             visualContent: <MockJourneyGrid />,
           },
           {
@@ -493,7 +498,7 @@ export default function PreviewPage() {
             description:
               'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
             cropFocus: 'bottom-left',
-            filter: 'editorial',
+            filter: 'duotone',
             visualContent: <MockFeedbackPanel />,
           },
           {

@@ -4,25 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { Section } from './section'
 import { Reveal } from '@/components/reveal'
-
-type CropFocus = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center'
-type ImageFilter = 'film-grain' | 'muted-warm' | 'muted-cool' | 'editorial' | 'faded'
-
-const filterClass: Record<ImageFilter, string> = {
-  'film-grain': 'filter-film-grain',
-  'muted-warm': 'filter-muted-warm',
-  'muted-cool': 'filter-muted-cool',
-  editorial: 'filter-editorial',
-  faded: 'filter-faded',
-}
-
-const cropOrigin: Record<CropFocus, string> = {
-  'top-left': 'origin-top-left',
-  'top-right': 'origin-top-right',
-  'bottom-left': 'origin-bottom-left',
-  'bottom-right': 'origin-bottom-right',
-  center: 'origin-center',
-}
+import { type CropFocus, type ImageFilter, filterClass, cropOrigin } from '@/lib/image-filters'
 
 interface AccordionShowcaseItem {
   heading: string
@@ -50,7 +32,7 @@ export function AccordionShowcase({
 
   const activeItem = items[activeIndex]
   const activeCrop = activeItem?.cropFocus ?? 'center'
-  const activeFilter = activeItem?.filter ?? 'editorial'
+  const activeFilter = activeItem?.filter ?? 'faded'
 
   return (
     <Section
@@ -91,19 +73,19 @@ export function AccordionShowcase({
                     </h3>
                   </button>
                   <div
-                    className="overflow-hidden transition-all duration-slow"
-                    style={{
-                      maxHeight: isActive ? '12rem' : '0',
-                      opacity: isActive ? 1 : 0,
-                    }}
+                    className={`grid transition-all duration-slow ${
+                      isActive ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                    }`}
                   >
-                    <p
-                      className={`text-body-sm leading-relaxed pb-6 ${
-                        isDark ? 'text-copy-faint' : 'text-copy-mid'
-                      }`}
-                    >
-                      {item.description}
-                    </p>
+                    <div className="overflow-hidden">
+                      <p
+                        className={`text-body-sm leading-relaxed pb-6 ${
+                          isDark ? 'text-copy-faint' : 'text-copy-mid'
+                        }`}
+                      >
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               )
@@ -127,14 +109,10 @@ export function AccordionShowcase({
                 className={`object-cover scale-[1.5] ${filterClass[activeFilter]} ${cropOrigin[activeCrop]} transition-transform duration-slow`}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              {/* Vignette */}
               <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background: isDark
-                    ? 'radial-gradient(ellipse at center, transparent 35%, rgba(28, 28, 26, 0.45) 100%)'
-                    : 'radial-gradient(ellipse at center, transparent 35%, rgba(255, 255, 255, 0.5) 100%)',
-                }}
+                className={`absolute inset-0 pointer-events-none ${
+                  isDark ? 'vignette-dark' : 'vignette-light'
+                }`}
               />
               {activeItem?.visualContent && (
                 <div className="absolute top-[20%] left-4 right-[-15%] bottom-[-10%] transition-opacity duration-normal">
