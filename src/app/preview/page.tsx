@@ -21,6 +21,7 @@ import { CustomerStory } from '@/components/sections/customer-story'
 import { PartnerShowcase } from '@/components/sections/partner-showcase'
 import { SecurityBadges } from '@/components/sections/security-badges'
 import { ValueCards } from '@/components/sections/value-cards'
+import { GrainCta } from '@/components/sections/grain-cta'
 import DisplayCards from '@/components/ui/display-cards'
 import { MessageCircle, Users, ShieldCheck } from 'lucide-react'
 import { PostGrid } from '@/components/blog/post-grid'
@@ -605,6 +606,23 @@ export default function PreviewPage() {
           { heading: 'Ask Us a Question', description: 'Not ready for a meeting? Send us a question and we\'ll get back to you within one business day.', href: '/find-out-more', ctaLabel: 'Ask a Question' },
           { heading: 'Get a Quote', description: 'If you have a clear sense of your requirements, we can put together a proposal.', href: '/find-out-more', ctaLabel: 'Request a Quote' },
         ]}
+      />
+
+      <SectionLabel name="GrainCta — light" />
+      <GrainCta
+        heading={<>Ready to see it in <em className="text-accent">action</em>?</>}
+        subtitle="Book a short conversation with the Ambr AI team. We will show you simulations built for your real scenarios — not a generic demo."
+        ctaLabel="Book a Demo"
+        ctaHref="/find-out-more"
+      />
+
+      <SectionLabel name="GrainCta — dark" />
+      <GrainCta
+        variant="dark"
+        heading={<>See what Ambr AI looks like{'\n'}for <em className="text-accent">your</em> team.</>}
+        subtitle="We'll build a custom simulation using your real scenarios. No generic demos."
+        ctaLabel="Request a Demo"
+        ctaHref="/contact"
       />
 
       {/* ╔══════════════════════════════════════════════════╗
