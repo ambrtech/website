@@ -7,7 +7,7 @@ import { HowItWorks } from '@/components/sections/how-it-works'
 import { Impact } from '@/components/sections/impact'
 import { SplitContent } from '@/components/sections/split-content'
 import { ProductScreenshot, MockFeedbackPanel } from '@/components/sections/product-screenshot'
-import { BentoShowcase } from '@/components/sections/bento-showcase'
+import { EditorialFeature } from '@/components/sections/editorial-feature'
 import { SecurityBadges } from '@/components/sections/security-badges'
 import { WhyAmbr } from '@/components/sections/why-ambr'
 import { Testimonial } from '@/components/sections/testimonial'
@@ -32,7 +32,7 @@ export default function Home() {
       <div data-section="feedback">
         <SplitContent
           eyebrow="Coaching"
-          heading={<>Feedback that actually changes <em className="text-accent">behaviour</em></>}
+          heading={<>Feedback that actually changes <em className="text-accent italic font-light">behaviour</em></>}
           visualContent={
             <ProductScreenshot tint>
               <MockFeedbackPanel />
@@ -46,10 +46,10 @@ export default function Home() {
           </p>
         </SplitContent>
       </div>
-      <div data-section="bento">
-        <BentoShowcase
+      <div data-section="editorial">
+        <EditorialFeature
           eyebrow="The platform"
-          heading={<>Everything your team needs, in <em className="text-accent">one place</em></>}
+          heading={<>Everything your team needs, in <em className="text-accent italic font-light">one place</em></>}
           subtitle="Voice simulations, structured feedback, team analytics, and 30+ languages — all from a single dashboard."
         />
       </div>

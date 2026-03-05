@@ -35,10 +35,12 @@ export function Reveal({ children, className = '', slow, delay = 0 }: RevealProp
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-all ease-out ${
-        slow ? 'duration-reveal' : 'duration-slow'
+      className={`transition-all ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        slow ? 'duration-[1.5s]' : 'duration-[1.2s]'
       } ${
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        visible 
+          ? 'opacity-100 translate-y-0 [clip-path:inset(-20%_-20%_-20%_-20%)]' 
+          : 'opacity-0 translate-y-[15px] [clip-path:inset(0_0_10%_0)]'
       } ${className}`}
     >
       {children}

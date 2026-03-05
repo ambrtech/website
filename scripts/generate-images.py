@@ -148,7 +148,6 @@ def generate_image(prompt_data: dict, model: str) -> Path | None:
             image_config=types.ImageConfig(
                 aspect_ratio=prompt_data["aspect_ratio"],
                 image_size="4K",
-                person_generation="",
             ),
             response_modalities=["IMAGE", "TEXT"],
         )
@@ -158,7 +157,6 @@ def generate_image(prompt_data: dict, model: str) -> Path | None:
             image_config=types.ImageConfig(
                 aspect_ratio=prompt_data["aspect_ratio"],
                 image_size="2K",
-                person_generation="",
             ),
             response_modalities=["IMAGE", "TEXT"],
         )

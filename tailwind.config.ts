@@ -12,6 +12,10 @@ export const brand = {
       alt: '#F0EFEB',
       white: '#FFFFFF',
     },
+    anchor: {
+      DEFAULT: '#2A2421',
+      pine: '#1B2922',
+    },
     dark: {
       DEFAULT: '#1C1C1A',
       mid: '#2E2E2B',

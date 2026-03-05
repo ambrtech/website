@@ -1,5 +1,8 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
+import { Reveal } from '@/components/reveal'
+import { Marginalia } from '@/components/marginalia'
 import { ComparisonLayout } from '@/components/sections/comparison-layout'
 import { UseCaseCards } from '@/components/sections/use-case-cards'
 import { ScenarioCards } from '@/components/sections/scenario-cards'
@@ -715,6 +718,96 @@ export default function PreviewPage() {
       <div className="px-container-mobile md:px-container py-6">
         <div className="mx-auto max-w-[720px]">
           <AuthorBio name="Jamie Wood" role="CTO & Co-Founder" />
+        </div>
+      </div>
+
+      {/* ╔══════════════════════════════════════════════════╗
+         ║  BRAND EVOLUTION (NEW EXPLORATIONS)              ║
+         ╚══════════════════════════════════════════════════╝ */}
+
+      <GroupLabel name="Brand Evolution Explorations" />
+
+      <SectionLabel name="Marginalia — The Human Touch" />
+      <div className="bg-surface-white py-16 border-y border-border my-12">
+        <div className="px-container-mobile md:px-container mb-12">
+          <div className="max-w-site mx-auto">
+            <Reveal>
+              <h3 className="font-heading text-section leading-[1.1] mb-6">
+                Perfecting the <em className="italic font-light">delivery</em>
+              </h3>
+              <p className="text-body text-copy-mid leading-relaxed mb-6 max-w-2xl">
+                Hand-drawn annotations emphasize the custom, human-led nature of the product. These draw dynamically as the user scrolls.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+
+        <div className="px-container-mobile md:px-container mb-16">
+          <div className="max-w-site mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <Reveal delay={200} className="relative">
+              <Image 
+                src="/images/photography/practice-phone-booth.png" 
+                alt="Practice session" 
+                width={800} 
+                height={533} 
+                className="w-full h-auto rounded-brand shadow-card"
+              />
+              <div className="absolute top-1/4 -left-8 md:-left-16 z-10 w-48 h-32 hidden md:block">
+                <Marginalia direction="circle" delay={800} width={200} height={120}>
+                  <div className="absolute -left-32 top-8 w-32 text-right pr-4">
+                    <span className="font-heading italic text-sm text-accent leading-tight inline-block">
+                      Focus on body language
+                    </span>
+                  </div>
+                </Marginalia>
+              </div>
+            </Reveal>
+            <div className="hidden md:block" />
+          </div>
+        </div>
+
+        <div className="px-container-mobile md:px-container">
+          <div className="max-w-3xl mx-auto text-center">
+            <Reveal>
+              <Marginalia direction="underline" delay={600} width={300} height={20} className="mb-8">
+                <h3 className="font-heading text-title leading-[1.2] text-dark relative z-10">
+                  "The most <em className="text-accent italic font-light">realistic</em> training environment."
+                </h3>
+              </Marginalia>
+            </Reveal>
+          </div>
+        </div>
+      </div>
+
+      <SectionLabel name="Deep Palette — Quiet Authority" />
+      <div className="py-16 mb-24">
+        <div className="bg-anchor-pine text-surface-white py-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-noise opacity-5 mix-blend-overlay pointer-events-none" />
+          <div className="px-container-mobile md:px-container relative z-10">
+            <div className="max-w-site mx-auto grid md:grid-cols-2 gap-16 items-center">
+              <Reveal>
+                <h2 className="font-heading text-headline leading-[1.1] mb-6">
+                  Trusted by the <em className="italic font-light text-accent-soft">most demanding</em> teams.
+                </h2>
+                <p className="text-surface-alt/80 text-lg leading-relaxed mb-10 max-w-md">
+                  A deep, rich Pine Green grounds the brand in authority and substance.
+                </p>
+                <div className="inline-block rounded-brand-sm bg-surface-white text-anchor-pine px-8 py-3.5 text-sm font-body-medium">
+                  Enterprise Security Review
+                </div>
+              </Reveal>
+              <Reveal delay={200}>
+                <div className="relative aspect-[4/3] rounded-brand-lg overflow-hidden bg-anchor border border-surface-white/10 shadow-2xl">
+                  <Image 
+                    src="/images/photography/hero-quiet-reflection.jpeg" 
+                    alt="Professional reflection" 
+                    fill 
+                    className="object-cover opacity-60 filter grayscale mix-blend-overlay"
+                  />
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </div>
 

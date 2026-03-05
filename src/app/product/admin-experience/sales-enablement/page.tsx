@@ -1,20 +1,111 @@
+import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { SplitContent } from '@/components/sections/split-content'
-import { FeatureGrid } from '@/components/sections/feature-grid'
+import {
+  ProductScreenshot,
+  MockScenarioCard,
+  MockCustomizationFlow,
+  MockDashboard,
+} from '@/components/sections/product-screenshot'
 import { StatBar } from '@/components/sections/stat-bar'
-import { NumberedSteps } from '@/components/sections/numbered-steps'
-import { CTA } from '@/components/sections/cta'
-import { Section } from '@/components/sections/section'
+import { PullQuote } from '@/components/sections/pull-quote'
 import { Reveal } from '@/components/reveal'
 
 export const metadata = createMetadata({
-  title: 'Sales Enablement',
+  title: 'Admin Experience for Sales Enablement',
   description:
-    'Onboard new sales hires faster, upskill continuously, and measure the conversations that drive revenue. Built for sales enablement leaders.',
+    'Onboard new hires faster, upskill continuously, and see the difference. Realistic, pressure-tested conversation practice at scale for sales teams.',
   path: '/product/admin-experience/sales-enablement',
 })
+
+/* ── Inline mock UIs ── */
+
+function MockPitchPractice() {
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Pitch Practice
+        </span>
+      </div>
+      <div className="p-3 rounded-brand-sm bg-surface border border-border">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-8 h-8 rounded-full bg-surface-alt border border-border flex items-center justify-center">
+            <span className="font-heading text-caption text-copy-mid">VP</span>
+          </div>
+          <div>
+            <p className="text-caption font-body-medium text-dark">VP of Operations</p>
+            <p className="text-caption text-copy-light">Cold prospect, 15 min meeting</p>
+          </div>
+        </div>
+        <div className="h-px bg-border mb-3" />
+        <p className="text-caption text-copy-mid leading-relaxed">
+          &ldquo;We&apos;ve looked at three other vendors already. What makes
+          your approach different?&rdquo;
+        </p>
+      </div>
+      <div className="grid grid-cols-2 gap-3">
+        <div className="p-3 rounded-brand-sm bg-surface border border-border text-center">
+          <p className="font-heading text-label tracking-heading text-dark leading-none mb-1">78%</p>
+          <p className="text-caption text-copy-light">Clarity</p>
+        </div>
+        <div className="p-3 rounded-brand-sm bg-surface border border-border text-center">
+          <p className="font-heading text-label tracking-heading text-dark leading-none mb-1">82%</p>
+          <p className="text-caption text-copy-light">Confidence</p>
+        </div>
+      </div>
+      <div className="p-3 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
+        <p className="text-caption text-copy-mid leading-relaxed">
+          Strong opening. Try pausing after your value prop to let it land
+          before transitioning to discovery.
+        </p>
+      </div>
+    </div>
+  )
+}
+
+function MockOnboardingJourney() {
+  const stages = [
+    { title: 'Product knowledge', progress: 100 },
+    { title: 'Discovery & qualification', progress: 75 },
+    { title: 'Objection handling', progress: 30 },
+    { title: 'Negotiation & close', progress: 0 },
+  ]
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light">
+          New Hire Journey
+        </span>
+        <span className="text-caption text-copy-faint">Week 2 of 4</span>
+      </div>
+      {stages.map((stage) => (
+        <div key={stage.title} className="p-3 rounded-brand-sm bg-surface border border-border">
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-caption font-body-medium text-dark">{stage.title}</p>
+            <span className={`text-caption ${
+              stage.progress === 100 ? 'text-accent' : 'text-copy-light'
+            }`}>
+              {stage.progress === 100 ? 'Complete' : `${stage.progress}%`}
+            </span>
+          </div>
+          <div className="h-1.5 rounded-full bg-surface-alt overflow-hidden">
+            <div
+              className={`h-full rounded-full ${
+                stage.progress === 100 ? 'bg-accent' : 'bg-accent-soft'
+              }`}
+              style={{ width: `${Math.max(stage.progress, 2)}%` }}
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export default function SalesEnablementPage() {
   return (
@@ -31,165 +122,178 @@ export default function SalesEnablementPage() {
         ]}
       />
 
+      {/* ── Hero ── */}
       <PageHero
         compact
         eyebrow="For Sales Enablement"
         heading={
           <>
             Onboard faster. Upskill continuously.{' '}
-            <em className="text-accent">See the results.</em>
+            See the <em className="text-accent">difference</em>.
           </>
         }
-        subtitle="Sales training should not end with a workshop. Your team needs to train on the conversations that actually close deals — discovery, objection handling, negotiation, expansion — in conditions that build real skills."
+        subtitle="Real sales capability comes from repetition. From practicing objection handling, discovery, and negotiation enough times that the response feels natural, not recalled. No scheduling. No role-play awkwardness with a manager. Just a platform where your team builds real skill, and you get full visibility into how they perform."
       />
 
+      {/* ── Stat bar ── */}
       <StatBar
         items={[
-          {
-            value: '40%',
-            label: 'Faster ramp time reported by enablement teams',
-          },
-          {
-            value: 'Day 1',
-            label: 'New hires start practicing from their first day',
-          },
-          {
-            value: '10x',
-            label: 'More practice reps than traditional roleplay',
-          },
+          { value: '40%', label: 'Faster ramp time reported by enablement teams' },
+          { value: 'Day 1', label: 'New hires start practicing immediately' },
+          { value: '10x', label: 'More practice reps than traditional roleplay' },
         ]}
       />
 
-      <FeatureGrid
-        eyebrow="Built for sales teams"
+      {/* ── 1. Scenario library — left text, right mock ── */}
+      <SplitContent
+        eyebrow="Built for sales"
         heading={
           <>
-            Practice the conversations that{' '}
-            <em className="text-accent">drive revenue</em>
+            A library of the conversations your team{' '}
+            <em className="text-accent">actually</em> has
           </>
         }
-        items={[
-          {
-            heading: 'Scenario library for sales',
-            description:
-              'Prospecting, discovery, objection handling, negotiation, closing, account expansion. A library of the exact conversation types your reps face — ready to use or customize.',
-          },
-          {
-            heading: 'Custom scenarios for your pipeline',
-            description:
-              'Build simulations around your products, buyer personas, and competitive landscape. New product launch? New vertical? Deploy targeted practice in hours, not months.',
-          },
-          {
-            heading: 'Presentation and pitch training',
-            description:
-              'Reps rehearse pitches and demos with AI-driven audience interaction. With screensharing enabled, the simulation responds to their delivery in real time — just like a prospect would.',
-          },
-          {
-            heading: 'Body language analysis',
-            description:
-              'Feedback on non-verbal communication alongside voice, so your team knows how they come across on camera. Presence and delivery, not just what they said.',
-          },
-        ]}
-      />
+        visualContent={
+          <ProductScreenshot tint>
+            <MockScenarioCard />
+          </ProductScreenshot>
+        }
+      >
+        <p>
+          Prospecting, discovery, objection handling, negotiation, closing,
+          account expansion. Ready-made simulations for every stage of
+          the sales conversation, ready to use or customize.
+        </p>
+      </SplitContent>
 
+      {/* ── 2. Custom scenarios — reversed ── */}
       <SplitContent
+        reversed
+        eyebrow="Your pipeline, your simulations"
+        heading={
+          <>
+            Custom scenarios built around{' '}
+            <em className="text-accent">your</em> deals
+          </>
+        }
+        visualContent={
+          <ProductScreenshot tint>
+            <MockCustomizationFlow />
+          </ProductScreenshot>
+        }
+      >
+        <p>
+          Simulations built around your products, buyer personas, and
+          competitive landscape. New product launch? New vertical? Deploy
+          targeted practice in hours, not months.
+        </p>
+      </SplitContent>
+
+      {/* ── 3. Pitch & presentation — left text, right mock ── */}
+      <SplitContent
+        eyebrow="Delivery practice"
+        heading={
+          <>
+            Pitch, present, and practice how you{' '}
+            <em className="text-accent">come across</em>
+          </>
+        }
+        visualContent={
+          <ProductScreenshot tint>
+            <MockPitchPractice />
+          </ProductScreenshot>
+        }
+      >
+        <p>
+          Reps rehearse demos and pitches with AI-driven audience
+          interaction. With screensharing enabled, the simulation responds
+          to their delivery in real time — just like a prospect would.
+        </p>
+        <p>
+          Body language analysis gives feedback on non-verbal communication
+          alongside voice, so your team knows how they come across on camera.
+        </p>
+      </SplitContent>
+
+      {/* ── 4. Onboarding — reversed ── */}
+      <SplitContent
+        reversed
         eyebrow="Accelerate onboarding"
         heading={
           <>
             Onboard in <em className="text-accent">days</em>, not months
           </>
         }
-      >
-        <p>
-          New hires start training from day one. No scheduling, no pairing,
-          no waiting for a senior team member to be available. From their
-          first week, they can practice your core sales conversations —
-          discovery, demo, negotiation — in realistic simulations built
-          around your actual deal stages and buyer personas.
-        </p>
-        <p>
-          Structured Journeys take them through a progressive sequence of
-          scenarios, building competency before they ever get on a live
-          call. You see exactly when they are ready — no guessing, no
-          premature deployment.
-        </p>
-      </SplitContent>
-
-      <NumberedSteps
-        eyebrow="Structured onboarding"
-        heading="From new hire to pipeline-ready"
-        items={[
-          {
-            title: 'Product knowledge',
-            description:
-              'Reps practice articulating your value proposition, handling common questions, and positioning against competitors — before their first customer call.',
-          },
-          {
-            title: 'Discovery and qualification',
-            description:
-              'Structured simulations teach reps to ask the right questions, identify pain points, and qualify opportunities using your specific methodology.',
-          },
-          {
-            title: 'Objection handling',
-            description:
-              'Reps face realistic pushback scenarios and practice responding with confidence. They build the muscle memory that workshops alone cannot create.',
-          },
-        ]}
-      />
-
-      <SplitContent
-        reversed
-        eyebrow="Capability insights"
-        heading={
-          <>
-            Data that sharpens your{' '}
-            <em className="text-accent">enablement strategy</em>
-          </>
+        visualContent={
+          <ProductScreenshot tint>
+            <MockOnboardingJourney />
+          </ProductScreenshot>
         }
       >
         <p>
-          Stop guessing where your team is struggling. Ambr AI surfaces
-          patterns across your organization — which stages of the
-          conversation break down, where confidence drops, and which
-          skills need reinforcement.
-        </p>
-        <p>
-          Use that data to focus your development investment where it
-          matters most and to shape enablement programs around real
-          evidence, not manager anecdotes.
+          New hires start practicing from day one. No scheduling, no
+          shadowing queues, no waiting for a senior rep to be available.
+          Structured Journeys take them through a progressive sequence of
+          scenarios, building competency before they ever get on a live call.
         </p>
       </SplitContent>
 
-      {/* Continuous upskilling — custom inline */}
-      <Section className="bg-surface-alt border-y border-border">
+      {/* ── 5. Capability insights — left text, right mock ── */}
+      <SplitContent
+        eyebrow="Capability insights"
+        heading={
+          <>
+            Know exactly where your team is{' '}
+            <em className="text-accent">struggling</em>
+          </>
+        }
+        visualContent={
+          <ProductScreenshot tint>
+            <MockDashboard />
+          </ProductScreenshot>
+        }
+      >
+        <p>
+          Stop waiting for quota attainment data to tell you what went wrong.
+          Ambr AI surfaces patterns across your organization before they
+          become pipeline problems.
+        </p>
+        <p>
+          Which stages of the conversation consistently break down? Where
+          does confidence drop? Which reps need more support, and on what?
+          Use that data to focus your enablement investment where it matters.
+        </p>
+      </SplitContent>
+
+      {/* ── Social proof ── */}
+      <PullQuote
+        quote="The feedback is really well structured, not overloaded with text like other tools where you don't know where to start."
+        role="L&D Manager"
+        company="Global Logistics Company"
+      />
+
+      {/* ── CTA ── */}
+      <section className="py-section-lg md:py-section-xl px-container-mobile md:px-container text-center bg-dark text-surface">
         <Reveal>
-          <div className="max-w-3xl">
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
-              Beyond onboarding
-            </p>
-            <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-6">
-              Upskilling that never{' '}
-              <em className="text-accent">stops</em>
-            </h2>
-            <div className="text-body text-copy-mid leading-[1.75] space-y-4">
-              <p>
-                New product launch? New competitive threat? New vertical?
-                Deploy targeted practice simulations to your entire sales
-                organization in hours. Reps practice on their own time, at
-                their own pace — and you see the results in the dashboard
-                before the next pipeline review.
-              </p>
-              <p>
-                Assign certifications that prove readiness. Track whether
-                skills actually transfer to live conversations. Build an
-                enablement program with a measurable feedback loop.
-              </p>
-            </div>
+          <h2 className="font-heading text-headline leading-[1.1] tracking-heading mb-10 text-surface">
+            See it for <em className="text-accent">yourself</em>.
+          </h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/try-for-free"
+              className="inline-block rounded-brand-sm bg-accent text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent-hover hover:-translate-y-px hover:shadow-lg"
+            >
+              Try for Free
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-block rounded-brand-sm border border-surface/20 text-surface px-8 py-3.5 text-sm font-body-medium transition-all hover:border-surface/40 hover:-translate-y-px"
+            >
+              Find Out More
+            </Link>
           </div>
         </Reveal>
-      </Section>
-
-      <CTA />
+      </section>
     </>
   )
 }

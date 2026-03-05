@@ -1,64 +1,87 @@
 import Link from 'next/link'
 
 const footerNav = {
-  Platform: [
-    { label: 'How it works', href: '/how-it-works' },
-    { label: 'Use cases', href: '/use-cases' },
-    { label: 'Custom scenarios', href: '/custom-scenarios' },
-    { label: 'Demo', href: '/contact' },
+  Product: [
+    { label: 'How It Works', href: '/product/how-it-works' },
+    { label: 'AI Roleplay', href: '/product/ai-roleplay' },
+    { label: 'Admin Experience', href: '/product/admin-experience' },
+    { label: 'Integrations', href: '/product/integrations' },
+    { label: 'Languages', href: '/product/languages' },
+  ],
+  'For Admins': [
+    { label: 'L&D Teams', href: '/product/admin-experience/ld-teams' },
+    { label: 'Sales Enablement', href: '/product/admin-experience/sales-enablement' },
+    { label: 'Customer Service', href: '/product/admin-experience/customer-service' },
+  ],
+  Industries: [
+    { label: 'Professional Services', href: '/industries/professional-services' },
+    { label: 'Consulting & Advisory', href: '/industries/consulting-advisory' },
+    { label: 'Accounting & Tax', href: '/industries/accounting-audit-tax' },
+    { label: 'Legal', href: '/industries/legal' },
+    { label: 'Retail & Hospitality', href: '/industries/retail-hospitality' },
+    { label: 'Technology', href: '/industries/technology' },
   ],
   Company: [
     { label: 'About', href: '/about' },
     { label: 'Customers', href: '/customers' },
     { label: 'Blog', href: '/blog' },
     { label: 'Careers', href: '/careers' },
+    { label: 'Contact', href: '/contact' },
   ],
   Security: [
     { label: 'Compliance', href: '/security/compliance' },
     { label: 'Data Protection', href: '/security/data-protection' },
     { label: 'Responsible AI', href: '/security/responsible-ai' },
-    { label: 'Contact', href: '/contact' },
   ],
 }
 
 export function Footer() {
   return (
     <footer className="border-t border-border px-container-mobile md:px-container pt-16 pb-8">
-      <div className="mx-auto max-w-site grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 md:gap-12">
-        <div className="col-span-2 md:col-span-1">
+      <div className="mx-auto max-w-site">
+        {/* Logo and tagline */}
+        <div className="mb-12">
           <Link href="/" className="font-heading text-logo text-dark tracking-heading">
             Ambr{' '}
-              <span className="relative inline-block text-accent">
+            <span className="relative inline-block text-accent">
+              AI
+              <span
+                className="absolute inset-0 bg-noise bg-clip-text text-transparent mix-blend-multiply opacity-50 select-none pointer-events-none"
+                aria-hidden="true"
+              >
                 AI
-                <span className="absolute inset-0 bg-noise bg-clip-text text-transparent mix-blend-multiply opacity-50 select-none pointer-events-none" aria-hidden="true">
-                  AI
-                </span>
               </span>
+            </span>
           </Link>
           <p className="text-nav text-copy-light max-w-[280px] leading-relaxed mt-3">
             Realistic AI voice simulations, custom-built for enterprise teams.
           </p>
         </div>
-        {Object.entries(footerNav).map(([heading, links]) => (
-          <div key={heading}>
-            <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">
-              {heading}
-            </p>
-            <ul className="space-y-1">
-              {links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-nav text-copy-mid transition-colors hover:text-accent py-0.5 inline-block"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+
+        {/* Navigation grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-8">
+          {Object.entries(footerNav).map(([heading, links]) => (
+            <div key={heading}>
+              <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">
+                {heading}
+              </p>
+              <ul className="space-y-1">
+                {links.map((link) => (
+                  <li key={link.href + link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-nav text-copy-mid transition-colors hover:text-accent py-0.5 inline-block"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
+
       <div className="mx-auto max-w-site mt-12 pt-6 border-t border-border flex justify-between text-eyebrow text-copy-light">
         <span>&copy; {new Date().getFullYear()} Ambr Technologies Limited</span>
       </div>

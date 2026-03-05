@@ -20,6 +20,10 @@
   --color-surface-alt: #F0EFEB;
   --color-surface-white: #FFFFFF;
 
+  /* Colors — anchor */
+  --color-anchor: #2A2421;
+  --color-anchor-pine: #1B2922;
+
   /* Colors — dark */
   --color-dark: #1C1C1A;
   --color-dark-mid: #2E2E2B;
@@ -189,6 +193,25 @@
 @keyframes mobileMenuIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes drawStroke {
+  to { stroke-dashoffset: 0; }
+}
+
+.animate-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawStroke 2s ease-out forwards;
+}
+
+@keyframes clipReveal {
+  from { clip-path: inset(0 0 100% 0); transform: translateY(20px); opacity: 0; }
+  to { clip-path: inset(0 0 0% 0); transform: translateY(0); opacity: 1; }
+}
+
+.animate-clip-reveal {
+  animation: clipReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 html,
