@@ -84,7 +84,7 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
   const displayCards = cards || defaultCards;
 
   return (
-    <div className="grid [grid-template-areas:'stack'] place-items-center" style={{ animation: 'fadeIn 700ms ease both' }}>
+    <div className="grid [grid-template-areas:'stack'] place-items-center animate-fade-in">
       {displayCards.map((cardProps, index) => (
         <DisplayCard key={index} {...cardProps} />
       ))}

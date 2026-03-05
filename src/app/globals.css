@@ -167,6 +167,10 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+.animate-fade-in {
+  animation: fadeIn 700ms ease both;
+}
+
 @keyframes waveAnim {
   0% { transform: scaleY(0.3); opacity: 0.2; }
   100% { transform: scaleY(1); opacity: 0.5; }
