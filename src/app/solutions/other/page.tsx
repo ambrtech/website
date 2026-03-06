@@ -1,14 +1,25 @@
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
+import { AccordionShowcase } from '@/components/sections/accordion-showcase'
 import { SplitContent } from '@/components/sections/split-content'
-import { FeatureGrid } from '@/components/sections/feature-grid'
-import { CTA } from '@/components/sections/cta'
+import { Section } from '@/components/sections/section'
+import { Reveal } from '@/components/reveal'
+import { GrainCta } from '@/components/sections/grain-cta'
+import { SimulationCard } from '@/components/ui/simulation-card'
+import {
+  ProductScreenshot,
+  MockVoiceConversation,
+  MockFeedbackPanel,
+  MockAdminBuilder,
+  MockCustomizationDelivery,
+  MockScenarioCreator,
+} from '@/components/sections/product-screenshot'
 
 export const metadata = createMetadata({
   title: 'Other Solutions',
   description:
-    'Explore additional AI conversation training scenarios. Custom simulations for any workplace conversation your teams need to master.',
+    'Ambr AI works wherever conversations carry high stakes. Custom simulations for HR, consulting, healthcare, compliance, presentations, and any conversation type your teams need to master.',
   path: '/solutions/other',
 })
 
@@ -27,46 +38,121 @@ export default function OtherSolutionsPage() {
         compact
         heading={
           <>
-            Other <em className="text-accent">Solutions</em>
+            Conversations that matter aren&apos;t limited to management and{' '}
+            <em className="text-accent">sales</em>
           </>
         }
-        subtitle="Explore additional AI conversation training scenarios. Custom simulations for any workplace conversation your teams need to master."
+        subtitle="Ambr AI works wherever the stakes are high. The platform is built around customization, so any conversation type that needs training is possible."
       />
 
-      <SplitContent
-        eyebrow="Why it matters"
-        heading="If your team talks, we can help them practise"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      />
-
-      <FeatureGrid
-        eyebrow="Capabilities"
-        heading="Simulations for every scenario"
+      <AccordionShowcase
+        variant="dark"
+        heading={
+          <>
+            Where organizations are already using{' '}
+            <em className="text-accent italic font-light">Ambr AI</em>
+          </>
+        }
         items={[
           {
-            heading: 'Onboarding conversations',
+            heading: 'HR & People Operations',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'Sensitive investigations, restructure announcements, and return-to-work conversations.',
+            visualContent: <MockVoiceConversation />,
+            cropFocus: 'center',
+            filter: 'duotone',
           },
           {
-            heading: 'Compliance and policy',
+            heading: 'Consulting & Client Advisory',
             description:
-              'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+              'Managing difficult client relationships, scope negotiations, and fee conversations.',
           },
           {
-            heading: 'Cross-cultural communication',
+            heading: 'Internal Communications & Change Management',
             description:
-              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+              'Announcing organizational change, town hall Q&A, and cascading difficult messages.',
+            visualContent: <MockFeedbackPanel />,
+            cropFocus: 'top-left',
+            filter: 'duotone-cream',
           },
           {
-            heading: 'Bespoke scenarios',
+            heading: 'Healthcare & Clinical Communication',
             description:
-              'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+              'Sensitive patient conversations, breaking bad news, and interdisciplinary handoffs.',
+          },
+          {
+            heading: 'Compliance & Regulatory',
+            description:
+              'Explaining requirements to non-technical stakeholders and audit interview preparation.',
+          },
+          {
+            heading: 'Presentations & Public Speaking',
+            description:
+              'Conference talks, board presentations, investor briefings, and internal announcements.',
           },
         ]}
       />
 
-      <CTA />
+      <SplitContent
+        eyebrow="Built to be customized"
+        heading={<>Build it yourself</>}
+        body="Admins create scenarios in minutes using the scenario builder. Define the context, character behavior, and feedback criteria — then assign to your team."
+        visualContent={
+          <ProductScreenshot tint>
+            <MockAdminBuilder />
+          </ProductScreenshot>
+        }
+      />
+
+      <SplitContent
+        reversed
+        heading={<>Let us build it</>}
+        body="Our team delivers fully tailored simulations fast. Share your brief, and we build bespoke scenarios that reflect your organization, language, and culture."
+        visualContent={
+          <ProductScreenshot tint>
+            <MockCustomizationDelivery />
+          </ProductScreenshot>
+        }
+      />
+
+      <SplitContent
+        heading={<>Individual scenarios</>}
+        body="Users create private simulations for upcoming conversations. Describe the situation, define the other person, and start practicing immediately."
+        visualContent={
+          <ProductScreenshot tint>
+            <MockScenarioCreator />
+          </ProductScreenshot>
+        }
+      />
+
+      <Section>
+        <Reveal>
+          <div className="max-w-2xl mx-auto">
+            <SimulationCard
+              layout="live-call"
+              characterName="Sam"
+              characterRole="New Hire"
+              characterInitials="ST"
+              title="Practice an onboarding conversation"
+              description="Walk a new team member through their first week. Set expectations, answer questions, and build rapport."
+              href="/try-for-free"
+              socialProof="892 conversations this week"
+            />
+          </div>
+        </Reveal>
+      </Section>
+
+      <GrainCta
+        variant="dark"
+        heading={
+          <>
+            Whatever your team needs to practice, we can <em className="text-accent">build</em> it.
+          </>
+        }
+        subtitle="Custom simulations for any high-stakes conversation."
+        ctaLabel="Try for Free"
+        ctaHref="/try-for-free"
+      />
     </>
   )
 }

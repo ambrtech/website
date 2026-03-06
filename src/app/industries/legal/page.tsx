@@ -1,13 +1,23 @@
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
+import { AccordionShowcase } from '@/components/sections/accordion-showcase'
+import { TrialScenario } from '@/components/sections/trial-scenario'
 import { SplitContent } from '@/components/sections/split-content'
-import { CTA } from '@/components/sections/cta'
+import { FeatureGrid } from '@/components/sections/feature-grid'
+import { GrainCta } from '@/components/sections/grain-cta'
+import {
+  ProductScreenshot,
+  MockVoiceConversation,
+  MockFeedbackPanel,
+  MockPresentationTraining,
+  MockAdminBuilder,
+} from '@/components/sections/product-screenshot'
 
 export const metadata = createMetadata({
   title: 'Legal',
   description:
-    'Conversation simulation training for legal professionals. Practice client intake, negotiation, and stakeholder communication scenarios.',
+    'Ambr AI gives law firms a structured, confidential way to develop the communication skills that define careers and win mandates.',
   path: '/industries/legal',
 })
 
@@ -17,31 +27,139 @@ export default function LegalPage() {
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Industries', href: '/industries/professional-services' },
+          { name: 'Industries', href: '/industries' },
           { name: 'Legal', href: '/industries/legal' },
         ]}
       />
+
       <PageHero
         compact
+        eyebrow="Industries"
         heading={
           <>
-            Communication training for <em className="text-accent">legal</em> teams
+            Your lawyers earn trust in every conversation. Make sure they&apos;re ready
+            for <em className="text-accent">each</em> one.
           </>
         }
-        subtitle="Conversation simulation training for legal professionals. Practice client intake, negotiation, and stakeholder communication scenarios."
+        subtitle="Client advice. Negotiations. Difficult billing conversations. Performance feedback. Ambr AI gives law firms a structured, confidential way to develop the communication skills that define careers — and win mandates."
       />
+
+      <AccordionShowcase
+        variant="dark"
+        heading={
+          <>
+            Where it makes the{' '}
+            <em className="text-accent italic font-light">difference</em>
+          </>
+        }
+        items={[
+          {
+            heading: 'Client relationship management',
+            description:
+              'Delivering difficult advice and managing expectations.',
+            visualContent: <MockVoiceConversation />,
+            cropFocus: 'center',
+            filter: 'duotone',
+          },
+          {
+            heading: 'Negotiation preparation',
+            description:
+              'Walk into settlement discussions and mediations with your approach already tested.',
+            visualContent: <MockFeedbackPanel />,
+            cropFocus: 'top-left',
+            filter: 'duotone-cream',
+          },
+          {
+            heading: 'Difficult billing discussions',
+            description:
+              'Give your people a safe place to practice the conversations that test client relationships most.',
+            cropFocus: 'bottom-right',
+            filter: 'duotone-copper',
+          },
+          {
+            heading: 'Manager development',
+            description:
+              'Delivering honest feedback and developing junior lawyers.',
+            visualContent: <MockPresentationTraining />,
+            cropFocus: 'top-right',
+            filter: 'faded',
+          },
+          {
+            heading: 'Associate development',
+            description:
+              'Accelerate the path from technical competence to trusted advisor.',
+            cropFocus: 'center',
+            filter: 'duotone-blush',
+          },
+          {
+            heading: 'Business development',
+            description:
+              'Pitching for new mandates and expanding relationships.',
+            cropFocus: 'bottom-left',
+            filter: 'duotone',
+          },
+        ]}
+      />
+
+      <TrialScenario
+        characterName="James"
+        characterRole="General Counsel"
+        characterInitials="JC"
+        title="Practice a high-stakes settlement negotiation"
+        scenario="Your client is considering a settlement offer. They want your recommendation, but the decision carries significant risk either way. Advise them."
+      />
+
       <SplitContent
-        eyebrow="The challenge"
-        heading="Every conversation carries consequence"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        eyebrow="Customized for legal"
+        heading={
+          <>
+            Built around <em className="text-accent">your</em> practice
+          </>
+        }
+        body="Your jurisdictions, practice areas, and client types. Every scenario reflects how your lawyers actually work."
+        visualContent={
+          <ProductScreenshot tint>
+            <MockAdminBuilder />
+          </ProductScreenshot>
+        }
       />
-      <SplitContent
-        reversed
-        eyebrow="The solution"
-        heading="Safe practice for high-stakes dialogue"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+      <FeatureGrid
+        eyebrow="Why legal firms choose Ambr AI"
+        items={[
+          {
+            heading: 'Confidential by design',
+            description:
+              'Conversations stay private. ISO27001 certified, GDPR compliant.',
+          },
+          {
+            heading: 'Scale across teams',
+            description:
+              'Give your entire firm access to high-quality practice and coaching without the bottleneck.',
+          },
+          {
+            heading: 'Feedback that actually coaches',
+            description:
+              'The kind of structured coaching that shapes how people communicate.',
+          },
+          {
+            heading: 'Global, and actually global',
+            description: '30+ languages, adjusted for cultural context.',
+          },
+        ]}
       />
-      <CTA />
+
+      <GrainCta
+        variant="dark"
+        heading={
+          <>
+            See what Ambr AI looks like for <em className="text-accent">your</em> team.
+          </>
+        }
+        subtitle="Practice the conversations that win mandates."
+        ctaLabel="Try for Free"
+        ctaHref="/try-for-free"
+      />
     </>
   )
 }

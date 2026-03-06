@@ -1,16 +1,38 @@
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
-import { SplitContent } from '@/components/sections/split-content'
 import { FeatureGrid } from '@/components/sections/feature-grid'
-import { CTA } from '@/components/sections/cta'
+import { AccordionShowcase } from '@/components/sections/accordion-showcase'
+import { SplitContent } from '@/components/sections/split-content'
+import { Section } from '@/components/sections/section'
+import { Reveal } from '@/components/reveal'
+import { GrainCta } from '@/components/sections/grain-cta'
+import { SimulationCard } from '@/components/ui/simulation-card'
+import { StrategyOutcomes } from '@/components/sections/strategy-outcomes'
+import {
+  ProductScreenshot,
+  MockVoiceConversation,
+  MockChatTraining,
+  MockDashboard,
+  MockScreensharing,
+  MockBodyLanguage,
+} from '@/components/sections/product-screenshot'
 
 export const metadata = createMetadata({
-  title: 'Customer Service',
+  title: 'Customer Service Training',
   description:
-    'Build empathy and resolution skills through realistic customer service conversation simulations tailored to your products and processes.',
+    'Effective, consistent customer service at scale. AI conversation training for de-escalation, retention, complaint handling, and frontline team onboarding.',
   path: '/solutions/customer-service',
 })
+
+const scenarios = [
+  'De-escalating an angry customer threatening to leave',
+  'Handling a complex product complaint',
+  'Delivering difficult news about a policy',
+  'Managing an emotional customer with sensitivity',
+  'Upselling or cross-selling during a service interaction',
+  'Navigating a multi-issue call with composure',
+]
 
 export default function CustomerServicePage() {
   return (
@@ -27,46 +49,201 @@ export default function CustomerServicePage() {
         compact
         heading={
           <>
-            Customer <em className="text-accent">Service</em>
+            Effective, consistent customer service at <em className="text-accent">scale</em>
           </>
         }
-        subtitle="Build empathy and resolution skills through realistic customer service conversation simulations tailored to your products and processes."
+        subtitle="Customer service quality directly impacts retention and brand reputation. Ambr AI helps you onboard new team members faster and maintain a consistent standard across every location."
       />
 
-      <SplitContent
-        eyebrow="Why it matters"
-        heading="Every interaction shapes loyalty"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      />
-
-      <FeatureGrid
-        eyebrow="Capabilities"
-        heading="Prepare teams for real customer moments"
+      <AccordionShowcase
+        variant="dark"
+        heading={
+          <>
+            How teams use Ambr AI for{' '}
+            <em className="text-accent italic font-light">service</em>
+          </>
+        }
         items={[
           {
-            heading: 'Complaint resolution',
+            heading: 'Onboarding new team members',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              'Get hires conversation-ready in their first week.',
+            visualContent: <MockVoiceConversation />,
+            cropFocus: 'center',
+            filter: 'duotone',
           },
           {
-            heading: 'Empathy and de-escalation',
+            heading: 'Upskilling existing teams',
             description:
-              'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+              'Target skills like de-escalation, retention, and empathy.',
+            visualContent: <MockChatTraining />,
+            cropFocus: 'top-left',
+            filter: 'duotone-cream',
           },
           {
-            heading: 'Product knowledge',
+            heading: 'New products and policies',
             description:
-              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+              'Deploy new training scenarios fast for launches and policy changes.',
           },
           {
-            heading: 'Process adherence',
+            heading: 'Standardizing service quality',
             description:
-              'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+              'Same scenarios and feedback across every shift and location.',
+          },
+          {
+            heading: 'Multilingual teams',
+            description:
+              'Consistent service regardless of market or language.',
+            visualContent: <MockDashboard />,
+            cropFocus: 'top-right',
+            filter: 'faded',
+          },
+          {
+            heading: 'Reducing ramp time',
+            description:
+              'Cut the time from hire to confident customer interaction.',
           },
         ]}
       />
 
-      <CTA />
+      <Section>
+        <Reveal>
+          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+            Example scenarios
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {scenarios.map((s) => (
+              <span key={s} className="px-4 py-2.5 border border-border rounded-brand-sm bg-surface-white text-body-sm text-copy-mid hover:border-accent-soft transition-colors">
+                {s}
+              </span>
+            ))}
+          </div>
+        </Reveal>
+      </Section>
+
+      <FeatureGrid
+        eyebrow="Customized to your service operation"
+        items={[
+          {
+            heading: 'Your products and policies',
+            description:
+              'Reflect your actual product range, service workflows, and return policies.',
+          },
+          {
+            heading: 'Your brand tone of voice',
+            description:
+              'Matches your service style guide so agents practice the way you want them to sound.',
+          },
+          {
+            heading: 'Your escalation paths',
+            description:
+              'Train on your specific handoff processes, not generic escalation flows.',
+          },
+          {
+            heading: 'Global in 30+ languages',
+            description:
+              'Consistent training across every market you serve.',
+          },
+        ]}
+      />
+
+      <SplitContent
+        eyebrow="Built for frontline teams"
+        heading={<>Ultra-realistic voice AI</>}
+        body="Train under the same pressure as a live call. The AI adapts in real time to tone, pace, and emotional state — so your agents are ready for anything."
+        visualContent={
+          <ProductScreenshot tint>
+            <MockVoiceConversation />
+          </ProductScreenshot>
+        }
+      />
+
+      <SplitContent
+        reversed
+        heading={<>Chat-based training</>}
+        body="Training available for agents on text-based channels. Practice handling complaints, escalations, and multi-issue conversations through chat."
+        visualContent={
+          <ProductScreenshot tint>
+            <MockChatTraining />
+          </ProductScreenshot>
+        }
+      />
+
+      <SplitContent
+        heading={<>Screensharing</>}
+        body="For scenarios that involve walking through dashboards, product information, or troubleshooting steps with a customer on the line."
+        visualContent={
+          <ProductScreenshot tint>
+            <MockScreensharing />
+          </ProductScreenshot>
+        }
+      />
+
+      <SplitContent
+        reversed
+        heading={<>Body language analysis</>}
+        body="Feedback for team members who interact on video. Eye contact, posture, and facial expression all shape the customer experience."
+        visualContent={
+          <ProductScreenshot tint>
+            <MockBodyLanguage />
+          </ProductScreenshot>
+        }
+      />
+
+      <Section>
+        <Reveal>
+          <div className="max-w-2xl mx-auto">
+            <SimulationCard
+              layout="live-call"
+              characterName="Laura"
+              characterRole="Frustrated Customer"
+              characterInitials="LM"
+              title="Resolve a complaint before it escalates further"
+              description="A customer has called three times about the same issue. They want to speak to a manager. Can you turn it around?"
+              href="/try-for-free"
+              socialProof="3,112 conversations this week"
+            />
+          </div>
+        </Reveal>
+      </Section>
+
+      <StrategyOutcomes
+        eyebrow="Drive your customer service strategy"
+        heading={
+          <>
+            From anecdote to <em className="text-accent">evidence</em>
+          </>
+        }
+        items={[
+          {
+            heading: 'Visibility across your team',
+            description:
+              'See where new hires need targeted support and where experienced agents have gaps.',
+          },
+          {
+            heading: 'Certification tracking',
+            description:
+              'Set and verify standards across your team with structured certification programs.',
+          },
+          {
+            heading: 'Measurable impact',
+            description:
+              'Track improvement over time and build evidence for QA reviews and leadership reporting.',
+          },
+        ]}
+      />
+
+      <GrainCta
+        variant="dark"
+        heading={
+          <>
+            See what Ambr AI looks like for <em className="text-accent">your</em> service team.
+          </>
+        }
+        subtitle="Consistent quality. Faster onboarding. Happier customers."
+        ctaLabel="Try for Free"
+        ctaHref="/try-for-free"
+      />
     </>
   )
 }

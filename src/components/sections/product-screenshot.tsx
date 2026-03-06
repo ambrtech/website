@@ -291,6 +291,410 @@ export function MockContextSelector() {
   )
 }
 
+/** A mock screensharing UI during a product walkthrough. */
+export function MockScreensharing() {
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Screen Share Active
+        </span>
+        <span className="ml-auto text-caption text-copy-faint flex items-center gap-1.5">
+          <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+          Live
+        </span>
+      </div>
+
+      {/* Mock shared screen area */}
+      <div className="rounded-brand-sm bg-dark/[0.03] border border-border p-4 space-y-3">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="h-2 w-20 rounded bg-dark/10" />
+          <div className="h-2 w-12 rounded bg-dark/5" />
+          <div className="h-2 w-16 rounded bg-dark/5" />
+        </div>
+        <div className="grid grid-cols-3 gap-3">
+          <div className="aspect-[4/3] rounded-brand-sm bg-accent-whisper border border-accent-soft/30 flex items-center justify-center">
+            <span className="text-caption text-accent/50">Dashboard</span>
+          </div>
+          <div className="aspect-[4/3] rounded-brand-sm bg-surface border border-border flex items-center justify-center">
+            <span className="text-caption text-copy-faint">Analytics</span>
+          </div>
+          <div className="aspect-[4/3] rounded-brand-sm bg-surface border border-border flex items-center justify-center">
+            <span className="text-caption text-copy-faint">Reports</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Conversation overlay */}
+      <div className="flex items-center gap-3 px-4 py-3 rounded-brand-sm bg-surface border border-border">
+        <div className="w-8 h-8 rounded-full bg-accent-soft/30 flex items-center justify-center shrink-0">
+          <span className="text-caption font-body-medium text-accent">AI</span>
+        </div>
+        <p className="text-caption text-copy-mid leading-relaxed">
+          &ldquo;Can you walk me through the pricing for the enterprise tier?&rdquo;
+        </p>
+      </div>
+    </div>
+  )
+}
+
+/** A mock body language analysis feedback panel. */
+export function MockBodyLanguage() {
+  const signals = [
+    { label: 'Eye contact', score: 85, note: 'Consistent and confident' },
+    { label: 'Posture', score: 72, note: 'Open but consider leaning in' },
+    { label: 'Gestures', score: 68, note: 'Use more hand movement for emphasis' },
+    { label: 'Facial expression', score: 90, note: 'Warm and engaged throughout' },
+  ]
+
+  return (
+    <div className="space-y-5">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Body Language Analysis
+        </span>
+      </div>
+
+      {/* Video preview placeholder */}
+      <div className="relative aspect-video rounded-brand-sm bg-dark/[0.04] border border-border overflow-hidden flex items-center justify-center">
+        <div className="w-16 h-16 rounded-full bg-surface border-2 border-accent-soft flex items-center justify-center">
+          <div className="w-8 h-8 rounded-full bg-accent-soft/50" />
+        </div>
+        <div className="absolute bottom-3 left-3 flex items-center gap-2 bg-surface-white/90 rounded-brand-sm px-3 py-1.5 border border-border">
+          <span className="w-2 h-2 rounded-full bg-accent" />
+          <span className="text-caption text-copy-mid">Analyzing...</span>
+        </div>
+      </div>
+
+      {signals.map((signal) => (
+        <div key={signal.label}>
+          <div className="flex items-center justify-between mb-1.5">
+            <span className="text-caption font-body-medium text-copy-mid">{signal.label}</span>
+            <span className="text-caption text-copy-light">{signal.score}%</span>
+          </div>
+          <div className="h-1 rounded-full bg-surface-alt overflow-hidden mb-1">
+            <div
+              className="h-full rounded-full bg-accent-soft"
+              style={{ width: `${signal.score}%` }}
+            />
+          </div>
+          <p className="text-caption text-copy-faint">{signal.note}</p>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+/** A mock chat-based training interface for text channel agents. */
+export function MockChatTraining() {
+  const messages = [
+    { sender: 'customer', text: "I've been waiting 3 days for a response about my refund. This is unacceptable." },
+    { sender: 'agent', text: "I completely understand your frustration, and I'm sorry for the delay. Let me look into this right now." },
+    { sender: 'customer', text: "I've already explained the issue twice to different people." },
+  ]
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Chat Simulation
+        </span>
+      </div>
+
+      <div className="space-y-3">
+        {messages.map((msg, i) => (
+          <div
+            key={i}
+            className={`flex ${msg.sender === 'agent' ? 'justify-end' : 'justify-start'}`}
+          >
+            <div
+              className={`max-w-[80%] px-4 py-3 rounded-brand-sm text-caption leading-relaxed ${
+                msg.sender === 'agent'
+                  ? 'bg-accent-whisper border border-accent-soft/30 text-copy-mid'
+                  : 'bg-surface border border-border text-copy-mid'
+              }`}
+            >
+              <p className="text-eyebrow-sm font-body-medium text-copy-light mb-1">
+                {msg.sender === 'agent' ? 'You' : 'Customer'}
+              </p>
+              {msg.text}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Input area */}
+      <div className="flex items-center gap-2 px-4 py-3 rounded-brand-sm border border-border bg-surface">
+        <span className="text-caption text-copy-faint flex-1">Type your response...</span>
+        <span className="text-caption text-accent font-body-medium">Send</span>
+      </div>
+    </div>
+  )
+}
+
+/** A mock presentation training interface with AI audience. */
+export function MockPresentationTraining() {
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Presentation Mode
+        </span>
+        <span className="ml-auto text-caption text-copy-faint">4:32 / 15:00</span>
+      </div>
+
+      {/* Slide area */}
+      <div className="aspect-[16/9] rounded-brand-sm bg-dark/[0.03] border border-border flex items-center justify-center relative">
+        <div className="text-center space-y-2">
+          <div className="h-3 w-32 mx-auto rounded bg-dark/10" />
+          <div className="h-2 w-48 mx-auto rounded bg-dark/5" />
+          <div className="h-2 w-40 mx-auto rounded bg-dark/5" />
+        </div>
+        <div className="absolute bottom-3 right-3 text-caption bg-surface-white/90 border border-border rounded-brand-sm px-2 py-1 text-copy-faint">
+          Slide 3 / 8
+        </div>
+      </div>
+
+      {/* AI audience reactions */}
+      <div className="grid grid-cols-3 gap-2">
+        {[
+          { name: 'Sarah (CFO)', reaction: 'Nodding, engaged' },
+          { name: 'Mark (CTO)', reaction: 'Wants more detail' },
+          { name: 'Lisa (VP Ops)', reaction: 'Taking notes' },
+        ].map((audience) => (
+          <div key={audience.name} className="p-3 rounded-brand-sm bg-surface border border-border">
+            <div className="w-6 h-6 rounded-full bg-accent-soft/30 mx-auto mb-2" />
+            <p className="text-caption font-body-medium text-copy-mid text-center leading-tight">{audience.name}</p>
+            <p className="text-caption text-copy-faint text-center mt-1">{audience.reaction}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="px-4 py-3 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
+        <p className="text-caption text-copy-mid">
+          <span className="font-body-medium text-accent">Mark:</span> &ldquo;Can you elaborate on the implementation timeline?&rdquo;
+        </p>
+      </div>
+    </div>
+  )
+}
+
+/** A mock personal scenario creator interface. */
+export function MockScenarioCreator() {
+  return (
+    <div className="space-y-5">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Create Scenario
+        </span>
+      </div>
+
+      <div className="space-y-4">
+        <div>
+          <label className="text-caption font-body-medium text-copy-mid block mb-2">
+            What conversation do you want to practice?
+          </label>
+          <div className="px-4 py-3 rounded-brand-sm border border-border bg-surface">
+            <span className="text-body-sm text-copy-mid">
+              I need to give feedback to a team member about missed deadlines
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <label className="text-caption font-body-medium text-copy-mid block mb-2">
+            What should the other person be like?
+          </label>
+          <div className="px-4 py-3 rounded-brand-sm border border-border bg-surface">
+            <span className="text-body-sm text-copy-mid">
+              Defensive at first, but ultimately open to feedback
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <label className="text-caption font-body-medium text-copy-mid block mb-2">
+            Any specific context?
+          </label>
+          <div className="px-4 py-3 rounded-brand-sm border border-border bg-surface">
+            <span className="text-body-sm text-copy-faint italic">
+              Optional — add details about your situation
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-between pt-3 border-t border-border">
+        <span className="text-caption text-copy-faint">Private — only visible to you</span>
+        <span className="inline-block rounded-brand-sm bg-accent text-surface-white px-5 py-2 text-caption font-body-medium">
+          Start Conversation
+        </span>
+      </div>
+    </div>
+  )
+}
+
+/** A mock admin scenario builder interface. */
+export function MockAdminBuilder() {
+  return (
+    <div className="space-y-5">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Scenario Builder
+        </span>
+      </div>
+
+      <div className="space-y-3">
+        <div className="flex items-center gap-3 p-3 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
+          <span className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-caption text-accent">1</span>
+          <div className="flex-1">
+            <p className="text-caption font-body-medium text-dark">Scenario context</p>
+            <p className="text-caption text-copy-light">Performance review — underperforming team member</p>
+          </div>
+          <span className="text-caption text-accent">✓</span>
+        </div>
+
+        <div className="flex items-center gap-3 p-3 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
+          <span className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-caption text-accent">2</span>
+          <div className="flex-1">
+            <p className="text-caption font-body-medium text-dark">AI character behavior</p>
+            <p className="text-caption text-copy-light">Defensive, avoids direct answers, becomes emotional</p>
+          </div>
+          <span className="text-caption text-accent">✓</span>
+        </div>
+
+        <div className="flex items-center gap-3 p-3 rounded-brand-sm border border-border bg-surface">
+          <span className="w-6 h-6 rounded-full bg-surface-alt border border-border flex items-center justify-center text-caption text-copy-faint">3</span>
+          <div className="flex-1">
+            <p className="text-caption font-body-medium text-copy-mid">Feedback criteria</p>
+            <p className="text-caption text-copy-faint">Define what good looks like</p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3 p-3 rounded-brand-sm border border-border bg-surface opacity-50">
+          <span className="w-6 h-6 rounded-full bg-surface-alt border border-border flex items-center justify-center text-caption text-copy-faint">4</span>
+          <div className="flex-1">
+            <p className="text-caption font-body-medium text-copy-faint">Assign to team</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/** A mock in-house customization delivery flow. */
+export function MockCustomizationDelivery() {
+  return (
+    <div className="space-y-5">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Customization Service
+        </span>
+      </div>
+
+      <div className="flex items-center gap-4 p-4 rounded-brand-sm bg-surface border border-border">
+        <div className="w-10 h-10 rounded-full bg-accent-soft/30 flex items-center justify-center shrink-0">
+          <span className="text-caption font-body-medium text-accent">AB</span>
+        </div>
+        <div>
+          <p className="text-caption font-body-medium text-dark">Brief received</p>
+          <p className="text-caption text-copy-light">
+            &ldquo;We need scenarios for our Q2 sales kickoff covering new pricing...&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <div className="flex items-center gap-3 text-copy-faint justify-center">
+        <div className="h-px w-8 bg-border" />
+        <span className="text-caption">48 hours</span>
+        <div className="h-px w-8 bg-border" />
+      </div>
+
+      <div className="space-y-2">
+        {[
+          { title: 'Enterprise renewal — CFO pushback', status: 'Ready' },
+          { title: 'Discovery call — cold prospect', status: 'Ready' },
+          { title: 'Competitive displacement — VP Ops', status: 'In review' },
+        ].map((scenario) => (
+          <div key={scenario.title} className="flex items-center gap-3 p-3 rounded-brand-sm border border-border bg-surface-white">
+            <span className={`text-caption font-body-medium ${scenario.status === 'Ready' ? 'text-accent' : 'text-copy-faint'}`}>
+              {scenario.status === 'Ready' ? '✓' : '○'}
+            </span>
+            <span className="text-caption text-copy-mid flex-1">{scenario.title}</span>
+            <span className={`text-caption ${scenario.status === 'Ready' ? 'text-accent' : 'text-copy-faint'}`}>
+              {scenario.status}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+/** A mock voice AI conversation in progress. */
+export function MockVoiceConversation() {
+  return (
+    <div className="space-y-5">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Live Conversation
+        </span>
+        <span className="ml-auto flex items-center gap-1.5">
+          <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+          <span className="text-caption text-copy-faint">2:34</span>
+        </span>
+      </div>
+
+      {/* Waveform visualization */}
+      <div className="flex items-center justify-center gap-1 h-12 px-4">
+        {[20, 45, 30, 65, 85, 55, 70, 40, 60, 80, 35, 50, 75, 45, 30, 55, 70, 40, 25, 50].map((h, i) => (
+          <div
+            key={i}
+            className="w-1 rounded-full bg-accent-soft/70"
+            style={{ height: `${h}%` }}
+          />
+        ))}
+      </div>
+
+      {/* Conversation transcript */}
+      <div className="space-y-3">
+        <div className="flex items-start gap-3">
+          <div className="w-7 h-7 rounded-full bg-surface-alt border border-border flex items-center justify-center shrink-0">
+            <span className="text-caption text-copy-faint">AI</span>
+          </div>
+          <div className="px-4 py-3 rounded-brand-sm bg-surface border border-border flex-1">
+            <p className="text-caption text-copy-mid leading-relaxed">
+              &ldquo;I appreciate you raising this, but I don&apos;t think my performance has dropped. I&apos;ve been handling a lot of additional work.&rdquo;
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-3 justify-end">
+          <div className="px-4 py-3 rounded-brand-sm bg-accent-whisper border border-accent-soft/30 flex-1 max-w-[80%]">
+            <p className="text-caption text-copy-mid leading-relaxed">
+              &ldquo;I hear you, and I want to understand. Let&apos;s talk about the workload first...&rdquo;
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Response time indicator */}
+      <div className="flex items-center justify-center gap-2 py-2">
+        <span className="text-caption text-copy-faint">Response time:</span>
+        <span className="text-caption font-body-medium text-accent">340ms</span>
+      </div>
+    </div>
+  )
+}
+
 /** A mock admin dashboard summary. */
 export function MockDashboard() {
   return (

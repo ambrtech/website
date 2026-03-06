@@ -1,13 +1,23 @@
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
+import { AccordionShowcase } from '@/components/sections/accordion-showcase'
+import { TrialScenario } from '@/components/sections/trial-scenario'
 import { SplitContent } from '@/components/sections/split-content'
-import { CTA } from '@/components/sections/cta'
+import { FeatureGrid } from '@/components/sections/feature-grid'
+import { GrainCta } from '@/components/sections/grain-cta'
+import {
+  ProductScreenshot,
+  MockVoiceConversation,
+  MockFeedbackPanel,
+  MockBodyLanguage,
+  MockAdminBuilder,
+} from '@/components/sections/product-screenshot'
 
 export const metadata = createMetadata({
   title: 'Accounting, Audit & Tax',
   description:
-    'AI-powered training simulations for accounting, audit, and tax professionals. Practice complex client discussions with confidence.',
+    'Ambr AI helps accounting, audit, and tax firms develop the communication skills that turn technical expertise into lasting client relationships.',
   path: '/industries/accounting-audit-tax',
 })
 
@@ -17,31 +27,139 @@ export default function AccountingAuditTaxPage() {
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Industries', href: '/industries/professional-services' },
+          { name: 'Industries', href: '/industries' },
           { name: 'Accounting, Audit & Tax', href: '/industries/accounting-audit-tax' },
         ]}
       />
+
       <PageHero
         compact
+        eyebrow="Industries"
         heading={
           <>
-            Confident client conversations in <em className="text-accent">accounting</em>
+            Technical expertise wins the work.{' '}
+            <em className="text-accent">Communication</em> skills keep it.
           </>
         }
-        subtitle="AI-powered training simulations for accounting, audit, and tax professionals. Practice complex client discussions with confidence."
+        subtitle="Client advisory. Audit findings. Difficult billing conversations. Manager feedback. Ambr AI gives accounting, audit, and tax firms a structured way to develop the communication skills that turn technical expertise into lasting client relationships."
       />
+
+      <AccordionShowcase
+        variant="dark"
+        heading={
+          <>
+            Where it makes the{' '}
+            <em className="text-accent italic font-light">difference</em>
+          </>
+        }
+        items={[
+          {
+            heading: 'Delivering audit findings',
+            description:
+              'Train on delivering findings and navigating tense audit committee presentations.',
+            visualContent: <MockVoiceConversation />,
+            cropFocus: 'center',
+            filter: 'duotone',
+          },
+          {
+            heading: 'Client advisory conversations',
+            description:
+              'Translate complex tax or regulatory guidance into clear, confident recommendations.',
+            visualContent: <MockFeedbackPanel />,
+            cropFocus: 'top-left',
+            filter: 'duotone-cream',
+          },
+          {
+            heading: 'Difficult billing discussions',
+            description:
+              'Give your people a safe place to practice the conversations that test client relationships most.',
+            cropFocus: 'bottom-right',
+            filter: 'duotone-copper',
+          },
+          {
+            heading: 'Manager development',
+            description:
+              'Delivering feedback and handling performance issues.',
+            visualContent: <MockBodyLanguage />,
+            cropFocus: 'top-right',
+            filter: 'faded',
+          },
+          {
+            heading: 'New joiner onboarding',
+            description:
+              'Get junior professionals client-ready faster without pulling senior staff off billable work.',
+            cropFocus: 'center',
+            filter: 'duotone-blush',
+          },
+          {
+            heading: 'Business development',
+            description:
+              'Cross-selling additional services and pitching for new mandates.',
+            cropFocus: 'bottom-left',
+            filter: 'duotone',
+          },
+        ]}
+      />
+
+      <TrialScenario
+        characterName="Sarah"
+        characterRole="Audit Director"
+        characterInitials="SW"
+        title="Deliver difficult audit findings with confidence"
+        scenario="You are presenting audit findings to a client's CFO who disagrees with a material finding. Walk them through your position."
+      />
+
       <SplitContent
-        eyebrow="The challenge"
-        heading="Technical expertise alone is not enough"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        eyebrow="Customized for your firm"
+        heading={
+          <>
+            Built around <em className="text-accent">your</em> reality
+          </>
+        }
+        body="Your service lines, your client industries, your terminology. Every scenario reflects how your people actually work — not generic templates."
+        visualContent={
+          <ProductScreenshot tint>
+            <MockAdminBuilder />
+          </ProductScreenshot>
+        }
       />
-      <SplitContent
-        reversed
-        eyebrow="The solution"
-        heading="Simulations tailored to your practice areas"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+      <FeatureGrid
+        eyebrow="Why accounting firms choose Ambr AI"
+        items={[
+          {
+            heading: 'Scale across locations',
+            description:
+              'Every person gets the same quality of training and feedback — at any volume.',
+          },
+          {
+            heading: 'Confidential by design',
+            description:
+              'ISO certified, GDPR compliant. Data is never used to train external models.',
+          },
+          {
+            heading: 'Feedback that actually coaches',
+            description:
+              'Detailed, actionable feedback after every simulation.',
+          },
+          {
+            heading: 'Global, and actually global',
+            description: '30+ languages, adjusted for cultural context.',
+          },
+        ]}
       />
-      <CTA />
+
+      <GrainCta
+        variant="dark"
+        heading={
+          <>
+            See what Ambr AI looks like for <em className="text-accent">your</em> team.
+          </>
+        }
+        subtitle="Practice the conversations that build client trust."
+        ctaLabel="Try for Free"
+        ctaHref="/try-for-free"
+      />
     </>
   )
 }

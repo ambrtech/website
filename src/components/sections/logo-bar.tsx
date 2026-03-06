@@ -4,9 +4,8 @@ const clients = [
   { name: 'Deloitte', serif: true },
   { name: 'Skyscanner', serif: false },
   { name: 'IWG', serif: false },
-  { name: 'Browne Jacobson', serif: true },
   { name: 'DXC Technology', serif: false },
-  { name: 'Citizen', serif: true },
+  { name: 'Binance', serif: false },
 ]
 
 export function LogoBar() {

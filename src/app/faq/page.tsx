@@ -2,12 +2,12 @@ import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { FaqSection } from '@/components/sections/faq-section'
-import { CTA } from '@/components/sections/cta'
+import { GrainCta } from '@/components/sections/grain-cta'
 
 export const metadata = createMetadata({
   title: 'Frequently Asked Questions',
   description:
-    'Common questions about Ambr AI\'s conversation simulation platform. Learn about implementation, pricing, security, and customisation.',
+    'Common questions about Ambr AI, including how the platform works, customization, security, pricing, and getting started.',
   path: '/faq',
 })
 
@@ -25,59 +25,70 @@ export default function FaqPage() {
         compact
         heading={
           <>
-            Frequently asked{' '}
-            <em className="text-accent">questions</em>
+            Frequently asked <em className="text-accent">questions</em>
           </>
         }
-        subtitle="Everything you need to know about Ambr AI's conversation simulation platform."
+        subtitle="Everything you need to know about Ambr AI and realistic AI roleplay training."
       />
 
       <FaqSection
         items={[
           {
-            question: 'How long does it take to set up custom simulations?',
+            question: 'What is AI roleplay training?',
             answer:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+              'AI roleplay is a training method where employees build conversation skills by speaking with an AI that responds naturally in real time via voice.',
           },
           {
-            question: 'What makes Ambr AI different from other training platforms?',
+            question: 'How does Ambr AI work?',
             answer:
-              'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum.',
+              'Choose a scenario, have a realistic voice conversation with an AI character, and receive detailed feedback. The AI adapts to tone and approach in real time.',
           },
           {
-            question: 'Is my data secure with Ambr AI?',
+            question:
+              'What makes Ambr AI different from other AI training tools?',
             answer:
-              'Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus.',
+              'Deep customization based on your specific organization, ultra-realistic voice interaction, and a hands-on service model with a dedicated team.',
           },
           {
-            question: 'Which languages does Ambr AI support?',
+            question: 'What kind of feedback do users receive?',
             answer:
-              'Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.',
+              'Personalized feedback covering structure, word choice, approach, tone, pacing, and delivery.',
           },
           {
-            question: 'Can I integrate Ambr AI with our existing LMS?',
+            question: 'Can users train on presentations?',
             answer:
-              'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna.',
+              'Yes. Ambr AI includes Presentation Training with an AI audience that provides feedback on delivery and impact.',
           },
           {
-            question: 'How does pricing work?',
+            question: 'How long does it take to get started?',
             answer:
-              'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo.',
+              'Customized scenarios can be created in minutes, and our team supports you through setup and rollout.',
           },
           {
-            question: 'What types of conversations can be simulated?',
+            question:
+              "Is my organization's data used to train AI models?",
             answer:
-              'Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis.',
+              'No. Your data is never used to train any AI model outside the Ambr AI platform. This is a contractual commitment.',
           },
           {
-            question: 'Do you offer a pilot programme?',
+            question: 'How is Ambr AI priced?',
             answer:
-              'Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ut facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac.',
+              "Ambr AI uses a license-based pricing model based on your organization's scale. Contact us for a quote.",
           },
         ]}
       />
 
-      <CTA />
+      <GrainCta
+        heading={
+          <>
+            Still have <em className="text-accent">questions</em>?
+          </>
+        }
+        subtitle="Get in touch with our team. We are happy to help."
+        ctaLabel="Find Out More"
+        ctaHref="/find-out-more"
+        variant="light"
+      />
     </>
   )
 }

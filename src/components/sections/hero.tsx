@@ -10,24 +10,31 @@ export function Hero() {
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
             <p className="text-caption font-body-medium uppercase tracking-eyebrow text-copy-light mb-10 opacity-0 animate-[fadeIn_1.2s_ease-out_0.3s_both] eyebrow-hairline">
-              AI voice simulation for enterprise teams
+              Voice AI training platform
             </p>
-            <h1 className="font-heading text-display leading-[0.95] tracking-tight mb-12 opacity-0 animate-[clipReveal_1.5s_cubic-bezier(0.16,1,0.3,1)_0.4s_both]">
-              Conversations<br />
-              <em className="text-accent italic font-light">perfected.</em>
+            <h1 className="font-heading text-headline leading-[1.05] tracking-heading mb-12 opacity-0 animate-[clipReveal_1.5s_cubic-bezier(0.16,1,0.3,1)_0.4s_both]">
+              Training for the conversations that{' '}
+              <em className="text-accent italic font-light">matter</em> most
             </h1>
             <p className="text-lg text-copy-mid max-w-[520px] leading-[1.7] mb-10 opacity-0 animate-[fadeIn_1.2s_ease-out_0.6s_both]">
-              The world&apos;s most realistic AI conversation practice. Custom-built
-              around your organisation, your scenarios, and the conversations
-              that drive your business.
+              Voice AI training platform for high-stakes workplace conversations.
+              From sales negotiations to management feedback, your teams build real
+              skills through ultra-realistic conversation simulations — all easily
+              customizable to meet your specific training needs.
             </p>
-            <div className="opacity-0 animate-[fadeIn_1.2s_ease-out_0.8s_both]">
+            <div className="flex items-center gap-4 opacity-0 animate-[fadeIn_1.2s_ease-out_0.8s_both]">
               <Link
-                href="/contact"
+                href="/try-for-free"
                 className="group relative inline-block rounded-brand-sm bg-dark text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent hover:-translate-y-px hover:shadow-lg overflow-hidden"
               >
-                <span className="relative z-10">Request a Demo</span>
+                <span className="relative z-10">Try for Free</span>
                 <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-10 bg-noise mix-blend-overlay transition-opacity" />
+              </Link>
+              <Link
+                href="/find-out-more"
+                className="text-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
+              >
+                Find Out More →
               </Link>
             </div>
           </div>
