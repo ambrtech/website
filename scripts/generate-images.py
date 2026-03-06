@@ -147,7 +147,7 @@ def generate_image(prompt_data: dict, model: str) -> Path | None:
         config = types.GenerateContentConfig(
             image_config=types.ImageConfig(
                 aspect_ratio=prompt_data["aspect_ratio"],
-                image_size="4K",
+                image_size="2K",
             ),
             response_modalities=["IMAGE", "TEXT"],
         )
