@@ -30,13 +30,13 @@ export function FeatureGrid({ eyebrow, heading, items }: FeatureGridProps) {
             )}
           </div>
         )}
-        <div className="grid md:grid-cols-2 gap-x-16">
+        <div className="grid md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-2">
           {items.map((item) => (
-            <div key={item.heading} className="py-6 border-t border-border">
-              <h3 className="font-heading text-label text-dark mb-2">
+            <div key={item.heading} className="py-8 md:py-10 border-t border-border">
+              <h3 className="font-heading text-lg text-dark mb-3 tracking-tight">
                 {item.heading}
               </h3>
-              <p className="text-body-sm text-copy-light leading-relaxed">
+              <p className="text-body text-copy-mid leading-[1.75]">
                 {item.description}
               </p>
             </div>

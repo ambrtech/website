@@ -12,27 +12,6 @@ interface FaqSectionProps {
   items: FaqItem[]
 }
 
-function ChevronIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      width="12"
-      height="8"
-      viewBox="0 0 12 8"
-      fill="none"
-      className={`transition-transform duration-fast shrink-0 ${open ? 'rotate-180' : ''}`}
-      aria-hidden="true"
-    >
-      <path
-        d="M1 1.5L6 6.5L11 1.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
 export function FaqSection({ items }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
@@ -45,16 +24,20 @@ export function FaqSection({ items }: FaqSectionProps) {
       <FaqJsonLd items={items} />
       <div className="mx-auto max-w-site max-w-[800px]">
         {items.map((item, index) => (
-          <div key={index} className="border-t border-border last:border-b">
+          <div key={index} className="border-t border-border last:border-b group">
             <button
-              className="flex items-center justify-between w-full py-5 text-left gap-8"
+              className="flex items-center justify-between w-full py-6 md:py-8 text-left gap-8 cursor-pointer focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none focus-visible:rounded-sm transition-colors duration-normal hover:text-accent"
               onClick={() => toggle(index)}
               aria-expanded={openIndex === index}
             >
-              <span className="text-label font-body-medium text-dark">
+              <span className="text-label font-heading tracking-heading text-dark group-hover:text-accent transition-colors duration-normal">
                 {item.question}
               </span>
-              <ChevronIcon open={openIndex === index} />
+              <span className={`text-accent text-lg transition-transform duration-normal shrink-0 ${
+                openIndex === index ? 'rotate-45' : ''
+              }`}>
+                +
+              </span>
             </button>
             <div
               className="grid transition-all duration-normal ease-out"
@@ -63,7 +46,7 @@ export function FaqSection({ items }: FaqSectionProps) {
               }}
             >
               <div className="overflow-hidden">
-                <p className="text-body text-copy-mid leading-[1.75] pb-6">
+                <p className="text-body text-copy-mid leading-[1.75] pb-6 md:pb-8 pr-12">
                   {item.answer}
                 </p>
               </div>

@@ -1,0 +1,10 @@
+model_list:
+  # Google Gemini
+  - model_name: gemini-3.1-pro-preview
+    litellm_params:
+      model: gemini/gemini-3.1-pro-preview
+      api_key: os.environ/GEMINI_API_KEY
+    model_info:
+        max_input_tokens: 1048576
+        max_output_tokens: 65535
+        max_tokens: 65535

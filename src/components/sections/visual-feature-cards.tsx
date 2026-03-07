@@ -58,8 +58,8 @@ export function VisualFeatureCards() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark opacity-80" />
           </div>
 
-          <h3 className="font-heading text-section leading-[1.2] tracking-heading text-dark mb-3">Lorem ipsum dolor</h3>
-          <p className="text-body text-copy-mid leading-relaxed">
+          <h3 className="font-heading text-title leading-[1.1] tracking-tight text-dark mb-3">Lorem ipsum dolor</h3>
+          <p className="text-body text-copy-mid leading-[1.75]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </Reveal>
@@ -92,8 +92,8 @@ export function VisualFeatureCards() {
             </div>
           </div>
 
-          <h3 className="font-heading text-section leading-[1.2] tracking-heading text-dark mb-3">Consectetur adipiscing</h3>
-          <p className="text-body text-copy-mid leading-relaxed">
+          <h3 className="font-heading text-title leading-[1.1] tracking-tight text-dark mb-3">Consectetur adipiscing</h3>
+          <p className="text-body text-copy-mid leading-[1.75]">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </Reveal>
@@ -121,8 +121,8 @@ export function VisualFeatureCards() {
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-dark to-transparent" />
           </div>
 
-          <h3 className="font-heading text-section leading-[1.2] tracking-heading text-dark mb-3">Sed do eiusmod</h3>
-          <p className="text-body text-copy-mid leading-relaxed">
+          <h3 className="font-heading text-title leading-[1.1] tracking-tight text-dark mb-3">Sed do eiusmod</h3>
+          <p className="text-body text-copy-mid leading-[1.75]">
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
         </Reveal>
