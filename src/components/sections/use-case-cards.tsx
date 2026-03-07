@@ -56,10 +56,10 @@ export function UseCaseCards({ eyebrow, heading, items }: UseCaseCardsProps) {
               href={item.href}
               className="group flex flex-col h-full px-8 py-10 lg:px-6 lg:py-12 bg-surface-white hover:bg-surface transition-colors duration-normal border-l border-border first:border-l-0"
             >
-              <h3 className="font-heading text-section leading-[1.2] tracking-heading mb-4 text-dark group-hover:text-accent transition-colors duration-normal">
+              <h3 className="font-heading text-title leading-[1.1] tracking-tight mb-5 text-dark group-hover:text-accent transition-colors duration-normal">
                 {item.heading}
               </h3>
-              <p className="text-body-sm text-copy-mid leading-relaxed mb-8">
+              <p className="text-body text-copy-mid leading-[1.75] mb-10">
                 {item.description}
               </p>
 

@@ -17,21 +17,21 @@ interface BentoShowcaseProps {
 export function BentoShowcase({ eyebrow, heading, subtitle }: BentoShowcaseProps) {
   return (
     <Section>
-      {(eyebrow || heading) && (
-        <div className="max-w-3xl mb-16 md:mb-20">
+      {(eyebrow || heading || subtitle) && (
+        <div className="max-w-3xl mb-12 md:mb-16">
           <Reveal>
             {eyebrow && (
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-6 eyebrow-hairline">
                 {eyebrow}
               </p>
             )}
             {heading && (
-              <h2 className="font-heading text-headline leading-[1.1] tracking-heading text-dark mb-6">
+              <h2 className="font-heading text-title leading-[1.1] tracking-tight text-dark mb-6">
                 {heading}
               </h2>
             )}
             {subtitle && (
-              <p className="text-body text-copy-mid leading-[1.75] max-w-[580px]">
+              <p className="text-lg text-copy-mid leading-[1.7] max-w-[640px]">
                 {subtitle}
               </p>
             )}

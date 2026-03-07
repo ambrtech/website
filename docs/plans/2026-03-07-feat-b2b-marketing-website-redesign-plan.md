@@ -1,7 +1,7 @@
 ---
 title: B2B Marketing Website Redesign and Design Polish
 type: feat
-status: active
+status: completed
 date: 2026-03-07
 ---
 
@@ -92,12 +92,12 @@ Key improvements will include:
 
 ## Acceptance Criteria
 
-- [ ] All headings are scaled appropriately and maintain a sophisticated editorial feel.
-- [ ] Expandable components (FAQs, detail cards, "black boxes") have clear visual affordances indicating they can be clicked.
-- [ ] Component spacing is consistent, deliberate, and uses established Tailwind tokens.
-- [ ] The overall aesthetic aligns with the CLAUDE.md brand guidelines: warm, credible, human-first, and enterprise-ready.
-- [ ] No magic numbers or hardcoded hex values exist in the updated component files.
-- [ ] Visual hierarchy is clear and guides the user toward conversion actions.
+- [x] All headings are scaled appropriately and maintain a sophisticated editorial feel.
+- [x] Expandable components (FAQs, detail cards, "black boxes") have clear visual affordances indicating they can be clicked.
+- [x] Component spacing is consistent, deliberate, and uses established Tailwind tokens.
+- [x] The overall aesthetic aligns with the CLAUDE.md brand guidelines: warm, credible, human-first, and enterprise-ready.
+- [x] No magic numbers or hardcoded hex values exist in the updated component files.
+- [x] Visual hierarchy is clear and guides the user toward conversion actions.
 
 ## Success Metrics
 

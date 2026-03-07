@@ -32,9 +32,9 @@ export function Testimonial() {
                 as training and started treating it as practice — which is exactly the
                 shift we needed.
               </blockquote>
-              <p className="text-body-sm font-body-medium text-dark">Tracy Anderson</p>
-              <p className="text-nav text-copy-light mt-0.5">
-                Head of Learning &amp; Development, Skyscanner
+              <p className="text-body font-body-medium text-dark">Tracy Anderson</p>
+              <p className="text-body-sm text-copy-mid mt-1">
+                Head of Learning &amp; Development, <span className="text-copy-light">Skyscanner</span>
               </p>
             </div>
           </div>

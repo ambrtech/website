@@ -31,14 +31,14 @@ export function SplitContent({
   const textBlock = (
     <div>
       {eyebrow && (
-        <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+        <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-6 eyebrow-hairline">
           {eyebrow}
         </p>
       )}
-      <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-6">
+      <h2 className="font-heading text-title leading-[1.1] tracking-heading mb-8 text-dark">
         {heading}
       </h2>
-      <div className="text-body text-copy-mid leading-[1.75] space-y-4">
+      <div className="text-lg text-copy-mid leading-[1.7] space-y-6">
         {children ?? (body && <p>{body}</p>)}
       </div>
     </div>
@@ -50,10 +50,10 @@ export function SplitContent({
     <Section>
       <Reveal>
         <div
-          className={`grid gap-12 md:gap-20 items-start ${
+          className={`grid gap-12 md:gap-16 lg:gap-24 items-center ${
             reversed
-              ? 'md:grid-cols-[1.2fr_1fr]'
-              : 'md:grid-cols-[1fr_1.2fr]'
+              ? 'md:grid-cols-[1.1fr_1fr]'
+              : 'md:grid-cols-[1fr_1.1fr]'
           }`}
         >
           {reversed ? (

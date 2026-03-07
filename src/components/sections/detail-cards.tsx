@@ -49,19 +49,19 @@ export function DetailCards({ eyebrow, heading, items }: DetailCardsProps) {
             <Reveal key={item.heading} className="h-full">
               <button
                 type="button"
-                className={`flex flex-col h-full w-full text-left border p-6 md:p-8 transition-all duration-normal cursor-pointer ${
+                className={`group flex flex-col h-full w-full text-left border p-6 md:p-8 transition-all duration-normal cursor-pointer focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none rounded-brand ${
                   isExpanded
                     ? 'bg-surface-white border-accent-soft shadow-card'
-                    : 'bg-surface-white border-border hover:border-accent-soft/50'
+                    : 'bg-surface-white border-border hover:border-accent-soft hover:shadow-dropdown'
                 }`}
                 onClick={() => toggle(index)}
                 aria-expanded={isExpanded}
               >
                 <div className="flex items-start justify-between gap-4 w-full">
-                  <h3 className="font-heading text-label tracking-heading text-dark">
+                  <h3 className="font-heading text-label tracking-heading text-dark group-hover:text-accent transition-colors duration-normal">
                     {item.heading}
                   </h3>
-                  <span className={`text-copy-faint text-body-sm transition-transform duration-normal shrink-0 ${
+                  <span className={`text-accent text-lg transition-transform duration-normal shrink-0 ${
                     isExpanded ? 'rotate-45' : ''
                   }`}>
                     +

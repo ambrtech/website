@@ -34,19 +34,19 @@ export function TestimonialGrid({ eyebrow, heading, testimonials }: TestimonialG
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 lg:gap-y-16">
         {testimonials.map((item, index) => (
           <Reveal key={`${item.company}-${index}`}>
-            <blockquote className="flex flex-col h-full border-t border-border pt-8">
-              <p className="font-heading text-body leading-[1.6] tracking-heading text-dark mb-8 flex-1">
+            <blockquote className="flex flex-col h-full border-t border-border pt-8 md:pt-10">
+              <p className="font-heading text-lg md:text-xl leading-[1.6] tracking-heading text-dark mb-10 flex-1">
                 &ldquo;{item.quote}&rdquo;
               </p>
               <footer>
                 {item.name && (
-                  <p className="text-body-sm font-body-medium text-dark">{item.name}</p>
+                  <p className="text-body font-body-medium text-dark">{item.name}</p>
                 )}
-                <p className="text-caption text-copy-light">
-                  {item.role}, {item.company}
+                <p className="text-body-sm text-copy-mid mt-1">
+                  {item.role}, <span className="text-copy-light">{item.company}</span>
                 </p>
               </footer>
             </blockquote>
