@@ -40,19 +40,19 @@ export default function Home() {
       <Hero />
 
       <StatBar
+        heading="Results that speak for themselves"
         items={[
           {
             value: '93%',
             label: 'feel better prepared for real conversations',
           },
           {
-            value: '92%',
-            label: 'engagement rate',
-            source: 'Skyscanner pilot',
+            value: 'X%',
+            label: 'faster onboarding and ramp-up time',
           },
           {
-            value: '340ms',
-            label: 'average AI response time',
+            value: '740ms',
+            label: 'ultra-fast response time feels just like speaking to a real human',
           },
         ]}
       />
@@ -69,21 +69,22 @@ export default function Home() {
           </h2>
           <p className="text-body text-copy-mid leading-[1.75] max-w-[580px]">
             Ambr AI is fully customizable to match your specific training
-            goals. Choose from a library of ready-made scenarios, or easily
-            create your own:
+            goals - and can be done easily, with minimal effort and without
+            huge investment. Choose from a library of ready-made scenarios, or
+            easily create your own:
           </p>
         </Reveal>
       </Section>
 
       <SplitContent
-        eyebrow="Admin customization"
+        eyebrow="Admin Customization"
         heading={
           <>
             Build scenarios that match your{' '}
             <em className="text-accent">reality</em>
           </>
         }
-        body="Define the conversation context, AI character behavior, and feedback criteria. Deploy to your teams with full control over the training experience."
+        body="Easily create custom simulations yourself, directly in the platform. No technical skills required."
         visualContent={
           <ProductScreenshot tint>
             <MockAdminBuilder />
@@ -93,13 +94,13 @@ export default function Home() {
 
       <SplitContent
         reversed
-        eyebrow="In-house customization service"
+        eyebrow="In-House Customization Service"
         heading={
           <>
             We build it <em className="text-accent">for</em> you
           </>
         }
-        body="Share your brief with our team. We create bespoke scenarios tailored to your organization's language, culture, and training goals, delivered within 48 hours."
+        body="Our expert team builds fully tailored simulations for you. Share a few minutes of context and we deliver scenarios that match your need."
         visualContent={
           <ProductScreenshot tint>
             <MockCustomizationDelivery />
@@ -108,14 +109,14 @@ export default function Home() {
       />
 
       <SplitContent
-        eyebrow="Personal scenario creator"
+        eyebrow="Individual User Customization"
         heading={
           <>
             Let your people create their{' '}
             <em className="text-accent">own</em>
           </>
         }
-        body="Team members can create personal practice scenarios for conversations they have coming up. Private, immediate, and specific to their situation."
+        body="Individual team members create their own private scenarios for specific upcoming conversations."
         visualContent={
           <ProductScreenshot tint>
             <MockScenarioCreator />
@@ -123,45 +124,46 @@ export default function Home() {
         }
       />
 
-      <Section>
-        <Reveal>
-          <Link
-            href="/customisation"
-            className="inline-flex items-center gap-2 text-label font-body-medium text-dark hover:text-accent transition-colors duration-normal"
-          >
-            See how customization works
-            <span className="text-accent">→</span>
-          </Link>
-        </Reveal>
-      </Section>
+      <div className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
+        <div className="mx-auto max-w-site">
+          <Reveal>
+            <Link
+              href="/customization"
+              className="inline-flex items-center gap-2 text-label font-body-medium text-dark hover:text-accent transition-colors duration-normal"
+            >
+              See how customization works
+              <span className="text-accent">→</span>
+            </Link>
+          </Reveal>
+        </div>
+      </div>
 
       {/* ── Testimonials ── */}
       <TestimonialGrid
-        heading="What people say"
         testimonials={[
           {
             quote:
-              "It's every HR Leader's dream to have a tool that lets people practice difficult conversations before they have them for real.",
-            role: 'Head of People',
-            company: 'Design Agency',
+              "Weirdly human. I said a few things to try to catch the AI out and it was able to answer in the right way.",
+            role: '',
+            company: 'Consulting Firm',
           },
           {
             quote:
-              'We love it. The team has completely embraced it and the feedback quality is remarkable.',
-            role: 'L&D Manager',
+              "What truly sets it apart is the quality of its feedback - it's detailed, actionable, and feels like having a personal coach.",
+            role: '',
+            company: 'Scale-Up',
+          },
+          {
+            quote:
+              "We write scripts for managers but it's not sustainable - Ambr AI gives them a self-sustaining skill.",
+            role: 'Head of Learning & Development',
+            company: 'Logistics Company',
+          },
+          {
+            quote:
+              "We love it. It's great that we can customize it for our needs.",
+            role: '',
             company: 'Professional Services Firm',
-          },
-          {
-            quote:
-              'The team is incredibly responsive. They feel like an extension of our own L&D function.',
-            role: 'Enterprise client',
-            company: '',
-          },
-          {
-            quote:
-              "We've looked at alternatives but they were just 'meh'... this is a really good product.",
-            role: 'Training Manager',
-            company: 'Recruitment Company',
           },
         ]}
       />

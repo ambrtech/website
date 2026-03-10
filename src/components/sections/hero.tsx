@@ -14,14 +14,13 @@ export function Hero() {
               Voice AI training platform
             </p>
             <h1 className="font-heading text-headline leading-[1.05] tracking-heading mb-12 opacity-0 animate-[clipReveal_1.5s_cubic-bezier(0.16,1,0.3,1)_0.4s_both]">
-              Training for the conversations that{' '}
-              <em className="text-accent italic font-light">matter</em> most
+              Customized AI roleplays for the conversations that <em className="text-accent">matter most</em>
             </h1>
             <p className="text-body text-copy-mid max-w-[520px] leading-[1.7] mb-10 opacity-0 animate-[fadeIn_1.2s_ease-out_0.6s_both]">
-              Voice AI training platform for high-stakes workplace conversations.
-              From sales negotiations to management feedback, your teams build real
-              skills through ultra-realistic conversation simulations — all easily
-              customizable to meet your specific training needs.
+              Training platform for high-stakes workplace conversations. From
+              sales negotiations to management feedback, your teams build real
+              skills through ultra-realistic AI conversation simulations - all
+              easily customizable to meet your specific training needs.
             </p>
             <div className="flex items-center gap-4 opacity-0 animate-[fadeIn_1.2s_ease-out_0.8s_both]">
               <Link

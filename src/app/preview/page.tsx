@@ -503,6 +503,7 @@ export default function PreviewPage() {
 
       <SectionLabel name="StatBar" />
       <StatBar
+        heading="Results that speak for themselves"
         items={[
           { value: '93%', label: 'of users report feeling better prepared for real conversations', source: 'Ambr AI user survey' },
           { value: '78%', label: 'felt more comfortable navigating difficult conversations', source: 'Skyscanner 12-week pilot' },

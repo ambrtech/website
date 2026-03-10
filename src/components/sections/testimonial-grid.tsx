@@ -46,7 +46,7 @@ export function TestimonialGrid({ eyebrow, heading, testimonials }: TestimonialG
                   <p className="text-body-sm font-body-medium text-dark">{item.name}</p>
                 )}
                 <p className="text-caption text-copy-light">
-                  {item.role}, {item.company}
+                  {[item.role, item.company].filter(Boolean).join(', ')}
                 </p>
               </footer>
             </blockquote>
