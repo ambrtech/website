@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Reveal } from '@/components/reveal'
 
+import { Breadcrumbs } from '@/components/sections/breadcrumbs'
+import { PageHero } from '@/components/sections/page-hero'
 import { ComparisonLayout } from '@/components/sections/comparison-layout'
 import { UseCaseCards } from '@/components/sections/use-case-cards'
 import { ScenarioCards } from '@/components/sections/scenario-cards'
@@ -191,6 +193,38 @@ export default function PreviewPage() {
          ╚══════════════════════════════════════════════════╝ */}
 
       <GroupLabel name="Content & Narrative" />
+
+      <SectionLabel name="Breadcrumbs" />
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Security', href: '/security/compliance' },
+          { name: 'Data Protection', href: '/security/data-protection' },
+        ]}
+      />
+
+      <SectionLabel name="PageHero" />
+      <PageHero
+        eyebrow="Data Protection"
+        heading={
+          <>
+            Your data. Your <em className="text-accent">control</em>.
+          </>
+        }
+        subtitle="Complete transparency on what we collect, how we store it, and what we'll never do with it."
+      />
+
+      <SectionLabel name="PageHero — compact" />
+      <PageHero
+        eyebrow="Responsible AI"
+        heading={
+          <>
+            Responsible AI, by <em className="text-accent">design</em>.
+          </>
+        }
+        subtitle="AI roleplay involves real people practicing real conversations: moments of vulnerability, uncertainty, and growth."
+        compact
+      />
 
       <SectionLabel name="ComparisonLayout" />
       <ComparisonLayout

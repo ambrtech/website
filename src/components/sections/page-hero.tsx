@@ -5,11 +5,20 @@ interface PageHeroProps {
   heading: React.ReactNode
   subtitle: string
   compact?: boolean
+  /** Set to true when PageHero is the first element on the page (no Breadcrumbs above). Adds header clearance. */
+  first?: boolean
 }
 
-export function PageHero({ eyebrow, heading, subtitle }: PageHeroProps) {
+export function PageHero({ eyebrow, heading, subtitle, compact, first }: PageHeroProps) {
+  const topPadding = first
+    ? 'pt-28 md:pt-36'
+    : 'pt-section-mobile md:pt-section'
+  const bottomPadding = compact
+    ? 'pb-section-mobile md:pb-12'
+    : 'pb-section-mobile md:pb-section'
+
   return (
-    <section className="pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container">
+    <section className={`${topPadding} ${bottomPadding} px-container-mobile md:px-container`}>
       <div className="mx-auto max-w-site">
         <Reveal>
           {eyebrow && (

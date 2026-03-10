@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { createMetadata } from '@/lib/metadata'
-import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { LogoCloud } from '@/components/sections/logo-cloud'
 import { Reveal } from '@/components/reveal'
@@ -47,14 +46,6 @@ const secondaryCredentials = [
 export default function CompliancePage() {
   return (
     <>
-      <Breadcrumbs
-        items={[
-          { name: 'Home', href: '/' },
-          { name: 'Security', href: '/security/compliance' },
-          { name: 'Compliance', href: '/security/compliance' },
-        ]}
-      />
-
       <PageHero
         eyebrow="Compliance"
         heading={
@@ -64,6 +55,7 @@ export default function CompliancePage() {
           </>
         }
         subtitle="Our customers include global consulting firms and publicly listed enterprises. Our security standards reflect theirs."
+        first
       />
 
       {/* ── Certifications ── */}

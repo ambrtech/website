@@ -18,10 +18,8 @@ const footerNav = {
     { label: 'Technology', href: '/industries/technology' },
   ],
   Company: [
-    { label: 'About', href: '/about' },
-    { label: 'Customers', href: '/customers' },
+    { label: 'About', href: '/company' },
     { label: 'Blog', href: '/blog' },
-    { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' },
   ],
   Security: [

@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { Reveal } from '@/components/reveal'
-import { CTA } from '@/components/sections/cta'
 
 export const metadata = createMetadata({
   title: 'Languages',
@@ -40,17 +39,27 @@ interface LanguageRegion {
 
 const regions: LanguageRegion[] = [
   {
+    region: 'North America',
+    languages: [
+      'English (US)',
+      'French (Canada)',
+      'Spanish (US)',
+    ],
+  },
+  {
+    region: 'Latin America',
+    languages: [
+      'Portuguese (Brazil)',
+    ],
+  },
+  {
     region: 'Europe',
     languages: [
       'English (UK)',
-      'English (US)',
       'French (France)',
-      'French (Canada)',
       'German',
       'Italian',
       'Spanish (Spain)',
-      'Spanish (US)',
-      'Portuguese (Brazil)',
       'Dutch (Netherlands)',
       'Dutch (Belgium)',
       'Polish',
@@ -63,11 +72,19 @@ const regions: LanguageRegion[] = [
     ],
   },
   {
-    region: 'Asia-Pacific',
+    region: 'East & Southeast Asia',
     languages: [
       'Mandarin Chinese',
       'Japanese',
       'Korean',
+      'Indonesian',
+      'Thai',
+      'Vietnamese',
+    ],
+  },
+  {
+    region: 'South Asia',
+    languages: [
       'Hindi',
       'Bengali',
       'Gujarati',
@@ -77,9 +94,6 @@ const regions: LanguageRegion[] = [
       'Tamil',
       'Telugu',
       'Urdu',
-      'Indonesian',
-      'Thai',
-      'Vietnamese',
     ],
   },
   {
@@ -209,7 +223,7 @@ export default function LanguagesPage() {
       </section>
 
       {/* ── Supported Languages ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt border-y border-border">
+      <section className="pt-section-mobile md:pt-section pb-10 md:pb-14 px-container-mobile md:px-container bg-surface-alt border-y border-border">
         <div className="mx-auto max-w-site">
           <Reveal>
             <div className="mb-12 md:mb-16">
@@ -257,16 +271,16 @@ export default function LanguagesPage() {
 
           {/* Growing callout */}
           <Reveal>
-            <div className="mt-16 md:mt-20 border-l-[3px] border-accent-soft pl-6 py-1">
+            <div className="mt-12 md:mt-14 border-l-[3px] border-accent-soft pl-6 py-1">
               <p className="text-body text-copy-mid leading-[1.75]">
-                This list is growing. If you need a language not listed here,{' '}
+                This list is growing. If you need a language not listed here, please{' '}
                 <Link
                   href="/contact"
                   className="text-accent font-body-medium hover:text-accent-hover transition-colors"
                 >
                   get in touch
                 </Link>
-                . We may already support it or can add it.
+                {' - '}we may be able to support it.
               </p>
             </div>
           </Reveal>
@@ -274,7 +288,7 @@ export default function LanguagesPage() {
       </section>
 
       {/* ── For Global Organizations ── */}
-      <section className="py-section-lg md:py-section-xl px-container-mobile md:px-container">
+      <section className="pt-12 md:pt-16 pb-section-mobile md:pb-section px-container-mobile md:px-container">
         <div className="mx-auto max-w-[720px] text-center">
           <Reveal>
             {/* Decorative centered hairline */}
@@ -306,8 +320,6 @@ export default function LanguagesPage() {
           </Reveal>
         </div>
       </section>
-
-      <CTA />
     </>
   )
 }

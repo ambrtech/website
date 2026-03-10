@@ -22,6 +22,7 @@ export default function TryForFreePage() {
           </>
         }
         subtitle="See what realistic AI roleplay training feels like. Choose one of the example scenarios below and start a live conversation. It takes less than five minutes."
+        first
       />
 
       <Section>

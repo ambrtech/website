@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
-import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
-
 import { Reveal } from '@/components/reveal'
 
 export const metadata = createMetadata({
@@ -15,206 +13,169 @@ export const metadata = createMetadata({
 const dataTypes = [
   {
     label: 'Voice & transcripts',
-    bullets: [
-      'Voice data and conversation transcripts power real-time AI responses, simulation feedback, and personalized coaching.',
-      'This data also feeds admin dashboards and reporting, giving organizations insight into capability gaps and training impact.',
-    ],
+    description:
+      'Voice data and conversation transcripts power real-time AI responses, simulation feedback, and personalized coaching. This data also feeds admin dashboards, giving organizations insight into capability gaps and training impact.',
   },
   {
     label: 'Usage metadata',
-    bullets: [
-      'Usage metadata, including session timestamps, scenario selections, and engagement metrics, supports admin reporting and helps us refine the platform experience.',
-    ],
+    description:
+      'Session timestamps, scenario selections, and engagement metrics support admin reporting and help us refine the platform experience. This metadata is never linked to individual learner identities externally.',
   },
   {
     label: 'Account information',
-    bullets: [
-      'Account information such as names, email addresses, and organizational roles is used solely for platform access and administration.',
-    ],
+    description:
+      'Names, email addresses, and organizational roles are used solely for platform access and administration. Account data is never used for marketing, profiling, or shared beyond your organization.',
   },
 ]
 
-const dataCommitments = [
-  'Customer data is never sold, licensed, or shared with third parties.',
-  'Conversations are never used to train AI models.',
-  'Internal analysis of usage patterns helps us improve our product.',
+const retentionFeatures = [
+  {
+    label: 'Configurable retention',
+    description: 'Retention periods are configurable per organization to match your internal policies.',
+  },
+  {
+    label: 'Granular selection',
+    description: 'Choose what is retained: audio recordings, transcripts, simulation feedback, or any combination.',
+  },
+  {
+    label: 'Deletion on request',
+    description: 'Data can be deleted at any time during the contract term. All customer data is deleted within the agreed timeframe on contract termination.',
+  },
+  {
+    label: 'Verified deletion',
+    description: 'Deletion is verified and documented, with confirmation provided to your organization.',
+  },
 ]
 
-const retentionPoints = [
-  'Retention periods are configurable per organization',
-  'Choose what is retained: audio recordings, transcripts, simulation feedback, or any combination.',
-  'Data can be deleted at any time during the contract term on request, and all customer data is deleted within the agreed timeframe on contract termination.',
-  'Deletion is verified and documented',
+const resources = [
+  { label: 'Sub-processors', href: 'https://security.ambr.ai', external: true },
+  { label: 'Data Processing Agreement', href: 'https://ambr.ai/dpa', external: true },
+  { label: 'Trust Portal', href: 'https://security.ambr.ai', external: true },
+  { label: 'Compliance certifications', href: '/security/compliance', external: false },
+  { label: 'Responsible AI', href: '/security/responsible-ai', external: false },
 ]
 
 export default function DataProtectionPage() {
   return (
     <>
-      <Breadcrumbs
-        items={[
-          { name: 'Home', href: '/' },
-          { name: 'Security', href: '/security/compliance' },
-          { name: 'Data Protection', href: '/security/data-protection' },
-        ]}
-      />
-
       <PageHero
         eyebrow="Data Protection"
         heading={
           <>
-            Your data. Your <em className="text-accent">control</em>.
+            Your data. <em className="text-accent">Your control</em>.
           </>
         }
-        subtitle="How we handle your data, in plain terms."
+        subtitle="Complete transparency on what we collect, how we store it, and what we'll never do with it. Your data is never sold. Your conversations are never used to train AI models."
         compact
+        first
       />
 
-      {/* ── Data and Purpose ── */}
-      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
+      {/* ── Data types ── */}
+      <section className="pb-10 md:pb-16 px-container-mobile md:px-container">
         <div className="mx-auto max-w-site">
           <Reveal>
-            <div className="max-w-[720px] mb-12">
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                Data and Purpose
-              </p>
-              <p className="text-body text-copy-mid leading-[1.75]">
-                Ambr AI collects only what is necessary to deliver and improve the
-                service.
-              </p>
-            </div>
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-6 eyebrow-hairline">
+              What we collect and why
+            </p>
           </Reveal>
-
           <div className="grid md:grid-cols-3 gap-6">
             {dataTypes.map((item, i) => (
               <Reveal key={item.label} delay={i * 80}>
-                <div className="bg-surface-alt rounded-brand p-7 h-full">
+                <div className="bg-surface-alt rounded-brand p-7 md:p-8 h-full">
                   <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-4">
                     {item.label}
                   </p>
-                  <ul className="space-y-3">
-                    {item.bullets.map((bullet) => (
-                      <li
-                        key={bullet}
-                        className="text-body-sm text-copy-mid leading-[1.75] pl-5 relative before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent-soft"
-                      >
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-body-sm text-copy-mid leading-[1.75]">
+                    {item.description}
+                  </p>
                 </div>
               </Reveal>
             ))}
           </div>
-          <Reveal delay={240}>
-            <div className="mt-8 border border-border rounded-brand p-7 md:p-8">
-              <ul className="space-y-3">
-                {dataCommitments.map((point) => (
-                  <li
-                    key={point}
-                    className="text-body-sm text-copy-mid leading-[1.7] pl-5 relative before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent-soft"
-                  >
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
         </div>
       </section>
 
       {/* ── Retention, Control, and Residency ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container">
-        <div className="mx-auto max-w-site grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-20 items-start">
-          <Reveal>
-            <div>
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                Retention, Control, and Residency
-              </p>
-              <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-5">
-                Customers have granular control over how their data is stored.
-              </h2>
-              <p className="text-body text-copy-mid leading-[1.75]">
-                Ambr AI is hosted on Google Cloud infrastructure in the UK. For
-                organizations with specific residency requirements, we support
-                data storage in additional regions on request, including
-                per-customer configuration for audio recordings.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <div className="border border-border rounded-brand p-7 md:p-8">
-              <ul className="space-y-3">
-                {retentionPoints.map((point) => (
-                  <li
-                    key={point}
-                    className="text-body-sm text-copy-mid leading-[1.7] pl-5 relative before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent-soft"
-                  >
-                    {point}
-                  </li>
+      <section className="py-10 md:py-16 px-container-mobile md:px-container">
+        <div className="mx-auto max-w-site">
+          <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-20 items-start">
+            <Reveal>
+              <div>
+                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+                  Retention, Control, and Residency
+                </p>
+                <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-5">
+                  Granular control over how your data is stored.
+                </h2>
+                <p className="text-body text-copy-mid leading-[1.75]">
+                  Ambr AI is hosted on Google Cloud infrastructure in the UK. For
+                  organizations with specific residency requirements, we support
+                  data storage in additional regions on request, including
+                  per-customer configuration for audio recordings.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={100}>
+              <div className="space-y-5">
+                {retentionFeatures.map((feature, i) => (
+                  <div key={i} className="flex gap-4 items-start">
+                    <div className="mt-0.5 shrink-0">
+                      <svg viewBox="0 0 20 20" fill="currentColor" className="w-4.5 h-4.5 text-accent">
+                        <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-body-sm font-body-medium text-dark leading-[1.5] mb-1">
+                        {feature.label}
+                      </p>
+                      <p className="text-body-sm text-copy-mid leading-[1.7]">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
                 ))}
-              </ul>
-            </div>
-          </Reveal>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
-      {/* ── Sub-processors + DPA ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt">
-        <div className="mx-auto max-w-[720px]">
-          <Reveal>
-            <div>
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                Sub-processors &amp; DPA
-              </p>
-              <p className="text-body text-copy-mid leading-[1.75]">
-                A full list of sub-processors is available through our trust portal at{' '}
-                <a
-                  href="https://security.ambr.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
-                >
-                  security.ambr.ai
-                </a>
-                . Our standard Data Processing Agreement is available for review at{' '}
-                <a
-                  href="https://ambr.ai/dpa"
-                  className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
-                >
-                  ambr.ai/dpa
-                </a>
-                .
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ── Cross-links ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container border-t border-border">
+      {/* ── Resources & links ── */}
+      <section className="py-10 md:py-16 px-container-mobile md:px-container border-t border-border">
         <div className="mx-auto max-w-site text-center">
           <Reveal>
-            <p className="font-heading text-label leading-[1.3] tracking-heading mb-6">
+            <p className="font-heading text-label leading-[1.3] tracking-heading mb-8">
               Have a specific data handling question?{' '}
               <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors">
                 Talk to us
               </Link>
               .
             </p>
-            <div className="flex items-center justify-center gap-6 flex-wrap">
-              <Link
-                href="/security/compliance"
-                className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
-              >
-                Review our compliance certifications &rarr;
-              </Link>
-              <span className="text-copy-faint" aria-hidden="true">&middot;</span>
-              <Link
-                href="/security/responsible-ai"
-                className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
-              >
-                Our approach to responsible AI &rarr;
-              </Link>
+            <div className="flex items-center justify-center gap-x-6 gap-y-3 flex-wrap">
+              {resources.map((item, i) => (
+                <span key={item.label} className="flex items-center gap-6">
+                  {i > 0 && (
+                    <span className="text-copy-faint" aria-hidden="true">&middot;</span>
+                  )}
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
+                    >
+                      {item.label} &rarr;
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
+                    >
+                      {item.label} &rarr;
+                    </Link>
+                  )}
+                </span>
+              ))}
             </div>
           </Reveal>
         </div>

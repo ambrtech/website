@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
-import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { Reveal } from '@/components/reveal'
 
@@ -14,14 +13,6 @@ export const metadata = createMetadata({
 export default function ResponsibleAIPage() {
   return (
     <>
-      <Breadcrumbs
-        items={[
-          { name: 'Home', href: '/' },
-          { name: 'Security', href: '/security/compliance' },
-          { name: 'Responsible AI', href: '/security/responsible-ai' },
-        ]}
-      />
-
       <PageHero
         eyebrow="Responsible AI"
         heading={
@@ -31,6 +22,7 @@ export default function ResponsibleAIPage() {
         }
         subtitle="AI roleplay involves real people practicing real conversations: moments of vulnerability, uncertainty, and growth. That responsibility shapes every decision we make. Ambr AI is not a general-purpose AI tool — it is a training platform built to help people perform better in the moments that matter at work. That focused scope makes our ethical commitments specific and enforceable."
         compact
+        first
       />
 
       {/* ── Human-centered (dark anchor) ── */}
