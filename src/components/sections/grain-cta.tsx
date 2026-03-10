@@ -7,6 +7,8 @@ interface GrainCtaProps {
   subtitle?: string
   ctaLabel: string
   ctaHref: string
+  secondaryLabel?: string
+  secondaryHref?: string
   variant?: 'light' | 'dark'
 }
 
@@ -27,7 +29,7 @@ const variantConfig = {
   },
 } as const
 
-export function GrainCta({ heading, subtitle, ctaLabel, ctaHref, variant = 'light' }: GrainCtaProps) {
+export function GrainCta({ heading, subtitle, ctaLabel, ctaHref, secondaryLabel, secondaryHref, variant = 'light' }: GrainCtaProps) {
   const v = variantConfig[variant]
 
   return (
@@ -60,12 +62,22 @@ export function GrainCta({ heading, subtitle, ctaLabel, ctaHref, variant = 'ligh
           )}
 
           <Reveal slow delay={200}>
-            <Link
-              href={ctaHref}
-              className={`mt-10 inline-block rounded-brand-sm px-8 py-3.5 text-sm font-body-medium transition-all duration-normal ${v.button}`}
-            >
-              {ctaLabel}
-            </Link>
+            <div className="mt-10 flex items-center gap-4">
+              <Link
+                href={ctaHref}
+                className={`inline-block rounded-brand-sm px-8 py-3.5 text-sm font-body-medium transition-all duration-normal ${v.button}`}
+              >
+                {ctaLabel}
+              </Link>
+              {secondaryLabel && secondaryHref && (
+                <Link
+                  href={secondaryHref}
+                  className={`text-sm font-body-medium transition-colors ${v.subtitle} hover:text-accent`}
+                >
+                  {secondaryLabel} →
+                </Link>
+              )}
+            </div>
           </Reveal>
         </div>
       </div>

@@ -16,6 +16,7 @@ interface SplitContentProps {
   heading: React.ReactNode
   children?: React.ReactNode
   body?: string
+  badge?: string
   reversed?: boolean
   visualContent?: React.ReactNode
 }
@@ -25,6 +26,7 @@ export function SplitContent({
   heading,
   children,
   body,
+  badge,
   reversed = false,
   visualContent,
 }: SplitContentProps) {
@@ -41,6 +43,11 @@ export function SplitContent({
       <div className="text-body text-copy-mid leading-[1.75] space-y-4">
         {children ?? (body && <p>{body}</p>)}
       </div>
+      {badge && (
+        <span className="inline-block text-caption font-body-medium uppercase tracking-eyebrow text-copy-light border border-border rounded-brand-sm px-3 py-1 mt-5">
+          {badge}
+        </span>
+      )}
     </div>
   )
 

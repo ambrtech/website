@@ -34,7 +34,7 @@ export function TestimonialGrid({ eyebrow, heading, testimonials }: TestimonialG
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         {testimonials.map((item, index) => (
           <Reveal key={`${item.company}-${index}`}>
             <blockquote className="flex flex-col h-full border-t border-border pt-8">

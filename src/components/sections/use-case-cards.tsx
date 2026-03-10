@@ -1,10 +1,8 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Section } from './section'
 import { Reveal } from '@/components/reveal'
 
-/**
- * Interface for individual use case items.
- */
 export interface UseCaseItem {
   heading: string
   description: string
@@ -12,39 +10,55 @@ export interface UseCaseItem {
   ctaLabel: string
 }
 
-/**
- * Props for the UseCaseCards component.
- */
 export interface UseCaseCardsProps {
-  /** Optional eyebrow text. */
   eyebrow?: string
-  /** Optional section heading. */
-  heading?: string
-  /** Array of 3-4 use case items. */
+  heading?: React.ReactNode
+  subtitle?: string
+  image?: {
+    src: string
+    alt: string
+  }
   items: UseCaseItem[]
 }
 
-/**
- * UseCaseCards displays a grid of categories with an editorial, menu-like feel.
- * It avoids app-like rounded corners and SaaS shadows in favour of sharp, 
- * sophisticated lines and tactile hover states.
- */
-export function UseCaseCards({ eyebrow, heading, items }: UseCaseCardsProps) {
+export function UseCaseCards({ eyebrow, heading, subtitle, image, items }: UseCaseCardsProps) {
   return (
     <Section className="bg-surface-white">
-      <div className="max-w-3xl mb-16 md:mb-24">
-        {eyebrow && (
+      <div className={`mb-12 md:mb-16 ${image ? 'grid md:grid-cols-[1fr_1fr] gap-10 md:gap-16 items-end' : 'max-w-3xl'}`}>
+        <div>
+          {eyebrow && (
+            <Reveal>
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5 eyebrow-hairline">
+                {eyebrow}
+              </p>
+            </Reveal>
+          )}
+          {heading && (
+            <Reveal slow>
+              <h2 className="font-heading text-section leading-[1.2] tracking-heading text-dark">
+                {heading}
+              </h2>
+            </Reveal>
+          )}
+          {subtitle && (
+            <Reveal>
+              <p className="text-body text-copy-mid leading-[1.75] mt-4">
+                {subtitle}
+              </p>
+            </Reveal>
+          )}
+        </div>
+        {image && (
           <Reveal>
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5 eyebrow-hairline">
-              {eyebrow}
-            </p>
-          </Reveal>
-        )}
-        {heading && (
-          <Reveal slow>
-            <h2 className="font-heading text-headline leading-[1.1] tracking-heading text-dark">
-              {heading}
-            </h2>
+            <div className="hidden md:block">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={600}
+                height={400}
+                className="w-full h-auto rounded-brand object-cover aspect-[3/2]"
+              />
+            </div>
           </Reveal>
         )}
       </div>
@@ -56,7 +70,7 @@ export function UseCaseCards({ eyebrow, heading, items }: UseCaseCardsProps) {
               href={item.href}
               className="group flex flex-col h-full px-8 py-10 lg:px-6 lg:py-12 bg-surface-white hover:bg-surface transition-colors duration-normal border-l border-border first:border-l-0"
             >
-              <h3 className="font-heading text-section leading-[1.2] tracking-heading mb-4 text-dark group-hover:text-accent transition-colors duration-normal">
+              <h3 className="font-heading text-label leading-[1.3] tracking-heading mb-4 text-dark group-hover:text-accent transition-colors duration-normal">
                 {item.heading}
               </h3>
               <p className="text-body-sm text-copy-mid leading-relaxed mb-8">
@@ -68,7 +82,6 @@ export function UseCaseCards({ eyebrow, heading, items }: UseCaseCardsProps) {
                 <span className="text-accent">→</span>
               </div>
 
-              {/* Accent line on hover */}
               <div className="h-0.5 bg-accent mt-8 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-slow origin-left" />
             </Link>
           </Reveal>

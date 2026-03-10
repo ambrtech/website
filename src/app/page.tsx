@@ -171,33 +171,43 @@ export default function Home() {
       {/* ── Use cases ── */}
       <UseCaseCards
         eyebrow="Use cases"
-        heading="One platform for every conversation that matters"
+        heading={
+          <>
+            One platform for every conversation that{' '}
+            <em className="text-accent">matters</em>
+          </>
+        }
+        subtitle="One training solution across every function - with unified reporting and administration."
+        image={{
+          src: '/images/photography/consulting-client-meeting.png',
+          alt: 'Two professionals in a client meeting across a table',
+        }}
         items={[
           {
             heading: 'Management & Leadership',
             description:
-              'Performance reviews, sensitive feedback, team conflict, and restructures.',
+              'Performance reviews. Team restructures. Sensitive feedback. Give your managers the skills to lead with confidence.',
             href: '/solutions/management-leadership',
             ctaLabel: 'Explore',
           },
           {
             heading: 'Sales & Negotiations',
             description:
-              'Discovery calls, objection handling, negotiation, and closing.',
+              'Discovery calls. Objection handling. Contract negotiations. Onboard and upskill your sales teams faster.',
             href: '/solutions/sales-negotiations',
             ctaLabel: 'Explore',
           },
           {
             heading: 'Customer Service',
             description:
-              'Complaint resolution, de-escalation, and retention conversations.',
+              'Escalations. Retention calls. Complex inquiries. Drive consistency across every customer interaction.',
             href: '/solutions/customer-service',
             ctaLabel: 'Explore',
           },
           {
             heading: 'And more',
             description:
-              'HR, onboarding, presentations, and any conversation where the words matter.',
+              "Presentations, onboarding, interviewing. If it matters to your business, it's in our product.",
             href: '/solutions/other',
             ctaLabel: 'Explore',
           },
@@ -211,12 +221,13 @@ export default function Home() {
             Voice AI
           </p>
           <h2 className="font-heading text-headline leading-[1.1] tracking-heading max-w-[700px] mb-4">
-            Ultra-realistic <em className="text-accent">voice</em> AI
+            Ultra-realistic AI <em className="text-accent">roleplays</em>
           </h2>
           <p className="text-body text-copy-mid leading-[1.75] max-w-[580px]">
             Ambr AI delivers conversation simulations that feel genuinely
-            human. AI characters listen, adapt to tone and approach, and
-            respond just like a real person would.
+            human - without the real-world consequences. AI characters listen,
+            adapt to tone and approach, and respond just like a real person
+            would.
           </p>
         </Reveal>
       </Section>
@@ -229,7 +240,7 @@ export default function Home() {
             <em className="text-accent">milliseconds</em>
           </>
         }
-        body="No awkward pauses. No lag. The AI responds with human-like timing, keeping the conversational flow natural and realistic."
+        body="Voice AI responses are near-instant. No awkward pauses. The pacing feels natural, just like a real conversation."
         visualContent={
           <ProductScreenshot tint>
             <MockVoiceConversation />
@@ -246,7 +257,7 @@ export default function Home() {
             <em className="text-accent">listen</em>
           </>
         }
-        body="AI characters adapt their tone, pushback, and emotional state based on how you approach the conversation. No two sessions are the same."
+        body="AI characters respond to what your team members actually say and how they say it. Push back, change direction, try a different tactic, and the AI follows."
         visualContent={
           <ProductScreenshot tint>
             <MockFeedbackPanel />
@@ -255,13 +266,30 @@ export default function Home() {
       />
 
       <SplitContent
+        eyebrow="Genuine conversational pressure"
+        heading={
+          <>
+            Think on your <em className="text-accent">feet</em>
+          </>
+        }
+        body="Your team has to think on their feet, read the tone, and respond in the moment. That is where real skills are built."
+        visualContent={
+          <ProductScreenshot tint>
+            <MockVoiceConversation />
+          </ProductScreenshot>
+        }
+      />
+
+      <SplitContent
+        reversed
         eyebrow="Body language analysis"
         heading={
           <>
             Beyond <em className="text-accent">words</em>
           </>
         }
-        body="Ambr AI analyzes eye contact, posture, gestures, and facial expression to give feedback on how you show up, not just what you say."
+        body="Ambr AI can read how people come across visually alongside their voice, providing feedback on the non-verbal signals that shape every interaction."
+        badge="Optional add-on"
         visualContent={
           <ProductScreenshot tint>
             <MockBodyLanguage />
@@ -276,54 +304,69 @@ export default function Home() {
       />
 
       {/* ── Why Ambr AI ── */}
-      <ShowcaseSplit
-        heading={
-          <>
-            Why teams choose <em className="text-accent">Ambr AI</em>
-          </>
-        }
-        subtitle="One platform. Every conversation that matters."
-        visualContent={<MockDashboard />}
-        filter="duotone-cream"
-        cropFocus="top-left"
-        features={[
-          {
-            heading: 'Customization',
-            description:
-              'Simulations built around your specific scenarios, language, and training goals.',
-          },
-          {
-            heading: 'One platform, every use case',
-            description:
-              'Management, sales, customer service and more. One admin experience, one vendor.',
-          },
-          {
-            heading: 'Actionable feedback',
-            description:
-              'Structured insights on tone, pacing, word choice, and approach after every session.',
-          },
-          {
-            heading: 'Global training',
-            description:
-              '30+ languages. Consistent training across every region your teams operate in.',
-          },
-          {
-            heading: 'Admin dashboard & reporting',
-            description:
-              'Track usage, monitor engagement, and identify capability gaps across your organization.',
-          },
-        ]}
-      />
-
       <Section>
         <Reveal>
-          <Link
-            href="/product/languages"
-            className="inline-flex items-center gap-2 text-label font-body-medium text-dark hover:text-accent transition-colors duration-normal"
-          >
-            See supported languages
-            <span className="text-accent">→</span>
-          </Link>
+          <div className="grid md:grid-cols-[1fr_1fr] gap-6 md:gap-20 items-end mb-12 md:mb-14">
+            <h2 className="font-heading text-section leading-[1.2] tracking-heading text-dark">
+              Why teams choose <em className="text-accent">Ambr AI</em>
+            </h2>
+            <p className="text-body text-copy-mid leading-[1.75]">
+              One platform. Every conversation that matters.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 border-t border-border pt-10">
+          {[
+            {
+              heading: 'Customization',
+              description:
+                'Simulations built around your specific scenarios, language, and training goals. Start with our pre-built library or create something entirely new. Customize easily and instantly.',
+            },
+            {
+              heading: 'One platform, every use case',
+              description:
+                'Management, sales, customer service and more. One admin experience, one set of reporting, one platform. No need to manage multiple solutions.',
+            },
+            {
+              heading: 'Actionable feedback',
+              description:
+                'Every simulation ends with structured, personalized insights on tone, pacing, word choice, structure, and approach. Feed insights back into your training strategy.',
+            },
+            {
+              heading: 'Admin dashboard & reporting',
+              description:
+                'Track usage, monitor engagement, view aggregated learning insights, and identify capability gaps across your organization.',
+            },
+            {
+              heading: 'Global training',
+              description:
+                '30+ languages. Deploy consistent, structured conversation training across every region your teams operate in, all from a single platform.',
+            },
+          ].map((feature, i) => (
+            <Reveal key={feature.heading} delay={i * 60}>
+              <div>
+                <h3 className="font-heading text-label tracking-heading text-dark mb-3">
+                  {feature.heading}
+                </h3>
+                <p className="text-body-sm text-copy-mid leading-[1.75]">
+                  {feature.description}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal>
+          <div className="mt-12">
+            <Link
+              href="/product/languages"
+              className="inline-flex items-center gap-2 text-label font-body-medium text-dark hover:text-accent transition-colors duration-normal"
+            >
+              See all supported languages
+              <span className="text-accent">→</span>
+            </Link>
+          </div>
         </Reveal>
       </Section>
 
@@ -358,13 +401,14 @@ export default function Home() {
         variant="dark"
         heading={
           <>
-            Not replacing humans.{' '}
-            <em className="text-accent">Enabling</em> human connection.
+            Enabling human <em className="text-accent">connection</em>, not replacing it.
           </>
         }
-        subtitle="The best training has always been conversational. Ambr AI makes structured, realistic conversation training available to every employee, across every team, in over 30 languages — so when the real conversation happens, they are ready."
+        subtitle="Ambr AI makes structured, realistic conversation training available to every employee, across every team, in over 30 languages - so when the real conversation happens, they are ready."
         ctaLabel="Try for Free"
         ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
       />
     </>
   )

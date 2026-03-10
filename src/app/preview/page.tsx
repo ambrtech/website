@@ -243,11 +243,12 @@ export default function PreviewPage() {
       <UseCaseCards
         eyebrow="Solutions"
         heading="One platform. Every conversation that matters."
+        subtitle="One training solution across every function - with unified reporting and administration."
         items={[
-          { heading: 'Management & Leadership', description: 'Difficult feedback. Performance reviews. Navigating team conflict. Conversations most managers dread — practiced until they don\'t.', href: '/solutions/management-leadership', ctaLabel: 'Try for Free' },
-          { heading: 'Sales & Negotiations', description: 'Discovery calls. Objection handling. Contract negotiations. Build the instinct to respond, not recite.', href: '/solutions/sales-negotiations', ctaLabel: 'Try for Free' },
-          { heading: 'Customer Service', description: 'Complaints. Escalations. Retention calls. Consistent quality across every interaction.', href: '/solutions/customer-service', ctaLabel: 'Try for Free' },
-          { heading: 'And more', description: 'Presentations, onboarding, compliance conversations — if it matters to your business, we can build it.', href: '/solutions/other', ctaLabel: 'Try for Free' },
+          { heading: 'Management & Leadership', description: 'Performance reviews. Team restructures. Sensitive feedback. Give your managers the skills to lead with confidence.', href: '/solutions/management-leadership', ctaLabel: 'Explore' },
+          { heading: 'Sales & Negotiations', description: 'Discovery calls. Objection handling. Contract negotiations. Onboard and upskill your sales teams faster.', href: '/solutions/sales-negotiations', ctaLabel: 'Explore' },
+          { heading: 'Customer Service', description: 'Escalations. Retention calls. Complex inquiries. Drive consistency across every customer interaction.', href: '/solutions/customer-service', ctaLabel: 'Explore' },
+          { heading: 'And more', description: "Presentations, onboarding, interviewing. If it matters to your business, it's in our product.", href: '/solutions/other', ctaLabel: 'Explore' },
         ]}
       />
 

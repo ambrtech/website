@@ -84,10 +84,10 @@
   --container-site: 1240px;
 
   /* Spacing / padding */
-  --spacing-section-mobile: 2.5rem;
-  --spacing-section: 4rem;
-  --spacing-section-lg: 8rem;
-  --spacing-section-xl: 10rem;
+  --spacing-section-mobile: 2rem;
+  --spacing-section: 3rem;
+  --spacing-section-lg: 6rem;
+  --spacing-section-xl: 8rem;
   --spacing-section-2xl: 13rem;
   --spacing-header: 5rem;
   --spacing-container: 2.5rem;
