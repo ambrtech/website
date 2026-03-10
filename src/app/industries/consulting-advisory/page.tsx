@@ -3,7 +3,6 @@ import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
-import { TrialScenario } from '@/components/sections/trial-scenario'
 import { PullQuote } from '@/components/sections/pull-quote'
 import { GrainCta } from '@/components/sections/grain-cta'
 import Link from 'next/link'
@@ -88,7 +87,6 @@ export default function ConsultingAdvisoryPage() {
       />
 
       <PageHero
-        first
         compact
         eyebrow="Consulting & Advisory"
         heading={

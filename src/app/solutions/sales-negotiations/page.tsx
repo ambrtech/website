@@ -243,6 +243,8 @@ export default function SalesNegotiationsPage() {
         subtitle="Stronger conversations. Faster ramp. Measurable results."
         ctaLabel="Try for Free"
         ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
       />
     </>
   )

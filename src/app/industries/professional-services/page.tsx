@@ -2,7 +2,7 @@ import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { SplitContent } from '@/components/sections/split-content'
-import { CTA } from '@/components/sections/cta'
+import { GrainCta } from '@/components/sections/grain-cta'
 
 export const metadata = createMetadata({
   title: 'Professional Services',
@@ -17,7 +17,7 @@ export default function ProfessionalServicesPage() {
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Industries', href: '/industries/professional-services' },
+          { name: 'Industries', href: '/industries' },
           { name: 'Professional Services', href: '/industries/professional-services' },
         ]}
       />
@@ -33,15 +33,27 @@ export default function ProfessionalServicesPage() {
       <SplitContent
         eyebrow="The challenge"
         heading="Client conversations carry high stakes"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        body="In professional services, every client interaction shapes trust. From delivering difficult audit findings to navigating scope negotiations, your people need to communicate with precision and confidence under pressure."
       />
       <SplitContent
         reversed
         eyebrow="The solution"
         heading="Realistic practice that builds real confidence"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        body="Ambr AI gives your teams a structured, private way to practice the conversations that matter most. Realistic voice simulations with AI characters that push back, adapt, and respond just like a real client or stakeholder would."
       />
-      <CTA />
+      <GrainCta
+        variant="dark"
+        heading={
+          <>
+            See what Ambr AI looks like for <em className="text-accent">your</em> firm.
+          </>
+        }
+        subtitle="Practice the conversations that build client trust."
+        ctaLabel="Try for Free"
+        ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
+      />
     </>
   )
 }

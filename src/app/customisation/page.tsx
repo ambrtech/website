@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { SplitContent } from '@/components/sections/split-content'
+import { GrainCta } from '@/components/sections/grain-cta'
 import {
   ProductScreenshot,
   MockCustomizationFlow,
@@ -228,31 +228,19 @@ export default function CustomisationPage() {
       </Section>
 
       {/* ── 9. CTA block ── */}
-      <section className="py-section-lg md:py-section-xl px-container-mobile md:px-container text-center bg-dark text-surface">
-        <Reveal>
-          <h2 className="font-heading text-headline leading-[1.1] tracking-heading mb-6 text-surface">
-            See what Ambr AI looks like<br />
-            for <em className="text-accent">your</em> team.
-          </h2>
-          <p className="text-body text-copy-light max-w-[440px] mx-auto leading-[1.7] mb-10">
-            We&apos;ll build a custom simulation using your real scenarios. No generic demos.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/try-for-free"
-              className="inline-block rounded-brand-sm bg-accent text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent-hover hover:-translate-y-px hover:shadow-lg"
-            >
-              Try for Free
-            </Link>
-            <Link
-              href="/find-out-more"
-              className="inline-block rounded-brand-sm border border-surface-white/20 text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:border-surface-white/40 hover:-translate-y-px"
-            >
-              Find Out More
-            </Link>
-          </div>
-        </Reveal>
-      </section>
+      <GrainCta
+        variant="dark"
+        heading={
+          <>
+            See what Ambr AI looks like for <em className="text-accent">your</em> team.
+          </>
+        }
+        subtitle="We'll build a custom simulation using your real scenarios. No generic demos."
+        ctaLabel="Try for Free"
+        ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
+      />
     </>
   )
 }

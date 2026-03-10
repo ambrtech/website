@@ -243,6 +243,8 @@ export default function CustomerServicePage() {
         subtitle="Consistent quality. Faster onboarding. Happier customers."
         ctaLabel="Try for Free"
         ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
       />
     </>
   )

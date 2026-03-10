@@ -1,4 +1,5 @@
 import { createMetadata } from '@/lib/metadata'
+import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
@@ -50,8 +51,15 @@ const useCases = [
 export default function AccountingAuditTaxPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Industries', href: '/industries' },
+          { name: 'Accounting, Audit & Tax', href: '/industries/accounting-audit-tax' },
+        ]}
+      />
+
       <PageHero
-        first
         compact
         eyebrow="Accounting, Audit & Tax"
         heading={

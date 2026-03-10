@@ -222,6 +222,8 @@ export default function ManagementLeadershipPage() {
         subtitle="Structured practice for the conversations that shape your culture."
         ctaLabel="Try for Free"
         ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
       />
     </>
   )

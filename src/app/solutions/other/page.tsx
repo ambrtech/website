@@ -152,6 +152,8 @@ export default function OtherSolutionsPage() {
         subtitle="Custom simulations for any high-stakes conversation."
         ctaLabel="Try for Free"
         ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
       />
     </>
   )

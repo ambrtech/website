@@ -181,10 +181,10 @@ export default function AIRoleplayPage() {
             </div>
             <div className="text-center md:text-left">
               <p className="font-heading text-headline text-accent leading-none tracking-heading">
-                X%
+                740ms
               </p>
               <p className="text-body-sm text-copy-mid mt-3 leading-relaxed">
-                Placeholder feedback stat
+                ultra-fast response time for natural-feeling conversations
               </p>
             </div>
             <div className="text-center md:text-left">
@@ -224,7 +224,7 @@ export default function AIRoleplayPage() {
         <Reveal>
           <div className="grid md:grid-cols-2 gap-8">
             <Link
-              href="/customization"
+              href="/customisation"
               className="group border border-border rounded-brand-md p-8 transition-all duration-normal hover:border-accent-soft hover:shadow-card"
             >
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">

@@ -4,7 +4,7 @@ import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { Section } from '@/components/sections/section'
 import { TrustBadges } from '@/components/sections/trust-badges'
-import { CTA } from '@/components/sections/cta'
+import { GrainCta } from '@/components/sections/grain-cta'
 import { Reveal } from '@/components/reveal'
 
 export const metadata = createMetadata({
@@ -271,7 +271,19 @@ export default function AIEthicsPage() {
         </Reveal>
       </Section>
 
-      <CTA />
+      <GrainCta
+        variant="dark"
+        heading={
+          <>
+            See what Ambr AI looks like for <em className="text-accent">your</em> team.
+          </>
+        }
+        subtitle="We'll build a custom simulation using your real scenarios. No generic demos."
+        ctaLabel="Try for Free"
+        ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
+      />
     </>
   )
 }

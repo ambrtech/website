@@ -10,6 +10,7 @@ import {
   MockJourneyGrid,
 } from '@/components/sections/product-screenshot'
 import { ShowcaseSplit } from '@/components/sections/showcase-split'
+import { GrainCta } from '@/components/sections/grain-cta'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 
@@ -197,28 +198,19 @@ export default function AdminExperiencePage() {
         </Reveal>
       </Section>
 
-      {/* ── 7. Final CTA — dual button ── */}
-      <section className="py-section-lg md:py-section-xl px-container-mobile md:px-container text-center bg-dark text-surface">
-        <Reveal>
-          <h2 className="font-heading text-headline leading-[1.1] tracking-heading mb-6 text-surface">
+      {/* ── 7. Final CTA ── */}
+      <GrainCta
+        variant="dark"
+        heading={
+          <>
             See it for <em className="text-accent">yourself</em>.
-          </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-            <Link
-              href="/try-for-free"
-              className="inline-block rounded-brand-sm bg-accent text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent-hover hover:-translate-y-px hover:shadow-lg"
-            >
-              Try for Free
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-block rounded-brand-sm border border-surface/20 text-surface px-8 py-3.5 text-sm font-body-medium transition-all hover:border-surface/40 hover:-translate-y-px"
-            >
-              Find Out More
-            </Link>
-          </div>
-        </Reveal>
-      </section>
+          </>
+        }
+        ctaLabel="Try for Free"
+        ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
+      />
     </>
   )
 }

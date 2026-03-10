@@ -206,6 +206,8 @@ export default function CompanyPage() {
         subtitle="Experience realistic AI roleplay training. No commitment required."
         ctaLabel="Try for Free"
         ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
         variant="dark"
       />
     </>

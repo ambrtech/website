@@ -16,8 +16,6 @@ import {
 } from '@/components/sections/product-screenshot'
 import { TestimonialGrid } from '@/components/sections/testimonial-grid'
 import { UseCaseCards } from '@/components/sections/use-case-cards'
-import { ShowcaseSplit } from '@/components/sections/showcase-split'
-import { MockDashboard } from '@/components/sections/product-screenshot'
 import { PullQuote } from '@/components/sections/pull-quote'
 import { SecurityBadges } from '@/components/sections/security-badges'
 import { GrainCta } from '@/components/sections/grain-cta'
@@ -47,8 +45,8 @@ export default function Home() {
             label: 'feel better prepared for real conversations',
           },
           {
-            value: 'X%',
-            label: 'faster onboarding and ramp-up time',
+            value: '85%',
+            label: 'would recommend Ambr AI to peers',
           },
           {
             value: '740ms',
@@ -128,7 +126,7 @@ export default function Home() {
         <div className="mx-auto max-w-site">
           <Reveal>
             <Link
-              href="/customization"
+              href="/customisation"
               className="inline-flex items-center gap-2 text-label font-body-medium text-dark hover:text-accent transition-colors duration-normal"
             >
               See how customization works

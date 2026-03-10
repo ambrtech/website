@@ -36,7 +36,6 @@ export default function HowItWorksPage() {
 
       {/* ── Hero ── */}
       <PageHero
-        first
         compact
         eyebrow="How It Works"
         heading={

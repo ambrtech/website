@@ -275,7 +275,7 @@ export default function LanguagesPage() {
               <p className="text-body text-copy-mid leading-[1.75]">
                 This list is growing. If you need a language not listed here, please{' '}
                 <Link
-                  href="/contact"
+                  href="/find-out-more"
                   className="text-accent font-body-medium hover:text-accent-hover transition-colors"
                 >
                   get in touch
