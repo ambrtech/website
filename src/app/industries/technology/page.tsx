@@ -1,18 +1,12 @@
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
-import { AccordionShowcase } from '@/components/sections/accordion-showcase'
+import { Section } from '@/components/sections/section'
+import { Reveal } from '@/components/reveal'
 import { TrialScenario } from '@/components/sections/trial-scenario'
-import { SplitContent } from '@/components/sections/split-content'
 import { FeatureGrid } from '@/components/sections/feature-grid'
+import { PullQuote } from '@/components/sections/pull-quote'
 import { GrainCta } from '@/components/sections/grain-cta'
-import {
-  ProductScreenshot,
-  MockVoiceConversation,
-  MockScreensharing,
-  MockFeedbackPanel,
-  MockAdminBuilder,
-} from '@/components/sections/product-screenshot'
 
 export const metadata = createMetadata({
   title: 'Technology',
@@ -20,6 +14,39 @@ export const metadata = createMetadata({
     'Ambr AI gives technology companies structured practice for sales, customer success, technical communication, and leadership conversations.',
   path: '/industries/technology',
 })
+
+const useCases = [
+  {
+    heading: 'Sales and pre-sales',
+    description:
+      'Discovery calls. Technical demos. Procurement negotiations. Train on the conversations that close deals, especially when selling to non-technical buyers.',
+  },
+  {
+    heading: 'Customer success',
+    description:
+      'Renewal conversations. Upsell discussions. Delivering hard news about timelines. Build the skills that protect and grow revenue.',
+  },
+  {
+    heading: 'Technical communication',
+    description:
+      'Help engineers and product teams communicate clearly with non-technical stakeholders. The ability to translate complexity into clarity is a competitive advantage.',
+  },
+  {
+    heading: 'New hire onboarding',
+    description:
+      'Get new team members customer-ready and product-fluent faster. Structured conversation training that scales with your hiring, without tying up senior staff.',
+  },
+  {
+    heading: 'Manager development',
+    description:
+      'Rapid growth creates new managers overnight. Give them structured training on delivering honest feedback, handling performance issues, and leading difficult conversations — before they\u2019re learning on their teams.',
+  },
+  {
+    heading: 'Leadership and executive communication',
+    description:
+      'Board presentations. Investor updates. All-hands meetings. Give your leaders a structured way to prepare for the high-visibility conversations that come with scale.',
+  },
+]
 
 export default function TechnologyPage() {
   return (
@@ -34,130 +61,116 @@ export default function TechnologyPage() {
 
       <PageHero
         compact
-        eyebrow="Industries"
+        eyebrow="Technology"
         heading={
           <>
-            Your teams build great products. Make sure they can sell, support, and{' '}
-            <em className="text-accent">lead</em> just as well.
+            Great tech companies aren&rsquo;t just built on great products.
+            They&rsquo;re built on great{' '}
+            <em className="text-accent">communication</em> too.
           </>
         }
-        subtitle="Sales calls. Customer success conversations. Technical demos. Manager feedback. Ambr AI gives technology companies a structured way to practice all of them — before it counts."
+        subtitle="Sales calls. Customer success conversations. Technical demos. Manager feedback. You can build the best product in the market and still lose on the conversations that surround it. Ambr AI gives technology companies a structured way to train for all of them — before it counts."
       />
 
-      <AccordionShowcase
-        variant="dark"
-        heading={
-          <>
-            Where it makes the{' '}
-            <em className="text-accent italic font-light">difference</em>
-          </>
-        }
-        items={[
-          {
-            heading: 'Sales and pre-sales',
-            description:
-              'Discovery calls, demos, and negotiations. Train on selling to non-technical buyers.',
-            visualContent: <MockVoiceConversation />,
-            cropFocus: 'center',
-            filter: 'duotone',
-          },
-          {
-            heading: 'Customer success',
-            description:
-              'Renewal conversations and building skills that protect revenue.',
-            cropFocus: 'top-left',
-            filter: 'duotone-cream',
-          },
-          {
-            heading: 'Technical communication',
-            description:
-              'Help engineers and product teams translate complexity into clarity.',
-            visualContent: <MockScreensharing />,
-            cropFocus: 'top-left',
-            filter: 'duotone-cream',
-          },
-          {
-            heading: 'New hire onboarding',
-            description:
-              'Get new team members product-fluent faster without tying up senior staff.',
-            cropFocus: 'bottom-right',
-            filter: 'duotone-copper',
-          },
-          {
-            heading: 'Manager development',
-            description:
-              'Structured training on performance issues for new managers in rapid-growth environments.',
-            visualContent: <MockFeedbackPanel />,
-            cropFocus: 'top-right',
-            filter: 'faded',
-          },
-          {
-            heading: 'Leadership and executive communication',
-            description: 'Board presentations and investor updates.',
-            cropFocus: 'bottom-left',
-            filter: 'duotone-blush',
-          },
-        ]}
-      />
+      {/* ── Use cases ── */}
+      <Section>
+        <Reveal>
+          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+            Use cases
+          </p>
+          <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[600px] mb-12">
+            Where AI roleplay makes the{' '}
+            <em className="text-accent">difference</em>
+          </h2>
+        </Reveal>
+        <div className="grid md:grid-cols-2 gap-x-16">
+          {useCases.map((item, i) => (
+            <Reveal key={item.heading} delay={i * 60}>
+              <div className="py-6 border-t border-border">
+                <h3 className="font-heading text-label text-dark mb-2">
+                  {item.heading}
+                </h3>
+                <p className="text-body-sm text-copy-light leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      {/* ── Try it yourself ── */}
+      <Section>
+        <Reveal>
+          <p className="text-body-sm text-copy-mid leading-relaxed max-w-[580px] mb-8">
+            This is an example scenario. Every simulation is customized to your
+            product, market, and competitive landscape.
+          </p>
+        </Reveal>
+      </Section>
 
       <TrialScenario
-        characterName="David"
-        characterRole="Engineering Lead"
-        characterInitials="DK"
-        title="Get stakeholder buy-in for a technical decision"
+        characterName="Sarah"
+        characterRole="VP of Engineering"
+        characterInitials="SL"
+        title="Lead a key enterprise renewal conversation"
         scenario="A key enterprise client is considering switching to a competitor at renewal. Lead the retention conversation."
+        ctaHref="/try-for-free"
       />
 
-      <SplitContent
-        eyebrow="Customized for technology"
-        heading={
-          <>
-            Built around <em className="text-accent">your</em> stack
-          </>
-        }
-        body="Your product, your users, your market context. Every scenario reflects how your teams actually sell, support, and collaborate."
-        visualContent={
-          <ProductScreenshot tint>
-            <MockAdminBuilder />
-          </ProductScreenshot>
-        }
-      />
-
+      {/* ── Why tech companies choose Ambr AI ── */}
       <FeatureGrid
-        eyebrow="Why technology companies choose Ambr AI"
+        eyebrow="Why tech companies choose Ambr AI"
         items={[
           {
-            heading: 'Scales with your growth',
+            heading: 'Customized to your product and market',
             description:
-              'Scales your training needs instantly as you double headcount.',
+              'Your buyers, your competitive landscape, your product terminology. Roleplays can be customized to your context so that training is relevant, not generic.',
+          },
+          {
+            heading: 'Keeps pace with hypergrowth',
+            description:
+              'When headcount doubles, training quality shouldn\u2019t drop — Ambr AI scales instantly without adding resource.',
           },
           {
             heading: 'Feedback that actually coaches',
             description:
-              'Detailed, actionable feedback after every simulation.',
+              'Detailed, actionable feedback after every session — not just a summary. Coaching that changes how people communicate.',
           },
           {
             heading: 'Confidential by design',
             description:
-              'ISO certified, GDPR compliant. Data is isolated and secure.',
+              'Conversations stay private. Never shared across clients, never used to train models. ISO 27001 certified, GDPR compliant, EU AI Act compliant.',
           },
           {
             heading: 'Global, and actually global',
-            description: '30+ languages, adjusted for cultural context.',
+            description:
+              '30+ languages, adjusted for cultural context. Training that reflects how business is actually done in each market.',
           },
         ]}
       />
 
+      {/* ── Testimonial ── */}
+      <PullQuote
+        quote="We love it. It\u2019s great that we can customize it for our needs."
+        role="L&D Manager"
+        company="Tech Firm"
+      />
+
+      {/* ── Closing CTA ── */}
       <GrainCta
         variant="dark"
         heading={
           <>
-            See what Ambr AI looks like for <em className="text-accent">your</em> team.
+            See what Ambr AI looks like for{' '}
+            <em className="text-accent">your</em> team.
           </>
         }
         subtitle="Practice the conversations that drive growth."
         ctaLabel="Try for Free"
         ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
       />
     </>
   )

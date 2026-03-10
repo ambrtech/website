@@ -1,18 +1,12 @@
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
-import { AccordionShowcase } from '@/components/sections/accordion-showcase'
+import { Section } from '@/components/sections/section'
+import { Reveal } from '@/components/reveal'
 import { TrialScenario } from '@/components/sections/trial-scenario'
-import { SplitContent } from '@/components/sections/split-content'
 import { FeatureGrid } from '@/components/sections/feature-grid'
+import { PullQuote } from '@/components/sections/pull-quote'
 import { GrainCta } from '@/components/sections/grain-cta'
-import {
-  ProductScreenshot,
-  MockVoiceConversation,
-  MockChatTraining,
-  MockDashboard,
-  MockScenarioCreator,
-} from '@/components/sections/product-screenshot'
 
 export const metadata = createMetadata({
   title: 'Retail & Hospitality',
@@ -20,6 +14,29 @@ export const metadata = createMetadata({
     'Ambr AI gives retail and hospitality businesses a structured, scalable way to train every team member on customer interactions consistently.',
   path: '/industries/retail-hospitality',
 })
+
+const useCases = [
+  {
+    heading: 'New hire onboarding',
+    description:
+      'Get new team members customer-ready in days, with structured training that doesn\u2019t depend on a manager being free to deliver it. Scales instantly for seasonal hiring peaks.',
+  },
+  {
+    heading: 'Customer complaint handling',
+    description:
+      'Demanding guests. Difficult returns. Escalating situations. Give your teams the practice to turn difficult moments into loyalty.',
+  },
+  {
+    heading: 'Service excellence',
+    description:
+      'Train on recommending naturally. Upsell conversations that increase spend by enhancing the experience, not interrupting it.',
+  },
+  {
+    heading: 'Manager development',
+    description:
+      'Delivering honest feedback, handling performance issues, motivating teams under pressure \u2014 the internal conversations that shape culture and retention across every site.',
+  },
+]
 
 export default function RetailHospitalityPage() {
   return (
@@ -34,107 +51,93 @@ export default function RetailHospitalityPage() {
 
       <PageHero
         compact
-        eyebrow="Industries"
+        eyebrow="Retail & Hospitality"
         heading={
           <>
             Your brand lives in every customer interaction. Make sure your people are{' '}
             <em className="text-accent">ready</em> for them.
           </>
         }
-        subtitle="Customer complaints. Upsell conversations. New hire onboarding. Manager feedback. Ambr AI gives retail and hospitality businesses a structured, scalable way to train every team member consistently."
+        subtitle="Customer complaints. Upsell conversations. New hire onboarding. Manager feedback. In retail and hospitality, high-stakes conversations happen across every location, every shift, every day — and the gap between a good experience and a great one is almost always a conversation. Ambr AI gives retail and hospitality businesses a structured, scalable way to train every team member consistently — before it counts."
       />
 
-      <AccordionShowcase
-        variant="dark"
-        heading={
-          <>
-            Where it makes the{' '}
-            <em className="text-accent italic font-light">difference</em>
-          </>
-        }
-        items={[
-          {
-            heading: 'New hire onboarding',
-            description:
-              'Get new team members customer-ready in days. Scales instantly for seasonal hiring peaks.',
-            visualContent: <MockVoiceConversation />,
-            cropFocus: 'center',
-            filter: 'duotone',
-          },
-          {
-            heading: 'Customer complaint handling',
-            description:
-              'Give your teams the practice to turn difficult moments into loyalty.',
-            visualContent: <MockChatTraining />,
-            cropFocus: 'top-left',
-            filter: 'duotone-cream',
-          },
-          {
-            heading: 'Service excellence',
-            description:
-              'Train on recommending naturally and upselling through enhancing the experience.',
-            cropFocus: 'bottom-right',
-            filter: 'duotone-copper',
-          },
-          {
-            heading: 'Manager development',
-            description:
-              'Delivering feedback and motivating teams under pressure.',
-            visualContent: <MockDashboard />,
-            cropFocus: 'top-right',
-            filter: 'faded',
-          },
-        ]}
-      />
+      {/* ── Use cases ── */}
+      <Section>
+        <Reveal>
+          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+            Use cases
+          </p>
+          <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[600px] mb-12">
+            Where AI roleplay makes the{' '}
+            <em className="text-accent">difference</em>
+          </h2>
+        </Reveal>
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-2">
+          {useCases.map((item, i) => (
+            <Reveal key={item.heading} delay={i * 60}>
+              <div className="py-6 border-t border-border">
+                <h3 className="font-heading text-label text-dark mb-2">
+                  {item.heading}
+                </h3>
+                <p className="text-body-sm text-copy-light leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
 
+      {/* ── Try it yourself ── */}
       <TrialScenario
         characterName="Rachel"
-        characterRole="Frustrated Customer"
-        characterInitials="RT"
-        title="Turn around a frustrated customer before they walk out"
+        characterRole="Frustrated Guest"
+        characterInitials="RG"
+        title="Resolve a guest complaint before it becomes a review"
         scenario="A hotel guest is unhappy with their room and is threatening to leave a negative review. Resolve the situation."
+        socialProof="This is an example scenario. Every simulation is customized to your brand, service standards, and training goals."
       />
 
-      <SplitContent
-        eyebrow="Customized for your brand"
-        heading={
-          <>
-            Built around <em className="text-accent">your</em> standards
-          </>
-        }
-        body="Your products, your service workflows, your brand tone of voice. Agents practice the way you want them to sound."
-        visualContent={
-          <ProductScreenshot tint>
-            <MockScenarioCreator />
-          </ProductScreenshot>
-        }
-      />
-
+      {/* ── Why retail & hospitality choose Ambr AI ── */}
       <FeatureGrid
-        eyebrow="Why retail & hospitality choose Ambr AI"
+        eyebrow="Why retail and hospitality brands choose Ambr AI"
         items={[
+          {
+            heading: 'Customized to your brand standards',
+            description:
+              'Your products, your service protocols, your tone of voice. Simulations can be customized — so training feels like your brand, not a generic customer service exercise.',
+          },
+          {
+            heading: 'Built for seasonal scale',
+            description:
+              'Onboard large cohorts of new hires consistently and quickly — without depending on manager availability.',
+          },
           {
             heading: 'Confidential by design',
             description:
-              'Data is isolated, never shared, and never used to train external models.',
-          },
-          {
-            heading: 'Scales consistently across every location',
-            description:
-              'Every team member gets the same quality of training and feedback.',
+              'Conversations stay private. Never shared across clients, never used to train models. ISO 27001 certified, GDPR compliant, EU AI Act compliant.',
           },
           {
             heading: 'Feedback that actually coaches',
             description:
-              'Detailed, actionable feedback after every simulation.',
+              'Detailed, actionable feedback after every session — not just a summary. Coaching that changes how people communicate.',
           },
           {
             heading: 'Global, and actually global',
-            description: '30+ languages, adjusted for cultural context.',
+            description:
+              '30+ languages, adjusted for cultural context. Training that reflects how business is actually done in each market.',
           },
         ]}
       />
 
+      {/* ── Testimonial ── */}
+      <PullQuote
+        quote="We used Ambr AI for role play and conversation feedback for our frontline workers for sales strategy, product knowledge, and resolution handling. I\u2019ve met with tons of AI vendors, and none that had the same level of quality and customer service as Ambr AI, so I would definitely recommend them to others."
+        name="Jesse Strot"
+        company="Soapy Joe\u2019s Car Wash"
+      />
+
+      {/* ── Closing CTA ── */}
       <GrainCta
         variant="dark"
         heading={
@@ -145,6 +148,8 @@ export default function RetailHospitalityPage() {
         subtitle="Train every team member to deliver your brand at its best."
         ctaLabel="Try for Free"
         ctaHref="/try-for-free"
+        secondaryLabel="Find Out More"
+        secondaryHref="/find-out-more"
       />
     </>
   )
