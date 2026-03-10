@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Grid } from '@/components/grid'
+import { LogoBar } from '@/components/sections/logo-bar'
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center bg-surface-white overflow-hidden">
+    <section className="relative min-h-screen flex flex-col bg-surface-white overflow-hidden">
       <Grid className="text-dark/[0.02]" dotSize={1} gap={40} />
-      <div className="relative z-10 mx-auto w-full max-w-site px-container-mobile md:px-container">
+      <div className="relative z-10 mx-auto w-full max-w-site px-container-mobile md:px-container flex-1 flex items-center">
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
             <p className="text-caption font-body-medium uppercase tracking-eyebrow text-copy-light mb-10 opacity-0 animate-[fadeIn_1.2s_ease-out_0.3s_both] eyebrow-hairline">
@@ -50,6 +51,11 @@ export function Hero() {
             />
           </div>
         </div>
+      </div>
+
+      {/* Pinned to bottom of viewport */}
+      <div className="relative z-10 shrink-0">
+        <LogoBar />
       </div>
     </section>
   )

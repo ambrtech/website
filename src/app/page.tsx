@@ -1,7 +1,6 @@
 import { createMetadata } from '@/lib/metadata'
 import { OrganizationJsonLd } from '@/components/json-ld'
 import { Hero } from '@/components/sections/hero'
-import { LogoBar } from '@/components/sections/logo-bar'
 import { StatBar } from '@/components/sections/stat-bar'
 import {
   SplitContent,
@@ -39,8 +38,6 @@ export default function Home() {
       <OrganizationJsonLd />
 
       <Hero />
-
-      <LogoBar />
 
       <StatBar
         items={[
