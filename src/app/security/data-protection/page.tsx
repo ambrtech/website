@@ -15,49 +15,35 @@ export const metadata = createMetadata({
 const dataTypes = [
   {
     label: 'Voice & transcripts',
-    description:
-      'Powers real-time AI responses, simulation feedback, and personalized coaching. Also feeds admin dashboards and reporting, giving organizations insight into capability gaps and training impact.',
+    bullets: [
+      'Voice data and conversation transcripts power real-time AI responses, simulation feedback, and personalized coaching.',
+      'This data also feeds admin dashboards and reporting, giving organizations insight into capability gaps and training impact.',
+    ],
   },
   {
     label: 'Usage metadata',
-    description:
-      'Session timestamps, scenario selections, and engagement metrics. Supports admin reporting and helps us refine the platform experience.',
+    bullets: [
+      'Usage metadata, including session timestamps, scenario selections, and engagement metrics, supports admin reporting and helps us refine the platform experience.',
+    ],
   },
   {
     label: 'Account information',
-    description:
-      'Names, email addresses, and organizational roles. Used solely for platform access and administration.',
+    bullets: [
+      'Account information such as names, email addresses, and organizational roles is used solely for platform access and administration.',
+    ],
   },
 ]
 
-const commitments = [
-  {
-    heading: 'Never sold or shared',
-    description:
-      'Client data is never sold, licensed, or shared with third parties.',
-  },
-  {
-    heading: 'Never used for model training',
-    description:
-      'Your conversations are never used to train AI models.',
-  },
-  {
-    heading: 'Fully isolated',
-    description:
-      'Every client\u2019s data is logically isolated at the infrastructure level. Conversation data, user profiles, and organizational configurations are fully separated.',
-  },
-  {
-    heading: 'Organization-scoped reporting',
-    description:
-      'Admin reporting reflects only that organization\u2019s data. No cross-client visibility, ever.',
-  },
+const dataCommitments = [
+  'Customer data is never sold, licensed, or shared with third parties.',
+  'Conversations are never used to train AI models.',
+  'Internal analysis of usage patterns helps us improve our product.',
 ]
 
 const retentionPoints = [
   'Retention periods are configurable per organization',
-  'Clients choose what is retained: audio recordings, transcripts, simulation feedback, or any combination',
-  'Data can be deleted at any time during the contract term on request',
-  'All client data is deleted within the agreed timeframe on contract termination',
+  'Choose what is retained: audio recordings, transcripts, simulation feedback, or any combination.',
+  'Data can be deleted at any time during the contract term on request, and all customer data is deleted within the agreed timeframe on contract termination.',
   'Deletion is verified and documented',
 ]
 
@@ -91,13 +77,9 @@ export default function DataProtectionPage() {
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
                 Data and Purpose
               </p>
-              <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-5">
-                We collect only what is necessary.
-              </h2>
               <p className="text-body text-copy-mid leading-[1.75]">
                 Ambr AI collects only what is necessary to deliver and improve the
-                service. Internal analysis of usage patterns helps us improve our
-                product.
+                service.
               </p>
             </div>
           </Reveal>
@@ -109,44 +91,34 @@ export default function DataProtectionPage() {
                   <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-4">
                     {item.label}
                   </p>
-                  <p className="text-body-sm text-copy-mid leading-[1.75]">
-                    {item.description}
-                  </p>
+                  <ul className="space-y-3">
+                    {item.bullets.map((bullet) => (
+                      <li
+                        key={bullet}
+                        className="text-body-sm text-copy-mid leading-[1.75] pl-5 relative before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent-soft"
+                      >
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── Data Commitments ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-dark text-surface-white">
-        <div className="mx-auto max-w-site">
-          <Reveal>
-            <div className="max-w-[600px] mb-12">
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
-                Data Commitments
-              </p>
-              <h2 className="font-heading text-section leading-[1.2] tracking-heading">
-                Contractual commitments, not aspirational statements.
-              </h2>
+          <Reveal delay={240}>
+            <div className="mt-8 border border-border rounded-brand p-7 md:p-8">
+              <ul className="space-y-3">
+                {dataCommitments.map((point) => (
+                  <li
+                    key={point}
+                    className="text-body-sm text-copy-mid leading-[1.7] pl-5 relative before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent-soft"
+                  >
+                    {point}
+                  </li>
+                ))}
+              </ul>
             </div>
           </Reveal>
-
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-0">
-            {commitments.map((item, i) => (
-              <Reveal key={item.heading} delay={i * 60}>
-                <div className="py-7 border-t border-surface-white/10">
-                  <h3 className="font-heading text-label tracking-heading mb-3">
-                    {item.heading}
-                  </h3>
-                  <p className="text-body-sm text-copy-light leading-[1.75]">
-                    {item.description}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -156,16 +128,16 @@ export default function DataProtectionPage() {
           <Reveal>
             <div>
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                Retention &amp; Residency
+                Retention, Control, and Residency
               </p>
               <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-5">
-                Granular control over how your data is stored.
+                Customers have granular control over how their data is stored.
               </h2>
               <p className="text-body text-copy-mid leading-[1.75]">
                 Ambr AI is hosted on Google Cloud infrastructure in the UK. For
                 organizations with specific residency requirements, we support
                 data storage in additional regions on request, including
-                per-client configuration for audio recordings.
+                per-customer configuration for audio recordings.
               </p>
             </div>
           </Reveal>
@@ -186,46 +158,33 @@ export default function DataProtectionPage() {
         </div>
       </section>
 
-      {/* ── Breach Notification + Sub-processors ── */}
+      {/* ── Sub-processors + DPA ── */}
       <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt">
         <div className="mx-auto max-w-[720px]">
           <Reveal>
-            <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-              <div>
-                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                  Breach Notification
-                </p>
-                <p className="text-body text-copy-mid leading-[1.75]">
-                  Ambr AI maintains a formal incident response and breach notification
-                  process. In the event of a data incident, affected clients are
-                  notified in accordance with contractual and regulatory obligations.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                  Sub-processors &amp; DPA
-                </p>
-                <p className="text-body text-copy-mid leading-[1.75]">
-                  A full list of sub-processors is available through our trust portal at{' '}
-                  <a
-                    href="https://security.ambr.ai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
-                  >
-                    security.ambr.ai
-                  </a>
-                  . Our standard Data Processing Agreement is available for review at{' '}
-                  <a
-                    href="https://ambr.ai/dpa"
-                    className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
-                  >
-                    ambr.ai/dpa
-                  </a>
-                  .
-                </p>
-              </div>
+            <div>
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+                Sub-processors &amp; DPA
+              </p>
+              <p className="text-body text-copy-mid leading-[1.75]">
+                A full list of sub-processors is available through our trust portal at{' '}
+                <a
+                  href="https://security.ambr.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
+                >
+                  security.ambr.ai
+                </a>
+                . Our standard Data Processing Agreement is available for review at{' '}
+                <a
+                  href="https://ambr.ai/dpa"
+                  className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
+                >
+                  ambr.ai/dpa
+                </a>
+                .
+              </p>
             </div>
           </Reveal>
         </div>

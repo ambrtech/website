@@ -25,6 +25,12 @@ import { PartnerShowcase } from '@/components/sections/partner-showcase'
 import { SecurityBadges } from '@/components/sections/security-badges'
 import { ValueCards } from '@/components/sections/value-cards'
 import { GrainCta } from '@/components/sections/grain-cta'
+import { LogoCloud } from '@/components/sections/logo-cloud'
+import { LogoBar } from '@/components/sections/logo-bar'
+import { ContrastSplit } from '@/components/sections/contrast-split'
+import { IconFeatureCards } from '@/components/sections/icon-feature-cards'
+import { DarkShowcase } from '@/components/sections/dark-showcase'
+import { TestimonialStat } from '@/components/sections/testimonial-stat'
 import DisplayCards from '@/components/ui/display-cards'
 import { MessageCircle, Users, ShieldCheck } from 'lucide-react'
 import { PostGrid } from '@/components/blog/post-grid'
@@ -346,6 +352,83 @@ export default function PreviewPage() {
           ]} />
         </div>
       </div>
+
+      {/* ╔══════════════════════════════════════════════════╗
+         ║  CUSTOMIZATION PAGE COMPONENTS                  ║
+         ╚══════════════════════════════════════════════════╝ */}
+
+      <GroupLabel name="Customization Page Components" />
+
+      <SectionLabel name="ContrastSplit" />
+      <ContrastSplit
+        leftHeading={<>The most effective training reflects the exact nuances of <em className="text-accent">your</em> business.</>}
+        leftBody="Generic simulations teach generic skills. But real conversations are shaped by your terminology, your culture, your products, and the specific dynamics your people navigate every day."
+        rightHeading="Ambr AI bridges this gap."
+        rightBody="We build every simulation from your world — your playbooks, your objection guides, your escalation paths, your tone of voice. The result is practice that feels so real, your team forgets it's a simulation."
+      />
+
+      <SectionLabel name="IconFeatureCards" />
+      <IconFeatureCards
+        heading={<>What you can customize <span className="text-copy-light">(and how easy it is)</span></>}
+        subtitle="Share your materials. We handle the rest."
+        items={[
+          {
+            icon: (
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="4" y="4" width="24" height="24" rx="3" />
+                <path d="M4 12h24" />
+                <path d="M12 12v16" />
+                <path d="M8 8h2" />
+              </svg>
+            ),
+            title: 'Context & Objectives',
+            description: 'Your industry, your scenarios, your success criteria. Every simulation starts with the context that makes it feel real.',
+          },
+          {
+            icon: (
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="16" cy="10" r="5" />
+                <path d="M6 26c0-5.523 4.477-10 10-10s10 4.477 10 10" />
+              </svg>
+            ),
+            title: 'AI Character',
+            description: 'Personality, communication style, emotional range, and behavior patterns tailored to your world.',
+          },
+          {
+            icon: (
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 4h14l6 6v18a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2z" />
+                <path d="M20 4v6h6" />
+                <path d="M8 16h12" />
+                <path d="M8 20h12" />
+                <path d="M8 24h8" />
+              </svg>
+            ),
+            title: 'Real-World Inputs',
+            description: 'Playbooks, objection guides, product materials — transformed into simulation intelligence.',
+          },
+        ]}
+      />
+
+      <SectionLabel name="DarkShowcase" />
+      <DarkShowcase
+        heading={<>Built around your exact <em className="text-accent">needs</em>.</>}
+        subtitle="Every deployment is shaped by what matters most to your organization."
+        items={[
+          { title: 'Your terminology', description: 'Product names, internal jargon, competitor references, industry acronyms — the simulation speaks your language.' },
+          { title: 'Your culture', description: 'Tone, formality, escalation norms, regional nuances shaped to match your organization.' },
+          { title: 'Your success criteria', description: 'Feedback calibrated to your framework — your competencies, your rubric, your definition of good.' },
+        ]}
+      />
+
+      <SectionLabel name="TestimonialStat" />
+      <TestimonialStat
+        stat={{ value: '93%', label: 'of learners rate simulations as realistic' }}
+        testimonials={[
+          { quote: 'They built everything around our specific needs — our terminology, our escalation paths, our tone of voice.', role: 'Head of L&D', company: 'Enterprise client' },
+          { quote: 'The customization process was remarkably fast. Our first scenarios were live within a week.', role: 'Sales Enablement Lead', company: 'Technology company' },
+        ]}
+      />
 
       {/* ╔══════════════════════════════════════════════════╗
          ║  SOCIAL PROOF                                    ║
@@ -757,6 +840,15 @@ export default function PreviewPage() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* ── Logo Components ── */}
+      <SectionLabel name="LogoCloud (static)" />
+      <LogoCloud />
+
+      <SectionLabel name="LogoBar (infinite ticker)" />
+      <div className="py-section-mobile md:py-section">
+        <LogoBar />
       </div>
 
     </>

@@ -433,13 +433,13 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* ── Navigation bar ── */}
       <div
-        className={`transition-colors duration-fast ${
+        className={`transition-colors duration-fast px-container-mobile md:px-container ${
           activeDropdown
             ? 'bg-surface-white'
             : 'bg-surface-white/90 backdrop-blur-xl'
         }`}
       >
-        <div className="mx-auto max-w-site px-container-mobile lg:px-container flex items-center justify-between h-16 lg:h-header">
+        <div className="mx-auto max-w-site flex items-center justify-between h-16 lg:h-header">
           {/* Logo */}
           <Link
             href="/"

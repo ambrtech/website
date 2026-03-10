@@ -695,6 +695,216 @@ export function MockVoiceConversation() {
   )
 }
 
+/** A mock Slack-style notification nudging someone to complete a simulation. */
+export function MockTrainingNudge() {
+  return (
+    <div className="flex items-start gap-3">
+      <div className="w-8 h-8 rounded-brand-sm bg-accent-soft/40 flex items-center justify-center shrink-0">
+        <span className="text-caption font-body-medium text-accent">A</span>
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="flex items-baseline gap-2 mb-1">
+          <span className="text-caption font-body-medium text-dark">Ambr AI</span>
+          <span className="text-caption text-copy-faint">10:24 AM</span>
+        </div>
+        <div className="p-3 rounded-brand-sm bg-surface border border-border space-y-2.5">
+          <p className="text-caption text-copy-mid leading-relaxed">
+            Hi Sarah - you&apos;re 2 scenarios away from completing the
+            <span className="font-body-medium text-dark"> Performance Feedback</span> journey.
+          </p>
+          <div className="flex items-center gap-3">
+            <div className="flex-1 h-1.5 rounded-full bg-surface-alt overflow-hidden">
+              <div className="h-full rounded-full bg-accent-soft" style={{ width: '71%' }} />
+            </div>
+            <span className="text-caption text-copy-light shrink-0">5/7</span>
+          </div>
+          <p className="text-caption text-copy-light">
+            Next up: <span className="text-copy-mid">Delivering feedback to a defensive team member</span>
+          </p>
+          <div className="flex items-center gap-2 pt-1">
+            <span className="inline-block rounded-brand-sm bg-accent text-surface-white px-3.5 py-1.5 text-caption font-body-medium">
+              Start scenario
+            </span>
+            <span className="inline-block rounded-brand-sm border border-border px-3.5 py-1.5 text-caption text-copy-mid">
+              Remind me later
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/** A mock LMS interface showing Ambr AI embedded as a training module. */
+export function MockLmsEmbed() {
+  const modules = [
+    { title: 'Performance Feedback', type: 'AI Simulation', status: 'In progress', progress: 71 },
+    { title: 'Conflict Resolution', type: 'AI Simulation', status: 'Not started', progress: 0 },
+    { title: 'Difficult Conversations', type: 'AI Simulation', status: 'Completed', progress: 100 },
+  ]
+
+  return (
+    <div className="space-y-4">
+      {/* LMS nav bar */}
+      <div className="flex items-center gap-4 pb-3 border-b border-border">
+        <div className="flex items-center gap-2">
+          <div className="w-5 h-5 rounded bg-dark/10" />
+          <span className="text-caption font-body-medium text-copy-light">Your LMS</span>
+        </div>
+        <div className="flex gap-3 ml-auto">
+          <span className="text-caption text-copy-faint">Catalog</span>
+          <span className="text-caption text-dark font-body-medium">My Learning</span>
+          <span className="text-caption text-copy-faint">Reports</span>
+        </div>
+      </div>
+
+      {/* Course header */}
+      <div className="flex items-center gap-3">
+        <div className="w-8 h-8 rounded-brand-sm bg-accent-soft/40 flex items-center justify-center shrink-0">
+          <span className="text-caption font-body-medium text-accent">A</span>
+        </div>
+        <div>
+          <p className="text-caption font-body-medium text-dark">Leadership Development</p>
+          <p className="text-caption text-copy-faint">Ambr AI &middot; 7 simulations</p>
+        </div>
+      </div>
+
+      {/* Module list */}
+      <div className="space-y-2">
+        {modules.map((mod) => (
+          <div
+            key={mod.title}
+            className="flex items-center gap-3 p-3 rounded-brand-sm border border-border bg-surface"
+          >
+            <div
+              className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                mod.progress === 100
+                  ? 'border-accent bg-accent'
+                  : mod.progress > 0
+                    ? 'border-accent-soft'
+                    : 'border-copy-faint/30'
+              }`}
+            >
+              {mod.progress === 100 && (
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                  <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
+              {mod.progress > 0 && mod.progress < 100 && (
+                <div className="w-2 h-2 rounded-full bg-accent-soft" />
+              )}
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-caption font-body-medium text-dark">{mod.title}</p>
+              <p className="text-caption text-copy-faint">{mod.type}</p>
+            </div>
+            {mod.progress > 0 && mod.progress < 100 && (
+              <div className="w-16 h-1.5 rounded-full bg-surface-alt overflow-hidden shrink-0">
+                <div className="h-full rounded-full bg-accent-soft" style={{ width: `${mod.progress}%` }} />
+              </div>
+            )}
+            <span className={`text-caption shrink-0 ${
+              mod.progress === 100 ? 'text-accent' : 'text-copy-faint'
+            }`}>
+              {mod.status}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+/** A mock deployment timeline showing brief → build → practice. */
+export function MockDeploymentTimeline() {
+  const steps = [
+    { label: 'Brief received', time: 'Day 1', done: true },
+    { label: 'Simulation built', time: 'Day 3', done: true },
+    { label: 'Team practicing', time: 'Day 5', done: false },
+  ]
+
+  return (
+    <div className="space-y-5">
+      <div className="flex items-center gap-2 mb-4">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Deployment Timeline
+        </span>
+      </div>
+
+      <div className="relative">
+        {steps.map((step, i) => (
+          <div key={step.label} className="flex items-start gap-4 mb-6 last:mb-0">
+            <div className="flex flex-col items-center">
+              <div
+                className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                  step.done
+                    ? 'border-accent bg-accent-whisper'
+                    : 'border-accent-soft bg-surface'
+                }`}
+              >
+                {step.done && (
+                  <div className="w-2 h-2 rounded-full bg-accent" />
+                )}
+              </div>
+              {i < steps.length - 1 && (
+                <div className="w-px h-8 bg-border mt-1" />
+              )}
+            </div>
+            <div className="pt-0.5">
+              <p className="text-caption font-body-medium text-dark">{step.label}</p>
+              <p className="text-caption text-copy-light">{step.time}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+/** A mock evaluation rubric showing scored competencies. */
+export function MockEvaluationRubric() {
+  const criteria = [
+    { label: 'Objection Handling', score: 92 },
+    { label: 'Product Knowledge', score: 88 },
+    { label: 'Empathy & Tone', score: 95 },
+    { label: 'Closing Methodology', score: 85 },
+  ]
+
+  return (
+    <div className="space-y-5">
+      <div className="flex items-center gap-2 mb-4">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+          Evaluation Rubric
+        </span>
+      </div>
+
+      {criteria.map((item) => (
+        <div key={item.label}>
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-caption font-body-medium text-copy-mid">{item.label}</span>
+            <span className="text-caption text-copy-light">{item.score}%</span>
+          </div>
+          <div className="h-1 rounded-full bg-surface-alt overflow-hidden">
+            <div
+              className="h-full rounded-full bg-accent-soft"
+              style={{ width: `${item.score}%` }}
+            />
+          </div>
+        </div>
+      ))}
+
+      <div className="pt-4 border-t border-border">
+        <p className="text-caption text-copy-light leading-relaxed">
+          Scored against your internal sales competency framework. Calibrated to your
+          methodology and language.
+        </p>
+      </div>
+    </div>
+  )
+}
+
 /** A mock admin dashboard summary. */
 export function MockDashboard() {
   return (

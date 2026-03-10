@@ -10,7 +10,6 @@ import {
   MockJourneyGrid,
 } from '@/components/sections/product-screenshot'
 import { ShowcaseSplit } from '@/components/sections/showcase-split'
-import { UseCaseCards } from '@/components/sections/use-case-cards'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 
@@ -34,6 +33,7 @@ export default function AdminExperiencePage() {
 
       {/* ── 1. Hero ── */}
       <PageHero
+        compact
         eyebrow="Admin Experience"
         heading={
           <>
@@ -162,36 +162,7 @@ export default function AdminExperiencePage() {
         ]}
       />
 
-      {/* ── 5. Three audience cards — hub links to sub-pages ── */}
-      <UseCaseCards
-        eyebrow="One platform, every conversation"
-        heading="Built for the teams that own training"
-        items={[
-          {
-            heading: 'L&D Teams',
-            description:
-              'Build capability and track development at scale.',
-            href: '/product/admin-experience/ld-teams',
-            ctaLabel: 'Explore for L&D',
-          },
-          {
-            heading: 'Sales Enablement',
-            description:
-              'Onboard and upskill with realistic conversation training.',
-            href: '/product/admin-experience/sales-enablement',
-            ctaLabel: 'Explore for Sales',
-          },
-          {
-            heading: 'Customer Service',
-            description:
-              'Drive consistency and confidence across frontline teams.',
-            href: '/product/admin-experience/customer-service',
-            ctaLabel: 'Explore for Service',
-          },
-        ]}
-      />
-
-      {/* ── 6. Integrations teaser ── */}
+      {/* ── 5. Integrations teaser ── */}
       <Section className="bg-surface-alt border-y border-border">
         <Reveal>
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">

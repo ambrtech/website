@@ -1,19 +1,38 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
-import { PageHero } from '@/components/sections/page-hero'
+import {
+  ProductScreenshot,
+  MockLmsEmbed,
+  MockTrainingNudge,
+} from '@/components/sections/product-screenshot'
 import { Reveal } from '@/components/reveal'
 
 export const metadata = createMetadata({
   title: 'Integrations',
   description:
-    'Ambr AI connects to your learning infrastructure and identity providers. SCORM, xAPI, SAML 2.0, and Slack support included. No migration required.',
+    'Ambr AI integrates quickly with your learning infrastructure and identity providers. SCORM, xAPI, SAML 2.0, Slack, and Microsoft Teams support included.',
   path: '/product/integrations',
 })
 
 /* ────────────────────────────────────────────────────────────
    Data
    ──────────────────────────────────────────────────────────── */
+
+const lmsPlatforms = [
+  'Cornerstone',
+  'SAP SuccessFactors',
+  'Docebo',
+  'Absorb LMS',
+  '360Learning',
+  'Totara',
+  'Moodle',
+  'TalentLMS',
+  'iSpring',
+  'Litmos',
+  'LearnUpon',
+  'Degreed',
+]
 
 const learningStandards = [
   {
@@ -30,15 +49,15 @@ const learningStandards = [
 
 const ssoProviders = [
   {
-    name: 'Okta',
-    protocol: 'SAML 2.0 / OIDC',
-  },
-  {
     name: 'Microsoft Entra ID',
     protocol: 'SAML 2.0 / OIDC',
   },
   {
     name: 'Google Workspace',
+    protocol: 'SAML 2.0 / OIDC',
+  },
+  {
+    name: 'Okta',
     protocol: 'SAML 2.0 / OIDC',
   },
 ]
@@ -58,17 +77,56 @@ export default function IntegrationsPage() {
         ]}
       />
 
-      <PageHero
-        compact
-        eyebrow="Integrations"
-        heading={
-          <>
-            Fits into the systems you{' '}
-            <em className="text-accent">already</em> use.
-          </>
-        }
-        subtitle="Ambr AI connects to your learning infrastructure and identity providers. No migration. No disruption."
-      />
+      {/* ── Hero — split layout with mock ── */}
+      <section className="pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container">
+        <div className="mx-auto max-w-site">
+          <Reveal>
+            <div className="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-start">
+              <div>
+                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+                  Integrations
+                </p>
+                <h1 className="font-heading text-headline leading-[1.1] tracking-heading mb-6">
+                  Seamlessly connects to your{' '}
+                  <em className="text-accent">existing</em> tools.
+                </h1>
+                <p className="text-body text-copy-mid leading-[1.75] max-w-[480px]">
+                  Ambr AI integrates quickly with your learning infrastructure
+                  and identity providers. No technical headaches. No disruption.
+                </p>
+              </div>
+              <div>
+                <ProductScreenshot tint>
+                  <MockLmsEmbed />
+                </ProductScreenshot>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── LMS Platforms — grid directly below hero ── */}
+      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
+        <div className="mx-auto max-w-site">
+          <Reveal>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {lmsPlatforms.map((platform) => (
+                <div
+                  key={platform}
+                  className="border border-border rounded-brand px-5 py-4 text-center transition-all duration-normal hover:border-accent-soft hover:shadow-card"
+                >
+                  <p className="font-heading text-body-sm tracking-heading text-dark">
+                    {platform}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="text-body-sm text-copy-light mt-5">
+              and 50+ more.
+            </p>
+          </Reveal>
+        </div>
+      </section>
 
       {/* ── Learning Standards ── */}
       <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
@@ -78,12 +136,9 @@ export default function IntegrationsPage() {
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
                 Learning Standards
               </p>
-              <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-5">
-                Your team accesses Ambr AI through the LMS they already know.
+              <h2 className="font-heading text-section leading-[1.2] tracking-heading">
+                Standards-based from the start.
               </h2>
-              <p className="text-body text-copy-mid leading-[1.75]">
-                No new logins, no change in workflow.
-              </p>
             </div>
           </Reveal>
 
@@ -147,31 +202,28 @@ export default function IntegrationsPage() {
         </div>
       </section>
 
-      {/* ── Slack ── */}
+      {/* ── Slack & Teams ── */}
       <section className="py-section-mobile md:py-section px-container-mobile md:px-container">
-        <div className="mx-auto max-w-site">
+        <div className="mx-auto max-w-site grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-16 items-start">
           <Reveal>
-            <div className="border border-border rounded-brand p-8 md:p-12">
-              <div className="grid md:grid-cols-[1fr_1.5fr] gap-8 md:gap-16 items-start">
-                <div>
-                  <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                    Messaging
-                  </p>
-                  <h2 className="font-heading text-section leading-[1.2] tracking-heading">
-                    Slack
-                  </h2>
-                </div>
-                <div className="md:pt-2">
-                  <p className="text-body text-copy-mid leading-[1.75]">
-                    Surface Ambr AI notifications and training nudges in Slack,
-                    keeping practice visible where your team already
-                    communicates. Automated reminders, completion notifications,
-                    and nudges delivered directly into the channels your team
-                    uses every day.
-                  </p>
-                </div>
-              </div>
+            <div>
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+                Messaging
+              </p>
+              <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-5">
+                Slack &amp; Teams
+              </h2>
+              <p className="text-body text-copy-mid leading-[1.75]">
+                Surface Ambr AI notifications and training nudges in Slack
+                and Microsoft Teams, keeping practice visible where your team
+                already communicates.
+              </p>
             </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <ProductScreenshot tint>
+              <MockTrainingNudge />
+            </ProductScreenshot>
           </Reveal>
         </div>
       </section>
@@ -193,31 +245,11 @@ export default function IntegrationsPage() {
                 know what&apos;s possible.
               </p>
               <Link
-                href="/contact"
+                href="/find-out-more"
                 className="inline-block rounded-brand-sm bg-dark text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent hover:-translate-y-px hover:shadow-lg"
               >
                 Find out more
               </Link>
-            </div>
-
-            <div className="mt-12 pt-10 border-t border-border text-center">
-              <div className="flex items-center justify-center gap-6 flex-wrap">
-                <Link
-                  href="/product/how-it-works"
-                  className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
-                >
-                  See how it works &rarr;
-                </Link>
-                <span className="text-copy-faint" aria-hidden="true">
-                  &middot;
-                </span>
-                <Link
-                  href="/security/compliance"
-                  className="text-body-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
-                >
-                  Review our compliance certifications &rarr;
-                </Link>
-              </div>
             </div>
           </Reveal>
         </div>

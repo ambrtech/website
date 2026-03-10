@@ -17,7 +17,7 @@ export function Hero() {
               Training for the conversations that{' '}
               <em className="text-accent italic font-light">matter</em> most
             </h1>
-            <p className="text-lg text-copy-mid max-w-[520px] leading-[1.7] mb-10 opacity-0 animate-[fadeIn_1.2s_ease-out_0.6s_both]">
+            <p className="text-body text-copy-mid max-w-[520px] leading-[1.7] mb-10 opacity-0 animate-[fadeIn_1.2s_ease-out_0.6s_both]">
               Voice AI training platform for high-stakes workplace conversations.
               From sales negotiations to management feedback, your teams build real
               skills through ultra-realistic conversation simulations — all easily

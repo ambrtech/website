@@ -7,13 +7,9 @@ interface PageHeroProps {
   compact?: boolean
 }
 
-export function PageHero({ eyebrow, heading, subtitle, compact }: PageHeroProps) {
+export function PageHero({ eyebrow, heading, subtitle }: PageHeroProps) {
   return (
-    <section
-      className={`${
-        compact ? 'pt-section-mobile md:pt-section' : 'pt-section-xl md:pt-section-2xl'
-      } pb-section-mobile md:pb-section px-container-mobile md:px-container`}
-    >
+    <section className="pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container">
       <div className="mx-auto max-w-site">
         <Reveal>
           {eyebrow && (

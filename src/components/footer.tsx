@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BrandLogo } from '@/components/brand-logo'
 
 const footerNav = {
   Product: [
@@ -7,11 +8,6 @@ const footerNav = {
     { label: 'Admin Experience', href: '/product/admin-experience' },
     { label: 'Integrations', href: '/product/integrations' },
     { label: 'Languages', href: '/product/languages' },
-  ],
-  'For Admins': [
-    { label: 'L&D Teams', href: '/product/admin-experience/ld-teams' },
-    { label: 'Sales Enablement', href: '/product/admin-experience/sales-enablement' },
-    { label: 'Customer Service', href: '/product/admin-experience/customer-service' },
   ],
   Industries: [
     { label: 'Professional Services', href: '/industries/professional-services' },
@@ -41,17 +37,8 @@ export function Footer() {
       <div className="mx-auto max-w-site">
         {/* Logo and tagline */}
         <div className="mb-12">
-          <Link href="/" className="font-heading text-logo text-dark tracking-heading">
-            Ambr{' '}
-            <span className="relative inline-block text-accent">
-              AI
-              <span
-                className="absolute inset-0 bg-noise bg-clip-text text-transparent mix-blend-multiply opacity-50 select-none pointer-events-none"
-                aria-hidden="true"
-              >
-                AI
-              </span>
-            </span>
+          <Link href="/" aria-label="Ambr AI home" className="inline-flex items-center text-copy-light">
+            <BrandLogo className="h-6 w-auto md:h-7" />
           </Link>
           <p className="text-nav text-copy-light max-w-[280px] leading-relaxed mt-3">
             Realistic AI voice simulations, custom-built for enterprise teams.
@@ -59,7 +46,7 @@ export function Footer() {
         </div>
 
         {/* Navigation grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-8">
           {Object.entries(footerNav).map(([heading, links]) => (
             <div key={heading}>
               <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">
