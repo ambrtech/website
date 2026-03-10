@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
+import { BrandLogo } from '@/components/brand-logo'
 
 /* ─────────────────────────────────────────────────────
    Types
@@ -442,19 +443,11 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-heading text-logo text-dark tracking-heading"
+            aria-label="Ambr AI home"
+            className="flex items-center text-[#d0773b]"
             onClick={() => { closeDropdown(); closeMobile() }}
           >
-            Ambr{' '}
-            <span className="relative inline-block text-accent">
-              AI
-              <span
-                className="absolute inset-0 bg-noise bg-clip-text text-transparent mix-blend-multiply opacity-50 select-none pointer-events-none"
-                aria-hidden="true"
-              >
-                AI
-              </span>
-            </span>
+            <BrandLogo className="h-6.5 w-auto lg:h-[1.95rem]" />
           </Link>
 
           {/* Desktop nav */}
@@ -561,11 +554,11 @@ export function Header() {
           <div className="flex items-center justify-between h-16 px-container-mobile shrink-0">
             <Link
               href="/"
-              className="font-heading text-logo text-dark tracking-heading"
+              aria-label="Ambr AI home"
+              className="flex items-center text-[#d0773b]"
               onClick={closeMobile}
             >
-              Ambr{' '}
-              <span className="text-accent">AI</span>
+              <BrandLogo className="h-6.5 w-auto" />
             </Link>
             <button
               className="p-2 -mr-2 text-dark"
