@@ -33,11 +33,6 @@ export function TrialScenario({
             {eyebrow}
           </p>
         )}
-        {socialProof && (
-          <p className="text-body-sm text-copy-mid leading-relaxed max-w-xl mb-8">
-            {socialProof}
-          </p>
-        )}
         <div className="max-w-3xl">
           <SimulationCard
             layout="horizontal"
@@ -48,6 +43,11 @@ export function TrialScenario({
             description={scenario}
             href={ctaHref}
           />
+          {socialProof && (
+            <p className="text-caption text-copy-light italic leading-relaxed mt-5 border-l-2 border-accent-soft pl-4 max-w-lg">
+              {socialProof}
+            </p>
+          )}
         </div>
       </Reveal>
     </Section>

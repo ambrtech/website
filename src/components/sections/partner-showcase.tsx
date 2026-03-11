@@ -94,7 +94,7 @@ export function PartnerShowcase({
               {/* Background texture */}
               <div className="absolute inset-0 rounded-brand-lg overflow-hidden opacity-15">
                 <Image
-                  src="/images/textures/feature-texture.jpg"
+                  src="/textures/feature-texture.jpg"
                   alt=""
                   fill
                   className="object-cover filter-duotone-cream"

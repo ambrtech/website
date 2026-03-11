@@ -143,7 +143,7 @@ export default function AdminExperiencePage() {
         layout="left"
         filter="duotone"
         cropFocus="top-left"
-        textureImage="/images/textures/feature-texture-alt.jpg"
+        textureImage="/textures/feature-texture-alt.jpg"
         visualContent={<MockJourneyGrid />}
         heading={
           <>

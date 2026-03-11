@@ -28,10 +28,10 @@ export const metadata = createMetadata({
 const scenarios = [
   'Handling pricing objections from a skeptical CFO',
   'Running a discovery call with limited information',
-  'Presenting a solution to a multi-stakeholder committee',
+  'Presenting a solution to a multi-stakeholder buying committee',
   'Negotiating contract terms with a procurement lead',
   'Recovering a deal that has gone cold',
-  'Onboarding a new team member with your specific methodology',
+  'Onboarding a new team member with your specific sales methodology',
 ]
 
 export default function SalesNegotiationsPage() {
@@ -52,22 +52,22 @@ export default function SalesNegotiationsPage() {
             Onboard faster. Upskill <em className="text-accent">continuously</em>.
           </>
         }
-        subtitle="Ambr AI gives sales leaders a scalable platform to onboard new hires, upskill existing team members, and standardize training across every region. The result: stronger conversations, faster ramp times, and measurable improvement."
+        subtitle="A structured approach to sales conversation training. Ambr AI gives sales leaders and sales enablement teams a scalable platform to onboard new hires, upskill existing team members, and standardize training across every team and region. The result: stronger conversations, faster ramp times, and measurable improvement across your sales function."
       />
 
       <AccordionShowcase
         variant="dark"
         heading={
           <>
-            How teams use Ambr AI for{' '}
-            <em className="text-accent italic font-light">sales</em>
+            How organizations use Ambr AI for{' '}
+            <em className="text-accent italic font-light">sales</em> training
           </>
         }
         items={[
           {
             heading: 'Onboarding new team members',
             description:
-              'New hires build competency before their first live call.',
+              'New hires start training from day one. Structured Journeys build competency before they get on a live call.',
             visualContent: <MockVoiceConversation />,
             cropFocus: 'center',
             filter: 'duotone',
@@ -75,7 +75,7 @@ export default function SalesNegotiationsPage() {
           {
             heading: 'Upskilling existing teams',
             description:
-              'Targeted, repeatable training on discovery and negotiation.',
+              'Sharpen skills across your current sales organization with targeted, repeatable training on the conversations that matter.',
             visualContent: <MockScreensharing />,
             cropFocus: 'top-left',
             filter: 'duotone-cream',
@@ -83,12 +83,12 @@ export default function SalesNegotiationsPage() {
           {
             heading: 'New products and frameworks',
             description:
-              'Train your team on how to talk about new launches.',
+              'Launching a new product? Rolling out a new sales methodology? Ensure your teams are always working with the latest knowledge and best practice.',
           },
           {
             heading: 'Standardizing across teams',
             description:
-              'Consistent scenarios and feedback standards globally.',
+              'Systematize your sales training. Consistent scenarios, consistent feedback, consistent standards across every team and region.',
             visualContent: <MockFeedbackPanel />,
             cropFocus: 'top-right',
             filter: 'faded',
@@ -96,12 +96,12 @@ export default function SalesNegotiationsPage() {
           {
             heading: 'Pipeline-specific training',
             description:
-              'Simulations built around your actual deals and objections.',
+              'Build simulations around your actual deals, buyer personas, and competitive objections.',
           },
           {
             heading: 'Presentation and pitch rehearsal',
             description:
-              'Rehearse pitches and QBRs with AI interaction.',
+              'Team members rehearse pitches, QBRs, and conference presentations with an AI audience that challenges their delivery.',
           },
         ]}
       />
@@ -118,31 +118,34 @@ export default function SalesNegotiationsPage() {
               </span>
             ))}
           </div>
+          <p className="text-caption text-copy-light italic leading-relaxed mt-5 border-l-2 border-accent-soft pl-4 max-w-lg">
+            Sample scenarios. Every simulation is customized to your product, market, and sales process. Or choose from our pre-built sales scenario library.
+          </p>
         </Reveal>
       </Section>
 
       <FeatureGrid
-        eyebrow="Customized to your sales motion"
+        eyebrow="Easily customized to your sales environment"
         items={[
           {
             heading: 'Your exact product',
             description:
-              'Reference your actual value proposition, not a generic placeholder.',
+              'Simulations reference your actual product, pricing, and value proposition.',
           },
           {
             heading: 'Your frameworks',
             description:
-              'Train on MEDDIC, Challenger, SPIN, or your own proprietary methodology.',
+              'Train on your specific methodology, whether that is MEDDIC, Challenger, SPIN, or your own.',
           },
           {
             heading: 'Your objections and personas',
             description:
-              'Build scenarios around the pushback your team actually encounters.',
+              'Build scenarios around the real pushback and buyer types your team encounters.',
           },
           {
             heading: 'Global in 30+ languages',
             description:
-              'Culturally adjusted for every market you sell into.',
+              'Deploy consistent sales training across every market, culturally adjusted for local context.',
           },
         ]}
       />
@@ -151,7 +154,7 @@ export default function SalesNegotiationsPage() {
         className="bg-surface-white"
         eyebrow="Built for sales teams"
         heading={<>Ultra-realistic voice AI</>}
-        body="Your team trains the way they sell: through voice. Real-time conversations with AI that adapts to tone, pace, and approach."
+        body="Your team trains the way they sell: through voice. The AI adapts in real time, asks unexpected questions, and responds to what your team member actually says."
         visualContent={
           <ProductScreenshot tint>
             <MockVoiceConversation />
@@ -162,7 +165,7 @@ export default function SalesNegotiationsPage() {
       <SplitContent
         reversed
         heading={<>Screensharing built in</>}
-        body="Share your screen during product walkthroughs and demos. The AI asks questions, pushes back, and reacts to what you show — just like a real prospect."
+        body="Team members training on product walkthroughs, demos, or proposal presentations share their screen during the simulation, just like a real sales call."
         visualContent={
           <ProductScreenshot tint>
             <MockScreensharing />
@@ -173,7 +176,7 @@ export default function SalesNegotiationsPage() {
       <SplitContent
         className="bg-surface-white"
         heading={<>Presentation training</>}
-        body="Rehearse pitches, QBRs, and executive briefings with an AI audience that reacts and asks questions in real time."
+        body="Rehearse pitches, QBRs, and conference presentations with an AI audience that reacts, asks questions, and challenges delivery."
         visualContent={
           <ProductScreenshot tint>
             <MockPresentationTraining />
@@ -184,7 +187,7 @@ export default function SalesNegotiationsPage() {
       <SplitContent
         reversed
         heading={<>Body language analysis</>}
-        body="Feedback on non-verbal communication for video calls. Eye contact, posture, gestures, and facial expression — the signals that close deals."
+        body="Feedback on non-verbal communication, so your team knows how they come across on video calls."
         visualContent={
           <ProductScreenshot tint>
             <MockBodyLanguage />
@@ -192,7 +195,38 @@ export default function SalesNegotiationsPage() {
         }
       />
 
-      <Section className="bg-surface-white">
+      <FeatureGrid
+        className="bg-surface-white"
+        heading={
+          <>
+            Track and measure sales <em className="text-accent">capability</em>
+          </>
+        }
+        items={[
+          {
+            heading: 'Onboarding progress',
+            description:
+              'Track where each new hire is in their training journey. Monitor completion rates and identify who needs additional support before they go live.',
+          },
+          {
+            heading: 'Team-level insights',
+            description:
+              'See which conversation types your sales team finds most challenging: objection handling, discovery, negotiation, closing. Focus investment accordingly.',
+          },
+          {
+            heading: 'Exportable reporting',
+            description:
+              'Generate reports on training engagement, completion, and capability trends across teams, regions, and roles. Share with sales leadership in minutes.',
+          },
+          {
+            heading: 'Certification tracking',
+            description:
+              'Set competency benchmarks for key sales conversations and verify who has met them before they engage with prospects.',
+          },
+        ]}
+      />
+
+      <Section>
         <Reveal>
           <div className="max-w-2xl mx-auto">
             <SimulationCard
@@ -210,6 +244,7 @@ export default function SalesNegotiationsPage() {
       </Section>
 
       <StrategyOutcomes
+        className="bg-surface-white"
         eyebrow="Drive your sales enablement strategy"
         heading={
           <>
@@ -220,17 +255,17 @@ export default function SalesNegotiationsPage() {
           {
             heading: 'Visibility into real capability',
             description:
-              'See where objection handling breaks down, where discovery calls stall, and where reps need targeted support.',
+              'See how your team handles pressure: where objection handling breaks down, which conversation types need reinforcement, and where confidence drops across the team.',
           },
           {
             heading: 'Evidence-based development',
             description:
-              'Shape coaching programs and enablement strategy around real data, not manager impressions.',
+              'Shape enablement programs around real data, not anecdotal feedback from ride-alongs.',
           },
           {
             heading: 'Faster ramp time',
             description:
-              'Onboarding Journeys get new hires conversation-ready in days, not months.',
+              'Structured onboarding Journeys get new hires conversation-ready in days, with built-in certifications to verify competency.',
           },
         ]}
       />

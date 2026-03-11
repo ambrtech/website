@@ -85,8 +85,8 @@ const SAMPLE_POSTS: PostSummary[] = [
   },
 ]
 
-const TEXTURE_ORIGINAL = '/images/textures/feature-texture.jpg'
-const TEXTURE_ALT = '/images/textures/feature-texture-alt.jpg'
+const TEXTURE_ORIGINAL = '/textures/feature-texture.jpg'
+const TEXTURE_ALT = '/textures/feature-texture-alt.jpg'
 
 const FILTER_PRESETS = [
   { name: 'None', className: '', crop: 'origin-center', src: TEXTURE_ORIGINAL },
@@ -406,7 +406,7 @@ export default function PreviewPage() {
             heading: 'Consectetur adipiscing',
             description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
             filter: 'duotone-copper',
-            texture: '/images/textures/feature-texture-alt.jpg',
+            texture: '/textures/feature-texture-alt.jpg',
             cropFocus: 'center',
             visualContent: <MockEvaluationRubric />,
           },

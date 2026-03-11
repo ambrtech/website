@@ -1,0 +1,2 @@
+[    1349ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error during WebSocket handshake: net::ERR_CONNECTION_RESET @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_cf1d9188._.js:5696
+[    1349ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/images/textures/shadow-mask.png:0

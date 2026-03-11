@@ -25,7 +25,7 @@ export function AccordionShowcase({
   heading,
   items,
   variant = 'light',
-  textureImage = '/images/textures/feature-texture.jpg',
+  textureImage = '/textures/feature-texture.jpg',
 }: AccordionShowcaseProps) {
   const [activeIndex, setActiveIndex] = useState(0)
   const isDark = variant === 'dark'

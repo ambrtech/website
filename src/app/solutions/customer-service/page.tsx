@@ -27,9 +27,9 @@ export const metadata = createMetadata({
 
 const scenarios = [
   'De-escalating an angry customer threatening to leave',
-  'Handling a complex product complaint',
-  'Delivering difficult news about a policy',
-  'Managing an emotional customer with sensitivity',
+  'Handling a complex product complaint with incomplete information',
+  'Delivering difficult news about a policy or service limitation',
+  'Managing an emotional customer with sensitivity and professionalism',
   'Upselling or cross-selling during a service interaction',
   'Navigating a multi-issue call with composure',
 ]
@@ -52,22 +52,22 @@ export default function CustomerServicePage() {
             Effective, consistent customer service at <em className="text-accent">scale</em>
           </>
         }
-        subtitle="Customer service quality directly impacts retention and brand reputation. Ambr AI helps you onboard new team members faster and maintain a consistent standard across every location."
+        subtitle="Customer service quality directly impacts retention, satisfaction, and brand reputation. Ambr AI helps you onboard new team members faster, upskill existing teams efficiently, and maintain a consistent standard of service across every location and channel."
       />
 
       <AccordionShowcase
         variant="dark"
         heading={
           <>
-            How teams use Ambr AI for{' '}
-            <em className="text-accent italic font-light">service</em>
+            How organizations use Ambr AI for customer{' '}
+            <em className="text-accent italic font-light">service</em> training
           </>
         }
         items={[
           {
             heading: 'Onboarding new team members',
             description:
-              'Get hires conversation-ready in their first week.',
+              'Get new hires conversation-ready in their first week with structured training and built-in certifications.',
             visualContent: <MockVoiceConversation />,
             cropFocus: 'center',
             filter: 'duotone',
@@ -75,7 +75,7 @@ export default function CustomerServicePage() {
           {
             heading: 'Upskilling existing teams',
             description:
-              'Target skills like de-escalation, retention, and empathy.',
+              'Target specific skills across your current team: de-escalation, retention, empathy, product knowledge.',
             visualContent: <MockChatTraining />,
             cropFocus: 'top-left',
             filter: 'duotone-cream',
@@ -83,17 +83,17 @@ export default function CustomerServicePage() {
           {
             heading: 'New products and policies',
             description:
-              'Deploy new training scenarios fast for launches and policy changes.',
+              'Product launch next week? Policy change on Monday? Deploy new training scenarios fast so your team is prepared.',
           },
           {
             heading: 'Standardizing service quality',
             description:
-              'Same scenarios and feedback across every shift and location.',
+              'Same scenarios, same feedback standards, same quality across every shift, location, and region.',
           },
           {
             heading: 'Multilingual teams',
             description:
-              'Consistent service regardless of market or language.',
+              'Train in 30+ languages so your team delivers consistent service regardless of market.',
             visualContent: <MockDashboard />,
             cropFocus: 'top-right',
             filter: 'faded',
@@ -101,7 +101,7 @@ export default function CustomerServicePage() {
           {
             heading: 'Reducing ramp time',
             description:
-              'Cut the time from hire to confident customer interaction.',
+              'Cut the time from hire to confident, independent customer interaction.',
           },
         ]}
       />
@@ -118,31 +118,34 @@ export default function CustomerServicePage() {
               </span>
             ))}
           </div>
+          <p className="text-caption text-copy-light italic leading-relaxed mt-5 border-l-2 border-accent-soft pl-4 max-w-lg">
+            Sample scenarios. Simulations are customized to your products, policies, and brand tone of voice.
+          </p>
         </Reveal>
       </Section>
 
       <FeatureGrid
-        eyebrow="Customized to your service operation"
+        eyebrow="Easily customized to your customer service operation"
         items={[
           {
             heading: 'Your products and policies',
             description:
-              'Reflect your actual product range, service workflows, and return policies.',
+              'Scenarios reflect your actual product range, service policies, and common customer issues.',
           },
           {
             heading: 'Your brand tone of voice',
             description:
-              'Matches your service style guide so agents practice the way you want them to sound.',
+              'Simulations match your service style guide and communication standards.',
           },
           {
             heading: 'Your escalation paths',
             description:
-              'Train on your specific handoff processes, not generic escalation flows.',
+              'Train on the specific workflows and handoff processes your team uses.',
           },
           {
             heading: 'Global in 30+ languages',
             description:
-              'Consistent training across every market you serve.',
+              'Deploy consistent service training across every market.',
           },
         ]}
       />
@@ -151,7 +154,7 @@ export default function CustomerServicePage() {
         className="bg-surface-white"
         eyebrow="Built for frontline teams"
         heading={<>Ultra-realistic voice AI</>}
-        body="Train under the same pressure as a live call. The AI adapts in real time to tone, pace, and emotional state — so your agents are ready for anything."
+        body="Every simulation runs through voice. Your team trains under the same conversational pressure they will face on a live call. Ultra-low latency for seamless, natural dialogue."
         visualContent={
           <ProductScreenshot tint>
             <MockVoiceConversation />
@@ -162,7 +165,7 @@ export default function CustomerServicePage() {
       <SplitContent
         reversed
         heading={<>Chat-based training</>}
-        body="Training available for agents on text-based channels. Practice handling complaints, escalations, and multi-issue conversations through chat."
+        body="For agents working on text-based channels, training is also available via chat."
         visualContent={
           <ProductScreenshot tint>
             <MockChatTraining />
@@ -173,7 +176,7 @@ export default function CustomerServicePage() {
       <SplitContent
         className="bg-surface-white"
         heading={<>Screensharing</>}
-        body="For scenarios that involve walking through dashboards, product information, or troubleshooting steps with a customer on the line."
+        body="For scenarios that involve walking through systems, dashboards, or product information with a customer."
         visualContent={
           <ProductScreenshot tint>
             <MockScreensharing />
@@ -184,7 +187,7 @@ export default function CustomerServicePage() {
       <SplitContent
         reversed
         heading={<>Body language analysis</>}
-        body="Feedback for team members who interact on video. Eye contact, posture, and facial expression all shape the customer experience."
+        body="Feedback on non-verbal communication for team members who interact with customers on video."
         visualContent={
           <ProductScreenshot tint>
             <MockBodyLanguage />
@@ -192,7 +195,38 @@ export default function CustomerServicePage() {
         }
       />
 
-      <Section className="bg-surface-white">
+      <FeatureGrid
+        className="bg-surface-white"
+        heading={
+          <>
+            Track and measure service <em className="text-accent">quality</em>
+          </>
+        }
+        items={[
+          {
+            heading: 'Team-wide visibility',
+            description:
+              'Monitor training completion across shifts, locations, and teams. Identify where service quality is inconsistent and where targeted training is needed.',
+          },
+          {
+            heading: 'Conversation-type analysis',
+            description:
+              'See which scenarios cause the most difficulty across your team: de-escalation, retention, product complaints. Target development where it will have the most impact.',
+          },
+          {
+            heading: 'Exportable reporting',
+            description:
+              'Generate reports on training engagement, certification completion, and capability trends. Ready for QA reviews and stakeholder updates.',
+          },
+          {
+            heading: 'Chase completion',
+            description:
+              'Track who has and has not completed required training. Follow up easily to ensure every team member meets your service standards.',
+          },
+        ]}
+      />
+
+      <Section>
         <Reveal>
           <div className="max-w-2xl mx-auto">
             <SimulationCard
@@ -210,6 +244,7 @@ export default function CustomerServicePage() {
       </Section>
 
       <StrategyOutcomes
+        className="bg-surface-white"
         eyebrow="Drive your customer service strategy"
         heading={
           <>
@@ -220,17 +255,17 @@ export default function CustomerServicePage() {
           {
             heading: 'Visibility across your team',
             description:
-              'See where new hires need targeted support and where experienced agents have gaps.',
+              'See where confidence is high, where specific conversation types cause problems, and where new hires need targeted support.',
           },
           {
             heading: 'Certification tracking',
             description:
-              'Set and verify standards across your team with structured certification programs.',
+              'Set and verify standards across your team. Identify gaps before they become customer satisfaction issues.',
           },
           {
             heading: 'Measurable impact',
             description:
-              'Track improvement over time and build evidence for QA reviews and leadership reporting.',
+              'Track improvement over time. Build evidence for quality assurance reviews and reporting.',
           },
         ]}
       />

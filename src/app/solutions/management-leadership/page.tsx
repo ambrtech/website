@@ -27,7 +27,7 @@ export const metadata = createMetadata({
 const scenarios = [
   'Delivering difficult performance feedback',
   'Addressing persistent underperformance',
-  'Having a return-to-work conversation',
+  'Having a return-to-work conversation after long-term absence',
   'Managing conflict between team members',
   'Communicating organizational change to a resistant team',
   'Running a high-stakes 1:1',
@@ -52,22 +52,22 @@ export default function ManagementLeadershipPage() {
             <em className="text-accent">matter</em> most
           </>
         }
-        subtitle="The quality of management conversations directly impacts team performance, employee satisfaction, and retention. Ambr AI gives your organization a structured, scalable way to train every manager for these moments."
+        subtitle="The quality of management conversations directly impacts team performance, employee satisfaction, and retention. When managers handle feedback, restructures, and grievances well, the entire organization benefits. When they don&apos;t, the cost is felt everywhere. Ambr AI gives your organization a structured, scalable way to train every manager for these moments."
       />
 
       <AccordionShowcase
         variant="dark"
         heading={
           <>
-            How teams use Ambr AI for{' '}
-            <em className="text-accent italic font-light">management</em>
+            How organizations use Ambr AI for management{' '}
+            <em className="text-accent italic font-light">training</em>
           </>
         }
         items={[
           {
             heading: 'Onboarding new managers',
             description:
-              'Equip first-time managers with skills before they need them.',
+              'Equip first-time managers with conversation skills before they need them.',
             visualContent: <MockVoiceConversation />,
             cropFocus: 'center',
             filter: 'duotone',
@@ -75,12 +75,12 @@ export default function ManagementLeadershipPage() {
           {
             heading: 'Upskilling existing managers',
             description:
-              'Strengthen skills across your current population.',
+              'Strengthen skills across your current management population with structured, repeatable training.',
           },
           {
             heading: 'New frameworks and processes',
             description:
-              'Train managers on how to communicate performance frameworks or organizational change.',
+              'Rolling out a new performance management framework, internal policy, or organizational change? Train your managers on how to communicate it.',
             visualContent: <MockFeedbackPanel />,
             cropFocus: 'top-left',
             filter: 'duotone-cream',
@@ -88,7 +88,7 @@ export default function ManagementLeadershipPage() {
           {
             heading: 'Preparing for sensitive conversations',
             description:
-              'Restructures, grievances, and performance issues.',
+              'Restructures, grievances, performance issues. Build confidence for the conversations that carry the most weight.',
             visualContent: <MockBodyLanguage />,
             cropFocus: 'top-right',
             filter: 'faded',
@@ -108,31 +108,34 @@ export default function ManagementLeadershipPage() {
               </span>
             ))}
           </div>
+          <p className="text-caption text-copy-light italic leading-relaxed mt-5 border-l-2 border-accent-soft pl-4 max-w-lg">
+            These are examples. Every scenario can be customized to your organization, or choose from our pre-built scenario library.
+          </p>
         </Reveal>
       </Section>
 
       <FeatureGrid
-        eyebrow="Customized to your organization"
+        eyebrow="Easily customized to how your organization works"
         items={[
           {
             heading: 'Aligned to your internal policies',
             description:
-              'Reflected in your actual processes and guidelines.',
+              'Scenarios reflect your actual processes, performance frameworks, and guidelines.',
           },
           {
             heading: 'Focused on your priorities',
             description:
-              'Build training around the conversation types your managers need most.',
+              'Build training around the conversation types your managers need the most.',
           },
           {
             heading: 'Your terminology',
             description:
-              'Specific language, not generic corporate phrasing.',
+              'Simulations use your organization\u2019s specific language, not generic corporate phrasing.',
           },
           {
             heading: 'Global in 30+ languages',
             description:
-              'Deploy consistent training across every region.',
+              'Deploy consistent management training across every region.',
           },
         ]}
       />
@@ -141,7 +144,7 @@ export default function ManagementLeadershipPage() {
         className="bg-surface-white"
         eyebrow="Built for how leaders actually learn"
         heading={<>Ultra-realistic voice AI</>}
-        body="Real-time conversations where the AI adapts to tone and approach. Your managers train the way they lead: through voice."
+        body="Every simulation is a real-time voice conversation. Ultra-low latency. The AI adapts to tone, word choice, and approach, creating genuine conversational pressure."
         visualContent={
           <ProductScreenshot tint>
             <MockVoiceConversation />
@@ -152,7 +155,7 @@ export default function ManagementLeadershipPage() {
       <SplitContent
         reversed
         heading={<>Presentation training</>}
-        body="Rehearse town halls, board updates, and team announcements with an AI audience that reacts and asks questions in real time."
+        body="Leaders preparing for town halls, board updates, or all-hands meetings rehearse with an AI audience that reacts and challenges in real time."
         visualContent={
           <ProductScreenshot tint>
             <MockPresentationTraining />
@@ -163,7 +166,7 @@ export default function ManagementLeadershipPage() {
       <SplitContent
         className="bg-surface-white"
         heading={<>Body language analysis</>}
-        body="Feedback on non-verbal communication including eye contact, posture, gestures, and facial expression. Essential for leaders who communicate on video."
+        body="Feedback on non-verbal communication, so managers know how they come across visually as well as verbally."
         visualContent={
           <ProductScreenshot tint>
             <MockBodyLanguage />
@@ -171,7 +174,37 @@ export default function ManagementLeadershipPage() {
         }
       />
 
-      <Section>
+      <FeatureGrid
+        heading={
+          <>
+            Track and measure management <em className="text-accent">capability</em>
+          </>
+        }
+        items={[
+          {
+            heading: 'Engagement tracking',
+            description:
+              'Monitor which managers are completing training, how often, and across which conversation types. Chase completion with ease.',
+          },
+          {
+            heading: 'Capability insights',
+            description:
+              'See where your management population is strong and where gaps persist. Identify which conversation types need the most attention.',
+          },
+          {
+            heading: 'Exportable reporting',
+            description:
+              'Generate stakeholder-ready reports on training engagement, completion rates, and capability trends across teams and regions.',
+          },
+          {
+            heading: 'Certification tracking',
+            description:
+              'Set competency standards for management conversations and track who has met them.',
+          },
+        ]}
+      />
+
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="max-w-2xl mx-auto">
             <SimulationCard
@@ -189,7 +222,6 @@ export default function ManagementLeadershipPage() {
       </Section>
 
       <StrategyOutcomes
-        className="bg-surface-white"
         eyebrow="Drive your L&D strategy"
         heading={
           <>
@@ -200,17 +232,17 @@ export default function ManagementLeadershipPage() {
           {
             heading: 'Capability patterns',
             description:
-              'See where confidence is growing and where gaps persist across your management population.',
+              'See where confidence is growing, where gaps persist, and which conversations your managers are avoiding entirely.',
           },
           {
             heading: 'Structured programs',
             description:
-              'Deploy Journeys and certifications to build skills progressively, not as one-off events.',
+              'Deploy Journeys and certifications to build skills progressively across your management population.',
           },
           {
             heading: 'Actionable data',
             description:
-              'Shape your leadership strategy with real evidence from thousands of practice conversations.',
+              'Shape your leadership development strategy with real evidence, not anecdotal feedback.',
           },
         ]}
       />

@@ -15,7 +15,7 @@ export function PageHero({ eyebrow, heading, subtitle, compact, first }: PageHer
     : 'pt-section-mobile md:pt-section'
 
   return (
-    <section className={`${topPadding} pb-24 md:pb-28 -mb-16 px-container-mobile md:px-container bg-surface-white`}>
+    <section className={`${topPadding} pb-section-mobile md:pb-section px-container-mobile md:px-container bg-surface-white`}>
       <div className="mx-auto max-w-site">
         <Reveal>
           {eyebrow && (

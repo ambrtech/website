@@ -60,7 +60,7 @@ export function FeatureShowcaseCards({
                 <div className="relative aspect-[4/3] rounded-brand-lg overflow-hidden mb-6">
                   {/* Texture background */}
                   <Image
-                    src={item.texture ?? '/images/textures/feature-texture.jpg'}
+                    src={item.texture ?? '/textures/feature-texture.jpg'}
                     alt=""
                     fill
                     className={`object-cover scale-[1.5] ${item.cropFocus ? cropOrigin[item.cropFocus] : 'origin-center'} ${filterClass[item.filter]}`}

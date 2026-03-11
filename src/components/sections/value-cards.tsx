@@ -32,7 +32,7 @@ export function ValueCards({ items }: ValueCardsProps) {
                 <div className="relative aspect-[4/3] rounded-brand-lg overflow-hidden mb-6">
                   {/* Texture background */}
                   <Image
-                    src={item.texture ?? '/images/textures/feature-texture.jpg'}
+                    src={item.texture ?? '/textures/feature-texture.jpg'}
                     alt=""
                     fill
                     className={`object-cover scale-[1.5] ${item.cropFocus ?? 'origin-center'} ${item.filter ? filterClass[item.filter] : 'filter-duotone'}`}

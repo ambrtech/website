@@ -225,6 +225,23 @@ body {
   overflow-x: clip;
 }
 
+/* Auto-space sections at background transitions —
+   prevents eyebrows/content sitting flush against a colour change.
+   Lives in @layer base so any explicit Tailwind padding utility overrides it. */
+@layer base {
+  section.bg-surface-white + section:not(.bg-surface-white),
+  section:not(.bg-surface-white) + section.bg-surface-white {
+    padding-top: var(--spacing-section-mobile);
+  }
+
+  @media (min-width: 768px) {
+    section.bg-surface-white + section:not(.bg-surface-white),
+    section:not(.bg-surface-white) + section.bg-surface-white {
+      padding-top: var(--spacing-section);
+    }
+  }
+}
+
 /* Blog article prose */
 .prose-ambr {
   font-family: var(--font-body);

@@ -27,7 +27,7 @@ export function ShowcaseSplit({
   layout = 'left',
   cropFocus = 'center',
   filter = 'faded',
-  textureImage = '/images/textures/feature-texture.jpg',
+  textureImage = '/textures/feature-texture.jpg',
   visualContent,
   className,
 }: ShowcaseSplitProps) {

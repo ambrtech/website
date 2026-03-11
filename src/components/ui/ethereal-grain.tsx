@@ -138,8 +138,8 @@ export function EtherealGrain({
         <div
           style={{
             backgroundColor: color,
-            maskImage: `url('/images/textures/shadow-mask.png')`,
-            WebkitMaskImage: `url('/images/textures/shadow-mask.png')`,
+            maskImage: `url('/textures/shadow-mask.png')`,
+            WebkitMaskImage: `url('/textures/shadow-mask.png')`,
             maskSize: sizing === 'stretch' ? '100% 100%' : 'cover',
             WebkitMaskSize: sizing === 'stretch' ? '100% 100%' : 'cover',
             maskRepeat: 'no-repeat',
