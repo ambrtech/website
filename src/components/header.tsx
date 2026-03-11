@@ -42,7 +42,7 @@ type NavItem = DirectLink | DropdownMenu
 const navigation: NavItem[] = [
   {
     type: 'link',
-    label: 'Customisation',
+    label: 'Customization',
     href: '/customisation',
   },
   {
@@ -57,7 +57,7 @@ const navigation: NavItem[] = [
       {
         label: 'How It Works',
         href: '/product/how-it-works',
-        description: 'From setup to delivery in your organisation',
+        description: 'From setup to delivery in your organization',
       },
       {
         label: 'Admin Experience',
@@ -548,7 +548,7 @@ export function Header() {
           <Link
             href="/"
             aria-label="Ambr AI home"
-            className="flex items-center text-[#d0773b]"
+            className="flex items-center text-accent"
             onClick={() => { closeDropdown(); closeMobile() }}
           >
             <BrandLogo className="h-6.5 w-auto lg:h-[1.95rem]" />
@@ -659,7 +659,7 @@ export function Header() {
             <Link
               href="/"
               aria-label="Ambr AI home"
-              className="flex items-center text-[#d0773b]"
+              className="flex items-center text-accent"
               onClick={closeMobile}
             >
               <BrandLogo className="h-6.5 w-auto" />

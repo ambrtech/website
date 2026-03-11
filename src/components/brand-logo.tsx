@@ -6,7 +6,7 @@ interface BrandLogoProps {
 }
 
 const variantClassName: Record<BrandLogoVariant, string> = {
-  black: 'text-[#111111]',
+  black: 'text-dark',
   white: 'text-white',
 }
 
