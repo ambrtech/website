@@ -83,7 +83,7 @@ export default function TechnologyPage() {
             <em className="text-accent">difference</em>
           </h2>
         </Reveal>
-        <div className="grid md:grid-cols-2 gap-x-16">
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-2">
           {useCases.map((item, i) => (
             <Reveal key={item.heading} delay={i * 60}>
               <div className="py-6 border-t border-border">
@@ -100,22 +100,13 @@ export default function TechnologyPage() {
       </Section>
 
       {/* ── Try it yourself ── */}
-      <Section>
-        <Reveal>
-          <p className="text-body-sm text-copy-mid leading-relaxed max-w-[580px] mb-8">
-            This is an example scenario. Every simulation is customized to your
-            product, market, and competitive landscape.
-          </p>
-        </Reveal>
-      </Section>
-
       <TrialScenario
         characterName="Sarah"
         characterRole="VP of Engineering"
         characterInitials="SL"
         title="Lead a key enterprise renewal conversation"
         scenario="A key enterprise client is considering switching to a competitor at renewal. Lead the retention conversation."
-        ctaHref="/try-for-free"
+        socialProof="This is an example scenario. Every simulation is customized to your product, market, and competitive landscape."
       />
 
       {/* ── Why tech companies choose Ambr AI ── */}
@@ -152,7 +143,7 @@ export default function TechnologyPage() {
 
       {/* ── Testimonial ── */}
       <PullQuote
-        quote="We love it. It\u2019s great that we can customize it for our needs."
+        quote="We love it. It's great that we can customize it for our needs."
         role="L&D Manager"
         company="Tech Firm"
       />

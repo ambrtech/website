@@ -5,7 +5,7 @@ import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 import { TrialScenario } from '@/components/sections/trial-scenario'
 import { FeatureGrid } from '@/components/sections/feature-grid'
-import { PullQuote } from '@/components/sections/pull-quote'
+import { CustomerStory } from '@/components/sections/customer-story'
 import { GrainCta } from '@/components/sections/grain-cta'
 
 export const metadata = createMetadata({
@@ -131,10 +131,18 @@ export default function RetailHospitalityPage() {
       />
 
       {/* ── Testimonial ── */}
-      <PullQuote
-        quote="We used Ambr AI for role play and conversation feedback for our frontline workers for sales strategy, product knowledge, and resolution handling. I\u2019ve met with tons of AI vendors, and none that had the same level of quality and customer service as Ambr AI, so I would definitely recommend them to others."
+      <CustomerStory
+        compact
+        imageSrc="/images/customers/Jesse Strot.jpg"
+        imageAlt="Jesse Strot, Soapy Joe's Car Wash"
+        quote={
+          <>
+            <p>&ldquo;We used Ambr AI for role play and conversation feedback for our frontline workers for sales strategy, product knowledge, and resolution handling.</p>
+            <p className="mt-4">I&rsquo;ve met with tons of AI vendors, and none that had the same level of quality and customer service as Ambr AI, so I would definitely recommend them to others.&rdquo;</p>
+          </>
+        }
         name="Jesse Strot"
-        company="Soapy Joe\u2019s Car Wash"
+        company="Soapy Joe&rsquo;s Car Wash"
       />
 
       {/* ── Closing CTA ── */}

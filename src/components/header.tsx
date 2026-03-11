@@ -82,7 +82,6 @@ const navigation: NavItem[] = [
     content: [
       {
         heading: 'Professional Services',
-        href: '/industries/professional-services',
         items: [
           { label: 'Consulting & Advisory', href: '/industries/consulting-advisory' },
           { label: 'Accounting, Audit & Tax', href: '/industries/accounting-audit-tax' },

@@ -90,7 +90,7 @@ const whyAmbrItems = [
   {
     heading: 'Confidential by design',
     description:
-      'Conversations stay private. Data is never shared across customers or used to train models. ISO certified, GDPR compliant. Built to meet the standards enterprise procurement teams require.',
+      'Conversations stay private. Data is never shared across customers or used to train models. ISO 27001 certified, GDPR compliant, EU AI Act compliant. Built to meet the standards enterprise procurement teams require.',
   },
   {
     heading: 'Feedback that actually coaches',

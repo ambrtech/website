@@ -10,7 +10,6 @@ const footerNav = {
     { label: 'Languages', href: '/product/languages' },
   ],
   Industries: [
-    { label: 'Professional Services', href: '/industries/professional-services' },
     { label: 'Consulting & Advisory', href: '/industries/consulting-advisory' },
     { label: 'Accounting & Tax', href: '/industries/accounting-audit-tax' },
     { label: 'Legal', href: '/industries/legal' },

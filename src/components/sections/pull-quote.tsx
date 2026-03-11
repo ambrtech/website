@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Reveal } from '@/components/reveal'
 
 export interface PullQuoteProps {
@@ -5,9 +6,11 @@ export interface PullQuoteProps {
   name?: string
   role?: string
   company?: string
+  imageSrc?: string
+  imageAlt?: string
 }
 
-export function PullQuote({ quote, name, role, company }: PullQuoteProps) {
+export function PullQuote({ quote, name, role, company, imageSrc, imageAlt }: PullQuoteProps) {
   return (
     <section className="py-section-lg md:py-section-xl px-container-mobile md:px-container">
       <div className="mx-auto max-w-[900px]">
@@ -21,7 +24,19 @@ export function PullQuote({ quote, name, role, company }: PullQuoteProps) {
             </p>
             {(name || role || company) && (
               <footer className="mt-6 flex items-center gap-3">
-                <span className="w-8 h-px bg-accent-soft" />
+                {imageSrc ? (
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0">
+                    <Image
+                      src={imageSrc}
+                      alt={imageAlt ?? ''}
+                      fill
+                      className="object-cover"
+                      sizes="48px"
+                    />
+                  </div>
+                ) : (
+                  <span className="w-8 h-px bg-accent-soft" />
+                )}
                 <div className="text-body-sm text-copy-mid">
                   {name && <span className="font-body-medium text-dark">{name}</span>}
                   {name && (role || company) && <span> — </span>}

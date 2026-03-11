@@ -3,9 +3,10 @@ import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
+import { TrialScenario } from '@/components/sections/trial-scenario'
+import { FeatureGrid } from '@/components/sections/feature-grid'
 import { PullQuote } from '@/components/sections/pull-quote'
 import { GrainCta } from '@/components/sections/grain-cta'
-import Link from 'next/link'
 
 export const metadata = createMetadata({
   title: 'Consulting & Advisory',
@@ -33,7 +34,7 @@ const useCases = [
   {
     heading: 'Manager development',
     description:
-      'Delivering honest feedback, handling performance issues, and developing junior consultants — conversations that shape retention and culture.',
+      'Delivering honest feedback, handling performance issues, and developing junior consultants \u2014 conversations that shape retention and culture.',
   },
   {
     heading: 'New joiner onboarding',
@@ -44,34 +45,6 @@ const useCases = [
     heading: 'Business development',
     description:
       'From initial chemistry meetings to formal proposals, train on the conversations that grow your pipeline.',
-  },
-]
-
-const whyFeatures = [
-  {
-    heading: 'Built around your firm, not a generic template',
-    description:
-      'Your engagement models, client industries, and methodologies — built into your simulations quickly and without extensive investment.',
-  },
-  {
-    heading: 'Scale without senior time',
-    description:
-      'Partners and directors can\u2019t personally develop every consultant. Ambr AI gives your entire organization access to high-quality practice at any volume, without the bottleneck.',
-  },
-  {
-    heading: 'Confidential by design',
-    description:
-      'Conversations stay private. Never shared across clients, never used to train models. ISO 27001 certified, GDPR compliant, EU AI Act compliant.',
-  },
-  {
-    heading: 'Feedback that actually coaches',
-    description:
-      'Detailed, actionable feedback after every session — not just a summary. Coaching that changes how people communicate.',
-  },
-  {
-    heading: 'Global, and actually global',
-    description:
-      '30+ languages, adjusted for cultural context. Training that reflects how business is actually done in each market.',
   },
 ]
 
@@ -104,20 +77,19 @@ export default function ConsultingAdvisoryPage() {
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
             Use cases
           </p>
-          <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[700px] mb-12">
+          <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[600px] mb-12">
             Where AI roleplay makes the{' '}
             <em className="text-accent">difference</em>
           </h2>
         </Reveal>
-
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-2">
           {useCases.map((item, i) => (
             <Reveal key={item.heading} delay={i * 60}>
-              <div className="bg-surface-alt rounded-brand p-8">
-                <h3 className="font-heading text-label tracking-heading text-dark mb-3">
+              <div className="py-6 border-t border-border">
+                <h3 className="font-heading text-label text-dark mb-2">
                   {item.heading}
                 </h3>
-                <p className="text-body-sm text-copy-mid leading-[1.75]">
+                <p className="text-body-sm text-copy-light leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -127,64 +99,46 @@ export default function ConsultingAdvisoryPage() {
       </Section>
 
       {/* ── Try it yourself ── */}
-      <Section>
-        <Reveal>
-          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-            Try it yourself
-          </p>
-          <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[700px] mb-8">
-            See what a simulation feels like
-          </h2>
-          <div className="border border-accent-soft bg-accent-whisper rounded-brand p-6 max-w-2xl mb-8">
-            <p className="text-body-sm text-copy-mid leading-[1.75]">
-              This is an example scenario. Every simulation is customized to your
-              firm&apos;s clients, terminology, and methodology.
-            </p>
-          </div>
-        </Reveal>
-        <Reveal delay={100}>
-          <div className="max-w-2xl">
-            <p className="text-body text-copy-mid leading-[1.75] mb-6">
-              A client is pushing back on your project timeline and threatening to
-              reduce scope. Navigate the conversation.
-            </p>
-            <Link
-              href="/try-for-free"
-              className="inline-block rounded-brand-sm px-8 py-3.5 text-sm font-body-medium bg-accent text-surface-white hover:bg-accent-hover transition-all duration-normal"
-            >
-              Try for Free
-            </Link>
-          </div>
-        </Reveal>
-      </Section>
+      <TrialScenario
+        characterName="David"
+        characterRole="Client Director"
+        characterInitials="DC"
+        title="Navigate a client pushing back on your project timeline"
+        scenario="A client is pushing back on your project timeline and threatening to reduce scope. Navigate the conversation."
+        socialProof="This is an example scenario. Every simulation is customized to your firm&rsquo;s clients, terminology, and methodology."
+      />
 
       {/* ── Why consulting firms choose Ambr AI ── */}
-      <Section>
-        <Reveal>
-          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-            Why Ambr AI
-          </p>
-          <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[700px] mb-12">
-            Why consulting firms choose{' '}
-            <em className="text-accent">Ambr AI</em>
-          </h2>
-        </Reveal>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 border-t border-border pt-10">
-          {whyFeatures.map((feature, i) => (
-            <Reveal key={feature.heading} delay={i * 60}>
-              <div>
-                <h3 className="font-heading text-label tracking-heading text-dark mb-3">
-                  {feature.heading}
-                </h3>
-                <p className="text-body-sm text-copy-mid leading-[1.75]">
-                  {feature.description}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
+      <FeatureGrid
+        eyebrow="Why consulting firms choose Ambr AI"
+        items={[
+          {
+            heading: 'Built around your firm, not a generic template',
+            description:
+              'Your engagement models, client industries, and methodologies \u2014 built into your simulations quickly and without extensive investment.',
+          },
+          {
+            heading: 'Scale without senior time',
+            description:
+              'Partners and directors can\u2019t personally develop every consultant. Ambr AI gives your entire organization access to high-quality practice at any volume, without the bottleneck.',
+          },
+          {
+            heading: 'Confidential by design',
+            description:
+              'Conversations stay private. Never shared across clients, never used to train models. ISO 27001 certified, GDPR compliant, EU AI Act compliant.',
+          },
+          {
+            heading: 'Feedback that actually coaches',
+            description:
+              'Detailed, actionable feedback after every session \u2014 not just a summary. Coaching that changes how people communicate.',
+          },
+          {
+            heading: 'Global, and actually global',
+            description:
+              '30+ languages, adjusted for cultural context. Training that reflects how business is actually done in each market.',
+          },
+        ]}
+      />
 
       {/* ── Testimonial ── */}
       <PullQuote

@@ -31,16 +31,20 @@ export function TrialScenario({
             {eyebrow}
           </p>
         )}
-        <div className="max-w-2xl">
+        {socialProof && (
+          <p className="text-body-sm text-copy-mid leading-relaxed max-w-xl mb-8">
+            {socialProof}
+          </p>
+        )}
+        <div className="max-w-3xl">
           <SimulationCard
-            layout="scenario"
+            layout="horizontal"
             characterName={characterName}
             characterRole={characterRole}
             characterInitials={characterInitials}
             title={title}
             description={scenario}
             href={ctaHref}
-            socialProof={socialProof}
           />
         </div>
       </Reveal>

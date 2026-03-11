@@ -77,7 +77,7 @@ export default function AccountingAuditTaxPage() {
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
             Use cases
           </p>
-          <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[700px] mb-12">
+          <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[600px] mb-12">
             Where AI roleplay makes the{' '}
             <em className="text-accent">difference</em>
           </h2>
@@ -99,24 +99,13 @@ export default function AccountingAuditTaxPage() {
       </Section>
 
       {/* ── Try it yourself ── */}
-      <Section>
-        <Reveal>
-          <div className="mb-8 rounded-brand bg-surface-alt px-6 py-4">
-            <p className="text-body-sm text-copy-mid leading-relaxed">
-              This is an example scenario. Every simulation is customized to your
-              firm&apos;s areas, client types, and terminology.
-            </p>
-          </div>
-        </Reveal>
-      </Section>
-
       <TrialScenario
         characterName="Sarah"
         characterRole="CFO"
         characterInitials="SW"
         title="Deliver difficult audit findings with confidence"
         scenario="You are presenting audit findings to a client's CFO who disagrees with a material finding. Walk them through your position."
-        ctaHref="/try-for-free"
+        socialProof="This is an example scenario. Every simulation is customized to your firm's areas, client types, and terminology."
       />
 
       {/* ── Why accounting firms choose Ambr AI ── */}
@@ -136,7 +125,7 @@ export default function AccountingAuditTaxPage() {
           {
             heading: 'Confidential by design',
             description:
-              'Conversations stay private. Never shared across clients, never used to train models. ISO27001 certified, GDPR compliant, EU AI Act compliant.',
+              'Conversations stay private. Never shared across clients, never used to train models. ISO 27001 certified, GDPR compliant, EU AI Act compliant.',
           },
           {
             heading: 'Feedback that actually coaches',
@@ -153,7 +142,7 @@ export default function AccountingAuditTaxPage() {
 
       {/* ── Testimonial ── */}
       <PullQuote
-        quote="We love it. It\u2019s great that we can customize it for our needs."
+        quote="We love it. It's great that we can customize it for our needs."
         role="L&D Manager"
         company="Professional Services Firm"
       />

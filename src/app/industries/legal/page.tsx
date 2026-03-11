@@ -82,7 +82,7 @@ export default function LegalPage() {
             <em className="text-accent">difference</em>
           </h2>
         </Reveal>
-        <div className="grid md:grid-cols-2 gap-x-16">
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-2">
           {useCases.map((item, i) => (
             <Reveal key={item.heading} delay={i * 60}>
               <div className="py-6 border-t border-border">
@@ -99,24 +99,13 @@ export default function LegalPage() {
       </Section>
 
       {/* ── Try it yourself ── */}
-      <Section>
-        <Reveal>
-          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-8 eyebrow-hairline">
-            Try it yourself
-          </p>
-          <p className="text-body-sm text-copy-mid leading-relaxed max-w-[580px] mb-8 border-l-2 border-accent-soft pl-5">
-            This is an example scenario. Every simulation is customized to your
-            firm&apos;s practice areas, client situations, and terminology.
-          </p>
-        </Reveal>
-      </Section>
-
       <TrialScenario
         characterName="James"
         characterRole="General Counsel"
         characterInitials="JC"
         title="Advise a client on a high-stakes settlement"
         scenario="Your client is considering a settlement offer. They want your recommendation, but the decision carries significant risk either way. Advise them."
+        socialProof="This is an example scenario. Every simulation is customized to your firm&rsquo;s practice areas, client situations, and terminology."
       />
 
       {/* ── Why law firms choose Ambr AI ── */}
@@ -136,7 +125,7 @@ export default function LegalPage() {
           {
             heading: 'Confidential by design',
             description:
-              'Conversations stay private. Never shared across clients, never used to train models. ISO27001 certified, GDPR compliant, EU AI Act compliant.',
+              'Conversations stay private. Never shared across clients, never used to train models. ISO 27001 certified, GDPR compliant, EU AI Act compliant.',
           },
           {
             heading: 'Feedback that actually coaches',

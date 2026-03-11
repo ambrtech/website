@@ -15,7 +15,7 @@ import { ActionPicker } from '@/components/sections/action-picker'
 import { NumberedSteps } from '@/components/sections/numbered-steps'
 import { DetailCards } from '@/components/sections/detail-cards'
 import { PullQuote } from '@/components/sections/pull-quote'
-import { ProductScreenshot, MockFeedbackPanel, MockScenarioCard, MockDashboard, MockJourneyGrid, MockContextSelector } from '@/components/sections/product-screenshot'
+import { ProductScreenshot, MockFeedbackPanel, MockScenarioCard, MockDashboard, MockJourneyGrid, MockContextSelector, MockEvaluationRubric, MockDeploymentTimeline } from '@/components/sections/product-screenshot'
 import { BentoShowcase } from '@/components/sections/bento-showcase'
 import { SplitContent } from '@/components/sections/split-content'
 import { VisualFeatureCards } from '@/components/sections/visual-feature-cards'
@@ -26,6 +26,8 @@ import { CustomerStory } from '@/components/sections/customer-story'
 import { PartnerShowcase } from '@/components/sections/partner-showcase'
 import { SecurityBadges } from '@/components/sections/security-badges'
 import { ValueCards } from '@/components/sections/value-cards'
+import { IndustryCards } from '@/components/sections/industry-cards'
+import { FeatureShowcaseCards } from '@/components/sections/feature-showcase-cards'
 import { GrainCta } from '@/components/sections/grain-cta'
 import { LogoCloud } from '@/components/sections/logo-cloud'
 import { LogoBar } from '@/components/sections/logo-bar'
@@ -252,6 +254,41 @@ export default function PreviewPage() {
         ]}
       />
 
+      <SectionLabel name="IndustryCards" />
+      <IndustryCards
+        eyebrow="Industries"
+        heading={
+          <>
+            Ambr AI meets teams where they{' '}
+            <em className="text-accent">are</em>.
+          </>
+        }
+        subtitle="Every industry has conversations that define success. We build simulations around yours — your language, your scenarios, your culture."
+        items={[
+          {
+            title: 'Retail & Hospitality',
+            description: 'Guest interactions, complaint handling, and upselling — practiced in the tone and tempo your brand demands.',
+            image: '/images/photography/hotel-lobby-middle-eastern-east-asian.png',
+            imageAlt: 'Two colleagues conversing in a hotel lobby',
+            href: '/industries/retail-hospitality',
+          },
+          {
+            title: 'Technology',
+            description: 'Discovery calls, cross-functional alignment, and stakeholder management — calibrated to fast-moving tech environments.',
+            image: '/images/photography/tech-office-casual-diverse.png',
+            imageAlt: 'Diverse team collaborating in a modern tech office',
+            href: '/industries/technology',
+          },
+          {
+            title: 'Healthcare & Life Sciences',
+            description: 'Patient conversations, clinical handoffs, and compliance scenarios — with the sensitivity these moments require.',
+            image: '/images/photography/corridor-two-women-laughing.png',
+            imageAlt: 'Two women walking together in a corridor, mid-conversation',
+            href: '/industries/other',
+          },
+        ]}
+      />
+
       <SectionLabel name="ScenarioCards" />
       <ScenarioCards
         heading="Choose a Scenario"
@@ -343,6 +380,42 @@ export default function PreviewPage() {
             filter: 'duotone',
             texture: TEXTURE_ALT,
             cropFocus: 'origin-bottom-right',
+          },
+        ]}
+      />
+
+      <SectionLabel name="FeatureShowcaseCards" />
+      <FeatureShowcaseCards
+        eyebrow="Platform"
+        heading={
+          <>
+            Lorem ipsum dolor sit amet,{' '}
+            <em className="text-accent">consectetur</em>
+          </>
+        }
+        subtitle="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+        items={[
+          {
+            heading: 'Lorem ipsum dolor sit',
+            description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.',
+            filter: 'duotone',
+            cropFocus: 'top-left',
+            visualContent: <MockDashboard />,
+          },
+          {
+            heading: 'Consectetur adipiscing',
+            description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            filter: 'duotone-copper',
+            texture: '/images/textures/feature-texture-alt.jpg',
+            cropFocus: 'center',
+            visualContent: <MockEvaluationRubric />,
+          },
+          {
+            heading: 'Sed do eiusmod tempor',
+            description: 'Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error.',
+            filter: 'duotone-blush',
+            cropFocus: 'bottom-right',
+            visualContent: <MockDeploymentTimeline />,
           },
         ]}
       />
