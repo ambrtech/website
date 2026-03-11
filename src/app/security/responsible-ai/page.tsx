@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { PageHero } from '@/components/sections/page-hero'
+import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 
 export const metadata = createMetadata({
@@ -20,10 +21,24 @@ export default function ResponsibleAIPage() {
             Responsible AI, by <em className="text-accent">design</em>.
           </>
         }
-        subtitle="AI roleplay involves real people practicing real conversations: moments of vulnerability, uncertainty, and growth. That responsibility shapes every decision we make. Ambr AI is not a general-purpose AI tool — it is a training platform built to help people perform better in the moments that matter at work. That focused scope makes our ethical commitments specific and enforceable."
+        subtitle="AI roleplay involves real people practicing real conversations: moments of vulnerability, uncertainty, and growth. That responsibility shapes every decision we make."
         compact
         first
       />
+
+      {/* ── Purpose and Scope ── */}
+      <Section>
+        <Reveal>
+          <div className="max-w-[700px]">
+            <p className="text-body text-copy-mid leading-[1.75]">
+              Ambr AI is not a general-purpose AI tool. It is a training platform
+              built to help people perform better in the moments that matter at
+              work. That focused scope makes our ethical commitments specific and
+              enforceable.
+            </p>
+          </div>
+        </Reveal>
+      </Section>
 
       {/* ── Human-centered (dark anchor) ── */}
       <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
@@ -86,7 +101,8 @@ export default function ResponsibleAIPage() {
                 <p className="text-body-sm text-copy-mid leading-[1.75] mb-4">
                   A difficult conversation in Tokyo is not the same as one in
                   London or S&atilde;o Paulo. Ambr AI supports over 30 languages,
-                  adjusted to reflect cultural norms and workplace expectations.
+                  and our simulations are adjusted to reflect cultural norms,
+                  communication styles, and workplace expectations across regions.
                 </p>
                 <Link
                   href="/product/languages"
@@ -106,7 +122,9 @@ export default function ResponsibleAIPage() {
                   An ongoing design principle, not a checkbox.
                 </h3>
                 <p className="text-body-sm text-copy-mid leading-[1.75] mb-4">
-                  Scenario design includes review for cultural, gender, and
+                  AI systems can inherit and reinforce biases. We take this
+                  seriously as an ongoing design principle. Scenario design
+                  includes review for cultural, gender, and
                   demographic bias. Feedback mechanisms are designed for equitable
                   treatment regardless of accent, language proficiency, or
                   communication style.
@@ -126,7 +144,7 @@ export default function ResponsibleAIPage() {
         <div className="mx-auto max-w-site text-center">
           <Reveal>
             <p className="font-heading text-label leading-[1.3] tracking-heading mb-6">
-              Questions about Ambr AI?{' '}
+              Questions about our AI practices?{' '}
               <Link
                 href="/contact"
                 className="text-accent hover:text-accent-hover transition-colors"

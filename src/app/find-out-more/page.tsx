@@ -16,7 +16,7 @@ export default function FindOutMorePage() {
         {
           heading: 'Book a Meeting',
           description:
-            'A 30-minute conversation with an Ambr AI founder to walk through the platform.',
+            'A 30-minute conversation with an Ambr AI founder. We will learn about your training challenges, walk you through the platform, and answer your questions, shaped around your context.',
           href: '#',
           ctaLabel: 'Book a Meeting',
         },
@@ -30,9 +30,9 @@ export default function FindOutMorePage() {
         {
           heading: 'Get a Quote',
           description:
-            'Request an indicative proposal based on your team size and use cases.',
+            'If you have a clear sense of your requirements, team size and use cases, we can put together an indicative proposal.',
           href: '#',
-          ctaLabel: 'Get a Quote',
+          ctaLabel: 'Request a Quote',
         },
       ]}
     />

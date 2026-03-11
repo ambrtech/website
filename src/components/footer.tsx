@@ -19,6 +19,7 @@ const footerNav = {
   Company: [
     { label: 'About', href: '/company' },
     { label: 'Blog', href: '/blog' },
+    { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
   ],
   Security: [
@@ -54,9 +55,10 @@ export function Footer() {
                   <li key={link.href + link.label}>
                     <Link
                       href={link.href}
-                      className="text-nav text-copy-mid transition-colors hover:text-accent py-0.5 inline-block"
+                      className="group/link relative text-nav text-copy-mid transition-colors hover:text-accent py-0.5 inline-block"
                     >
                       {link.label}
+                      <span className="absolute left-0 bottom-0 h-px w-full bg-accent scale-x-0 group-hover/link:scale-x-100 transition-transform duration-slow origin-left" />
                     </Link>
                   </li>
                 ))}

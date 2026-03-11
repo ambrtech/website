@@ -7,7 +7,6 @@ import { PageHero } from '@/components/sections/page-hero'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 import { FeatureGrid } from '@/components/sections/feature-grid'
-import { PullQuote } from '@/components/sections/pull-quote'
 import { LogoCloud } from '@/components/sections/logo-cloud'
 import { GrainCta } from '@/components/sections/grain-cta'
 
@@ -103,7 +102,7 @@ export default function CompanyPage() {
             <p className="text-body text-copy-mid leading-[1.75]">
               We work with some of the world&rsquo;s most recognized organizations
               to transform how their people prepare for high-stakes professional
-              conversations. Our clients include Deloitte, Skyscanner, and IWG,
+              conversations. Our clients include Deloitte, Skyscanner, and Kandl,
               among others. They work with us because we deliver something that
               works, and we build it around their specific needs.
             </p>
@@ -246,60 +245,6 @@ export default function CompanyPage() {
           </div>
         </Reveal>
       </Section>
-
-      {/* ── Global reach ── */}
-      <Section className="bg-surface-white">
-        <Reveal>
-          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-            Global reach
-          </p>
-          <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-12">
-            Built for global teams
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 md:gap-16">
-            <div className="py-6 border-t border-border">
-              <h3 className="font-heading text-label text-dark mb-2">
-                GDPR compliance
-              </h3>
-              <p className="text-body-sm text-copy-mid leading-relaxed">
-                GDPR compliance is foundational to how we build and operate.
-              </p>
-            </div>
-            <div className="py-6 border-t border-border">
-              <h3 className="font-heading text-label text-dark mb-2">
-                EU AI Act alignment
-              </h3>
-              <p className="text-body-sm text-copy-mid leading-relaxed">
-                EU AI Act alignment is built into our product and operations.
-              </p>
-            </div>
-            <div className="py-6 border-t border-border">
-              <h3 className="font-heading text-label text-dark mb-2">
-                30+ languages
-              </h3>
-              <p className="text-body-sm text-copy-mid leading-relaxed">
-                Over 30 languages supported for truly global deployment.
-              </p>
-            </div>
-          </div>
-          <div className="mt-8">
-            <Link
-              href="/product/languages"
-              className="inline-flex items-center gap-2 text-label font-body-medium text-dark hover:text-accent transition-colors duration-normal"
-            >
-              Explore our language capabilities
-              <span className="text-accent">&rarr;</span>
-            </Link>
-          </div>
-        </Reveal>
-      </Section>
-
-      {/* ── Testimonial ── */}
-      <PullQuote
-        quote="We've looked at alternatives but they were just 'meh'... this is a really good product."
-        role="Training Manager"
-        company="Recruitment Company"
-      />
 
       {/* ── CTA ── */}
       <GrainCta

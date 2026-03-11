@@ -145,6 +145,11 @@ const navigation: NavItem[] = [
     label: 'Company',
     href: '/company',
   },
+  {
+    type: 'link',
+    label: 'FAQ',
+    href: '/faq',
+  },
 ]
 
 /* ─────────────────────────────────────────────────────
