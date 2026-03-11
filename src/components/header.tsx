@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BrandLogo } from '@/components/brand-logo'
 
 /* ─────────────────────────────────────────────────────
@@ -181,6 +182,79 @@ function ChevronIcon({ open, className }: { open?: boolean; className?: string }
 }
 
 /* ─────────────────────────────────────────────────────
+   Security trust sidebar
+   ───────────────────────────────────────────────────── */
+
+const trustBadges = [
+  { src: '/icons/badge-iso.svg', label: 'ISO 27001', sublabel: 'Certified' },
+  { src: '/icons/badge-gdpr.svg', label: 'GDPR', sublabel: 'Compliant', size: 58 },
+  { src: '/icons/badge-eu-ai-act.png', label: 'EU AI Act', sublabel: 'Ready', crop: true },
+  { src: null, label: 'No model training', sublabel: 'Your data stays yours', iconVariant: 'doc' as const },
+]
+
+function SecurityTrustSidebar({ onNavigate }: { onNavigate: () => void }) {
+  return (
+    <div className="bg-dark/90 backdrop-blur-md rounded-brand px-5 py-5 w-72 shrink-0">
+      <p className="text-eyebrow-sm uppercase tracking-eyebrow text-surface-white/50 mb-5">
+        Trust & compliance
+      </p>
+      <div className="grid grid-cols-2 gap-x-4 gap-y-5">
+        {trustBadges.map((badge) => (
+          <div key={badge.label} className="flex flex-col items-center text-center gap-2.5">
+            <div className="shrink-0">
+              {badge.src ? (
+                badge.crop ? (
+                  /* EU AI Act: crop to just the left icon */
+                  <div className="w-9 h-9 relative overflow-hidden">
+                    <Image
+                      src={badge.src}
+                      alt=""
+                      width={160}
+                      height={80}
+                      className="absolute left-0 top-1/2 -translate-y-1/2 w-auto h-9 max-w-none brightness-0 invert opacity-60"
+                    />
+                  </div>
+                ) : (
+                  <Image
+                    src={badge.src}
+                    alt=""
+                    width={badge.size ?? 52}
+                    height={badge.size ?? 52}
+                    className="brightness-0 invert opacity-60"
+                  />
+                )
+              ) : (
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-surface-white/60">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                  <path d="M14 2v6h6" />
+                  <rect x="9" y="13" width="6" height="5" rx="1" />
+                  <path d="M10.5 13v-1.5a1.5 1.5 0 013 0V13" />
+                </svg>
+              )}
+            </div>
+            <div>
+              <span className="block text-caption text-surface-white leading-tight">
+                {badge.label}
+              </span>
+              <span className="block text-caption text-surface-white/45 leading-tight mt-0.5">
+                {badge.sublabel}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+      <Link
+        href="/security/compliance"
+        onClick={onNavigate}
+        className="block text-center text-caption text-surface-white/40 hover:text-surface-white/70 transition-colors mt-5 pt-4 border-t border-surface-white/10"
+      >
+        Learn more &rarr;
+      </Link>
+    </div>
+  )
+}
+
+/* ─────────────────────────────────────────────────────
    Desktop dropdown panel content
    ───────────────────────────────────────────────────── */
 
@@ -192,6 +266,36 @@ function DropdownContent({
   onNavigate: () => void
 }) {
   const hasGroups = menu.content.some(isGroup)
+
+  /* Security: links on left, trust panel on right */
+  if (menu.label === 'Security') {
+    return (
+      <div className="flex gap-0 items-stretch max-w-3xl">
+        <div className="grid grid-cols-1 gap-1 shrink-0 w-64 pr-8">
+          {(menu.content as NavLink[]).map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={onNavigate}
+              className="group block py-3 px-4 rounded-brand-sm transition-colors hover:bg-surface-alt/50"
+            >
+              <span className="block text-body-sm text-dark group-hover:text-accent transition-colors">
+                {item.label}
+              </span>
+              {item.description && (
+                <span className="block text-caption text-copy-light mt-1 leading-relaxed">
+                  {item.description}
+                </span>
+              )}
+            </Link>
+          ))}
+        </div>
+        <div className="border-l border-border pl-8 flex items-start">
+          <SecurityTrustSidebar onNavigate={onNavigate} />
+        </div>
+      </div>
+    )
+  }
 
   /* Industries-style: group(s) on left, standalone links on right */
   if (hasGroups) {
