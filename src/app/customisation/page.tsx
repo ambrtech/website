@@ -33,7 +33,7 @@ export default function CustomisationPage() {
       />
 
       {/* ── 1. Hero — split layout ── */}
-      <section className="pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container">
+      <section className="pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container bg-surface-white">
         <div className="mx-auto max-w-site overflow-hidden">
           <Reveal>
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-start">
@@ -75,6 +75,7 @@ export default function CustomisationPage() {
 
       {/* ── 3. What you can customize ── */}
       <ShowcaseSplit
+        className="bg-surface-white"
         heading={
           <>
             What you can customize{' '}
@@ -133,6 +134,7 @@ export default function CustomisationPage() {
 
       {/* ── 5. Launch in days, not months ── */}
       <SplitContent
+        className="bg-surface-white"
         reversed
         eyebrow="Speed"
         heading={
@@ -200,7 +202,7 @@ export default function CustomisationPage() {
       />
 
       {/* ── 8. A team behind the platform ── */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="text-center max-w-[600px] mx-auto">
             <div className="flex items-center justify-center gap-2 mb-8">

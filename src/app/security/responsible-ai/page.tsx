@@ -52,7 +52,7 @@ export default function ResponsibleAIPage() {
       </section>
 
       {/* ── Three principle cards ── */}
-      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
+      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container bg-surface-white">
         <div className="mx-auto max-w-site">
           <Reveal>
             <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-8 eyebrow-hairline">
@@ -61,7 +61,7 @@ export default function ResponsibleAIPage() {
           </Reveal>
           <div className="grid md:grid-cols-3 gap-6">
             <Reveal>
-              <div className="bg-surface-alt rounded-brand p-8 md:p-10 h-full">
+              <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
                 <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
                   Transparency
                 </p>
@@ -76,7 +76,7 @@ export default function ResponsibleAIPage() {
             </Reveal>
 
             <Reveal delay={80}>
-              <div className="bg-surface-alt rounded-brand p-8 md:p-10 h-full">
+              <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
                 <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
                   Cultural context
                 </p>
@@ -98,7 +98,7 @@ export default function ResponsibleAIPage() {
             </Reveal>
 
             <Reveal delay={160}>
-              <div className="bg-surface-alt rounded-brand p-8 md:p-10 h-full">
+              <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
                 <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
                   Bias &amp; Fairness
                 </p>

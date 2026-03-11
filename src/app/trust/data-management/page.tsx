@@ -145,6 +145,7 @@ export default function DataManagementPage() {
 
       {/* -- What We Do With It -- */}
       <FeatureGrid
+        className="bg-surface-white"
         eyebrow="How We Use Data"
         heading="Three purposes. No exceptions."
         items={[
@@ -167,7 +168,7 @@ export default function DataManagementPage() {
       />
 
       {/* -- What We Will Never Do -- */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt">
+      <section className="py-section-mobile md:py-section px-container-mobile md:px-container">
         <div className="mx-auto max-w-site">
           <Reveal>
             <div className="mb-12">
@@ -200,7 +201,7 @@ export default function DataManagementPage() {
       </section>
 
       {/* -- Data Isolation -- */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-20 items-start">
             <div>
@@ -219,7 +220,7 @@ export default function DataManagementPage() {
                 </p>
               </div>
             </div>
-            <div className="border border-border rounded-brand-md p-8 md:p-10 bg-surface-alt">
+            <div className="border border-border rounded-brand-md p-8 md:p-10 bg-surface-white">
               <h3 className="font-heading text-label text-dark mb-6">
                 Isolation guarantees
               </h3>
@@ -271,7 +272,7 @@ export default function DataManagementPage() {
       </Section>
 
       {/* -- Human-Centered AI -- */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container border-t border-border">
+      <section className="py-section-mobile md:py-section px-container-mobile md:px-container border-t border-border bg-surface-white">
         <div className="mx-auto max-w-site">
           <Reveal>
             <div className="max-w-[680px]">
@@ -304,7 +305,7 @@ export default function DataManagementPage() {
       />
 
       {/* -- Cross-links -- */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="grid md:grid-cols-2 gap-8">
             <Link

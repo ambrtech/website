@@ -10,11 +10,12 @@ export interface NumberedStepsProps {
   eyebrow?: string
   heading?: string
   items: StepItem[]
+  className?: string
 }
 
-export function NumberedSteps({ eyebrow, heading, items }: NumberedStepsProps) {
+export function NumberedSteps({ eyebrow, heading, items, className }: NumberedStepsProps) {
   return (
-    <Section>
+    <Section className={className}>
       <div className="max-w-3xl mb-12 md:mb-16">
         {eyebrow && (
           <Reveal>

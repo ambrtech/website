@@ -63,7 +63,7 @@ export default function CompliancePage() {
         <div className="mx-auto max-w-site">
           {/* Lead credential: ISO 27001 */}
           <Reveal>
-            <div className="bg-surface-alt rounded-brand p-8 md:p-12 mb-6">
+            <div className="bg-surface-white rounded-brand p-8 md:p-12 mb-6">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 relative shrink-0">
@@ -176,7 +176,7 @@ export default function CompliancePage() {
       </section>
 
       {/* ── Client logos ── */}
-      <LogoCloud />
+      <LogoCloud className="bg-surface-white" />
 
       {/* ── Trust Portal + Cross-links ── */}
       <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-dark text-surface-white">

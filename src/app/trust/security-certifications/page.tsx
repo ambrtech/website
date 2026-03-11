@@ -155,7 +155,7 @@ export default function SecurityCertificationsPage() {
       </Section>
 
       {/* -- Data Commitments -- */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt">
+      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-white">
         <div className="mx-auto max-w-site">
           <Reveal>
             <div className="mb-12">
@@ -195,7 +195,7 @@ export default function SecurityCertificationsPage() {
       />
 
       {/* -- Cross-links -- */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="grid md:grid-cols-2 gap-8">
             <Link

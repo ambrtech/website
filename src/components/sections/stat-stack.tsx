@@ -13,7 +13,7 @@ interface StatStackProps {
 
 export function StatStack({ heading, items }: StatStackProps) {
   return (
-    <Section className="bg-surface-alt border-y border-border">
+    <Section className="border-y border-border">
       <Reveal>
         <div className="grid md:grid-cols-[0.8fr_1fr] gap-10 md:gap-20 items-start">
           <h2 className="font-heading text-section leading-[1.2] tracking-heading text-dark">

@@ -106,7 +106,7 @@ export default function CustomerServicePage() {
         ]}
       />
 
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
             Example scenarios
@@ -148,6 +148,7 @@ export default function CustomerServicePage() {
       />
 
       <SplitContent
+        className="bg-surface-white"
         eyebrow="Built for frontline teams"
         heading={<>Ultra-realistic voice AI</>}
         body="Train under the same pressure as a live call. The AI adapts in real time to tone, pace, and emotional state — so your agents are ready for anything."
@@ -170,6 +171,7 @@ export default function CustomerServicePage() {
       />
 
       <SplitContent
+        className="bg-surface-white"
         heading={<>Screensharing</>}
         body="For scenarios that involve walking through dashboards, product information, or troubleshooting steps with a customer on the line."
         visualContent={
@@ -190,7 +192,7 @@ export default function CustomerServicePage() {
         }
       />
 
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="max-w-2xl mx-auto">
             <SimulationCard

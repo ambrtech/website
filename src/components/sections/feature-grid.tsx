@@ -10,11 +10,12 @@ interface FeatureGridProps {
   eyebrow?: string
   heading?: React.ReactNode
   items: FeatureGridItem[]
+  className?: string
 }
 
-export function FeatureGrid({ eyebrow, heading, items }: FeatureGridProps) {
+export function FeatureGrid({ eyebrow, heading, items, className }: FeatureGridProps) {
   return (
-    <Section>
+    <Section className={className}>
       <Reveal>
         {(eyebrow || heading) && (
           <div className="mb-12">

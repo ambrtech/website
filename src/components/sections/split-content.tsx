@@ -19,6 +19,7 @@ interface SplitContentProps {
   badge?: string
   reversed?: boolean
   visualContent?: React.ReactNode
+  className?: string
 }
 
 export function SplitContent({
@@ -29,6 +30,7 @@ export function SplitContent({
   badge,
   reversed = false,
   visualContent,
+  className,
 }: SplitContentProps) {
   const textBlock = (
     <div>
@@ -54,7 +56,7 @@ export function SplitContent({
   const visualBlock = <div>{visualContent ?? <TextureBlock />}</div>
 
   return (
-    <Section>
+    <Section className={className}>
       <Reveal>
         <div
           className={`grid gap-12 md:gap-20 items-start ${

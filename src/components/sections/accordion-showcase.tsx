@@ -39,7 +39,7 @@ export function AccordionShowcase({
       className={
         isDark
           ? 'bg-dark border-y border-dark-mid'
-          : 'bg-surface-alt border-y border-border'
+          : 'border-y border-border'
       }
     >
       <Reveal>

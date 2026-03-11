@@ -106,7 +106,7 @@ export default function SalesNegotiationsPage() {
         ]}
       />
 
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
             Example scenarios
@@ -148,6 +148,7 @@ export default function SalesNegotiationsPage() {
       />
 
       <SplitContent
+        className="bg-surface-white"
         eyebrow="Built for sales teams"
         heading={<>Ultra-realistic voice AI</>}
         body="Your team trains the way they sell: through voice. Real-time conversations with AI that adapts to tone, pace, and approach."
@@ -170,6 +171,7 @@ export default function SalesNegotiationsPage() {
       />
 
       <SplitContent
+        className="bg-surface-white"
         heading={<>Presentation training</>}
         body="Rehearse pitches, QBRs, and executive briefings with an AI audience that reacts and asks questions in real time."
         visualContent={
@@ -190,7 +192,7 @@ export default function SalesNegotiationsPage() {
         }
       />
 
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="max-w-2xl mx-auto">
             <SimulationCard

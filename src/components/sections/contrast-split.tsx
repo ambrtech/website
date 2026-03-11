@@ -7,6 +7,7 @@ interface ContrastSplitProps {
   rightBody: string
   leftBg?: string
   rightBg?: string
+  className?: string
 }
 
 export function ContrastSplit({
@@ -14,11 +15,12 @@ export function ContrastSplit({
   leftBody,
   rightHeading,
   rightBody,
-  leftBg = 'bg-surface-alt',
+  leftBg = 'bg-surface',
   rightBg = 'bg-surface-white',
+  className,
 }: ContrastSplitProps) {
   return (
-    <section className="py-section-mobile md:py-section px-container-mobile md:px-container">
+    <section className={`py-section-mobile md:py-section px-container-mobile md:px-container ${className ?? ''}`}>
       <div className="mx-auto max-w-site">
         <Reveal>
           <div className="grid md:grid-cols-2 rounded-brand-lg overflow-hidden">

@@ -96,7 +96,7 @@ export default function ManagementLeadershipPage() {
         ]}
       />
 
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
             Example scenarios
@@ -138,6 +138,7 @@ export default function ManagementLeadershipPage() {
       />
 
       <SplitContent
+        className="bg-surface-white"
         eyebrow="Built for how leaders actually learn"
         heading={<>Ultra-realistic voice AI</>}
         body="Real-time conversations where the AI adapts to tone and approach. Your managers train the way they lead: through voice."
@@ -160,6 +161,7 @@ export default function ManagementLeadershipPage() {
       />
 
       <SplitContent
+        className="bg-surface-white"
         heading={<>Body language analysis</>}
         body="Feedback on non-verbal communication including eye contact, posture, gestures, and facial expression. Essential for leaders who communicate on video."
         visualContent={
@@ -187,6 +189,7 @@ export default function ManagementLeadershipPage() {
       </Section>
 
       <StrategyOutcomes
+        className="bg-surface-white"
         eyebrow="Drive your L&D strategy"
         heading={
           <>

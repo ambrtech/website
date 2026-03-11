@@ -16,7 +16,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
       <BreadcrumbJsonLd items={items} />
       <nav
         aria-label="Breadcrumb"
-        className="pt-24 md:pt-28 px-container-mobile md:px-container"
+        className="pt-24 md:pt-28 px-container-mobile md:px-container bg-surface-white"
       >
         <div className="mx-auto max-w-site">
           <ol className="flex items-center gap-2 text-caption text-copy-light">

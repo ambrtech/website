@@ -156,6 +156,7 @@ export default function OtherIndustriesPage() {
 
       {/* Use cases — 2-col grid via FeatureGrid */}
       <FeatureGrid
+        className="bg-surface-white"
         eyebrow="Use cases"
         heading={
           <>
@@ -174,6 +175,7 @@ export default function OtherIndustriesPage() {
 
       {/* Try it yourself */}
       <TrialScenario
+        className="bg-surface-white"
         eyebrow="Try it yourself"
         characterName="Pat"
         characterRole="HR Director"

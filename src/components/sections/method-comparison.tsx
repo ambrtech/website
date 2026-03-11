@@ -11,11 +11,12 @@ interface MethodComparisonProps {
   eyebrow?: string
   heading?: React.ReactNode
   items: MethodComparisonItem[]
+  className?: string
 }
 
-export function MethodComparison({ eyebrow, heading, items }: MethodComparisonProps) {
+export function MethodComparison({ eyebrow, heading, items, className }: MethodComparisonProps) {
   return (
-    <Section>
+    <Section className={className}>
       <Reveal>
         {(eyebrow || heading) && (
           <div className="mb-12">
@@ -34,7 +35,7 @@ export function MethodComparison({ eyebrow, heading, items }: MethodComparisonPr
 
         <div className="border border-border rounded-brand overflow-hidden">
           {/* Header row */}
-          <div className="hidden md:grid grid-cols-[1fr_80px_2fr] gap-6 px-6 py-4 bg-surface-alt border-b border-border">
+          <div className="hidden md:grid grid-cols-[1fr_80px_2fr] gap-6 px-6 py-4 bg-surface-white border-b border-border">
             <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light">Method</span>
             <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light text-center">Status</span>
             <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light">Insight</span>

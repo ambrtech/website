@@ -11,9 +11,9 @@
   /* Colors — accent */
   --color-accent: #D47234;
   --color-accent-hover: #B4612C;
-  --color-accent-soft: #EAB99A;
-  --color-accent-tint: #F9EAE1;
-  --color-accent-whisper: #FCF5F1;
+  --color-accent-soft: #F0C4A0;
+  --color-accent-tint: #FAE8D8;
+  --color-accent-whisper: #FDF5EE;
 
   /* Colors — surface */
   --color-surface: #F7F7F5;
@@ -376,3 +376,4 @@ body {
   font-size: 0.85em;
   border: none;
 }
+

@@ -10,11 +10,12 @@ interface StrategyOutcomesProps {
   eyebrow?: string
   heading?: React.ReactNode
   items: StrategyOutcomesItem[]
+  className?: string
 }
 
-export function StrategyOutcomes({ eyebrow, heading, items }: StrategyOutcomesProps) {
+export function StrategyOutcomes({ eyebrow, heading, items, className }: StrategyOutcomesProps) {
   return (
-    <Section>
+    <Section className={className}>
       <Reveal>
         {(eyebrow || heading) && (
           <div className="mb-12">

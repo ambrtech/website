@@ -69,6 +69,8 @@ The risk with this direction is blandness through excessive warmth. The brands t
 - `npm run start` — serve production build locally
 - `npm run lint` — run ESLint
 
+**After every set of code changes, run `npm run build` so the user can immediately see the result.** Do not wait to be asked.
+
 ## Project Structure
 ```
 tailwind.config.ts    — brand tokens + Tailwind theme extension (canonical source of truth)

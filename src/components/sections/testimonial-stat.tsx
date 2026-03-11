@@ -3,11 +3,12 @@ import { Reveal } from '@/components/reveal'
 interface TestimonialStatProps {
   stat: { value: string; label: string }
   testimonials: { quote: string; role: string; company: string }[]
+  className?: string
 }
 
-export function TestimonialStat({ stat, testimonials }: TestimonialStatProps) {
+export function TestimonialStat({ stat, testimonials, className }: TestimonialStatProps) {
   return (
-    <section className="py-section-mobile md:py-section px-container-mobile md:px-container">
+    <section className={`py-section-mobile md:py-section px-container-mobile md:px-container ${className ?? ''}`}>
       <div className="mx-auto max-w-site">
         <Reveal>
           <div className="grid md:grid-cols-3 gap-12 md:gap-16 items-start">

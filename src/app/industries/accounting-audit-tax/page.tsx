@@ -100,6 +100,7 @@ export default function AccountingAuditTaxPage() {
 
       {/* ── Try it yourself ── */}
       <TrialScenario
+        className="bg-surface-white"
         characterName="Sarah"
         characterRole="CFO"
         characterInitials="SW"
@@ -142,6 +143,7 @@ export default function AccountingAuditTaxPage() {
 
       {/* ── Testimonial ── */}
       <PullQuote
+        className="bg-surface-white"
         quote="We love it. It's great that we can customize it for our needs."
         role="L&D Manager"
         company="Professional Services Firm"

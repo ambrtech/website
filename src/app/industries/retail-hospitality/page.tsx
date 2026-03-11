@@ -90,6 +90,7 @@ export default function RetailHospitalityPage() {
 
       {/* ── Try it yourself ── */}
       <TrialScenario
+        className="bg-surface-white"
         characterName="Rachel"
         characterRole="Frustrated Guest"
         characterInitials="RG"
@@ -132,6 +133,7 @@ export default function RetailHospitalityPage() {
 
       {/* ── Testimonial ── */}
       <CustomerStory
+        className="bg-surface-white"
         compact
         imageSrc="/images/customers/Jesse Strot.jpg"
         imageAlt="Jesse Strot, Soapy Joe's Car Wash"

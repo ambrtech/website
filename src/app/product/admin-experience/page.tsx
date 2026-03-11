@@ -80,6 +80,7 @@ export default function AdminExperiencePage() {
 
       {/* ── 3. Reporting ── */}
       <SplitContent
+        className="bg-surface-white"
         reversed
         eyebrow="Actionable analytics"
         heading={
@@ -138,6 +139,7 @@ export default function AdminExperiencePage() {
 
       {/* ── 4. Journeys and certifications ── */}
       <ShowcaseSplit
+        className="bg-surface-white"
         layout="left"
         filter="duotone"
         cropFocus="top-left"
@@ -164,7 +166,7 @@ export default function AdminExperiencePage() {
       />
 
       {/* ── 5. Integrations teaser ── */}
-      <Section className="bg-surface-alt border-y border-border">
+      <Section className="border-y border-border">
         <Reveal>
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>

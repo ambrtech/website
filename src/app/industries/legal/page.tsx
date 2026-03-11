@@ -100,6 +100,7 @@ export default function LegalPage() {
 
       {/* ── Try it yourself ── */}
       <TrialScenario
+        className="bg-surface-white"
         characterName="James"
         characterRole="General Counsel"
         characterInitials="JC"
@@ -142,6 +143,7 @@ export default function LegalPage() {
 
       {/* ── Testimonial ── */}
       <PullQuote
+        className="bg-surface-white"
         quote="We love it. It's great that we can customize it for our needs."
         role="L&D Manager"
         company="Consulting Firm"

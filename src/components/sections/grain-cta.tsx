@@ -14,7 +14,7 @@ interface GrainCtaProps {
 
 const variantConfig = {
   light: {
-    bg: 'bg-surface-alt',
+    bg: 'bg-surface',
     grainColor: 'rgba(180, 170, 150, 0.7)',
     heading: 'text-copy',
     subtitle: 'text-copy-mid',

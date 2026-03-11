@@ -17,6 +17,7 @@ interface ShowcaseSplitProps {
   filter?: ImageFilter
   textureImage?: string
   visualContent?: React.ReactNode
+  className?: string
 }
 
 export function ShowcaseSplit({
@@ -28,6 +29,7 @@ export function ShowcaseSplit({
   filter = 'faded',
   textureImage = '/images/textures/feature-texture.jpg',
   visualContent,
+  className,
 }: ShowcaseSplitProps) {
   const imageBox = (
     <div className="relative w-full aspect-[4/3] rounded-brand-lg overflow-hidden">
@@ -75,7 +77,7 @@ export function ShowcaseSplit({
       : 'md:grid-cols-[1fr_1.1fr]'
 
   return (
-    <Section>
+    <Section className={className}>
       <Reveal>
         <div className={`grid ${gridCols} gap-8 md:gap-20 items-start mb-12 md:mb-16`}>
           {layout === 'left' ? (

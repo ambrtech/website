@@ -56,6 +56,7 @@ export default function Home() {
       />
 
       {/* ── Customization ── */}
+      <div className="bg-surface-white">
       <Section>
         <Reveal>
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
@@ -134,6 +135,7 @@ export default function Home() {
             </Link>
           </Reveal>
         </div>
+      </div>
       </div>
 
       {/* ── Testimonials ── */}
@@ -302,7 +304,7 @@ export default function Home() {
       />
 
       {/* ── Why Ambr AI ── */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="grid md:grid-cols-[1fr_1fr] gap-6 md:gap-20 items-end mb-12 md:mb-14">
             <h2 className="font-heading text-section leading-[1.2] tracking-heading text-dark">

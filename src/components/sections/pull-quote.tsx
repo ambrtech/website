@@ -8,11 +8,12 @@ export interface PullQuoteProps {
   company?: string
   imageSrc?: string
   imageAlt?: string
+  className?: string
 }
 
-export function PullQuote({ quote, name, role, company, imageSrc, imageAlt }: PullQuoteProps) {
+export function PullQuote({ quote, name, role, company, imageSrc, imageAlt, className }: PullQuoteProps) {
   return (
-    <section className="py-section-lg md:py-section-xl px-container-mobile md:px-container">
+    <section className={`py-section-lg md:py-section-xl px-container-mobile md:px-container ${className ?? ''}`}>
       <div className="mx-auto max-w-[900px]">
         <Reveal slow>
           <blockquote className="relative">

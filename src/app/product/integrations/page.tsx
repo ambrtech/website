@@ -78,7 +78,7 @@ export default function IntegrationsPage() {
       />
 
       {/* ── Hero — split layout with mock ── */}
-      <section className="pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container">
+      <section className="pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container bg-surface-white">
         <div className="mx-auto max-w-site">
           <Reveal>
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-start">
@@ -106,7 +106,7 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── LMS Platforms — grid directly below hero ── */}
-      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
+      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container bg-surface-white">
         <div className="mx-auto max-w-site">
           <Reveal>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -165,7 +165,7 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── Single Sign-On ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt">
+      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-white">
         <div className="mx-auto max-w-site grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-20 items-start">
           <Reveal>
             <div>
@@ -229,7 +229,7 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── Don't See Your Platform? ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-alt">
+      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-white">
         <div className="mx-auto max-w-site max-w-[720px]">
           <Reveal>
             <div className="text-center">

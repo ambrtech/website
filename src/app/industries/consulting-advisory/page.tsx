@@ -100,6 +100,7 @@ export default function ConsultingAdvisoryPage() {
 
       {/* ── Try it yourself ── */}
       <TrialScenario
+        className="bg-surface-white"
         characterName="David"
         characterRole="Client Director"
         characterInitials="DC"
@@ -142,6 +143,7 @@ export default function ConsultingAdvisoryPage() {
 
       {/* ── Testimonial ── */}
       <PullQuote
+        className="bg-surface-white"
         quote="We love it. It's great that we can customize it for our needs."
         role="L&D Manager"
         company="Consulting Firm"

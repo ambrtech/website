@@ -54,6 +54,7 @@ export default function AIRoleplayPage() {
 
       {/* ── How it works ── */}
       <NumberedSteps
+        className="bg-surface-white"
         eyebrow="How it works"
         heading="How Ambr AI works"
         items={[
@@ -118,6 +119,7 @@ export default function AIRoleplayPage() {
 
       {/* ── Use cases ── */}
       <FeatureGrid
+        className="bg-surface-white"
         eyebrow="Use cases"
         heading={
           <>
@@ -220,7 +222,7 @@ export default function AIRoleplayPage() {
       />
 
       {/* ── Cross-links ── */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="grid md:grid-cols-2 gap-8">
             <Link

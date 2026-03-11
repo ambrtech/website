@@ -94,6 +94,7 @@ export default function OtherSolutionsPage() {
       />
 
       <SplitContent
+        className="bg-surface-white"
         eyebrow="Built to be customized"
         heading={<>Build it yourself</>}
         body="Admins create scenarios in minutes using the scenario builder. Define the context, character behavior, and feedback criteria — then assign to your team."
@@ -116,6 +117,7 @@ export default function OtherSolutionsPage() {
       />
 
       <SplitContent
+        className="bg-surface-white"
         heading={<>Individual scenarios</>}
         body="Users create private simulations for upcoming conversations. Describe the situation, define the other person, and start practicing immediately."
         visualContent={

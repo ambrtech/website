@@ -3,9 +3,9 @@ export const brand = {
     accent: {
       DEFAULT: '#D47234',
       hover: '#B4612C',
-      soft: '#EAB99A',
-      tint: '#F9EAE1',
-      whisper: '#FCF5F1',
+      soft: '#F0C4A0',
+      tint: '#FAE8D8',
+      whisper: '#FDF5EE',
     },
     surface: {
       DEFAULT: '#F7F7F5',

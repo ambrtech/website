@@ -81,7 +81,7 @@ export default function DataProtectionPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {dataTypes.map((item, i) => (
               <Reveal key={item.label} delay={i * 80}>
-                <div className="bg-surface-alt rounded-brand p-7 md:p-8 h-full">
+                <div className="bg-surface-white rounded-brand p-7 md:p-8 h-full">
                   <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-4">
                     {item.label}
                   </p>
@@ -96,7 +96,7 @@ export default function DataProtectionPage() {
       </section>
 
       {/* ── Retention, Control, and Residency ── */}
-      <section className="py-10 md:py-16 px-container-mobile md:px-container">
+      <section className="py-10 md:py-16 px-container-mobile md:px-container bg-surface-white">
         <div className="mx-auto max-w-site">
           <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-20 items-start">
             <Reveal>

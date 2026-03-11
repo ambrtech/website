@@ -349,7 +349,7 @@ export function HomepageV2() {
 
           <Reveal slow>
             <div className="relative">
-              <div className="relative overflow-hidden rounded-brand-lg border border-border bg-surface-alt p-4 md:p-6">
+              <div className="relative overflow-hidden rounded-brand-lg border border-border bg-surface-white p-4 md:p-6">
                 <div className="grid gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
                   <div className="relative min-h-[420px] overflow-hidden rounded-brand-lg">
                     <Image
@@ -400,7 +400,7 @@ export function HomepageV2() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-surface-alt px-container-mobile py-10 md:px-container md:py-14">
+      <section className="border-y border-border px-container-mobile py-10 md:px-container md:py-14">
         <div className="mx-auto max-w-site">
           <Reveal>
             <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
@@ -440,7 +440,7 @@ export function HomepageV2() {
         </div>
       </section>
 
-      <section className="bg-surface-alt px-container-mobile py-section-mobile md:px-container md:py-section-lg">
+      <section className="px-container-mobile py-section-mobile md:px-container md:py-section-lg">
         <div className="mx-auto max-w-site">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
             <SectionIntro
@@ -523,7 +523,7 @@ export function HomepageV2() {
             <Reveal className="h-full">
               <article
                 id="testimonial-skyscanner"
-                className="grid h-full gap-6 rounded-brand-lg border border-border bg-surface-alt p-6 md:grid-cols-[auto_1fr] md:p-8"
+                className="grid h-full gap-6 rounded-brand-lg border border-border bg-surface-white p-6 md:grid-cols-[auto_1fr] md:p-8"
               >
                 <div className="relative h-36 w-28 overflow-hidden rounded-brand-lg md:h-full md:min-h-[240px] md:w-44">
                   <Image
@@ -588,7 +588,7 @@ export function HomepageV2() {
         </div>
       </section>
 
-      <section className="bg-surface-alt px-container-mobile py-section-mobile md:px-container md:py-section-lg">
+      <section className="px-container-mobile py-section-mobile md:px-container md:py-section-lg">
         <div className="mx-auto max-w-site">
           <SectionIntro
             eyebrow="Solutions"
@@ -646,14 +646,14 @@ export function HomepageV2() {
 
             <Reveal delay={100}>
               <div className="mt-8 space-y-5">
-                <div className="rounded-brand border border-border bg-surface-alt px-5 py-4">
+                <div className="rounded-brand border border-border bg-surface-white px-5 py-4">
                   <p className="font-body-medium text-dark">Ultra-low latency.</p>
                   <p className="mt-1 text-body-sm leading-[1.75] text-copy-mid">
                     Responses are near-instant. No awkward pauses. The pacing feels
                     natural, just like a real conversation.
                   </p>
                 </div>
-                <div className="rounded-brand border border-border bg-surface-alt px-5 py-4">
+                <div className="rounded-brand border border-border bg-surface-white px-5 py-4">
                   <p className="font-body-medium text-dark">Adaptive AI characters.</p>
                   <p className="mt-1 text-body-sm leading-[1.75] text-copy-mid">
                     The AI responds to what your team members actually say and how they
@@ -661,14 +661,14 @@ export function HomepageV2() {
                     AI follows.
                   </p>
                 </div>
-                <div className="rounded-brand border border-border bg-surface-alt px-5 py-4">
+                <div className="rounded-brand border border-border bg-surface-white px-5 py-4">
                   <p className="font-body-medium text-dark">Genuine conversational pressure.</p>
                   <p className="mt-1 text-body-sm leading-[1.75] text-copy-mid">
                     Your team has to think on their feet, read the tone, and respond in
                     the moment. That is where real skills are built.
                   </p>
                 </div>
-                <div className="rounded-brand border border-border bg-surface-alt px-5 py-4">
+                <div className="rounded-brand border border-border bg-surface-white px-5 py-4">
                   <p className="font-body-medium text-dark">Body language analysis.</p>
                   <p className="mt-1 text-body-sm leading-[1.75] text-copy-mid">
                     Ambr AI reads how people come across visually alongside their voice,
@@ -708,7 +708,7 @@ export function HomepageV2() {
                     sizes="(max-width: 1024px) 100vw, 28vw"
                   />
                 </div>
-                <div className="rounded-brand-lg border border-border bg-surface-alt p-6">
+                <div className="rounded-brand-lg border border-border bg-surface-white p-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full border border-accent-soft bg-accent-whisper text-accent">
                     <ScanFace className="h-5 w-5" />
                   </div>
@@ -722,7 +722,7 @@ export function HomepageV2() {
         </div>
       </section>
 
-      <section className="bg-surface-alt px-container-mobile py-section-mobile md:px-container md:py-section-lg">
+      <section className="px-container-mobile py-section-mobile md:px-container md:py-section-lg">
         <div className="mx-auto max-w-site">
           <SectionIntro
             eyebrow="Why Ambr AI"

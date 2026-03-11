@@ -68,6 +68,7 @@ export default function HowItWorksPage() {
 
       {/* ── Step 2: Have the conversation ── */}
       <SplitContent
+        className="bg-surface-white"
         reversed
         eyebrow="Step 2"
         heading="Have the conversation"
@@ -119,7 +120,7 @@ export default function HowItWorksPage() {
       />
 
       {/* ── Why Voice ── */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
             Why voice
@@ -177,7 +178,7 @@ export default function HowItWorksPage() {
       />
 
       {/* ── Built for the People Who Run Training ── */}
-      <Section className="bg-surface-alt border-y border-border">
+      <Section className="bg-surface-white border-y border-border">
         <div className="grid gap-12 md:gap-20 items-start md:grid-cols-[1fr_1.2fr]">
           <Reveal>
             <div>

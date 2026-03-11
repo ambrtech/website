@@ -86,7 +86,7 @@ export default function CompanyPage() {
       </Section>
 
       {/* ── Who we are ── */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="max-w-2xl">
             <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
@@ -131,7 +131,7 @@ export default function CompanyPage() {
       </div>
 
       {/* ── Founders ── */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
             Leadership
@@ -194,7 +194,7 @@ export default function CompanyPage() {
       />
 
       {/* ── What we stand for ── */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <div className="grid md:grid-cols-2 gap-10 md:gap-20">
             <div>
@@ -225,7 +225,7 @@ export default function CompanyPage() {
       </Section>
 
       {/* ── Why we exist ── */}
-      <Section className="bg-surface-alt">
+      <Section>
         <Reveal>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
@@ -248,7 +248,7 @@ export default function CompanyPage() {
       </Section>
 
       {/* ── Global reach ── */}
-      <Section>
+      <Section className="bg-surface-white">
         <Reveal>
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
             Global reach

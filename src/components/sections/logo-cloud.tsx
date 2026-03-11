@@ -16,11 +16,12 @@ const logos: { src: string; alt: string; w: number }[] = [
 
 interface LogoCloudProps {
   label?: string
+  className?: string
 }
 
-export function LogoCloud({ label = 'Trusted by' }: LogoCloudProps) {
+export function LogoCloud({ label = 'Trusted by', className }: LogoCloudProps) {
   return (
-    <section className="px-container-mobile md:px-container py-8 md:py-12 bg-surface-alt">
+    <section className={`px-container-mobile md:px-container py-8 md:py-12 ${className ?? ''}`}>
       <div className="mx-auto max-w-site">
         <Reveal>
           {label && (

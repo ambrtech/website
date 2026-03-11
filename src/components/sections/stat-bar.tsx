@@ -13,7 +13,7 @@ export interface StatBarProps {
 
 export function StatBar({ heading, items }: StatBarProps) {
   return (
-    <section className="py-10 md:py-14 px-container-mobile md:px-container bg-surface-alt border-y border-border">
+    <section className="py-10 md:py-14 px-container-mobile md:px-container border-y border-border">
       <div className="mx-auto max-w-site">
         {heading && (
           <Reveal>

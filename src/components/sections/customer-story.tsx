@@ -14,6 +14,7 @@ export interface CustomerStoryProps {
   ctaLabel?: string
   /** Smaller image column (~1/3 width instead of 1/2) */
   compact?: boolean
+  className?: string
 }
 
 export function CustomerStory({
@@ -26,12 +27,13 @@ export function CustomerStory({
   href,
   ctaLabel = 'Customer Story',
   compact,
+  className,
 }: CustomerStoryProps) {
   return (
-    <section className="py-section-mobile md:py-section px-container-mobile md:px-container">
+    <section className={`py-section-mobile md:py-section px-container-mobile md:px-container ${className ?? ''}`}>
       <div className="mx-auto max-w-site">
         <Reveal>
-          <div className={`grid ${compact ? 'md:grid-cols-[1fr_2fr]' : 'md:grid-cols-2'} gap-10 md:gap-16 items-stretch rounded-brand-lg bg-surface-alt p-6 md:p-10 lg:p-12`}>
+          <div className={`grid ${compact ? 'md:grid-cols-[1fr_2fr]' : 'md:grid-cols-2'} gap-10 md:gap-16 items-stretch rounded-brand-lg bg-surface-white p-6 md:p-10 lg:p-12`}>
             <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[320px] w-full overflow-hidden rounded-brand-lg">
               <Image
                 src={imageSrc}

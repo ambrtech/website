@@ -12,11 +12,12 @@ export interface TestimonialGridProps {
   eyebrow?: string
   heading?: string
   testimonials: TestimonialItem[]
+  className?: string
 }
 
-export function TestimonialGrid({ eyebrow, heading, testimonials }: TestimonialGridProps) {
+export function TestimonialGrid({ eyebrow, heading, testimonials, className }: TestimonialGridProps) {
   return (
-    <Section className="bg-surface-white">
+    <Section className={className}>
       {(eyebrow || heading) && (
         <div className="max-w-xl mb-16 md:mb-20">
           <Reveal>

@@ -1374,3 +1374,352 @@ A candid lomography-style photograph of six or seven professionals in the atrium
 ### 140. `after-session-relief.jpg`
 
 A candid lomography-style photograph of a Black man in his early 30s alone in a small modern meeting room or focus room — he has just finished something. He leans back in his chair, headphones around his neck, one hand resting on the table, expression somewhere between tired and satisfied. A notebook in front of him with a pen. A glass of water. The room behind him has the quiet of a space just used. Shot from the glass partition outside, focus on the glass, the man soft inside. Shot on Fuji Pro 400H film with a 50mm lens at f/2. Warm interior light, slightly cooler from the glass side. Uncorrected. Visible grain, matte. 3:2 aspect ratio. No text, no logos, no screens. The image bleeds to all four edges — no border, no vignette, no frame.
+
+---
+
+## Abstract Texture Library
+
+### 221. `abstract-breath-ink-dispersion.jpg` (use --pro)
+
+An abstract fine art photograph of ink dispersing slowly in still water. The ink is warm charcoal grey, diffusing into a pale cream liquid in soft, organic plumes that suggest the movement of exhaled breath. No recognisable objects or figures. The forms are soft-edged, vaporous, and asymmetric. Shot from directly above as a flat lay, macro lens, shallow depth of field. The overall palette is strictly muted: warm cream background with soft grey and faint bronze tones in the dispersing ink. Minimal contrast. The texture should feel meditative and still, like watching breath in cold air. Fine art photography, 4K resolution, 16:9 aspect ratio.
+
+---
+
+### 222. `abstract-breath-sumi-wash.jpg` (use --pro)
+
+Abstract mixed-media artwork on heavy cream watercolour paper. Diluted sumi ink washes create soft, atmospheric cloud-like forms that drift horizontally across the surface, evoking the sensation of whispered air or breath in motion. The marks are loose, translucent, and layered with visible paper grain showing through. Colour palette limited to warm grey, diluted charcoal, and the natural cream of the paper. No text, no geometric shapes, no digital artefacts. The composition should feel open and airy with at least 40% negative space. Scanned fine art print aesthetic. 4K, 16:9.
+
+---
+
+### 223. `abstract-breath-smoke-wisp.jpg`
+
+Extreme macro photograph of smoke trails in warm-toned studio lighting. A single delicate wisp of pale grey smoke curls and disperses against a soft cream background. Shot on medium format camera, 120mm macro lens, f/2.8. Lighting: single soft diffused light from the left casting no harsh shadows. The smoke has faint warm bronze undertones where the light catches it. Very low contrast, muted desaturated palette, meditative stillness. No objects, no text. The image should feel like captured breath. 4K resolution, 16:9 widescreen format.
+
+---
+
+### 224. `abstract-breath-watercolour-vapour.jpg`
+
+Abstract watercolour wash on textured paper. Wet-on-wet technique creates soft atmospheric bleeds and diffusions in diluted warm grey and faint copper pigment on a cream ground. The forms are entirely non-representational, suggesting gentle air movement or vapour. Visible paper fibre texture. Scanned artwork aesthetic with natural imperfections. Very low saturation, warm tone. No text, no figures, no hard edges. 4K, 3:2 landscape format.
+
+---
+
+### 225. `abstract-paper-translucent-layers.jpg` (use --pro)
+
+A flat-lay fine art photograph of overlapping sheets of aged translucent paper arranged on a warm cream surface. The papers are handmade, with visible fibres, torn irregular edges, and varying degrees of transparency. Some sheets have faint, illegible fragments of handwritten text or printed characters bleeding through from underneath, too diffused to read. The papers overlap creating subtle depth through layered translucency. Colour palette: warm parchment tones, pale ivory, soft cream, faint grey ink marks. Lit from above with soft even lighting, no harsh shadows. The texture should feel tactile and archival. Shot overhead on a medium format camera. 4K resolution, 16:9 format. No bright colours, no digital effects.
+
+---
+
+### 226. `abstract-paper-washi-collage.jpg` (use --pro)
+
+Abstract collage artwork using torn fragments of Japanese washi paper, old ledger pages, and translucent tissue in cream, warm white, and pale bronze tones. The papers are layered so earlier marks and text fragments show through as ghostly impressions. Some areas have faint graphite marks or soft pencil lines. The overall effect is archaeological: layers of communication partially revealed, partially obscured. All text fragments should be illegible, functioning as pure texture. Matte surface, visible adhesive marks and paper grain. Warm neutral palette only. 4K, 1:1.
+
+---
+
+### 227. `abstract-paper-lightbox-layers.jpg`
+
+Close-up photograph of layered translucent papers on a light box. Multiple sheets of handmade paper with torn edges, each slightly offset, creating subtle depth. Faint ink marks and illegible handwritten fragments visible between layers. Shot on 90mm macro lens, f/4, soft diffused overhead lighting. Colour palette strictly warm neutrals: cream, parchment, pale ivory, faint grey ink. Visible paper fibres and natural texture. The effect is archaeological and layered. No bright colours, no recognisable text. Low contrast, muted. 4K, 16:9.
+
+---
+
+### 228. `abstract-paper-vintage-scan.jpg`
+
+Overhead scan of a collage made from torn vintage paper scraps, old letters, and translucent tissue. Warm parchment tones with faint graphite pencil marks and ghost impressions of text showing through overlapping layers. Handmade aesthetic with visible tears, wrinkles, and adhesive residue. Flatbed scanner reproduction quality, perfectly sharp and even. Strictly muted warm neutrals, no saturated colour. Texture-forward, meditative. 4K, 3:2.
+
+---
+
+### 229. `abstract-cymatics-sand-plate.jpg` (use --pro)
+
+A scientific art photograph of cymatics: fine sand or powder arranged into intricate geometric interference patterns on a flat metal plate, as if shaped by resonant sound frequencies. The patterns are concentric, radial, and complex, resembling organic cellular structures or mandalas. Shot from directly overhead, macro lens, extremely sharp. The sand is warm grey on a cream-toned plate. Lighting is soft and even, creating subtle shadows in the sand ridges. The palette is strictly monochromatic warm neutrals. This should look like a fine art science photograph, beautiful and precise. No digital effects, no post-processing glow. 4K, 1:1 square format.
+
+---
+
+### 230. `abstract-cymatics-wave-interference.jpg` (use --pro)
+
+Abstract generative art inspired by wave interference patterns. Delicate overlapping concentric ripples create complex moire and interference textures across the entire canvas. The lines are very fine, like etched copper plate engravings. Rendered in warm bronze and charcoal lines on a cream ground. The patterns should suggest sound wave visualisation or water surface resonance. Extremely detailed and intricate at close inspection but reading as a unified soft texture at a distance. No text, no recognisable objects. The feel is scientific, elegant, and human. 4K, 16:9.
+
+---
+
+### 231. `abstract-cymatics-bronze-powder.jpg`
+
+Extreme close-up photograph of cymatics experiment. Fine bronze-coloured powder forming intricate resonance patterns on a cream-coloured metal plate vibrated by sound. The powder collects along nodal lines creating beautiful, mandala-like geometric formations. Shot on macro lens, 100mm, f/5.6, overhead studio lighting, soft and even. The palette is strictly warm neutral: bronze powder on cream surface. Sharp detail showing individual grains of powder. Scientific fine art photography aesthetic. No digital manipulation. 4K, 1:1 square.
+
+---
+
+### 232. `abstract-cymatics-line-moire.jpg`
+
+Delicate line-art pattern of overlapping concentric circles creating a wave interference moire effect. Very fine lines, like a copper plate engraving, in warm bronze on a cream parchment background. The pattern is complex and intricate up close but reads as a soft organic texture from a distance. Inspired by acoustic wave visualisation. Extremely detailed, precise, and elegant. No text, no figures. The aesthetic is somewhere between scientific diagram and fine art print. 4K, 16:9.
+
+---
+
+### 233. `abstract-gestural-linen-strokes.jpg` (use --pro)
+
+Abstract expressionist painting on raw linen canvas. Loose, energetic gestural brushstrokes sweep across the surface in broad horizontal movements, layered and overlapping. The paint is applied with varying pressure: some strokes are thick and opaque, others are dry-brushed and translucent, revealing the warm canvas weave beneath. Palette limited to charcoal black, warm grey, and touches of muted bronze on a natural linen ground. The marks suggest rhythm and movement, like a hand conducting music. Inspired by Cy Twombly and Franz Kline but softer, more meditative. No text, no recognisable imagery. Visible canvas texture throughout. Photographed straight-on, even gallery lighting. 4K, 16:9.
+
+---
+
+### 234. `abstract-gestural-charcoal-field.jpg` (use --pro)
+
+Mixed media artwork on heavy cream paper. Energetic charcoal and ink marks made with broad brushes and dragged tools create a field of gestural movement across the surface. Some areas are dense and dark, others are gossamer-light dry brush marks. The overall rhythm is horizontal, suggesting a waveform or frequency pattern without being literal. Palette: charcoal, warm grey, faint oxidised bronze, on cream paper. Visible paper grain, charcoal dust, smudge marks from the artist's hand. Raw, physical, human. No text, no geometric precision. 4K, 3:2.
+
+---
+
+### 235. `abstract-gestural-oil-closeup.jpg`
+
+Close-up photograph of an abstract painting on raw linen. Broad gestural brushstrokes in charcoal black and warm grey oil paint sweep horizontally across a natural linen canvas. Some strokes are thick impasto, others are translucent dry brush revealing canvas weave. Shot on medium format camera, 80mm lens, f/4, soft gallery lighting from above. Warm tone colour grading. Visible paint texture, canvas fibres, and subtle brush hair marks. The marks feel rhythmic and human, like captured movement. No text, no recognisable objects. Muted palette. 4K, 16:9.
+
+---
+
+### 236. `abstract-gestural-charcoal-macro.jpg`
+
+Macro photograph of charcoal marks on thick cream paper. Bold, loose gestural strokes and smudges fill the frame. You can see individual charcoal particles, smudge marks from fingertips, and the texture of the paper grain. The marks are energetic but meditative, suggesting rhythm rather than representation. Shot on 100mm macro, f/2.8, soft directional light from the left. Warm, low contrast colour grading. No text, no figures. Raw artistic process captured. 4K, 3:2.
+
+---
+
+### 237. `abstract-textile-linen-weave.jpg` (use --pro)
+
+An extreme close-up fine art photograph of raw linen fabric. The weave is clearly visible: warp and weft threads interlocking in a regular but imperfect handwoven pattern. The fabric is natural, unbleached, in warm cream and pale oatmeal tones. Shot from directly above with a macro lens, perfectly sharp across the entire frame. Soft, even studio lighting reveals the three-dimensional texture of individual threads. Some threads are slightly thicker or looser than others, showing the handmade quality. The image should feel tactile, warm, and premium. No objects, no styling, just the pure fabric surface filling the frame. 4K, 16:9.
+
+---
+
+### 238. `abstract-textile-silk-weave.jpg` (use --pro)
+
+Macro photograph of handwoven silk fabric with an irregular, artisanal weave structure. The threads alternate between warm cream and soft bronze tones, creating a subtle two-tone pattern. The surface catches light differently depending on thread direction, creating a gentle sheen. Some imperfections are visible: slightly uneven thread spacing, natural slubs in the silk. The overall effect is luxurious and tactile. Shot overhead with soft diffused lighting. The texture should read as premium, human, and warm. No other objects. 4K, 1:1.
+
+---
+
+### 239. `abstract-textile-linen-macro.jpg`
+
+Extreme macro photograph of handwoven linen fabric. Shot on 100mm macro lens, f/5.6, focus stacked for sharpness across the entire frame. Soft overhead studio lighting reveals the three-dimensional texture of each thread. Natural unbleached linen in warm cream and oatmeal tones. The weave pattern is regular but imperfect, with visible handmade character. Individual fibres and thread twist visible at this magnification. Warm colour grading, minimal contrast. Filling the entire frame edge to edge. No objects, no props. 4K, 16:9.
+
+---
+
+### 240. `abstract-textile-silk-blend.jpg`
+
+Close-up photograph of raw silk and linen blend fabric with visible weave texture. Two-tone: warm cream warp and pale bronze weft threads create a subtle colour interplay. Shot on medium format camera with 90mm macro lens, shallow depth of field with gentle softness at the edges. Natural window lighting from the left creates soft shadows in the fabric texture. The fabric has natural imperfections: slubs, slight irregularity, visible handwoven character. Warm, tactile, premium feel. 4K, 3:2.
+
+---
+
+### 241. `abstract-topo-charcoal-contours.jpg` (use --pro)
+
+Abstract line artwork inspired by topographic contour maps. Very fine, continuous lines in warm charcoal grey flow across a cream background, creating organic undulating contour patterns that suggest terrain or elevation mapping. The lines are thin and precise but hand-drawn, with subtle wobble and variation in weight. Some areas are densely packed (steep terrain), others are widely spaced (plateaus). The overall effect is minimal, elegant, and cartographic. No labels, no text, no grid references. Just the pure contour lines as abstract pattern. Palette limited to warm grey lines on cream ground. 4K, 16:9.
+
+---
+
+### 242. `abstract-topo-etched-contours.jpg` (use --pro)
+
+Minimalist abstract illustration of topographic contour lines rendered as if etched into cream paper with a fine pen. The contours form organic, flowing patterns across the full canvas, suggesting an abstract landscape viewed from above. Line weight varies subtly: some lines are darker and bolder where contours compress together, creating areas of visual density. Occasional faint bronze lines interrupt the charcoal, adding subtle warmth. No text, no cartographic notation, no colour fills. The aesthetic is somewhere between scientific mapping and fine art screen print. Clean, precise, contemplative. 4K, 16:9.
+
+---
+
+### 243. `abstract-topo-pen-contours.jpg`
+
+Fine art print of abstract topographic contour lines. Very thin, continuous hand-drawn lines in warm charcoal grey on heavy cream paper. The lines flow in organic, undulating parallel patterns suggesting terrain elevation, densely packed in some areas and widely spaced in others. The paper texture is visible throughout. Drawn with a fine technical pen with slight natural hand variation. No text, no labels, no colour. Scanned print aesthetic, perfectly sharp and flat. Minimal, elegant, cartographic abstraction. 4K, 16:9.
+
+---
+
+### 244. `abstract-topo-letterpress-bronze.jpg`
+
+Photograph of a letterpress or risograph print on thick cream paper. The print shows abstract contour lines in warm bronze ink, forming flowing organic topographic patterns. The ink has slight impression into the paper surface, visible at close inspection. Line quality is precise but with the slight imperfection of physical printing. Paper texture is prominent. Shot flat with even lighting, no shadows. Warm, minimal, artisanal craft aesthetic. 4K, 3:2.
+
+---
+
+### 245. `abstract-fingerprint-ink-macro.jpg` (use --pro)
+
+Abstract fine art photograph of a greatly enlarged fingerprint impression. The print is made with warm charcoal ink on cream paper, then photographed at extreme macro scale so the whorl patterns fill the entire frame as an abstract landscape. The ridges and valleys of the print become flowing, organic contour patterns. The ink coverage is uneven: some ridges are bold and dark, others are faint and broken, creating natural variation. The paper grain is visible in the gaps between ridges. No other elements, no text, no digital enhancement. The image should feel deeply human and intimate. Warm neutral palette only. 4K, 16:9.
+
+---
+
+### 246. `abstract-fingerprint-dissolving.jpg` (use --pro)
+
+Mixed media artwork: a single thumbprint pressed in matte bronze pigment onto heavy cream watercolour paper, then overlaid with delicate pencil marks and faint ink washes that extend the whorl patterns outward, as if the fingerprint is dissolving or radiating into the surrounding space. The central print is recognisable but the edges become abstract, gestural. The overall composition is centred with ample negative space. Palette: warm bronze, soft graphite grey, cream paper. The tone is contemplative, not forensic. No text. Photographed with even gallery lighting. 4K, 1:1.
+
+---
+
+### 247. `abstract-fingerprint-ridges-macro.jpg`
+
+Extreme macro photograph of a fingerprint impressed in warm grey ink on cream paper. Shot on 100mm macro lens, f/4, with soft overhead lighting. At this magnification the fingerprint ridge patterns become abstract flowing lines, like a topographic map or sound wave. The ink coverage varies naturally: some ridges are bold, others are broken and faint. Paper fibre texture visible between the ridges. Warm colour grading, low contrast. The image feels intimate and human. No text, no digital effects. 4K, 16:9.
+
+---
+
+### 248. `abstract-fingerprint-bronze-thumbprint.jpg`
+
+Photograph of a bronze ink thumbprint on thick cream handmade paper. The print is slightly imperfect, with natural pressure variation and partial coverage typical of a real thumbprint. Surrounding the print, the paper is clean with visible deckle edges at the frame margins. Shot from directly overhead on medium format camera, 80mm lens. Soft, warm lighting. The composition is centred with generous negative space. Minimal, intimate, human. No other marks or objects. 4K, 1:1 square.
+
+---
+
+## Abstract Textures v2
+
+### 249. `v2-breath-ink-bloom.jpg` (use --pro)
+
+A fine art photograph shot from the side through a glass vessel of still, pale cream-tinted water. A single drop of warm charcoal ink has just been released and is blooming downward in a slow, organic plume — tendrils of grey and faint bronze unfurling like an exhaled breath made visible. The ink forms are asymmetric, delicate, and vaporous. Shot on macro lens, shallow depth of field, the glass edge softly out of focus at the left of frame. Soft diffused studio lighting from behind creates gentle luminosity in the water. Palette strictly muted: cream water, warm charcoal ink, faint bronze where light passes through the thinnest plumes. Meditative, still, slow. No objects, no text. The image fills the entire frame edge to edge. No visible container edges, borders, or surrounding surface. 4K, 16:9.
+
+---
+
+### 250. `v2-breath-milk-diffusion.jpg` (use --pro)
+
+An extreme close-up fine art photograph of cream or milk being poured into a dark liquid — tea or diluted ink — captured at the moment of slow diffusion. The cream creates soft, billowing cloud-like forms as it disperses, organic and breath-like. Shot from directly above, macro lens, the swirling forms fill the entire frame. The palette is warm: deep amber-brown liquid, cream-white diffusion clouds with soft golden edges where the two liquids meet. Low contrast, muted, no harsh tones. The forms should feel like watching breath disperse in cold air, but in liquid. No cup edges, no spoon, no objects. The image fills the entire frame edge to edge. No visible container edges, borders, or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 251. `v2-breath-condensation-glass.jpg` (use --pro)
+
+A macro photograph of breath condensation on cold glass. The moisture has formed a soft, diffused field of tiny droplets on a smooth surface, with areas of varying density — some patches dense and opaque, others gossamer-thin where the breath was lighter. Through the condensation, warm amber light glows from behind, creating a soft luminous quality. The droplets catch light individually at close inspection. No fingerprints, no writing in the condensation, no visible frame or window edge. Shot on 100mm macro, f/2.8, focus on the droplet surface. Palette: warm amber glow through translucent white-grey condensation. The mood is intimate and human — the trace of a person's presence. The image fills the entire frame edge to edge. No visible glass edges, borders, or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 252. `v2-breath-pigment-unfurl.jpg` (use --pro)
+
+A fine art photograph of a single drop of diluted bronze pigment unfurling in perfectly still water, captured from above. The pigment creates delicate, feathered tendrils that radiate outward in organic fractal patterns, like a slow-motion explosion of warmth. The water is pale cream-tinted. The pigment tendrils are warm bronze and soft charcoal, with the finest edges becoming translucent and ghostly. The overall composition is roughly centred but asymmetric — nature never makes perfect circles. Shot on macro lens from directly overhead, shallow depth of field. Very low contrast, muted, meditative. No objects, no text. The image fills the entire frame edge to edge. No visible container edges, borders, or surrounding surface. The texture IS the image. 4K, 1:1.
+
+---
+
+### 253. `v2-breath-frost-trace.jpg` (use --pro)
+
+An extreme macro photograph of frost crystals forming on glass, as if from warm breath meeting a cold surface. The ice crystals create intricate, fern-like dendritic patterns that branch and spread across the frame. The crystals are translucent white with faint warm tones where ambient light catches their edges. The background through the glass is a soft, warm amber blur. Individual crystal structures are visible at this magnification — hexagonal branches, feathered edges, natural geometric beauty. The overall effect is the frozen trace of human breath made beautiful. Shot on 100mm macro, f/4, focus stacked. No visible glass edges or frame. The image fills the entire frame edge to edge. No borders, no surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 254. `v2-two-inks-conversation.jpg` (use --pro)
+
+A fine art photograph shot from above of two different inks meeting in still water. From the left, warm charcoal grey ink diffuses inward. From the right, diluted bronze-copper ink diffuses inward. The two plumes are approaching each other, their leading tendrils just beginning to intertwine and merge in the centre of the frame. The forms are organic, vaporous, asymmetric. Where the two inks meet, they create subtle new tones — neither fully grey nor bronze. The water is pale cream. The metaphor is two voices in conversation, meeting in the middle. Macro lens, overhead, shallow depth of field. Muted, meditative, slow. No objects, no text. The image fills the entire frame edge to edge. No visible container edges, borders, or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 255. `v2-ripple-interference.jpg` (use --pro)
+
+A fine art photograph of two sets of concentric ripples meeting on the surface of still, cream-tinted water. Two drops have fallen at different points, and the expanding circular waves are intersecting, creating a beautiful interference pattern of overlapping rings. Where the wave crests meet, the water surface catches warm studio light in bright lines. Where they cancel, the surface is smooth and dark. The pattern is mathematical but organic — perfectly natural physics made visible. Shot from above, macro lens, the water surface filling the entire frame. Soft warm lighting from one side. Palette: warm cream water, soft highlights where ripples catch light. No objects, no visible container. The image fills the entire frame edge to edge. No borders or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 256. `v2-cymatics-sand-fullbleed.jpg` (use --pro)
+
+An extreme close-up photograph of cymatics: fine warm-grey sand arranged into intricate geometric interference patterns by resonant sound frequencies. Shot so close that no edges of the plate are visible — the sand patterns fill the entire frame as an abstract landscape. The patterns are concentric, radial, and complex, resembling organic cellular structures. Individual sand grains are visible at this magnification, catching soft overhead light. The sand is warm grey and pale bronze tones on a cream surface. Subtle shadows in the ridges create three-dimensional depth. This should look like a beautiful, alien landscape seen from above. No plate edges, no equipment. The image fills the entire frame edge to edge. No borders or surrounding surface. The texture IS the image. 4K, 1:1.
+
+---
+
+### 257. `v2-cymatics-water-vibration.jpg` (use --pro)
+
+A fine art photograph of standing wave patterns on a thin layer of water vibrated by sound. The water surface forms intricate geometric nodes and anti-nodes, creating a grid-like pattern of raised peaks and still valleys. Shot from directly above with macro lens, the water catches warm studio light at the peaks, creating a constellation of bright points against the darker still areas. The overall pattern is regular but organic — the kind of beautiful order that sound imposes on liquid. Palette: warm cream water surface, bright warm highlights at wave peaks, soft shadows in the valleys. No visible container edges. The image fills the entire frame edge to edge. No borders or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 258. `v2-wax-seal-impression.jpg` (use --pro)
+
+An extreme macro photograph of an embossed wax seal on cream paper. The wax is a muted, warm bronze tone — not bright red. The seal impression shows intricate fine details: text fragments (illegible at this scale), decorative borders, a central motif. Shot from a slight angle to reveal the three-dimensional relief of the impression, with soft directional light from the left casting subtle shadows in the recessed areas. The wax has natural imperfections: slight cracks, uneven edges, the organic quality of a hand-pressed seal. The paper surface is visible around the seal, heavy and textured. Warm, tactile, authoritative. The mood is trust and formality. The image fills the entire frame edge to edge. No visible page edges, borders, or surrounding surface. 4K, 3:2.
+
+---
+
+### 259. `v2-fingerprint-two-overlapping.jpg` (use --pro)
+
+Abstract fine art photograph of two overlapping fingerprint impressions on cream paper. The first print is in warm charcoal ink, the second — slightly offset and rotated — is in diluted bronze pigment. Where the two prints overlap, the ridge patterns create a complex moire interference, a visual metaphor for two identities meeting. The prints are greatly enlarged so the whorl patterns fill the frame as abstract flowing lines. Both prints have natural variation: some ridges bold, others faint and broken. The paper grain is visible between the ridges. No other elements, no text. Warm neutral palette. The image fills the entire frame edge to edge. No visible paper edges, borders, or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 260. `v2-palimpsest-dialogue.jpg` (use --pro)
+
+A fine art flat-lay photograph of overlapping translucent papers, each bearing faint handwritten text in different hands — one in warm grey ink, another in diluted bronze, a third in soft graphite pencil. The papers are handmade with torn edges, layered so all three scripts are partially visible simultaneously, creating a visual palimpsest of multiple voices. No text should be legible — it functions as pure texture, suggesting layers of conversation and accumulated meaning. The papers vary in opacity, creating depth. Lit from above, soft and even. Palette: warm cream, ivory, parchment, grey ink, bronze ink, graphite. The image fills the entire frame edge to edge. No visible table surface, borders, or surrounding area. The texture IS the image. 4K, 16:9.
+
+---
+
+### 261. `v2-sand-voice-pattern.jpg` (use --pro)
+
+A fine art overhead photograph of fine sand on a flat surface, arranged into flowing, wave-like patterns as if shaped by sound or wind. The patterns are not geometric like cymatics but organic and directional — flowing lines, gentle curves, areas of density and sparseness that suggest the rhythm and cadence of speech. The sand is warm grey and pale bronze on a cream ground. Individual grains catch soft overhead light. The patterns should feel like a visual transcription of someone speaking — rhythm, pause, emphasis — rendered in sand. No objects, no visible surface edges. The image fills the entire frame edge to edge. No borders or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 262. `v2-contour-fullbleed-bronze.jpg` (use --pro)
+
+Abstract topographic contour lines filling the entire frame. Very fine, continuous hand-drawn lines in warm bronze and charcoal flow across a cream ground, creating organic undulating patterns that suggest navigating complex terrain. Line weight varies: some contours are fine and delicate, others are bolder where they compress together. The lines have subtle hand-drawn wobble, not computer-perfect. Some areas are densely packed, others open and spacious. The aesthetic is somewhere between cartography and fine art etching. No labels, no text, no grid references. No visible paper edges — the pattern extends to all four edges of the frame as if it continues beyond. The texture IS the image. 4K, 16:9.
+
+---
+
+### 263. `v2-echo-single-drop.jpg` (use --pro)
+
+A fine art photograph of the moment after a single drop has fallen into perfectly still, warm-tinted water. Concentric ripples radiate outward from the impact point, each ring perfectly circular and evenly spaced, diminishing in amplitude as they expand. The water surface catches warm light at each ripple crest, creating luminous concentric circles on a calm surface. The drop impact point is slightly off-centre. The metaphor is echo, resonance, the way a single voice radiates outward. Shot from directly above, macro lens. Palette: warm cream water, soft bright rings where light catches the ripples. The image fills the entire frame edge to edge. No visible container edges, borders, or surrounding surface. The texture IS the image. 4K, 1:1.
+
+---
+
+### 264. `v2-marginalia-feedback.jpg` (use --pro)
+
+An extreme close-up photograph of handwritten margin notes on aged cream paper. Multiple layers of annotation in different inks and hands: warm grey ink, diluted bronze, soft graphite pencil, faint red-brown. The notes are densely packed in the margins around a column of faint printed text (illegible). Underlines, brackets, small arrows, circled words — the visual language of close reading and feedback. All text is too small or blurred to read, functioning as pure texture suggesting deep engagement with ideas. The paper has natural age and texture. Shot on macro lens, shallow depth of field. The image fills the entire frame edge to edge. No visible page edges, borders, or book spine. The texture IS the image. 4K, 3:2.
+
+---
+
+### 265. `v2-pressed-botanical.jpg` (use --pro)
+
+A fine art flat-lay photograph of pressed botanical specimens arranged on cream paper. Delicate dried leaves, small flowers, and stems in muted warm tones: pale sage green faded to grey-green, dried bronze-brown petals, cream-coloured seed heads. The specimens are arranged with generous spacing, like a naturalist's collection. They are flattened by pressing, translucent in places where light passes through thin petals. The paper beneath has a subtle handmade texture. Warm, organic, intimate — the trace of real things preserved. Shot from above with soft even lighting. Palette: muted sage, dried bronze, warm cream, soft grey-green. The image fills the entire frame edge to edge. No visible paper edges, borders, or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 266. `v2-thread-through-paper.jpg` (use --pro)
+
+A macro photograph of a single thread being pulled through heavy cream paper, captured in the act. The thread is warm bronze-copper, and where it passes through the paper it has created a small puncture with fibres splaying outward. The thread curves gracefully across the paper surface before and after the puncture point. Around it, the paper is pristine but with visible handmade texture and subtle fibre. The metaphor is connection — something passing through a barrier, linking two sides. Shot on macro lens, very shallow depth of field, soft warm lighting from the left. The thread catches light along its surface. The image fills the entire frame edge to edge. No visible paper edges, borders, or surrounding surface. The texture IS the image. 4K, 3:2.
+
+---
+
+### 267. `v2-light-caustics-water.jpg` (use --pro)
+
+A fine art photograph of light caustics — the dancing, rippling light patterns that form when sunlight passes through shallow moving water and projects onto a surface below. The patterns are organic, constantly shifting networks of bright warm lines on a cream-coloured ground, creating an intricate web of refracted light. The forms are reminiscent of neural networks or conversation maps but entirely natural. Warm golden light, soft edges, no harsh contrast. The effect should feel like dappled sunlight through water on a warm day. No water visible, just the projected light pattern on the surface. The image fills the entire frame edge to edge. No visible surface edges, borders, or surrounding area. The texture IS the image. 4K, 16:9.
+
+---
+
+### 268. `v2-graphite-frottage.jpg` (use --pro)
+
+A fine art photograph of a graphite frottage — a rubbing made by placing paper over a textured surface and rubbing with soft pencil to reveal the hidden pattern beneath. The texture revealed is organic: wood grain, or stone, or embossed lettering — something with natural variation and depth. The graphite is warm grey with bronze undertones, applied with varying pressure so some areas are dense and dark while others are light and ghostly. The paper grain shows through everywhere. The concept is revealing what is hidden, making the invisible visible. Shot from above, perfectly flat, even lighting. The image fills the entire frame edge to edge. No visible paper edges, borders, or surrounding surface. The texture IS the image. 4K, 3:2.
+
+---
+
+### 269. `v2-marginalia-scenario-feedback.jpg` (use --pro)
+
+A fine art flat-lay photograph of a printed document on heavy cream paper, showing a training scenario brief. The document contains legible printed text in a clean serif font, warm charcoal ink. The main body text reads:
+
+"Unsuccessful promotion news
+
+Morgan, a good employee on your team, hasn't received the internal promotion she applied for. She wasn't quite ready for this step up however she's valued by the company and has potential for future advancement. You've scheduled this meeting to deliver the news.
+
+Objectives:
+1. Communicate the unsuccessful promotion application while maintaining a positive atmosphere
+2. Provide constructive feedback and develop a plan for Morgan's future growth
+
+Key Details:
+- Morgan didn't receive the promotion she applied for
+- She's a good employee with potential for future advancement
+- You need to maintain her motivation despite the disappointment
+- Provide constructive feedback on areas for development
+- Outline a path for her future growth and development"
+
+In the margins and between lines, handwritten annotations in different inks mark up the scenario like a director's notes. In warm bronze ink, a note next to "hasn't received the internal promotion" reads "not defensive enough — needs to push back harder when told". In graphite pencil near "maintain a positive atmosphere" an arrow points with the note "add detail: she gets visibly upset at first". Near "areas for development" a bracketed note in grey ink reads "tweak: mention her email communication specifically". Near "future growth" a small circled note reads "make Morgan ask about timeline". The handwriting is natural, slightly hurried, clearly human. The annotations feel like a real person customising a training scenario — arrows, underlines, brackets, small crosses. Shot from above on medium format camera, soft even lighting. Warm cream paper, charcoal print, bronze and graphite annotations. The image fills the entire frame edge to edge. No visible paper edges, desk surface, borders, or surrounding area. The texture IS the image. 4K, 3:2.
+
+---
+
+### 270. `v2-sand-voice-wave-a.jpg` (use --pro)
+
+A fine art overhead photograph of fine sand on a flat surface, shaped into flowing patterns that subtly evoke the amplitude and rhythm of a human voice waveform. The sand forms gentle, undulating ridges that rise and fall with the organic cadence of speech — wider, taller ridges where the voice is louder or more emphatic, tighter and shallower where it softens or pauses. The pattern flows horizontally across the frame like a landscape, not like a literal audio waveform icon. The sand is warm grey and pale bronze on a cream ground. Individual grains catch soft overhead light, creating subtle highlights along the ridge crests. The valleys between ridges are smooth and still. The overall effect is voice made physical — the trace of sound in matter. No objects, no visible surface edges. The image fills the entire frame edge to edge. No borders or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 271. `v2-sand-voice-wave-b.jpg` (use --pro)
+
+A fine art overhead photograph of fine sand on a cream surface, arranged by vibration into a pattern that suggests the natural rhythm of conversation. Two parallel bands of sand ridges flow horizontally across the frame — one slightly denser and more assertive in its peaks, the other softer and more measured — as if two voices were imprinted side by side. The ridges have the organic irregularity of real sound: no two peaks are identical, the spacing varies naturally, some ridges merge or split. The sand is warm grey with faint bronze tones where light catches the grain. Between the two bands, a narrow channel of smooth cream surface separates them like a breath between speakers. Shot from directly above, macro lens. Meditative, tactile, warm. No objects, no visible surface edges. The image fills the entire frame edge to edge. No borders or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 272. `v2-marginalia-scenario-v2.jpg` (use --pro)
+
+A photograph of an aged cream paper document covered in dense handwritten annotations. The document has a printed heading in bold serif type reading "Unsuccessful promotion news" followed by printed body text: "Morgan, a good employee on your team, hasn't received the internal promotion she applied for. She wasn't quite ready for this step up however she's valued by the company and has potential for future advancement." Below this are printed sections for "Objectives" and "Key Details" with numbered and bulleted items about communicating the news, providing feedback, and future growth.
+
+The printed text is sharp and legible on aged cream paper with visible fibre texture. Over and around this printed text, dense handwritten margin annotations crowd the edges and spaces between lines, in multiple inks: warm bronze ink, grey ink, and graphite pencil. The handwriting is natural, slightly hurried, and varies in size. Annotations include underlines beneath key phrases, brackets grouping sections, small x marks and checkmarks beside bullet points, arrows pointing from margin notes to specific lines, and circled words. The margin notes themselves are in a natural cursive hand — some are legible fragments like "not defensive enough", "push back harder", "add detail", "tweak", "make Morgan ask about timeline", "mention email communication". Other notes are partially obscured or overlapping, creating layers. Some annotations have been crossed out and rewritten.
+
+The overall feeling is of a real working document that has been reviewed and marked up by hand multiple times — like a theatre director's annotated script or a teacher's marked-up lesson plan. The paper has subtle age: faint foxing marks, slight yellowing, natural imperfections. The document feels handled and used. Warm, tactile, human. Shot from above, soft even lighting, medium format camera. The image fills the entire frame edge to edge. No visible desk surface, paper edges, or borders. The texture IS the image. 4K, 3:2.
+
+---
+
+### 273. `v2-sand-waveform-c.jpg` (use --pro)
+
+A fine art overhead photograph of fine warm-grey sand on a cream surface. The sand has been shaped into a single continuous ridge that oscillates back and forth around an invisible horizontal centre line, like an audio waveform viewed from above. The ridge rises high in places where a voice would be loud or emphatic, compresses into rapid tight oscillations where the voice speeds up, and flattens almost to nothing where there is a pause or silence. The overall shape clearly reads as a sound waveform or speech pattern — someone looking at this would think "that looks like a voice recording" — but it is made entirely of natural sand, with individual grains visible, imperfect edges, and organic softness. The waveform ridge flows from left to right across the full width of the frame. The sand catches soft warm overhead light along its crests. No objects, no visible surface edges. The image fills the entire frame edge to edge. No borders or surrounding surface. The texture IS the image. 4K, 16:9.
+
+---
+
+### 274. `v2-sand-waveform-d.jpg` (use --pro)
+
+A fine art photograph shot from a low angle across a flat cream surface covered in fine warm-grey sand. The sand has been arranged into a continuous oscillating ridge that clearly resembles a voice waveform — peaks and troughs of varying height flowing horizontally across the frame. Viewed from this low perspective, the sand ridge peaks rise like a tiny mountain range against a soft, warm, out-of-focus cream background. The tallest peaks represent loud speech, the smallest ripples represent quiet murmurs, and flat sections represent silence. The sand grains catch warm sidelight, creating highlights on the near faces of ridges and soft shadows behind them. The effect is unmistakably waveform-shaped but rendered in a beautiful, physical, natural material. Shallow depth of field — the nearest ridges are sharp, the far ones dissolve into soft bokeh. No objects, no visible surface edges. The image fills the entire frame edge to edge. No borders or surrounding surface. The texture IS the image. 4K, 16:9.

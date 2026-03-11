@@ -138,7 +138,7 @@ export default function LanguagesPage() {
       />
 
       {/* ── Hero with decorative greetings ── */}
-      <section className="relative pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container overflow-hidden">
+      <section className="relative pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container overflow-hidden bg-surface-white">
         {/* Decorative greetings — positioned behind hero text */}
         <div
           className="absolute inset-0 pointer-events-none select-none overflow-hidden"
@@ -223,7 +223,7 @@ export default function LanguagesPage() {
       </section>
 
       {/* ── Supported Languages ── */}
-      <section className="pt-section-mobile md:pt-section pb-10 md:pb-14 px-container-mobile md:px-container bg-surface-alt border-y border-border">
+      <section className="pt-section-mobile md:pt-section pb-10 md:pb-14 px-container-mobile md:px-container border-y border-border bg-surface-white">
         <div className="mx-auto max-w-site">
           <Reveal>
             <div className="mb-12 md:mb-16">

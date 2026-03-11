@@ -11,6 +11,7 @@ interface TrialScenarioProps {
   scenario: string
   ctaHref?: string
   socialProof?: string
+  className?: string
 }
 
 export function TrialScenario({
@@ -22,9 +23,10 @@ export function TrialScenario({
   scenario,
   ctaHref = '/try-for-free',
   socialProof,
+  className,
 }: TrialScenarioProps) {
   return (
-    <Section>
+    <Section className={className}>
       <Reveal>
         {eyebrow && (
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-8 eyebrow-hairline">

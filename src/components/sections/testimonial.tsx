@@ -4,7 +4,7 @@ import { Grid } from '@/components/grid'
 
 export function Testimonial() {
   return (
-    <section className="relative py-section-mobile md:py-section-lg px-container-mobile md:px-container border-t border-border bg-surface-alt overflow-hidden">
+    <section className="relative py-section-mobile md:py-section-lg px-container-mobile md:px-container border-t border-border overflow-hidden">
       <Grid className="text-dark/[0.02]" dotSize={1} gap={20} />
       <span
         className="absolute font-heading leading-none text-accent opacity-[0.04] z-0 pointer-events-none select-none"
