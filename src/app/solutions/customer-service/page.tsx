@@ -40,7 +40,6 @@ export default function CustomerServicePage() {
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Solutions', href: '/solutions/management-leadership' },
           { name: 'Customer Service', href: '/solutions/customer-service' },
         ]}
       />
@@ -228,12 +227,14 @@ export default function CustomerServicePage() {
 
       <Section>
         <Reveal>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto text-center">
             <SimulationCard
-              layout="live-call"
+              layout="photo-warm"
               characterName="Laura"
               characterRole="Frustrated Customer"
               characterInitials="LM"
+              characterImage="/images/team/zoe-headshot.png"
+              backgroundImage="/images/photography/glass-tower-pair-at-window.png"
               title="Resolve a complaint before it escalates further"
               description="A customer has called three times about the same issue. They want to speak to a manager. Can you turn it around?"
               href="/try-for-free"

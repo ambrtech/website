@@ -43,7 +43,7 @@ const navigation: NavItem[] = [
   {
     type: 'link',
     label: 'Customization',
-    href: '/customisation',
+    href: '/customization',
   },
   {
     type: 'dropdown',

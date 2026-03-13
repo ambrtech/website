@@ -40,7 +40,6 @@ export default function SalesNegotiationsPage() {
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Solutions', href: '/solutions/management-leadership' },
           { name: 'Sales & Negotiations', href: '/solutions/sales-negotiations' },
         ]}
       />
@@ -228,12 +227,14 @@ export default function SalesNegotiationsPage() {
 
       <Section>
         <Reveal>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto text-center">
             <SimulationCard
-              layout="live-call"
+              layout="photo-warm"
               characterName="Sarah"
               characterRole="VP of Operations"
               characterInitials="SC"
+              characterImage="/images/team/zoe-headshot.png"
+              backgroundImage="/images/photography/glass-tower-pair-at-window.png"
               title="Win over a skeptical buyer in under 15 minutes"
               description="A VP with 15 minutes and no context. Qualify the opportunity and build enough interest for a follow-up."
               href="/try-for-free"

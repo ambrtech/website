@@ -29,7 +29,6 @@ export default function OtherSolutionsPage() {
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Solutions', href: '/solutions/management-leadership' },
           { name: 'Other Solutions', href: '/solutions/other' },
         ]}
       />
@@ -129,12 +128,14 @@ export default function OtherSolutionsPage() {
 
       <Section>
         <Reveal>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto text-center">
             <SimulationCard
-              layout="live-call"
+              layout="photo-warm"
               characterName="Sam"
               characterRole="New Hire"
               characterInitials="ST"
+              characterImage="/images/team/zoe-headshot.png"
+              backgroundImage="/images/photography/glass-tower-pair-at-window.png"
               title="Practice an onboarding conversation"
               description="Walk a new team member through their first week. Set expectations, answer questions, and build rapport."
               href="/try-for-free"

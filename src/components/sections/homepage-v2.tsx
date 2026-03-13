@@ -31,10 +31,10 @@ const trustedBy = [
   { name: 'Professional Services Firm', href: '#testimonial-professional-services', muted: true },
   { name: 'Recruitment Company', href: '#testimonial-recruitment-company', muted: true },
   { name: 'Media Company', href: '#testimonial-media-company', muted: true },
-  { name: 'Technology company', href: '/customisation', muted: true },
-  { name: 'Financial services', href: '/customisation', muted: true },
+  { name: 'Technology company', href: '/customization', muted: true },
+  { name: 'Financial services', href: '/customization', muted: true },
   { name: 'Manufacturing Company', href: '#testimonials', muted: true },
-  { name: 'Enterprise client', href: '/customisation', muted: true },
+  { name: 'Enterprise client', href: '/customization', muted: true },
 ] as const
 
 const stats = [
@@ -493,7 +493,7 @@ export function HomepageV2() {
           <Reveal delay={120}>
             <div className="mt-10 flex">
               <Link
-                href="/customisation"
+                href="/customization"
                 className="inline-flex items-center gap-2 text-body font-body-medium text-dark transition-colors hover:text-accent"
               >
                 See how customization works

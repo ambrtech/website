@@ -19,7 +19,7 @@ export const metadata = createMetadata({
   title: 'Customization',
   description:
     'Every Ambr AI simulation is bespoke to your organization. Custom scenarios, language, culture, and context — built around your teams, not templates.',
-  path: '/customisation',
+  path: '/customization',
 })
 
 export default function CustomisationPage() {
@@ -28,7 +28,7 @@ export default function CustomisationPage() {
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Customization', href: '/customisation' },
+          { name: 'Customization', href: '/customization' },
         ]}
       />
 

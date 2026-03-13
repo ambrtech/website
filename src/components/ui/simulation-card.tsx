@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface SimulationCardProps {
   /** Layout variant. */
@@ -155,10 +156,17 @@ export function SimulationCard({
   const className = baseStyles[layout]
 
   if (href) {
+    if (href.startsWith('http')) {
+      return (
+        <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+          {content}
+        </a>
+      )
+    }
     return (
-      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+      <Link href={href} className={className}>
         {content}
-      </a>
+      </Link>
     )
   }
 
@@ -202,7 +210,7 @@ function Avatar({
         </span>
       </div>
       {online && (
-        <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-surface-white" />
+        <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-surface-white animate-[pulse-breath_3.5s_ease-in-out_infinite]" />
       )}
     </div>
   )
@@ -536,7 +544,7 @@ function AvatarImage({
           className="w-full h-full object-cover"
         />
       </div>
-      <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-surface-white/30" />
+      <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-surface-white/30 animate-[pulse-breath_3.5s_ease-in-out_infinite]" />
     </div>
   )
 }
@@ -618,7 +626,7 @@ function PhotoLayout({
         <p className="font-heading text-title tracking-heading text-surface-white mb-2">
           {characterName} is waiting
         </p>
-        <p className="text-body-sm text-surface-white/60 mb-8 max-w-xs mx-auto">
+        <p className="text-body text-surface-white/60 mb-8 max-w-sm mx-auto leading-relaxed">
           {title}
         </p>
 

@@ -32,7 +32,7 @@ const founders = [
   {
     name: 'Steph Newton',
     role: 'CCO',
-    image: '/images/team/steph headshot.jpeg',
+    image: '/images/team/steph-headshot.jpeg',
     linkedin: 'https://linkedin.com/in/',
   },
 ]
@@ -78,11 +78,12 @@ export default function CompanyPage() {
                   src="/images/team/team.jpg"
                   alt="The Ambr AI team in genuine conversation together"
                   fill
+                  priority
                   className="object-cover [filter:grayscale(15%)_sepia(8%)_contrast(95%)]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {/* Vignette */}
-                <div className="absolute inset-0 pointer-events-none" style={{ boxShadow: 'inset 0 0 120px 40px rgba(0,0,0,0.15)' }} />
+                <div className="absolute inset-0 pointer-events-none vignette-dark" />
                 {/* Grain */}
                 <div className="absolute inset-0 bg-noise-fine opacity-[0.14] mix-blend-soft-light pointer-events-none" />
               </div>
@@ -100,7 +101,7 @@ export default function CompanyPage() {
                 Why we exist
               </p>
               <h2 className="font-heading text-quote leading-[1.4] tracking-heading italic text-dark">
-                <span className="text-accent">Because soft skills are actually hard skills,</span>{' '}
+                Because soft skills are actually <em className="text-accent">hard</em> skills,{' '}
                 and the ability to
                 communicate with empathy and clarity in high-pressure moments
                 shouldn&rsquo;t be reserved for those with access to expensive
@@ -163,7 +164,7 @@ export default function CompanyPage() {
                 <div className="relative aspect-[3/4] rounded-brand-lg overflow-hidden mb-4">
                   <Image
                     src={founder.image}
-                    alt={founder.name}
+                    alt={`Portrait of ${founder.name}, ${founder.role} of Ambr AI`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 25vw"

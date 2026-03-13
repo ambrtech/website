@@ -903,7 +903,7 @@ export default function PreviewPage() {
         <div className="mx-auto max-w-[720px]">
           <CTAInline
             text="Every Ambr AI simulation is built around your real scenarios."
-            href="/customisation"
+            href="/customization"
             label="See how customization works"
           />
         </div>

@@ -71,7 +71,7 @@ export default function DataProtectionPage() {
         eyebrow="Data Protection"
         heading={
           <>
-            Your data. <em className="text-accent">Your control</em>.
+            Your data. Your <em className="text-accent">control</em>.
           </>
         }
         subtitle="Complete transparency on what we collect, how we store it, and what we'll never do with it. Your data is never sold. Your conversations are never used to train AI models."
@@ -154,7 +154,7 @@ export default function DataProtectionPage() {
           <Reveal>
             <p className="font-heading text-label leading-[1.3] tracking-heading mb-8">
               Have a specific data handling question?{' '}
-              <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors">
+              <Link href="/find-out-more" className="text-accent hover:text-accent-hover transition-colors">
                 Talk to us
               </Link>
               .

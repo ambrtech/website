@@ -104,9 +104,12 @@ export default function LegalPage() {
         characterName="James"
         characterRole="General Counsel"
         characterInitials="JC"
+        characterImage="/images/team/zoe-headshot.png"
+        backgroundImage="/images/photography/glass-tower-pair-at-window.png"
         title="Advise a client on a high-stakes settlement"
         scenario="Your client is considering a settlement offer. They want your recommendation, but the decision carries significant risk either way. Advise them."
-        socialProof="This is an example scenario. Every simulation is customized to your firm&rsquo;s practice areas, client situations, and terminology."
+        socialProof="1,847 conversations this week"
+        disclaimer="Every simulation is customized to your firm&#8217;s practice areas, client situations, and terminology."
       />
 
       {/* ── Why law firms choose Ambr AI ── */}

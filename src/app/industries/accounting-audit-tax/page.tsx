@@ -104,9 +104,12 @@ export default function AccountingAuditTaxPage() {
         characterName="Sarah"
         characterRole="CFO"
         characterInitials="SW"
+        characterImage="/images/team/zoe-headshot.png"
+        backgroundImage="/images/photography/glass-tower-pair-at-window.png"
         title="Deliver difficult audit findings with confidence"
         scenario="You are presenting audit findings to a client's CFO who disagrees with a material finding. Walk them through your position."
-        socialProof="This is an example scenario. Every simulation is customized to your firm's areas, client types, and terminology."
+        socialProof="1,438 conversations this week"
+        disclaimer="Every simulation is customized to your firm&#8217;s areas, client types, and terminology."
       />
 
       {/* ── Why accounting firms choose Ambr AI ── */}

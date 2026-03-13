@@ -1,4 +1,5 @@
 import { createMetadata } from '@/lib/metadata'
+import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { ActionPicker } from '@/components/sections/action-picker'
 
 export const metadata = createMetadata({
@@ -10,9 +11,18 @@ export const metadata = createMetadata({
 
 export default function FindOutMorePage() {
   return (
-    <ActionPicker
-      heading="Choose the option that suits you best."
-      items={[
+    <>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Find Out More', href: '/find-out-more' },
+        ]}
+      />
+
+      <ActionPicker
+        heading="Choose the option that suits you best."
+        headingAs="h1"
+        items={[
         {
           heading: 'Book a Meeting',
           description:
@@ -36,5 +46,6 @@ export default function FindOutMorePage() {
         },
       ]}
     />
+    </>
   )
 }

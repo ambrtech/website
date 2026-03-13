@@ -80,7 +80,7 @@ export function CustomizationColumns() {
         <Reveal>
           <div className="mt-12">
             <Link
-              href="/customisation"
+              href="/customization"
               className="inline-flex items-center gap-2 text-label font-body-medium text-dark hover:text-accent transition-colors duration-normal"
             >
               See how customization works

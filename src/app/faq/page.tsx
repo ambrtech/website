@@ -78,7 +78,7 @@ export default function FaqPage() {
                     ultra-realistic voice interaction that creates genuine conversational pressure.
                     Third, the service model: clients work with a dedicated team, not a self-serve
                     dashboard.{' '}
-                    <FaqLink href="/customisation">Explore customization</FaqLink>
+                    <FaqLink href="/customization">Explore customization</FaqLink>
                   </p>
                 ),
               },
@@ -137,7 +137,7 @@ export default function FaqPage() {
                     directly in the platform, the Ambr AI team can build tailored simulations on your
                     behalf, and individual users can create their own personal scenarios. There is also
                     an extensive pre-built scenario library available immediately.{' '}
-                    <FaqLink href="/customisation">Learn about customization</FaqLink>
+                    <FaqLink href="/customization">Learn about customization</FaqLink>
                   </p>
                 ),
               },

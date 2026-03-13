@@ -104,9 +104,12 @@ export default function ConsultingAdvisoryPage() {
         characterName="David"
         characterRole="Client Director"
         characterInitials="DC"
+        characterImage="/images/team/zoe-headshot.png"
+        backgroundImage="/images/photography/glass-tower-pair-at-window.png"
         title="Navigate a client pushing back on your project timeline"
         scenario="A client is pushing back on your project timeline and threatening to reduce scope. Navigate the conversation."
-        socialProof="This is an example scenario. Every simulation is customized to your firm&rsquo;s clients, terminology, and methodology."
+        socialProof="2,106 conversations this week"
+        disclaimer="Every simulation is customized to your firm&#8217;s clients, terminology, and methodology."
       />
 
       {/* ── Why consulting firms choose Ambr AI ── */}

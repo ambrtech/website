@@ -12,6 +12,13 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
 
+  // Permanent redirects for renamed routes
+  async redirects() {
+    return [
+      { source: '/customisation', destination: '/customization', permanent: true },
+    ]
+  },
+
   // HTTP headers for CDN caching and security
   async headers() {
     return [

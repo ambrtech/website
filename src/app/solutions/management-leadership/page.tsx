@@ -39,7 +39,6 @@ export default function ManagementLeadershipPage() {
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Solutions', href: '/solutions/management-leadership' },
           { name: 'Management & Leadership', href: '/solutions/management-leadership' },
         ]}
       />
@@ -206,12 +205,14 @@ export default function ManagementLeadershipPage() {
 
       <Section className="bg-surface-white">
         <Reveal>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto text-center">
             <SimulationCard
-              layout="live-call"
+              layout="photo-warm"
               characterName="Mark"
               characterRole="Direct Report"
               characterInitials="MR"
+              characterImage="/images/team/zoe-headshot.png"
+              backgroundImage="/images/photography/glass-tower-pair-at-window.png"
               title="Practice giving tough feedback without damaging the relationship"
               description="Your direct report has missed two consecutive deadlines on a critical project. Address performance while keeping them motivated."
               href="/try-for-free"

@@ -94,9 +94,12 @@ export default function RetailHospitalityPage() {
         characterName="Rachel"
         characterRole="Frustrated Guest"
         characterInitials="RG"
+        characterImage="/images/team/zoe-headshot.png"
+        backgroundImage="/images/photography/glass-tower-pair-at-window.png"
         title="Resolve a guest complaint before it becomes a review"
         scenario="A hotel guest is unhappy with their room and is threatening to leave a negative review. Resolve the situation."
-        socialProof="This is an example scenario. Every simulation is customized to your brand, service standards, and training goals."
+        socialProof="3,204 conversations this week"
+        disclaimer="Every simulation is customized to your brand, service standards, and training goals."
       />
 
       {/* ── Why retail & hospitality choose Ambr AI ── */}

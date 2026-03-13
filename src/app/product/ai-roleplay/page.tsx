@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
+import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
@@ -19,9 +20,17 @@ export const metadata = createMetadata({
 export default function AIRoleplayPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Product', href: '/product/how-it-works' },
+          { name: 'What is AI Roleplay', href: '/product/ai-roleplay' },
+        ]}
+      />
+
       {/* ── Hero ── */}
       <PageHero
-        first
+        compact
         eyebrow="What is AI Roleplay"
         heading="AI roleplay: realistic conversation training for high-stakes workplace conversations"
         subtitle="Ambr AI uses artificial intelligence to simulate realistic workplace conversations. Instead of reading a script, watching a video, or waiting for a scheduled session, your teams train by actually having the conversation, speaking with an AI that listens and responds just like a real person. Scalable. Consistent. Measurable."
@@ -226,7 +235,7 @@ export default function AIRoleplayPage() {
         <Reveal>
           <div className="grid md:grid-cols-2 gap-8">
             <Link
-              href="/customisation"
+              href="/customization"
               className="group border border-border rounded-brand-md p-8 transition-all duration-normal hover:border-accent-soft hover:shadow-card"
             >
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">

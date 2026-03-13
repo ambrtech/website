@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
+import { PageHero } from '@/components/sections/page-hero'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 
@@ -22,32 +23,24 @@ export default function ResponsibleAIPage() {
         ]}
       />
 
-      {/* ── Hero ── */}
-      <section className="pt-section-mobile md:pt-[120px] pb-section-mobile md:pb-[100px] px-container-mobile md:px-container bg-surface-white">
-        <div className="mx-auto max-w-site">
-          <Reveal>
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-              Responsible AI
-            </p>
-            <h1 className="font-heading text-headline leading-[1.1] tracking-heading max-w-[800px] mb-6">
-              Responsible AI, by <em className="text-accent">design</em>.
-            </h1>
-            <div className="text-body text-copy-mid leading-[1.75] max-w-[580px] space-y-4">
-              <p>
-                AI roleplay involves real people practicing real conversations:
-                moments of vulnerability, uncertainty, and growth. That
-                responsibility shapes every decision we make.
-              </p>
-              <p>
-                Ambr AI is not a general-purpose AI tool. It is a training
-                platform built to help people perform better in the moments that
-                matter at work. That focused scope makes our ethical commitments
-                specific and enforceable.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Responsible AI"
+        heading={<>Responsible AI, by <em className="text-accent">design</em>.</>}
+        subtitle="AI roleplay involves real people practicing real conversations: moments of vulnerability, uncertainty, and growth. That responsibility shapes every decision we make."
+        compact
+      />
+
+      {/* ── Focused scope ── */}
+      <Section className="bg-surface-white">
+        <Reveal>
+          <p className="text-body text-copy-mid leading-[1.75] max-w-[580px]">
+            Ambr AI is not a general-purpose AI tool. It is a training
+            platform built to help people perform better in the moments that
+            matter at work. That focused scope makes our ethical commitments
+            specific and enforceable.
+          </p>
+        </Reveal>
+      </Section>
 
       {/* ── Human-centered ── */}
       <Section>
@@ -151,7 +144,7 @@ export default function ResponsibleAIPage() {
             <p className="font-heading text-label leading-[1.3] tracking-heading mb-6">
               Questions about our AI practices?{' '}
               <Link
-                href="/contact"
+                href="/find-out-more"
                 className="text-accent hover:text-accent-hover transition-colors"
               >
                 Talk to us

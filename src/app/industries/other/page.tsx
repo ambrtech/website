@@ -180,8 +180,11 @@ export default function OtherIndustriesPage() {
         characterName="Pat"
         characterRole="HR Director"
         characterInitials="PR"
+        characterImage="/images/team/zoe-headshot.png"
+        backgroundImage="/images/photography/glass-tower-pair-at-window.png"
         title="Navigate a defensive response to performance feedback"
         scenario="You are giving an employee feedback on their recent performance. They become defensive. Navigate the conversation."
+        socialProof="1,892 conversations this week"
         ctaHref="/try-for-free"
       />
 

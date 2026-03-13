@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
+import { Section } from '@/components/sections/section'
 import {
   ProductScreenshot,
   MockLmsEmbed,
@@ -106,67 +107,63 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── LMS Platforms — grid directly below hero ── */}
-      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container bg-surface-white">
-        <div className="mx-auto max-w-site">
-          <Reveal>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {lmsPlatforms.map((platform) => (
-                <div
-                  key={platform}
-                  className="border border-border rounded-brand px-5 py-4 text-center transition-all duration-normal hover:border-accent-soft hover:shadow-card"
-                >
-                  <p className="font-heading text-body-sm tracking-heading text-dark">
-                    {platform}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <p className="text-body-sm text-copy-light mt-5">
-              and 50+ more.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ── Learning Standards ── */}
-      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
-        <div className="mx-auto max-w-site">
-          <Reveal>
-            <div className="max-w-[720px] mb-10 md:mb-12">
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                Learning Standards
-              </p>
-              <h2 className="font-heading text-section leading-[1.2] tracking-heading">
-                Standards-based from the start.
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {learningStandards.map((item, i) => (
-              <Reveal key={item.label} delay={i * 80}>
-                <div className="border border-border rounded-brand p-8 md:p-10 h-full">
-                  <div className="flex items-start justify-between gap-4 mb-4">
-                    <p className="font-heading text-label tracking-heading text-dark">
-                      {item.label}
-                    </p>
-                    <span className="inline-block text-caption font-body-medium uppercase tracking-eyebrow text-accent border border-accent-soft rounded-brand-sm px-3 py-1 shrink-0">
-                      Supported
-                    </span>
-                  </div>
-                  <p className="text-body-sm text-copy-mid leading-[1.75]">
-                    {item.description}
-                  </p>
-                </div>
-              </Reveal>
+      <Section className="!pt-0 bg-surface-white">
+        <Reveal>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {lmsPlatforms.map((platform) => (
+              <div
+                key={platform}
+                className="border border-border rounded-brand px-5 py-4 text-center transition-all duration-normal hover:border-accent-soft hover:shadow-card"
+              >
+                <p className="font-heading text-body-sm tracking-heading text-dark">
+                  {platform}
+                </p>
+              </div>
             ))}
           </div>
+          <p className="text-body-sm text-copy-light mt-5">
+            and 50+ more.
+          </p>
+        </Reveal>
+      </Section>
+
+      {/* ── Learning Standards ── */}
+      <Section className="!pt-0">
+        <Reveal>
+          <div className="max-w-[720px] mb-10 md:mb-12">
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+              Learning Standards
+            </p>
+            <h2 className="font-heading text-section leading-[1.2] tracking-heading">
+              Standards-based from the start.
+            </h2>
+          </div>
+        </Reveal>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {learningStandards.map((item, i) => (
+            <Reveal key={item.label} delay={i * 80}>
+              <div className="border border-border rounded-brand p-8 md:p-10 h-full">
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <p className="font-heading text-label tracking-heading text-dark">
+                    {item.label}
+                  </p>
+                  <span className="inline-block text-caption font-body-medium uppercase tracking-eyebrow text-accent border border-accent-soft rounded-brand-sm px-3 py-1 shrink-0">
+                    Supported
+                  </span>
+                </div>
+                <p className="text-body-sm text-copy-mid leading-[1.75]">
+                  {item.description}
+                </p>
+              </div>
+            </Reveal>
+          ))}
         </div>
-      </section>
+      </Section>
 
       {/* ── Single Sign-On ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-white">
-        <div className="mx-auto max-w-site grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-20 items-start">
+      <Section className="bg-surface-white">
+        <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-20 items-start">
           <Reveal>
             <div>
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
@@ -200,11 +197,11 @@ export default function IntegrationsPage() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </Section>
 
       {/* ── Slack & Teams ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container">
-        <div className="mx-auto max-w-site grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-16 items-start">
+      <Section>
+        <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 md:gap-16 items-start">
           <Reveal>
             <div>
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
@@ -226,11 +223,11 @@ export default function IntegrationsPage() {
             </ProductScreenshot>
           </Reveal>
         </div>
-      </section>
+      </Section>
 
       {/* ── Don't See Your Platform? ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-white">
-        <div className="mx-auto max-w-site max-w-[720px]">
+      <Section className="bg-surface-white">
+        <div className="mx-auto max-w-[720px]">
           <Reveal>
             <div className="text-center">
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline mx-auto w-fit">
@@ -253,7 +250,7 @@ export default function IntegrationsPage() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </Section>
     </>
   )
 }

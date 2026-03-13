@@ -1,4 +1,5 @@
 import { createMetadata } from '@/lib/metadata'
+import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
@@ -14,7 +15,15 @@ export const metadata = createMetadata({
 export default function TryForFreePage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Try for Free', href: '/try-for-free' },
+        ]}
+      />
+
       <PageHero
+        compact
         heading={
           <>
             Experience Ambr AI.{' '}
@@ -22,7 +31,6 @@ export default function TryForFreePage() {
           </>
         }
         subtitle="See what realistic AI roleplay training feels like. Choose one of the example scenarios below and start a live conversation. It takes less than five minutes."
-        first
       />
 
       <Section>

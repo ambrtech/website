@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
+import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 
 export const metadata = createMetadata({
@@ -183,112 +184,108 @@ export default function LanguagesPage() {
       </section>
 
       {/* ── How Simulations Adapt ── */}
-      <section className="py-section-mobile md:py-section px-container-mobile md:px-container border-t border-border">
-        <div className="mx-auto max-w-site">
-          <Reveal>
-            <div className="mb-12 md:mb-16">
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                How Simulations Adapt
-              </p>
-              <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[540px]">
-                Every simulation is shaped by the culture it serves.
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="grid md:grid-cols-3 gap-0">
-            {adaptations.map((item, i) => (
-              <Reveal key={item.heading} delay={i * 80}>
-                <div
-                  className={`h-full py-8 md:py-0 ${
-                    i !== 0
-                      ? 'border-t md:border-t-0 md:border-l border-border md:pl-8 lg:pl-12'
-                      : ''
-                  } ${i !== adaptations.length - 1 ? 'md:pr-8 lg:pr-12' : ''}`}
-                >
-                  <span className="font-heading text-title tracking-heading text-accent-soft leading-none mb-5 block">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <h3 className="font-heading text-label tracking-heading text-dark mb-3">
-                    {item.heading}
-                  </h3>
-                  <p className="text-body-sm text-copy-mid leading-[1.75]">
-                    {item.description}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+      <Section className="border-t border-border">
+        <Reveal>
+          <div className="mb-12 md:mb-16">
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+              How Simulations Adapt
+            </p>
+            <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[540px]">
+              Every simulation is shaped by the culture it serves.
+            </h2>
           </div>
+        </Reveal>
+
+        <div className="grid md:grid-cols-3 gap-0">
+          {adaptations.map((item, i) => (
+            <Reveal key={item.heading} delay={i * 80}>
+              <div
+                className={`h-full py-8 md:py-0 ${
+                  i !== 0
+                    ? 'border-t md:border-t-0 md:border-l border-border md:pl-8 lg:pl-12'
+                    : ''
+                } ${i !== adaptations.length - 1 ? 'md:pr-8 lg:pr-12' : ''}`}
+              >
+                <span className="font-heading text-title tracking-heading text-accent-soft leading-none mb-5 block">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h3 className="font-heading text-label tracking-heading text-dark mb-3">
+                  {item.heading}
+                </h3>
+                <p className="text-body-sm text-copy-mid leading-[1.75]">
+                  {item.description}
+                </p>
+              </div>
+            </Reveal>
+          ))}
         </div>
-      </section>
+      </Section>
 
       {/* ── Supported Languages ── */}
-      <section className="pt-section-mobile md:pt-section pb-10 md:pb-14 px-container-mobile md:px-container border-y border-border bg-surface-white">
-        <div className="mx-auto max-w-site">
-          <Reveal>
-            <div className="mb-12 md:mb-16">
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-                Supported Languages
-              </p>
-              <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[540px]">
-                30+ languages across every major region.
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="space-y-16 md:space-y-20">
-            {regions.map((group, groupIndex) => (
-              <Reveal key={group.region} delay={groupIndex * 60}>
-                <div className="grid md:grid-cols-[200px_1fr] lg:grid-cols-[240px_1fr] gap-6 md:gap-12">
-                  {/* Region label — large serif anchor */}
-                  <div className="md:pt-1">
-                    <h3 className="font-heading text-section md:text-title leading-[1.1] tracking-heading text-dark">
-                      {group.region}
-                    </h3>
-                    <p className="text-caption text-copy-faint mt-2">
-                      {group.languages.length} language{group.languages.length !== 1 ? 's' : ''}
-                    </p>
-                  </div>
-
-                  {/* Language list — structured grid */}
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-0">
-                    {group.languages.map((lang) => (
-                      <div
-                        key={lang}
-                        className="border-t border-border py-3.5 flex items-center gap-3"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent-soft shrink-0" />
-                        <span className="text-body-sm text-dark">
-                          {lang}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+      <Section className="!pb-10 md:!pb-14 border-y border-border bg-surface-white">
+        <Reveal>
+          <div className="mb-12 md:mb-16">
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+              Supported Languages
+            </p>
+            <h2 className="font-heading text-section leading-[1.2] tracking-heading max-w-[540px]">
+              30+ languages across every major region.
+            </h2>
           </div>
+        </Reveal>
 
-          {/* Growing callout */}
-          <Reveal>
-            <div className="mt-12 md:mt-14 border-l-[3px] border-accent-soft pl-6 py-1">
-              <p className="text-body text-copy-mid leading-[1.75]">
-                This list is growing. If you need a language not listed here, please{' '}
-                <Link
-                  href="/find-out-more"
-                  className="text-accent font-body-medium hover:text-accent-hover transition-colors"
-                >
-                  get in touch
-                </Link>
-                {' - '}we may be able to support it.
-              </p>
-            </div>
-          </Reveal>
+        <div className="space-y-16 md:space-y-20">
+          {regions.map((group, groupIndex) => (
+            <Reveal key={group.region} delay={groupIndex * 60}>
+              <div className="grid md:grid-cols-[200px_1fr] lg:grid-cols-[240px_1fr] gap-6 md:gap-12">
+                {/* Region label — large serif anchor */}
+                <div className="md:pt-1">
+                  <h3 className="font-heading text-section md:text-title leading-[1.1] tracking-heading text-dark">
+                    {group.region}
+                  </h3>
+                  <p className="text-caption text-copy-faint mt-2">
+                    {group.languages.length} language{group.languages.length !== 1 ? 's' : ''}
+                  </p>
+                </div>
+
+                {/* Language list — structured grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-0">
+                  {group.languages.map((lang) => (
+                    <div
+                      key={lang}
+                      className="border-t border-border py-3.5 flex items-center gap-3"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent-soft shrink-0" />
+                      <span className="text-body-sm text-dark">
+                        {lang}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
-      </section>
+
+        {/* Growing callout */}
+        <Reveal>
+          <div className="mt-12 md:mt-14 border-l-[3px] border-accent-soft pl-6 py-1">
+            <p className="text-body text-copy-mid leading-[1.75]">
+              This list is growing. If you need a language not listed here, please{' '}
+              <Link
+                href="/find-out-more"
+                className="text-accent font-body-medium hover:text-accent-hover transition-colors"
+              >
+                get in touch
+              </Link>
+              {' - '}we may be able to support it.
+            </p>
+          </div>
+        </Reveal>
+      </Section>
 
       {/* ── For Global Organizations ── */}
-      <section className="pt-12 md:pt-16 pb-section-mobile md:pb-section px-container-mobile md:px-container">
+      <Section className="!pt-12 md:!pt-16">
         <div className="mx-auto max-w-[720px] text-center">
           <Reveal>
             {/* Decorative centered hairline */}
@@ -319,7 +316,7 @@ export default function LanguagesPage() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </Section>
     </>
   )
 }

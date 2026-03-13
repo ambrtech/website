@@ -19,21 +19,23 @@ export interface ActionPickerProps {
   heading?: string
   subtitle?: string
   items: [ActionItem, ActionItem, ActionItem] // Strictly 3 items
+  /** Render the heading as a different element. Defaults to 'h2'. */
+  headingAs?: 'h1' | 'h2'
 }
 
 /**
  * ActionPicker presents three equally weighted paths for engagement.
  * Designed to feel like a concierge service—low pressure, high service.
  */
-export function ActionPicker({ heading, subtitle, items }: ActionPickerProps) {
+export function ActionPicker({ heading, subtitle, items, headingAs: HeadingTag = 'h2' }: ActionPickerProps) {
   return (
     <Section className="bg-surface-white">
       <div className="max-w-3xl mx-auto text-center mb-16 md:mb-24">
         {heading && (
           <Reveal>
-            <h2 className="font-heading text-headline leading-tight tracking-heading text-dark mb-6">
+            <HeadingTag className="font-heading text-headline leading-tight tracking-heading text-dark mb-6">
               {heading}
-            </h2>
+            </HeadingTag>
           </Reveal>
         )}
         {subtitle && (

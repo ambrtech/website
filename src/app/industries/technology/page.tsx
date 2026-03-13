@@ -105,9 +105,12 @@ export default function TechnologyPage() {
         characterName="Sarah"
         characterRole="VP of Engineering"
         characterInitials="SL"
+        characterImage="/images/team/zoe-headshot.png"
+        backgroundImage="/images/photography/glass-tower-pair-at-window.png"
         title="Lead a key enterprise renewal conversation"
         scenario="A key enterprise client is considering switching to a competitor at renewal. Lead the retention conversation."
-        socialProof="This is an example scenario. Every simulation is customized to your product, market, and competitive landscape."
+        socialProof="2,512 conversations this week"
+        disclaimer="Every simulation is customized to your product, market, and competitive landscape."
       />
 
       {/* ── Why tech companies choose Ambr AI ── */}
