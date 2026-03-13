@@ -1,7 +1,10 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { Grid } from '@/components/grid'
 import { LogoBar } from '@/components/sections/logo-bar'
+import { ImageReveal } from '@/components/animations/image-reveal'
 
 export function Hero() {
   return (
@@ -36,7 +39,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="hidden lg:block opacity-0 animate-[clipReveal_1.8s_cubic-bezier(0.16,1,0.3,1)_0.5s_both]">
+          <ImageReveal direction="right" duration={1.6} delay={0.5} immediate className="hidden lg:block">
             <Image
               src="/images/photography/hero-quiet-reflection.jpeg"
               alt="A woman at her desk in quiet reflection after a practice session, seen through indoor plant leaves with warm window light"
@@ -45,7 +48,7 @@ export function Hero() {
               priority
               className="w-full h-auto rounded-brand-lg"
             />
-          </div>
+          </ImageReveal>
         </div>
       </div>
 

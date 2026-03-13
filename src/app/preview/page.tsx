@@ -34,6 +34,9 @@ import { LogoBar } from '@/components/sections/logo-bar'
 import { ContrastSplit } from '@/components/sections/contrast-split'
 import { IconFeatureCards } from '@/components/sections/icon-feature-cards'
 import { DarkShowcase } from '@/components/sections/dark-showcase'
+import { CustomizationColumns } from '@/components/sections/customization-columns'
+import { CustomizationTabs } from '@/components/sections/customization-tabs'
+import { CustomizationCompact } from '@/components/sections/customization-compact'
 import { TestimonialStat } from '@/components/sections/testimonial-stat'
 import DisplayCards from '@/components/ui/display-cards'
 import { MessageCircle, Users, ShieldCheck } from 'lucide-react'
@@ -959,6 +962,18 @@ export default function PreviewPage() {
       <div className="py-section-mobile md:py-section">
         <LogoBar />
       </div>
+
+      {/* ── Customization Section Options ── */}
+      <GroupLabel name="Customization Section Options" />
+
+      <SectionLabel name="Option A: Three Columns" />
+      <CustomizationColumns />
+
+      <SectionLabel name="Option B: Tabbed Interface" />
+      <CustomizationTabs />
+
+      <SectionLabel name="Option C: Numbered Cards" />
+      <CustomizationCompact />
 
     </>
   )

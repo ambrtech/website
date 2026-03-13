@@ -7,9 +7,6 @@ import {
 } from '@/components/sections/split-content'
 import {
   ProductScreenshot,
-  MockAdminBuilder,
-  MockCustomizationDelivery,
-  MockScenarioCreator,
   MockVoiceConversation,
   MockBodyLanguage,
   MockFeedbackPanel,
@@ -21,6 +18,8 @@ import { SecurityBadges } from '@/components/sections/security-badges'
 import { GrainCta } from '@/components/sections/grain-cta'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
+import { CustomizationColumns } from '@/components/sections/customization-columns'
+import { EyebrowLine } from '@/components/animations/eyebrow-line'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
@@ -56,87 +55,7 @@ export default function Home() {
       />
 
       {/* ── Customization ── */}
-      <div className="bg-surface-white">
-      <Section>
-        <Reveal>
-          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-            Customization
-          </p>
-          <h2 className="font-heading text-headline leading-[1.1] tracking-heading max-w-[700px] mb-4">
-            Training built around your{' '}
-            <em className="text-accent">exact</em> needs
-          </h2>
-          <p className="text-body text-copy-mid leading-[1.75] max-w-[580px]">
-            Ambr AI is fully customizable to match your specific training
-            goals - and can be done easily, with minimal effort and without
-            huge investment. Choose from a library of ready-made scenarios, or
-            easily create your own:
-          </p>
-        </Reveal>
-      </Section>
-
-      <SplitContent
-        eyebrow="Admin Customization"
-        heading={
-          <>
-            Build scenarios that match your{' '}
-            <em className="text-accent">reality</em>
-          </>
-        }
-        body="Easily create custom simulations yourself, directly in the platform. No technical skills required."
-        visualContent={
-          <ProductScreenshot tint>
-            <MockAdminBuilder />
-          </ProductScreenshot>
-        }
-      />
-
-      <SplitContent
-        reversed
-        eyebrow="In-House Customization Service"
-        heading={
-          <>
-            We build it <em className="text-accent">for</em> you
-          </>
-        }
-        body="Our expert team builds fully tailored simulations for you. Share a few minutes of context and we deliver scenarios that match your need."
-        visualContent={
-          <ProductScreenshot tint>
-            <MockCustomizationDelivery />
-          </ProductScreenshot>
-        }
-      />
-
-      <SplitContent
-        eyebrow="Individual User Customization"
-        heading={
-          <>
-            Let your people create their{' '}
-            <em className="text-accent">own</em>
-          </>
-        }
-        body="Individual team members create their own private scenarios for specific upcoming conversations."
-        visualContent={
-          <ProductScreenshot tint>
-            <MockScenarioCreator />
-          </ProductScreenshot>
-        }
-      />
-
-      <div className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
-        <div className="mx-auto max-w-site">
-          <Reveal>
-            <Link
-              href="/customisation"
-              className="inline-flex items-center gap-2 text-label font-body-medium text-dark hover:text-accent transition-colors duration-normal"
-            >
-              See how customization works
-              <span className="text-accent">→</span>
-            </Link>
-          </Reveal>
-        </div>
-      </div>
-      </div>
+      <CustomizationColumns />
 
       {/* ── Testimonials ── */}
       <TestimonialGrid
@@ -217,7 +136,8 @@ export default function Home() {
       {/* ── Voice AI ── */}
       <Section>
         <Reveal>
-          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+          <EyebrowLine />
+          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
             Voice AI
           </p>
           <h2 className="font-heading text-headline leading-[1.1] tracking-heading max-w-[700px] mb-4">

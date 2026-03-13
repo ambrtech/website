@@ -33,7 +33,7 @@ export default function CustomisationPage() {
       />
 
       {/* ── 1. Hero — split layout ── */}
-      <section className="pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container bg-surface-white">
+      <section className="pt-section-mobile md:pt-[120px] pb-section-mobile md:pb-[100px] px-container-mobile md:px-container bg-surface-white">
         <div className="mx-auto max-w-site overflow-hidden">
           <Reveal>
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-start">

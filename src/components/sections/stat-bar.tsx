@@ -1,4 +1,5 @@
 import { Reveal } from '@/components/reveal'
+import { EyebrowLine } from '@/components/animations/eyebrow-line'
 
 export interface StatItem {
   value: string
@@ -17,7 +18,8 @@ export function StatBar({ heading, items }: StatBarProps) {
       <div className="mx-auto max-w-site">
         {heading && (
           <Reveal>
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-8 eyebrow-hairline">
+            <EyebrowLine />
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-8">
               {heading}
             </p>
           </Reveal>

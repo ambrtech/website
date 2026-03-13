@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Reveal } from '@/components/reveal'
+import { ScrollTextReveal } from '@/components/animations/scroll-text-reveal'
 import { EtherealGrain } from '@/components/ui/ethereal-grain'
 
 interface GrainCtaProps {
@@ -47,11 +48,11 @@ export function GrainCta({ heading, subtitle, ctaLabel, ctaHref, secondaryLabel,
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-site px-container-mobile md:px-container py-section-lg md:py-section-xl">
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-          <Reveal slow>
+          <ScrollTextReveal start="top 90%" end="top 45%">
             <h2 className={`font-heading text-headline leading-[1.1] tracking-heading ${v.heading}`}>
               {heading}
             </h2>
-          </Reveal>
+          </ScrollTextReveal>
 
           {subtitle && (
             <Reveal slow delay={100}>

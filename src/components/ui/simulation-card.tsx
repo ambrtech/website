@@ -1,10 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 interface SimulationCardProps {
   /** Layout variant. */
-  layout?: 'horizontal' | 'stacked' | 'pill' | 'live-call' | 'scenario'
+  layout?: 'horizontal' | 'stacked' | 'pill' | 'live-call' | 'scenario' | 'photo-warm' | 'photo-duotone' | 'photo-muted'
   /** Character name displayed in the card. */
   characterName: string
   /** Character role/relationship context. */
@@ -25,6 +26,10 @@ interface SimulationCardProps {
   onClick?: () => void
   /** Alternative: link to external demo URL. */
   href?: string
+  /** Optional character headshot image path (replaces initials). */
+  characterImage?: string
+  /** Background photography image path (for photo-* layouts). */
+  backgroundImage?: string
 }
 
 export function SimulationCard({
@@ -39,10 +44,14 @@ export function SimulationCard({
   socialProof,
   onClick,
   href,
+  characterImage,
+  backgroundImage,
 }: SimulationCardProps) {
   const metadata = [duration, difficulty].filter(Boolean).join(' · ')
 
-  const layoutMap = {
+  const photoLayouts = ['photo-warm', 'photo-duotone', 'photo-muted'] as const
+
+  const layoutMap: Record<string, React.ReactNode> = {
     horizontal: (
       <HorizontalLayout
         characterName={characterName}
@@ -88,11 +97,44 @@ export function SimulationCard({
         socialProof={socialProof}
       />
     ),
+    'photo-warm': (
+      <PhotoLayout
+        variant="warm"
+        characterName={characterName}
+        characterInitials={characterInitials}
+        characterImage={characterImage}
+        title={title}
+        socialProof={socialProof}
+        backgroundImage={backgroundImage}
+      />
+    ),
+    'photo-duotone': (
+      <PhotoLayout
+        variant="duotone"
+        characterName={characterName}
+        characterInitials={characterInitials}
+        characterImage={characterImage}
+        title={title}
+        socialProof={socialProof}
+        backgroundImage={backgroundImage}
+      />
+    ),
+    'photo-muted': (
+      <PhotoLayout
+        variant="muted"
+        characterName={characterName}
+        characterInitials={characterInitials}
+        characterImage={characterImage}
+        title={title}
+        socialProof={socialProof}
+        backgroundImage={backgroundImage}
+      />
+    ),
   }
 
   const content = layoutMap[layout]
 
-  const baseStyles = {
+  const baseStyles: Record<string, string> = {
     horizontal:
       'group block w-full text-left border border-border bg-surface-white rounded-brand-lg overflow-hidden transition-all duration-normal hover:border-accent-soft hover:shadow-card hover:-translate-y-px cursor-pointer',
     stacked:
@@ -102,6 +144,12 @@ export function SimulationCard({
       'group block w-full text-left bg-dark rounded-brand-lg overflow-hidden transition-all duration-normal hover:shadow-xl hover:-translate-y-px cursor-pointer',
     scenario:
       'group block w-full text-left border border-border bg-surface-white rounded-brand-lg overflow-hidden transition-all duration-normal hover:border-accent-soft hover:shadow-card hover:-translate-y-px cursor-pointer',
+    'photo-warm':
+      'group block w-full text-left rounded-brand-lg overflow-hidden transition-all duration-normal hover:shadow-xl hover:-translate-y-px cursor-pointer relative',
+    'photo-duotone':
+      'group block w-full text-left rounded-brand-lg overflow-hidden transition-all duration-normal hover:shadow-xl hover:-translate-y-px cursor-pointer relative',
+    'photo-muted':
+      'group block w-full text-left rounded-brand-lg overflow-hidden transition-all duration-normal hover:shadow-xl hover:-translate-y-px cursor-pointer relative',
   }
 
   const className = baseStyles[layout]
@@ -452,6 +500,146 @@ function ScenarioLayout({
             <span className="text-copy-faint">·</span>
             <SocialProofBadge text={socialProof} />
           </>
+        )}
+      </div>
+    </div>
+  )
+}
+
+/* ── Character avatar with image ── */
+
+function AvatarImage({
+  src,
+  name,
+  size = 'md',
+}: {
+  src: string
+  name: string
+  size?: 'sm' | 'md' | 'lg'
+}) {
+  const sizeClasses = {
+    sm: 'w-10 h-10',
+    md: 'w-14 h-14',
+    lg: 'w-16 h-16',
+  }
+
+  return (
+    <div className="relative shrink-0">
+      <div
+        className={`${sizeClasses[size]} rounded-full overflow-hidden border-2 border-surface-white/30`}
+      >
+        <Image
+          src={src}
+          alt={name}
+          width={64}
+          height={64}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-surface-white/30" />
+    </div>
+  )
+}
+
+/* ── Photo background layouts ── */
+
+const photoVariantConfig = {
+  warm: {
+    overlay: 'bg-gradient-to-b from-dark/45 via-dark/40 to-dark/70',
+    imageClass: 'saturate-[0.4] brightness-[0.6] sepia-[0.2] blur-[1.5px]',
+    label: 'Warm overlay',
+  },
+  duotone: {
+    overlay: 'bg-gradient-to-b from-accent/30 via-dark/50 to-dark/75',
+    imageClass: 'saturate-0 brightness-[0.8]',
+    label: 'Duotone',
+  },
+  muted: {
+    overlay: 'bg-gradient-to-b from-surface/20 via-dark/40 to-dark/80',
+    imageClass: 'saturate-[0.3] brightness-[0.7] contrast-[1.1]',
+    label: 'Muted',
+  },
+} as const
+
+function PhotoLayout({
+  variant,
+  characterName,
+  characterInitials,
+  characterImage,
+  title,
+  socialProof,
+  backgroundImage,
+}: {
+  variant: 'warm' | 'duotone' | 'muted'
+  characterName: string
+  characterInitials: string
+  characterImage?: string
+  title: string
+  socialProof?: string
+  backgroundImage?: string
+}) {
+  const v = photoVariantConfig[variant]
+  const bgSrc = backgroundImage ?? '/images/photography/hero-quiet-reflection.jpeg'
+
+  return (
+    <div className="relative min-h-[420px] flex flex-col">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src={bgSrc}
+          alt=""
+          fill
+          className={`object-cover ${v.imageClass}`}
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+        <div className={`absolute inset-0 ${v.overlay}`} />
+        {/* Subtle noise texture */}
+        <div className="absolute inset-0 bg-noise opacity-[0.03] mix-blend-overlay" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 p-8 md:p-10 text-center flex-1 flex flex-col items-center justify-center">
+        <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-surface-white/50 mb-6">
+          Interactive Demo
+        </p>
+
+        <div className="flex justify-center mb-6">
+          {characterImage ? (
+            <AvatarImage src={characterImage} name={characterName} size="lg" />
+          ) : (
+            <div className="w-14 h-14 rounded-full bg-surface-white/10 border-2 border-surface-white/20 flex items-center justify-center shrink-0">
+              <span className="font-heading text-body-sm text-surface-white/70 tracking-heading">
+                {characterInitials}
+              </span>
+            </div>
+          )}
+        </div>
+
+        <p className="font-heading text-title tracking-heading text-surface-white mb-2">
+          {characterName} is waiting
+        </p>
+        <p className="text-body-sm text-surface-white/60 mb-8 max-w-xs mx-auto">
+          {title}
+        </p>
+
+        <div className="inline-flex items-center gap-3 bg-accent text-surface-white px-6 py-3.5 rounded-brand-sm font-body-medium text-body-sm group-hover:bg-accent-hover transition-colors duration-normal">
+          <MicIcon className="w-5 h-5" />
+          <span>Connect and start talking</span>
+        </div>
+
+        <div className="flex items-center justify-center gap-4 mt-5">
+          <p className="text-caption text-surface-white/40">
+            No account required · Just 5 minutes
+          </p>
+        </div>
+
+        {socialProof && (
+          <div className="flex justify-center mt-3">
+            <span className="inline-flex items-center gap-1.5 text-caption text-surface-white/40">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500/60" />
+              {socialProof}
+            </span>
+          </div>
         )}
       </div>
     </div>

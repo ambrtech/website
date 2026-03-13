@@ -69,7 +69,7 @@ The risk with this direction is blandness through excessive warmth. The brands t
 - `npm run start` — serve production build locally
 - `npm run lint` — run ESLint
 
-**After every set of code changes, run `npm run build` so the user can immediately see the result.** Do not wait to be asked.
+**Do NOT run `npm run build` automatically** — it kills the dev server. The user runs `npm run dev` and relies on Turbopack hot-reload to see changes. Only run build if explicitly asked or to verify static generation.
 
 ## Project Structure
 ```
@@ -86,7 +86,7 @@ src/
       route.tsx       — dynamic OG image generation via @vercel/og
     layout.tsx        — root layout, global metadata, fonts
     page.tsx          — homepage
-    globals.css       — Tailwind imports + @config directive
+    globals.css       — Tailwind imports + @theme block
     sitemap.ts        — dynamic sitemap generation
     robots.ts         — robots.txt generation
 ```
@@ -99,36 +99,11 @@ src/
 - Use `generateStaticParams` for all dynamic routes (blog posts, use cases, tag pages, etc.)
 - Only use `"use client"` on leaf components that genuinely need interactivity — never at page level
 - Keep data fetching at the page/layout level using async Server Components
-- If personalisation or gated content is added later, use ISR (Incremental Static Regeneration) rather than switching to full SSR
 
 ### SEO & Metadata
 - Use `createMetadata()` from `@/lib/metadata` for every page — ensures consistent OG, Twitter, and canonical URL generation
-- The root layout sets `metadataBase`, `title.template` (`%s | Ambr AI`), and fallback OG/Twitter defaults
 - Every page must have a unique `title` and `description` via `createMetadata()`
 - Sitemap auto-generates from `src/app/sitemap.ts` — new content types should be added there
-- Robots.txt generated via `src/app/robots.ts`
-
-### Structured Data (JSON-LD)
-- Use components from `@/components/json-ld` — never write raw JSON-LD script tags
-- **`OrganizationJsonLd`** — homepage and about page
-- **`ArticleJsonLd`** — every blog post (headline, author, dates, publisher, image)
-- **`BreadcrumbJsonLd`** — all pages with depth > 1
-- **`FaqJsonLd`** — any page with FAQ content (high GEO citation rate)
-- **`JsonLd`** — generic component for custom schemas (e.g. Product on feature pages)
-- HTML `<` characters are escaped to `\u003c` to prevent XSS in JSON-LD payloads
-
-### OG Images
-- Dynamic OG images generated via `@vercel/og` at `/og?title=...&subtitle=...`
-- Uses brand colours and typography (Lora heading on surface background)
-- Shared frequently on LinkedIn — branded OG images are critical for professional appearance
-- For blog posts, pass the post title as `title` and a short description as `subtitle`
-
-### Vercel Optimizations
-- Use `next/image` for all images — provides automatic format negotiation (AVIF/WebP), lazy loading, and responsive sizing via Vercel's Image Optimization API
-- Use `next/font` for all fonts — self-hosted with `display: "swap"` for zero layout shift
-- Static assets get `Cache-Control: public, max-age=31536000, immutable` headers
-- Next.js handles code splitting per-route automatically; keep page components lean
-- Use `next/link` for all internal navigation to enable client-side transitions and prefetching
 
 ### Design Tokens
 - Brand values are defined in two places that must stay in sync:
@@ -178,101 +153,13 @@ src/
 ### Environment Variables
 - `NEXT_PUBLIC_SITE_URL` — canonical site URL (defaults to `https://ambr.ai`)
 - Public env vars must be prefixed with `NEXT_PUBLIC_`
-- See `.env.example` for reference
 
 ## Content System
-
-### Marketing Pages
 - Marketing pages are bespoke JSX files assembled from reusable section components
 - No content abstraction layer — each page is built directly as a page component
 - Section components enforce brand rules; page assembly determines narrative flow
-- When creating a new marketing page, reference this handbook and existing pages for structural consistency
-
-### Blog / GEO Content
-The blog requires proper infrastructure from the start — volume will grow and each post needs full technical SEO and GEO (Generative Engine Optimization) support.
-
-#### MDX Frontmatter
-Every blog post requires complete frontmatter:
-```yaml
----
-title: "Post Title Here"
-slug: "post-slug-here"
-description: "Meta description for search. 150-160 characters."
-publishedAt: "2026-03-15"
-updatedAt: "2026-03-20"
-author: "Jamie Wood"
-authorRole: "CTO & Co-Founder"
-tags: ["sales-training", "ai-simulation"]
-featuredImage: "/images/blog/slug-hero.jpg"
-featuredImageAlt: "Descriptive alt text for the image"
-readingTime: 7
----
-```
-
-#### Blog MDX Components
-| Component | Purpose |
-|---|---|
-| `<Callout type="info\|warning">` | Highlighted info or warning block |
-| `<StatHighlight value="78%" label="faster onboarding">` | Inline stat callout |
-| `<ComparisonTable>` | Side-by-side feature/approach comparison |
-| `<AuthorBio>` | Author card at end of post |
-| `<RelatedPosts>` | Manually or auto-linked related content |
-| `<CTAInline>` | Mid-post CTA (e.g. "See how Ambr handles this") |
-
-#### Taxonomy
-- Tags defined in `src/lib/taxonomy.ts` — each tag has a label and description
-- Every tag gets an index page (`/blog/tag/[slug]`) with proper meta and structured data
-- Supports topic cluster SEO from day one
-
-#### Pagination
-- `/blog` index paginates at 12 posts per page from the start
-- Build pagination infrastructure even with few posts — retrofitting is painful
-
-#### JSON-LD Structured Data
-Every blog post must include JSON-LD structured data rendered as a `<script type="application/ld+json">` tag:
-- **`Article` / `BlogPosting` schema** on every post — headline, description, author (as `Person`), datePublished, dateModified, publisher (as `Organization` with logo), image
-- **`Organization` schema** on the homepage and about page
-- **`BreadcrumbList` schema** on all pages with breadcrumb navigation
-- **`FAQPage` schema** on any page with FAQ content (high citation rate in AI-generated answers)
-
-#### GEO (Generative Engine Optimization) Considerations
-Content must be optimised for both traditional search engines and AI/LLM citation:
-- **Cite sources and include statistics** — content with verifiable claims and data gets cited 30-40% more by AI engines
-- **Clear question-and-answer structure** — AI engines heavily favour Q&A pairs; use FAQ sections where natural
-- **Original research and proprietary data** — unique benchmarks, frameworks, or datasets give AI engines a reason to cite us specifically
-- **Speakable content sections** — write key paragraphs as self-contained, quotable statements that AI can extract cleanly
-- **Entity clarity** — consistently refer to "Ambr AI" (not variations) so AI engines build a clear entity graph
-- **Update dates matter** — always populate `updatedAt` in frontmatter; AI engines favour recently updated content
-- **Topic authority through clusters** — the taxonomy system supports this; each tag cluster builds cumulative authority
-
-## Image Pipeline
-
-### Storage & Naming
-- Photography stored in `/public/images/photography/` with descriptive kebab-case names indicating scene and page context (e.g. `hero-solo-conversation.jpg`, `solutions-phone-booth-practice.jpg`)
-- Blog images in `/public/images/blog/`
-
-### Style
-- **Human-first, always.** People are the subject, not the product. The AI should be invisible in imagery.
-- Photography should feel candid and analog — natural light, film grain, warmth. Think lomography, not studio lighting.
-- Never use: corporate stock photography, staged/perfect compositions, tech-aesthetic imagery, abstract AI visuals, sci-fi tropes.
-
-### Usage
-- **Always use `next/image`** — never raw `<img>` tags. Provides automatic WebP/AVIF conversion, responsive srcset, lazy loading, and layout shift prevention.
-- Use `priority` prop only for above-fold hero images
-- Always provide explicit `width` and `height`
-
-### Alt Text
-- Every image must have descriptive alt text that conveys the scene, not the marketing message
-- **Good:** "A woman removing headphones and exhaling with relief at her desk"
-- **Bad:** "Ambr AI simulation practice"
-- This is both an accessibility requirement and an SEO/GEO signal
-
-### Optimisation
-- Vercel's built-in image optimisation via `next/image` is sufficient — no external image CDN needed
-- If consistent post-processing (warmth/grain) is needed across all photos, Cloudinary's free tier is an option
 
 ## Performance Budgets
-Every page must meet these targets:
 
 | Metric | Target |
 |---|---|

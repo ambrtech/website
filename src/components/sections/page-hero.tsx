@@ -11,11 +11,11 @@ interface PageHeroProps {
 
 export function PageHero({ eyebrow, heading, subtitle, compact, first }: PageHeroProps) {
   const topPadding = first
-    ? 'pt-28 md:pt-36'
-    : 'pt-section-mobile md:pt-section'
+    ? 'pt-28 md:pt-[160px]'
+    : 'pt-section-mobile md:pt-[120px]'
 
   return (
-    <section className={`${topPadding} pb-section-mobile md:pb-section px-container-mobile md:px-container bg-surface-white`}>
+    <section className={`${topPadding} pb-section-mobile md:pb-[100px] px-container-mobile md:px-container bg-surface-white`}>
       <div className="mx-auto max-w-site">
         <Reveal>
           {eyebrow && (

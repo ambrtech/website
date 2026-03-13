@@ -138,7 +138,7 @@ export default function LanguagesPage() {
       />
 
       {/* ── Hero with decorative greetings ── */}
-      <section className="relative pt-section-mobile md:pt-section pb-section-mobile md:pb-section px-container-mobile md:px-container overflow-hidden bg-surface-white">
+      <section className="relative pt-section-mobile md:pt-[120px] pb-section-mobile md:pb-[100px] px-container-mobile md:px-container overflow-hidden bg-surface-white">
         {/* Decorative greetings — positioned behind hero text */}
         <div
           className="absolute inset-0 pointer-events-none select-none overflow-hidden"

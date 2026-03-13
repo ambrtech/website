@@ -73,6 +73,29 @@ export default function SimulationCardPreview() {
           </div>
         </section>
 
+        {/* ── Photo background variant ── */}
+        <section>
+          <h2 className="font-heading text-title tracking-heading text-dark mb-2">
+            Photo background layout
+          </h2>
+          <p className="text-body-sm text-copy-light mb-8">
+            Photography background with duotone overlay treatment.
+            Warm, editorial feel. Uses character headshot.
+          </p>
+          <div className="max-w-2xl mx-auto">
+            <SimulationCard
+              layout="photo-warm"
+              characterName="Zoe"
+              characterRole="VP of Procurement"
+              characterInitials="ZW"
+              title="Navigate a high-stakes contract negotiation with a skeptical buyer"
+              socialProof="2,847 conversations this week"
+              characterImage="/images/team/zoe-headshot.png"
+              backgroundImage="/images/photography/glass-tower-pair-at-window.png"
+            />
+          </div>
+        </section>
+
         {/* ── Live call variant ── */}
         <section>
           <h2 className="font-heading text-title tracking-heading text-dark mb-2">

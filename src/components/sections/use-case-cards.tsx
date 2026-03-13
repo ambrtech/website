@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Section } from './section'
 import { Reveal } from '@/components/reveal'
+import { ImageReveal } from '@/components/animations/image-reveal'
+import { EyebrowLine } from '@/components/animations/eyebrow-line'
 
 export interface UseCaseItem {
   heading: string
@@ -28,7 +30,8 @@ export function UseCaseCards({ eyebrow, heading, subtitle, image, items }: UseCa
         <div>
           {eyebrow && (
             <Reveal>
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5 eyebrow-hairline">
+              <EyebrowLine />
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
                 {eyebrow}
               </p>
             </Reveal>
@@ -49,7 +52,7 @@ export function UseCaseCards({ eyebrow, heading, subtitle, image, items }: UseCa
           )}
         </div>
         {image && (
-          <Reveal>
+          <ImageReveal direction="right" delay={0.2}>
             <div className="hidden md:block">
               <Image
                 src={image.src}
@@ -59,7 +62,7 @@ export function UseCaseCards({ eyebrow, heading, subtitle, image, items }: UseCa
                 className="w-full h-auto rounded-brand object-cover aspect-[3/2]"
               />
             </div>
-          </Reveal>
+          </ImageReveal>
         )}
       </div>
 

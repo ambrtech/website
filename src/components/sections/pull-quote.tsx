@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Reveal } from '@/components/reveal'
+import { ScrollTextReveal } from '@/components/animations/scroll-text-reveal'
 
 export interface PullQuoteProps {
   quote: string
@@ -15,38 +16,40 @@ export function PullQuote({ quote, name, role, company, imageSrc, imageAlt, clas
   return (
     <section className={`py-section-lg md:py-section-xl px-container-mobile md:px-container ${className ?? ''}`}>
       <div className="mx-auto max-w-[900px]">
-        <Reveal slow>
-          <blockquote className="relative">
+        <blockquote className="relative">
             <span className="absolute -top-6 -left-3 md:-left-8 font-heading text-quote-mark leading-none text-accent/10 select-none pointer-events-none">
               &ldquo;
             </span>
-            <p className="font-heading text-section md:text-title leading-[1.3] tracking-heading text-dark italic">
-              &ldquo;{quote}&rdquo;
-            </p>
+            <ScrollTextReveal start="top 90%" end="top 40%">
+              <p className="font-heading text-section md:text-title leading-[1.3] tracking-heading text-dark italic">
+                &ldquo;{quote}&rdquo;
+              </p>
+            </ScrollTextReveal>
             {(name || role || company) && (
-              <footer className="mt-6 flex items-center gap-3">
-                {imageSrc ? (
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0">
-                    <Image
-                      src={imageSrc}
-                      alt={imageAlt ?? ''}
-                      fill
-                      className="object-cover"
-                      sizes="48px"
-                    />
+              <Reveal>
+                <footer className="mt-6 flex items-center gap-3">
+                  {imageSrc ? (
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0">
+                      <Image
+                        src={imageSrc}
+                        alt={imageAlt ?? ''}
+                        fill
+                        className="object-cover"
+                        sizes="48px"
+                      />
+                    </div>
+                  ) : (
+                    <span className="w-8 h-px bg-accent-soft" />
+                  )}
+                  <div className="text-body-sm text-copy-mid">
+                    {name && <span className="font-body-medium text-dark">{name}</span>}
+                    {name && (role || company) && <span> — </span>}
+                    {role}{role && company && ', '}{company}
                   </div>
-                ) : (
-                  <span className="w-8 h-px bg-accent-soft" />
-                )}
-                <div className="text-body-sm text-copy-mid">
-                  {name && <span className="font-body-medium text-dark">{name}</span>}
-                  {name && (role || company) && <span> — </span>}
-                  {role}{role && company && ', '}{company}
-                </div>
-              </footer>
+                </footer>
+              </Reveal>
             )}
           </blockquote>
-        </Reveal>
       </div>
     </section>
   )

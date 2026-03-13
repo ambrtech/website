@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
+import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { Reveal } from '@/components/reveal'
 
@@ -58,6 +59,14 @@ const resources = [
 export default function DataProtectionPage() {
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Security', href: '/security/compliance' },
+          { name: 'Data Protection', href: '/security/data-protection' },
+        ]}
+      />
+
       <PageHero
         eyebrow="Data Protection"
         heading={
@@ -67,7 +76,6 @@ export default function DataProtectionPage() {
         }
         subtitle="Complete transparency on what we collect, how we store it, and what we'll never do with it. Your data is never sold. Your conversations are never used to train AI models."
         compact
-        first
       />
 
       {/* ── Data types ── */}

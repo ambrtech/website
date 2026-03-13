@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { OrganizationJsonLd } from '@/components/json-ld'
-import { PageHero } from '@/components/sections/page-hero'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 import { FeatureGrid } from '@/components/sections/feature-grid'
@@ -51,37 +50,73 @@ export default function CompanyPage() {
       />
 
       {/* ── Hero ── */}
-      <PageHero
-        heading={
-          <>
-            Built for the conversations that{' '}
-            <em className="text-accent">matter</em> most
-          </>
-        }
-        subtitle="Ambr AI was founded on a straightforward observation: the most important conversations in any organization — the ones that build careers, close deals, and retain customers — are the ones people get the least opportunity to train for."
-      />
-
-      <Section>
-        <Reveal>
-          <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
-            <div className="max-w-lg">
-              <p className="text-body text-copy-mid leading-[1.75] mb-6">
-                We set out to change that, using the latest AI technology to help
-                people get better at the most human skill of all: talking to each
-                other.
-              </p>
+      <section className="pt-section-mobile md:pt-[120px] pb-section-mobile md:pb-[100px] px-container-mobile md:px-container bg-surface-white">
+        <div className="mx-auto max-w-site">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+            <div>
+              <Reveal>
+                <h1 className="font-heading text-headline leading-[1.1] tracking-heading max-w-[820px] mb-8">
+                  Built for the conversations that{' '}
+                  <em className="text-accent">matter</em> most
+                </h1>
+                <p className="text-body text-copy-mid leading-[1.75] max-w-[640px] mb-6">
+                  Ambr AI was founded on a straightforward observation: the most
+                  important conversations in any organization — the ones that
+                  build careers, close deals, and retain customers — are the ones
+                  people get the least opportunity to train for.
+                </p>
+                <p className="text-body text-copy-mid leading-[1.75] max-w-[640px]">
+                  We set out to change that, using the latest AI technology to
+                  help people get better at the most human skill of all: talking
+                  to each other.
+                </p>
+              </Reveal>
             </div>
-            <div className="relative aspect-[4/3] rounded-brand-lg overflow-hidden">
-              <Image
-                src="/images/photography/company-team-genuine.png"
-                alt="The Ambr AI team in conversation"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
+            <Reveal>
+              <div className="relative aspect-[4/3] rounded-brand-lg overflow-hidden">
+                <Image
+                  src="/images/team/team.jpg"
+                  alt="The Ambr AI team in genuine conversation together"
+                  fill
+                  className="object-cover [filter:grayscale(15%)_sepia(8%)_contrast(95%)]"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                {/* Vignette */}
+                <div className="absolute inset-0 pointer-events-none" style={{ boxShadow: 'inset 0 0 120px 40px rgba(0,0,0,0.15)' }} />
+                {/* Grain */}
+                <div className="absolute inset-0 bg-noise-fine opacity-[0.14] mix-blend-soft-light pointer-events-none" />
+              </div>
+            </Reveal>
           </div>
-        </Reveal>
+        </div>
+      </section>
+
+      {/* ── Why we exist ── */}
+      <Section>
+        <div className="grid md:grid-cols-[1fr_1fr] gap-10 md:gap-20 items-start">
+          <Reveal>
+            <div>
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+                Why we exist
+              </p>
+              <h2 className="font-heading text-quote leading-[1.4] tracking-heading italic text-dark">
+                <span className="text-accent">Because soft skills are actually hard skills,</span>{' '}
+                and the ability to
+                communicate with empathy and clarity in high-pressure moments
+                shouldn&rsquo;t be reserved for those with access to expensive
+                coaching or natural talent.
+              </h2>
+            </div>
+          </Reveal>
+          <Reveal>
+            <p className="text-body text-copy-mid leading-[1.75] md:mt-10">
+              To bridge the gap between knowing what to say and being able to say
+              it. Human connection and communication are fundamental to workplace
+              success, yet traditional training leaves people unprepared for the
+              conversations that matter most.
+            </p>
+          </Reveal>
+        </div>
       </Section>
 
       {/* ── Who we are ── */}
@@ -112,22 +147,6 @@ export default function CompanyPage() {
 
       {/* ── Client logos ── */}
       <LogoCloud label="Trusted by" />
-
-      <div className="px-container-mobile md:px-container pb-section-mobile md:pb-section">
-        <div className="mx-auto max-w-site">
-          <Reveal>
-            <Link
-              href="https://www.linkedin.com/company/ambr-ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-label font-body-medium text-dark hover:text-accent transition-colors duration-normal"
-            >
-              Follow us on LinkedIn
-              <span className="text-accent">&rarr;</span>
-            </Link>
-          </Reveal>
-        </div>
-      </div>
 
       {/* ── Founders ── */}
       <Section className="bg-surface-white">
@@ -165,6 +184,18 @@ export default function CompanyPage() {
                 </Link>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-border max-w-3xl">
+            <Link
+              href="https://www.linkedin.com/company/ambr-ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-label font-body-medium text-dark hover:text-accent transition-colors duration-normal"
+            >
+              Follow us on LinkedIn
+              <span className="text-accent">&rarr;</span>
+            </Link>
           </div>
         </Reveal>
       </Section>
@@ -219,29 +250,6 @@ export default function CompanyPage() {
                 training partner, not a software vendor.
               </p>
             </div>
-          </div>
-        </Reveal>
-      </Section>
-
-      {/* ── Why we exist ── */}
-      <Section>
-        <Reveal>
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-              Why we exist
-            </p>
-            <h2 className="font-heading text-quote md:text-section leading-[1.3] tracking-heading mb-8 italic">
-              Because soft skills are actually hard skills, and the ability to
-              communicate with empathy and clarity in high-pressure moments
-              shouldn&rsquo;t be reserved for those with access to expensive
-              coaching or natural talent.
-            </h2>
-            <p className="text-body text-copy-mid leading-[1.75] max-w-xl mx-auto">
-              To bridge the gap between knowing what to say and being able to say
-              it. Human connection and communication are fundamental to workplace
-              success, yet traditional training leaves people unprepared for the
-              conversations that matter most.
-            </p>
           </div>
         </Reveal>
       </Section>

@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { Section } from './section'
 import { Reveal } from '@/components/reveal'
+import { ImageReveal } from '@/components/animations/image-reveal'
+import { EyebrowLine } from '@/components/animations/eyebrow-line'
 
 interface EditorialFeatureProps {
   eyebrow?: string
@@ -13,7 +15,7 @@ export function EditorialFeature({ eyebrow, heading, subtitle }: EditorialFeatur
     <Section>
       <div className="grid lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_480px] gap-12 lg:gap-24 items-start">
         {/* Left Side: Large, beautiful photography */}
-        <Reveal className="group">
+        <ImageReveal direction="left" className="group">
           <div className="overflow-hidden rounded-brand-sm">
             <Image
               src="/images/photography/hero-quiet-reflection.jpeg"
@@ -23,15 +25,18 @@ export function EditorialFeature({ eyebrow, heading, subtitle }: EditorialFeatur
               className="w-full h-auto object-cover aspect-[4/3] transform transition-transform duration-[2s] group-hover:scale-[1.02]"
             />
           </div>
-        </Reveal>
+        </ImageReveal>
 
         {/* Right Side: Dense, editorial typeset information */}
         <div className="flex flex-col justify-center h-full max-w-lg lg:max-w-none">
           <Reveal delay={200}>
             {eyebrow && (
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-6 eyebrow-hairline">
-                {eyebrow}
-              </p>
+              <>
+                <EyebrowLine />
+                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-6">
+                  {eyebrow}
+                </p>
+              </>
             )}
             {heading && (
               <h2 className="font-heading text-headline leading-[1.1] tracking-heading text-dark mb-6">

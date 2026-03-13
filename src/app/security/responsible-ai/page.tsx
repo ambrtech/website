@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
-import { PageHero } from '@/components/sections/page-hero'
+import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 
@@ -14,130 +14,135 @@ export const metadata = createMetadata({
 export default function ResponsibleAIPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Responsible AI"
-        heading={
-          <>
-            Responsible AI, by <em className="text-accent">design</em>.
-          </>
-        }
-        subtitle="AI roleplay involves real people practicing real conversations: moments of vulnerability, uncertainty, and growth. That responsibility shapes every decision we make."
-        compact
-        first
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Security', href: '/security/compliance' },
+          { name: 'Responsible AI', href: '/security/responsible-ai' },
+        ]}
       />
 
-      {/* ── Purpose and Scope ── */}
-      <Section>
-        <Reveal>
-          <div className="max-w-[700px]">
-            <p className="text-body text-copy-mid leading-[1.75]">
-              Ambr AI is not a general-purpose AI tool. It is a training platform
-              built to help people perform better in the moments that matter at
-              work. That focused scope makes our ethical commitments specific and
-              enforceable.
-            </p>
-          </div>
-        </Reveal>
-      </Section>
-
-      {/* ── Human-centered (dark anchor) ── */}
-      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container">
+      {/* ── Hero ── */}
+      <section className="pt-section-mobile md:pt-[120px] pb-section-mobile md:pb-[100px] px-container-mobile md:px-container bg-surface-white">
         <div className="mx-auto max-w-site">
           <Reveal>
-            <div className="bg-dark text-surface-white rounded-brand p-8 md:p-12">
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
-                Human-centered
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
+              Responsible AI
+            </p>
+            <h1 className="font-heading text-headline leading-[1.1] tracking-heading max-w-[800px] mb-6">
+              Responsible AI, by <em className="text-accent">design</em>.
+            </h1>
+            <div className="text-body text-copy-mid leading-[1.75] max-w-[580px] space-y-4">
+              <p>
+                AI roleplay involves real people practicing real conversations:
+                moments of vulnerability, uncertainty, and growth. That
+                responsibility shapes every decision we make.
               </p>
-              <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-6 max-w-[640px]">
-                The conversations that shape careers and relationships happen
-                between <em className="text-accent">people</em>.
-              </h2>
-              <div className="max-w-[640px] space-y-4 text-body text-copy-light leading-[1.75]">
-                <p>Ambr AI exists to make sure people are ready for them.</p>
-                <p>
-                  Every simulation is practice for a real moment with a real
-                  colleague, client, or team member. The AI builds confidence and
-                  sharpens skill in a safe space. The measure of success is always
-                  what happens next, when it counts.
-                </p>
-              </div>
+              <p>
+                Ambr AI is not a general-purpose AI tool. It is a training
+                platform built to help people perform better in the moments that
+                matter at work. That focused scope makes our ethical commitments
+                specific and enforceable.
+              </p>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* ── Three principle cards ── */}
-      <section className="pb-section-mobile md:pb-section px-container-mobile md:px-container bg-surface-white">
-        <div className="mx-auto max-w-site">
-          <Reveal>
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-8 eyebrow-hairline">
-              Our Principles
+      {/* ── Human-centered ── */}
+      <Section>
+        <Reveal>
+          <div className="bg-dark text-surface-white rounded-brand p-8 md:p-12">
+            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+              Human-centered
             </p>
-          </Reveal>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Reveal>
-              <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
-                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
-                  Transparency
-                </p>
-                <h3 className="font-heading text-label tracking-heading mb-4">
-                  Users always know they are interacting with AI.
-                </h3>
-                <p className="text-body-sm text-copy-mid leading-[1.75]">
-                  That clarity is built into the product, and it aligns with the
-                  EU AI Act&apos;s transparency requirements.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={80}>
-              <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
-                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
-                  Cultural context
-                </p>
-                <h3 className="font-heading text-label tracking-heading mb-4">
-                  We don&apos;t just translate. We rebuild for context.
-                </h3>
-                <p className="text-body-sm text-copy-mid leading-[1.75] mb-4">
-                  A difficult conversation in Tokyo is not the same as one in
-                  London or S&atilde;o Paulo. Ambr AI supports over 30 languages,
-                  and our simulations are adjusted to reflect cultural norms,
-                  communication styles, and workplace expectations across regions.
-                </p>
-                <Link
-                  href="/product/languages"
-                  className="text-body-sm font-body-medium text-accent hover:text-accent-hover transition-colors"
-                >
-                  See all supported languages &rarr;
-                </Link>
-              </div>
-            </Reveal>
-
-            <Reveal delay={160}>
-              <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
-                <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
-                  Bias &amp; Fairness
-                </p>
-                <h3 className="font-heading text-label tracking-heading mb-4">
-                  An ongoing design principle, not a checkbox.
-                </h3>
-                <p className="text-body-sm text-copy-mid leading-[1.75] mb-4">
-                  AI systems can inherit and reinforce biases. We take this
-                  seriously as an ongoing design principle. Scenario design
-                  includes review for cultural, gender, and
-                  demographic bias. Feedback mechanisms are designed for equitable
-                  treatment regardless of accent, language proficiency, or
-                  communication style.
-                </p>
-                <p className="text-caption text-copy-light leading-[1.7]">
-                  This is continuous work, and we are committed to transparency
-                  about our approach.
-                </p>
-              </div>
-            </Reveal>
+            <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-6 max-w-[640px]">
+              The conversations that shape careers and relationships happen
+              between <em className="text-accent">people</em>.
+            </h2>
+            <div className="max-w-[640px] space-y-4 text-body text-copy-light leading-[1.75]">
+              <p>Ambr AI exists to make sure people are ready for them.</p>
+              <p>
+                Every simulation is practice for a real moment with a real
+                colleague, client, or team member. The AI builds confidence and
+                sharpens skill in a safe space. The measure of success is always
+                what happens next, when it counts.
+              </p>
+            </div>
           </div>
+        </Reveal>
+      </Section>
+
+      {/* ── Three principle cards ── */}
+      <Section className="bg-surface-white">
+        <Reveal>
+          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-8 eyebrow-hairline">
+            Our Principles
+          </p>
+        </Reveal>
+        <div className="grid md:grid-cols-3 gap-6">
+          <Reveal>
+            <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
+                Transparency
+              </p>
+              <h3 className="font-heading text-label tracking-heading mb-4">
+                Users always know they are interacting with AI.
+              </h3>
+              <p className="text-body-sm text-copy-mid leading-[1.75]">
+                That clarity is built into the product, and it aligns with the
+                EU AI Act&apos;s transparency requirements.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
+                Cultural context
+              </p>
+              <h3 className="font-heading text-label tracking-heading mb-4">
+                We don&apos;t just translate. We rebuild for context.
+              </h3>
+              <p className="text-body-sm text-copy-mid leading-[1.75] mb-4">
+                A difficult conversation in Tokyo is not the same as one in
+                London or S&atilde;o Paulo. Ambr AI supports over 30 languages,
+                and our simulations are adjusted to reflect cultural norms,
+                communication styles, and workplace expectations across regions.
+              </p>
+              <Link
+                href="/product/languages"
+                className="text-body-sm font-body-medium text-accent hover:text-accent-hover transition-colors"
+              >
+                See all supported languages &rarr;
+              </Link>
+            </div>
+          </Reveal>
+
+          <Reveal delay={160}>
+            <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
+                Bias &amp; Fairness
+              </p>
+              <h3 className="font-heading text-label tracking-heading mb-4">
+                An ongoing design principle, not a checkbox.
+              </h3>
+              <p className="text-body-sm text-copy-mid leading-[1.75] mb-4">
+                AI systems can inherit and reinforce biases. We take this
+                seriously as an ongoing design principle. Scenario design
+                includes review for cultural, gender, and
+                demographic bias. Feedback mechanisms are designed for equitable
+                treatment regardless of accent, language proficiency, or
+                communication style.
+              </p>
+              <p className="text-caption text-copy-light leading-[1.7]">
+                This is continuous work, and we are committed to transparency
+                about our approach.
+              </p>
+            </div>
+          </Reveal>
         </div>
-      </section>
+      </Section>
 
       {/* ── Cross-links ── */}
       <section className="py-section-mobile md:py-section px-container-mobile md:px-container border-t border-border">

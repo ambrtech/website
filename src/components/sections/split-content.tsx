@@ -1,5 +1,6 @@
 import { Section } from './section'
 import { Reveal } from '@/components/reveal'
+import { EyebrowLine } from '@/components/animations/eyebrow-line'
 
 function TextureBlock() {
   return (
@@ -35,9 +36,12 @@ export function SplitContent({
   const textBlock = (
     <div>
       {eyebrow && (
-        <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">
-          {eyebrow}
-        </p>
+        <>
+          <EyebrowLine />
+          <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
+            {eyebrow}
+          </p>
+        </>
       )}
       <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-6">
         {heading}
