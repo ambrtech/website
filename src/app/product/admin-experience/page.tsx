@@ -406,11 +406,11 @@ export default function AdminExperiencePage() {
         </div>
       </Section>
 
-      {/* ── 9. Customization (white — component has own bg) ── */}
-      <CustomizationColumns />
+      {/* ── 9. Customization (gray to alternate from white use cases) ── */}
+      <CustomizationColumns className="bg-surface" />
 
-      {/* ── 10. Integrations ── */}
-      <Section className="border-y border-border">
+      {/* ── 10. Integrations (white) ── */}
+      <Section className="bg-surface-white border-y border-border">
         <Reveal>
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>

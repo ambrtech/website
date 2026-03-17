@@ -31,9 +31,13 @@ const items = [
   },
 ] as const
 
-export function CustomizationColumns() {
+interface CustomizationColumnsProps {
+  className?: string
+}
+
+export function CustomizationColumns({ className }: CustomizationColumnsProps) {
   return (
-    <div className="bg-surface-white">
+    <div className={className ?? 'bg-surface-white'}>
       <Section>
         <Reveal>
           <EyebrowLine />
