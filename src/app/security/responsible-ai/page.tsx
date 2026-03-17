@@ -1,7 +1,9 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
+import { SplitContent } from '@/components/sections/split-content'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 
@@ -26,55 +28,79 @@ export default function ResponsibleAIPage() {
       <PageHero
         eyebrow="Responsible AI"
         heading={<>Responsible AI, by <em className="text-accent">design</em>.</>}
-        subtitle="AI roleplay involves real people practicing real conversations: moments of vulnerability, uncertainty, and growth. That responsibility shapes every decision we make."
+        subtitle="AI roleplay involves real people practicing real conversations: moments of vulnerability, uncertainty, and growth. That responsibility shapes every decision we make. Ambr AI is not a general-purpose AI tool — it is a focused training platform, and that focused scope makes our ethical commitments specific and enforceable."
         compact
       />
 
-      {/* ── Focused scope ── */}
-      <Section className="bg-surface-white">
-        <Reveal>
-          <p className="text-body text-copy-mid leading-[1.75] max-w-[580px]">
-            Ambr AI is not a general-purpose AI tool. It is a training
-            platform built to help people perform better in the moments that
-            matter at work. That focused scope makes our ethical commitments
-            specific and enforceable.
-          </p>
-        </Reveal>
-      </Section>
-
       {/* ── Human-centered ── */}
-      <Section>
-        <Reveal>
-          <div className="bg-dark text-surface-white rounded-brand p-8 md:p-12">
-            <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
-              Human-centered
-            </p>
-            <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-6 max-w-[640px]">
-              The conversations that shape careers and relationships happen
-              between <em className="text-accent">people</em>.
-            </h2>
-            <div className="max-w-[640px] space-y-4 text-body text-copy-light leading-[1.75]">
-              <p>Ambr AI exists to make sure people are ready for them.</p>
-              <p>
-                Every simulation is practice for a real moment with a real
-                colleague, client, or team member. The AI builds confidence and
-                sharpens skill in a safe space. The measure of success is always
-                what happens next, when it counts.
-              </p>
-            </div>
+      <SplitContent
+        eyebrow="Human-centered"
+        heading={
+          <>
+            The conversations that shape careers and relationships happen
+            between <em className="text-accent">people</em>.
+          </>
+        }
+        visualContent={
+          <div className="relative aspect-[4/3] rounded-brand-lg overflow-hidden">
+            <Image
+              src="/images/photography/executive-floor-walkaround.png"
+              alt="Colleagues walking together through a modern office"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-noise-fine opacity-[0.14] mix-blend-soft-light pointer-events-none" />
           </div>
-        </Reveal>
-      </Section>
+        }
+      >
+        <p>
+          Ambr AI exists to strengthen human connection, not replace it.
+          We don&apos;t automate conversations — we help people get better
+          at having them. The AI is practice; the real moment is always
+          human-to-human.
+        </p>
+        <p>
+          Every simulation is practice for a real moment with a real
+          colleague, client, or team member. The AI builds confidence and
+          sharpens skill in a safe space. The measure of success is always
+          what happens next, when it counts.
+        </p>
+        <p>
+          Every product decision we make is guided by a simple question:
+          does this help someone have a better conversation with another
+          person?
+        </p>
+      </SplitContent>
 
-      {/* ── Three principle cards ── */}
+      {/* ── Principle cards ── */}
       <Section className="bg-surface-white">
         <Reveal>
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-8 eyebrow-hairline">
             Our Principles
           </p>
         </Reveal>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <Reveal>
+            <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
+              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
+                Human-designed, quality-supervised
+              </p>
+              <h3 className="font-heading text-label tracking-heading mb-4">
+                AI that operates within human-defined parameters.
+              </h3>
+              <p className="text-body-sm text-copy-mid leading-[1.75]">
+                The core simulation library, feedback frameworks, and AI
+                character behaviors are designed by people with domain expertise
+                in workplace learning. The AI operates within these
+                human-defined parameters. Our team runs ongoing quality reviews
+                to ensure simulation and feedback standards are maintained as
+                the platform evolves.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={80}>
             <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
                 Transparency
@@ -89,7 +115,7 @@ export default function ResponsibleAIPage() {
             </div>
           </Reveal>
 
-          <Reveal delay={80}>
+          <Reveal delay={160}>
             <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
                 Cultural context
@@ -112,7 +138,7 @@ export default function ResponsibleAIPage() {
             </div>
           </Reveal>
 
-          <Reveal delay={160}>
+          <Reveal delay={240}>
             <div className="bg-surface-white rounded-brand p-8 md:p-10 h-full">
               <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-accent mb-5">
                 Bias &amp; Fairness
@@ -128,7 +154,7 @@ export default function ResponsibleAIPage() {
                 treatment regardless of accent, language proficiency, or
                 communication style.
               </p>
-              <p className="text-caption text-copy-light leading-[1.7]">
+              <p className="text-body-sm text-copy-mid leading-[1.75] border-l-2 border-accent-soft pl-4">
                 This is continuous work, and we are committed to transparency
                 about our approach.
               </p>
