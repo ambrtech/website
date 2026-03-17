@@ -158,13 +158,12 @@ export default function AdminExperiencePage() {
           </>
         }
         visualContent={
-          <div className="relative rounded-brand-lg overflow-hidden">
+          <div className="relative rounded-brand-lg overflow-hidden aspect-[4/5]">
             <Image
               src="/images/photography/abstract-topo-charcoal-contours.jpeg"
               alt=""
-              width={800}
-              height={600}
-              className="w-full h-auto object-cover filter-duotone"
+              fill
+              className="object-cover filter-duotone"
               sizes="(max-width: 768px) 100vw, 55vw"
             />
             <div className="absolute inset-0 pointer-events-none vignette-dark" />
@@ -305,13 +304,12 @@ export default function AdminExperiencePage() {
           </>
         }
         visualContent={
-          <div className="relative rounded-brand-lg overflow-hidden">
+          <div className="relative rounded-brand-lg overflow-hidden aspect-[3/4] md:aspect-[4/5]">
             <Image
               src="/images/photography/v2-sand-waveform-c.jpeg"
               alt=""
-              width={800}
-              height={600}
-              className="w-full h-auto object-cover filter-duotone-blush"
+              fill
+              className="object-cover filter-duotone-blush"
               sizes="(max-width: 768px) 100vw, 55vw"
             />
             <div className="absolute inset-0 pointer-events-none vignette-dark" />
