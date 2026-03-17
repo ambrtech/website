@@ -1,0 +1,130 @@
+[     384ms] [ERROR] Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. /case-studies/skyscanner @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b0daae9a._.js:2359
+[     567ms] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackErrorBoundary pathname="/case-stud..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <Head>
+          <__next_root_layout_boundary__>
+            <SegmentViewNode type="layout" pagePath="layout.tsx">
+              <SegmentTrieNode>
+              <link>
+              <script>
+              <script>
+              <script>
+              <RootLayout>
+                <html lang="en" className="lora_10936...">
+                  <head>
+                  <body className="font-body ...">
+                    <svg>
+                    <div>
+                    <noscript>
+                    <Header>
+                      <header className="fixed top-...">
+                        <div className="transition...">
+                          <div className="mx-auto ma...">
+                            <LinkComponent>
+                            <nav className="hidden lg:..." onMouseLeave={function handleMouseLeave}>
+                              <LinkComponent>
+                              <button>
+                              <button>
+                              <button>
+                              <button>
+                              <LinkComponent>
+                              <LinkComponent href="/try-for-free" className="text-nav b..." ...>
+                                <a
++                                 className="text-nav bg-dark text-surface-white rounded-brand-sm px-5 py-2 ml-3 trans..."
+-                                 className="text-nav text-copy-mid px-3 py-2 transition-colors hover:text-dark"
+                                  ref={function}
+                                  onClick={function onClick}
+                                  onMouseEnter={function onMouseEnter}
+                                  onTouchStart={function onTouchStart}
++                                 href="/try-for-free"
+-                                 href="/faq"
+                                >
++                                 Try for free
+-                                 FAQ
+                            ...
+                    ...
+          ...
+
+    at throwOnHydrationMismatch (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:2892:56)
+    at prepareToHydrateHostInstance (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:2946:23)
+    at completeWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:6330:60)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:886:74)
+    at completeUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:8363:23)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:8300:28)
+    at workLoopConcurrentByScheduler (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:8294:58)
+    at renderRootConcurrent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:8276:71)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7908:176)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:8882:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_5150ccfd._.js:2601:64)
+[     687ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/images/textures/shadow-mask.png:0
+[  114186ms] [ERROR] Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. /case-studies/skyscanner @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b0daae9a._.js:2359
+[  123546ms] [ERROR] ./src/app/case-studies/skyscanner/page.tsx:138:15
+Parsing ecmascript source code failed
+  136 |             ))}
+  137 |           </div>
+> 138 |         </div>
+      |               ^
+> 139 |       </section>
+      | ^^^^^^^
+  140 |
+  141 |       {/* ─── The Pilot: Engagement Stats ─── */}
+  142 |       <section className="py-section-mobile md:py-section px-container-mobile md:px-container">
+
+Expected '</', got 'jsx text (
+      )' @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b0daae9a._.js:2359
+[  129071ms] [ERROR] ./src/app/case-studies/skyscanner/page.tsx:161:15
+Parsing ecmascript source code failed
+  159 |             </Reveal>
+  160 |           </div>
+> 161 |         </div>
+      |               ^
+> 162 |       </section>
+      | ^^^^^^^
+  163 |
+  164 |       <StatBar
+  165 |         heading="Engagement"
+
+Expected '</', got 'jsx text (
+      )' @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b0daae9a._.js:2359
+[  139036ms] [ERROR] ./src/app/case-studies/skyscanner/page.tsx:232:15
+Parsing ecmascript source code failed
+  230 |             ))}
+  231 |           </div>
+> 232 |         </div>
+      |               ^
+> 233 |       </section>
+      | ^^^^^^^
+  234 |
+  235 |       {/* ─── Manager Testimonials ─── */}
+  236 |       <section className="py-section-mobile md:py-section px-container-mobile md:px-container bg-surface-white">
+
+Expected '</', got 'jsx text (
+      )' @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b0daae9a._.js:2359
+[  144444ms] [ERROR] ./src/app/case-studies/skyscanner/page.tsx:282:15
+Parsing ecmascript source code failed
+  280 |             ))}
+  281 |           </div>
+> 282 |         </div>
+      |               ^
+> 283 |       </section>
+      | ^^^^^^^
+  284 |
+  285 |       {/* ─── Beyond the Pilot ─── */}
+  286 |       <Section>
+
+Expected '</', got 'jsx text (
+      )' @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b0daae9a._.js:2359
