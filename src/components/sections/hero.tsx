@@ -95,7 +95,7 @@ export function Hero() {
 
             {/* Mobile: compact demo card below the text */}
             <div className="lg:hidden mt-10">
-              <Reveal delay={1000}>
+              <Reveal>
                 <MobileDemoCard />
               </Reveal>
             </div>
