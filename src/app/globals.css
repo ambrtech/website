@@ -201,6 +201,11 @@
   50% { opacity: 0.55; transform: scale(1.2); }
 }
 
+@keyframes cta-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 114, 52, 0); }
+  50% { box-shadow: 0 0 20px 4px rgba(212, 114, 52, 0.25); }
+}
+
 @keyframes drawStroke {
   to { stroke-dashoffset: 0; }
 }

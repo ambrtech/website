@@ -1,14 +1,69 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Grid } from '@/components/grid'
 import { LogoBar } from '@/components/sections/logo-bar'
 import { ImageReveal } from '@/components/animations/image-reveal'
 import { SimulationCard } from '@/components/ui/simulation-card'
 
+/* ── Mic icon (inline, keeps hero self-contained) ── */
+
+function MicIcon({ className = 'w-4 h-4' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+      <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+      <line x1="12" x2="12" y1="19" y2="22" />
+    </svg>
+  )
+}
+
+/* ── Compact mobile demo card ── */
+
+function MobileDemoCard() {
+  return (
+    <Link
+      href="/try-for-free"
+      className="group flex items-center gap-4 p-4 rounded-brand-lg border border-border bg-surface-white shadow-card hover:border-accent-soft hover:-translate-y-px transition-all duration-normal"
+    >
+      {/* Avatar with online dot */}
+      <div className="relative shrink-0">
+        <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent-soft">
+          <Image
+            src="/images/team/zoe-headshot.png"
+            alt="Sarah"
+            width={48}
+            height={48}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-surface-white animate-[pulse-breath_3.5s_ease-in-out_infinite]" />
+      </div>
+
+      {/* Text */}
+      <div className="flex-1 min-w-0">
+        <p className="font-heading text-label tracking-heading text-dark leading-snug">
+          Sarah is waiting
+        </p>
+        <p className="text-caption text-copy-mid mt-0.5 line-clamp-1">
+          Navigate a difficult performance conversation
+        </p>
+      </div>
+
+      {/* Mic CTA */}
+      <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center shrink-0 group-hover:bg-accent-hover transition-colors animate-[cta-glow_3s_ease-in-out_2s_infinite]">
+        <MicIcon className="w-4.5 h-4.5 text-surface-white" />
+      </div>
+    </Link>
+  )
+}
+
+/* ── Hero ── */
+
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col bg-surface-white overflow-hidden pt-header">
+    <section className="relative min-h-[auto] lg:min-h-screen flex flex-col bg-surface-white overflow-hidden pt-header">
       <Grid className="text-dark/[0.02]" dotSize={1} gap={40} />
       <div className="relative z-10 mx-auto w-full max-w-site px-container-mobile md:px-container flex-1 flex items-center">
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
@@ -22,14 +77,9 @@ export function Hero() {
               skills through ultra-realistic AI conversation simulations - all
               easily customizable to meet your specific training needs.
             </p>
-            <div className="flex items-center gap-4 opacity-0 animate-[fadeIn_1.2s_ease-out_0.8s_both]">
-              <Link
-                href="/try-for-free"
-                className="group relative inline-block rounded-brand-sm bg-dark text-surface-white px-8 py-3.5 text-sm font-body-medium transition-all hover:bg-accent hover:-translate-y-px hover:shadow-lg overflow-hidden"
-              >
-                <span className="relative z-10">Try for Free</span>
-                <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-10 bg-noise mix-blend-overlay transition-opacity" />
-              </Link>
+
+            {/* Secondary link only — demo card is the primary CTA */}
+            <div className="opacity-0 animate-[fadeIn_1.2s_ease-out_0.8s_both]">
               <Link
                 href="/find-out-more"
                 className="text-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
@@ -37,8 +87,14 @@ export function Hero() {
                 Find Out More →
               </Link>
             </div>
+
+            {/* Mobile: compact demo card below the text */}
+            <div className="lg:hidden mt-10 opacity-0 animate-[fadeIn_1.2s_ease-out_1s_both]">
+              <MobileDemoCard />
+            </div>
           </div>
 
+          {/* Desktop: dark photo treatment */}
           <ImageReveal direction="right" duration={1.6} delay={0.5} immediate className="hidden lg:block">
             <SimulationCard
               layout="photo-warm"
@@ -56,7 +112,7 @@ export function Hero() {
       </div>
 
       {/* Pinned to bottom of viewport */}
-      <div className="relative z-10 shrink-0">
+      <div className="relative z-10 shrink-0 mt-12 lg:mt-0">
         <LogoBar />
       </div>
     </section>

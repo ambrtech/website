@@ -422,10 +422,6 @@ function LiveCallLayout({
 }) {
   return (
     <div className="p-8 md:p-10 text-center">
-      <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-surface/50 mb-6">
-        Interactive Demo
-      </p>
-
       <div className="flex justify-center mb-6">
         <AvatarDark initials={characterInitials} />
       </div>
@@ -477,10 +473,6 @@ function ScenarioLayout({
 }) {
   return (
     <div className="p-6 md:p-8">
-      <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent mb-5 block">
-        Interactive Demo
-      </span>
-
       <div className="flex items-center gap-4 mb-5">
         <Avatar initials={characterInitials} size="lg" online />
         <p className="text-body-sm font-body-medium text-dark">{characterName}</p>
@@ -607,10 +599,6 @@ function PhotoLayout({
 
       {/* Content */}
       <div className="relative z-10 p-8 md:p-10 text-center flex-1 flex flex-col items-center justify-center">
-        <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-surface-white/50 mb-6">
-          Interactive Demo
-        </p>
-
         <div className="flex justify-center mb-6">
           {characterImage ? (
             <AvatarImage src={characterImage} name={characterName} size="lg" />
@@ -630,7 +618,7 @@ function PhotoLayout({
           {title}
         </p>
 
-        <div className="inline-flex items-center gap-3 bg-accent text-surface-white px-6 py-3.5 rounded-brand-sm font-body-medium text-body-sm group-hover:bg-accent-hover transition-colors duration-normal">
+        <div className="inline-flex items-center gap-3 bg-accent text-surface-white px-6 py-3.5 rounded-brand-sm font-body-medium text-body-sm group-hover:bg-accent-hover transition-colors duration-normal animate-[cta-glow_3s_ease-in-out_2s_infinite]">
           <MicIcon className="w-5 h-5" />
           <span>Connect and start talking</span>
         </div>
