@@ -327,11 +327,9 @@ export function MockModuleManagement() {
                 <p className="text-caption font-body-medium text-dark">{mod.name}</p>
                 <p className="text-detail text-copy-faint">{mod.desc}</p>
               </div>
-              <div className={`w-9 h-5 rounded-full relative ${mod.enabled ? 'bg-accent' : 'bg-surface-alt border border-border'}`}>
+              <div className={`w-9 h-5 rounded-full relative flex items-center ${mod.enabled ? 'bg-accent justify-end' : 'bg-surface-alt border border-border justify-start'}`}>
                 <div
-                  className={`absolute top-0.5 w-4 h-4 rounded-full bg-surface-white shadow-sm ${
-                    mod.enabled ? 'right-0.5' : 'left-0.5'
-                  }`}
+                  className="w-4 h-4 rounded-full bg-surface-white shadow-sm mx-0.5"
                 />
               </div>
             </div>
