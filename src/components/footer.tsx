@@ -26,6 +26,8 @@ const footerNav = {
     { label: 'Compliance', href: '/security/compliance' },
     { label: 'Data Protection', href: '/security/data-protection' },
     { label: 'Responsible AI', href: '/security/responsible-ai' },
+    { label: 'DPA', href: '/dpa' },
+    { label: 'Terms', href: '/terms' },
   ],
 }
 

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
@@ -230,41 +229,6 @@ export default function AIRoleplayPage() {
         variant="dark"
       />
 
-      {/* ── Cross-links ── */}
-      <Section className="bg-surface-white">
-        <Reveal>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Link
-              href="/customization"
-              className="group border border-border rounded-brand-md p-8 transition-all duration-normal hover:border-accent-soft hover:shadow-card"
-            >
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">
-                Learn more
-              </p>
-              <h3 className="font-heading text-label text-dark mb-2 group-hover:text-accent transition-colors duration-normal">
-                Customization
-              </h3>
-              <p className="text-body-sm text-copy-light leading-relaxed">
-                See how every simulation can be tailored to your scenarios, language, and culture.
-              </p>
-            </Link>
-            <Link
-              href="/product/how-it-works"
-              className="group border border-border rounded-brand-md p-8 transition-all duration-normal hover:border-accent-soft hover:shadow-card"
-            >
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-3">
-                Learn more
-              </p>
-              <h3 className="font-heading text-label text-dark mb-2 group-hover:text-accent transition-colors duration-normal">
-                How It Works
-              </h3>
-              <p className="text-body-sm text-copy-light leading-relaxed">
-                A deeper look at the platform, from scenario design to feedback and analytics.
-              </p>
-            </Link>
-          </div>
-        </Reveal>
-      </Section>
     </>
   )
 }

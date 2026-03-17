@@ -7,13 +7,15 @@ import {
   MockCustomizationFlow,
   MockDeploymentTimeline,
   MockEvaluationRubric,
+  MockAdminBuilder,
+  MockCustomizationDelivery,
+  MockScenarioCreator,
 } from '@/components/sections/product-screenshot'
-import { ContrastSplit } from '@/components/sections/contrast-split'
 import { ShowcaseSplit } from '@/components/sections/showcase-split'
-import { DarkShowcase } from '@/components/sections/dark-showcase'
 import { TestimonialStat } from '@/components/sections/testimonial-stat'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
+import { ImageReveal } from '@/components/animations/image-reveal'
 
 export const metadata = createMetadata({
   title: 'Customization',
@@ -60,18 +62,27 @@ export default function CustomisationPage() {
         </div>
       </section>
 
-      {/* ── 2. Why It Matters — contrast split ── */}
-      <ContrastSplit
-        leftHeading={
+      {/* ── 2. Why It Matters ── */}
+      <SplitContent
+        eyebrow="Why it matters"
+        heading={
           <>
             The most effective training reflects the exact nuances of{' '}
             <em className="text-accent">your</em> business.
           </>
         }
-        leftBody="Your sales teams use unique objection-handling language, and your managers navigate specific company policies."
-        rightHeading="Ambr AI bridges this gap."
-        rightBody="Easily create simulations that mirror your real-world context - from the precise products your people represent to the tailored feedback they receive - achieving employee readiness with speed and without extensive investment."
-      />
+      >
+        <p>
+          Your sales teams use unique objection-handling language, and your
+          managers navigate specific company policies.
+        </p>
+        <p>
+          Ambr AI bridges this gap. Easily create simulations that mirror your
+          real-world context — from the precise products your people represent to
+          the tailored feedback they receive — achieving employee readiness with
+          speed and without extensive investment.
+        </p>
+      </SplitContent>
 
       {/* ── 3. What you can customize ── */}
       <ShowcaseSplit
@@ -105,32 +116,53 @@ export default function CustomisationPage() {
         ]}
       />
 
-      {/* ── 4. Built around your exact needs — dark showcase ── */}
-      <DarkShowcase
-        heading={
-          <>
-            Built around your exact <em className="text-accent">needs</em>.
-          </>
-        }
-        subtitle="Fully customizable to match your specific training goals."
-        items={[
-          {
-            title: 'Self-Serve Customization',
-            description:
-              'Easily create custom simulations yourself, directly in the platform. No technical skills required.',
-          },
-          {
-            title: 'In-House Customization Service',
-            description:
-              'Our expert team builds fully tailored simulations for you. Share a few minutes of context and we deliver scenarios that match your need.',
-          },
-          {
-            title: 'Personal Scenario Creator',
-            description:
-              'Individual team members create their own private scenarios for specific upcoming conversations.',
-          },
-        ]}
-      />
+      {/* ── 4. Three ways to customize ── */}
+      <Section className="bg-surface">
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              heading: 'Admin Customization',
+              description:
+                'Easily create custom simulations yourself, directly in the platform. No technical skills required.',
+              mock: <MockAdminBuilder />,
+            },
+            {
+              heading: 'In-House Customization Service',
+              description:
+                'Our expert team builds fully tailored simulations for you. Share a few minutes of context and we deliver scenarios that match your need.',
+              mock: <MockCustomizationDelivery />,
+            },
+            {
+              heading: 'Individual User Customization',
+              description:
+                'Individual team members create their own private scenarios for specific upcoming conversations.',
+              mock: <MockScenarioCreator />,
+            },
+          ].map((item, i) => (
+            <div key={item.heading} className="space-y-6">
+              <ImageReveal direction="bottom" delay={i * 0.12}>
+                <div className="h-[260px] overflow-hidden rounded-brand-lg">
+                  <div className="transform scale-[0.65] origin-top-left w-[154%]">
+                    <ProductScreenshot>
+                      {item.mock}
+                    </ProductScreenshot>
+                  </div>
+                </div>
+              </ImageReveal>
+              <Reveal delay={i * 80 + 100}>
+                <div>
+                  <h3 className="font-heading text-label tracking-heading text-dark mb-2">
+                    {item.heading}
+                  </h3>
+                  <p className="text-body-sm text-copy-mid leading-[1.75]">
+                    {item.description}
+                  </p>
+                </div>
+              </Reveal>
+            </div>
+          ))}
+        </div>
+      </Section>
 
       {/* ── 5. Launch in days, not months ── */}
       <SplitContent
@@ -181,6 +213,7 @@ export default function CustomisationPage() {
 
       {/* ── 7. What teams are saying — testimonial + stat ── */}
       <TestimonialStat
+        className="bg-surface-white py-section-lg md:py-section-xl"
         stat={{
           value: '93%',
           label: 'of users report feeling better prepared for real conversations after using Ambr AI',
@@ -202,7 +235,7 @@ export default function CustomisationPage() {
       />
 
       {/* ── 8. A team behind the platform ── */}
-      <Section className="bg-surface-white">
+      <Section className="bg-surface py-section-lg md:py-section-xl">
         <Reveal>
           <div className="text-center max-w-[600px] mx-auto">
             <div className="flex items-center justify-center gap-2 mb-8">

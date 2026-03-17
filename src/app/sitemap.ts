@@ -49,6 +49,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/security/compliance`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/security/data-protection`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/security/responsible-ai`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${siteUrl}/dpa`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${siteUrl}/terms`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     ...blogEntries,
   ]
 }

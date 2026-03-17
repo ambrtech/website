@@ -37,7 +37,7 @@ export function MethodComparison({ eyebrow, heading, items, className }: MethodC
           {/* Header row */}
           <div className="hidden md:grid grid-cols-[1fr_80px_2fr] gap-6 px-6 py-4 bg-surface-white border-b border-border">
             <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light">Method</span>
-            <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light text-center">Status</span>
+            <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light text-center" aria-hidden="true" />
             <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light">Insight</span>
           </div>
 
