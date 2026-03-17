@@ -25,3 +25,4 @@
 
 ### Brand & Copy
 - [ ] Agree with S and Z the wording underneath logo in the footer (and anywhere else it's used): "Realistic AI voice simulations, custom-built for enterprise teams."
+- [ ] **Audit accent emphasis consistency** — Get Claude to extract every heading/sub-heading that uses `<em className="text-accent">` across the site into a consolidated markdown file, alongside the CLAUDE.md guidance on when emphasis should be used. Jamie to audit for consistency and cascade changes back out.

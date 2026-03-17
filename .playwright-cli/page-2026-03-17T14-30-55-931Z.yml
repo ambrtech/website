@@ -1,0 +1,355 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Ambr AI home" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e7]:
+        - link "Customization" [ref=e8] [cursor=pointer]:
+          - /url: /customization
+        - button "Product" [ref=e9]:
+          - text: Product
+          - img [ref=e10]
+        - button "Industries" [ref=e12]:
+          - text: Industries
+          - img [ref=e13]
+        - button "Solutions" [ref=e15]:
+          - text: Solutions
+          - img [ref=e16]
+        - button "Security" [ref=e18]:
+          - text: Security
+          - img [ref=e19]
+        - link "Company" [ref=e21] [cursor=pointer]:
+          - /url: /company
+        - link "FAQ" [ref=e22] [cursor=pointer]:
+          - /url: /faq
+        - link "Try for free" [ref=e23] [cursor=pointer]:
+          - /url: /try-for-free
+  - main [ref=e24]:
+    - navigation "Breadcrumb" [ref=e25]:
+      - list [ref=e27]:
+        - listitem [ref=e28]:
+          - link "Home" [ref=e29] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e30]:
+          - generic [ref=e31]: /
+          - generic [ref=e32]: Customization
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - paragraph [ref=e38]: Customization
+        - heading "Built around your business." [level=1] [ref=e39]:
+          - text: Built around
+          - emphasis [ref=e40]: your
+          - text: business.
+        - paragraph [ref=e41]: Ambr AI can be easily configured to your scenarios, terminology, and criteria, so your people prepare for the conversations they'll actually have.
+      - generic [ref=e51]:
+        - generic [ref=e54]: Customization
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - paragraph [ref=e57]: Your context
+            - generic [ref=e58]:
+              - generic [ref=e59]: Sales methodology
+              - generic [ref=e60]: Buyer personas
+              - generic [ref=e61]: Pricing & packaging
+              - generic [ref=e62]: Competitive landscape
+          - generic [ref=e63]: →
+          - generic [ref=e64]:
+            - paragraph [ref=e65]: Your simulation
+            - generic [ref=e66]:
+              - paragraph [ref=e67]: Enterprise renewal negotiation
+              - paragraph [ref=e68]: CFO pushes back on pricing using your competitor's offer, referencing your packaging structure by name...
+            - generic [ref=e69]:
+              - paragraph [ref=e70]: Discovery call — cold prospect
+              - paragraph [ref=e71]: VP of Ops has 15 minutes and no context. Qualify the opportunity using your methodology...
+    - generic [ref=e76]:
+      - img [ref=e77]
+      - paragraph [ref=e78]: Why it matters
+      - heading "The most effective training reflects the exact nuances of your business." [level=2] [ref=e79]:
+        - text: The most effective training reflects the exact nuances of
+        - emphasis [ref=e80]: your
+        - text: business.
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: Your sales teams use unique objection-handling language, and your managers navigate specific company policies.
+        - paragraph [ref=e83]: Ambr AI bridges this gap. Easily create simulations that mirror your real-world context — from the precise products your people represent to the tailored feedback they receive — achieving employee readiness with speed and without extensive investment.
+    - generic [ref=e90]:
+      - generic [ref=e92]:
+        - heading "What you can customize (and how easy it is)" [level=2] [ref=e93]
+        - paragraph [ref=e94]: Building highly tailored simulations is fast and intuitive. You don't need technical skills to create scenarios that reflect your exact workplace reality.
+      - generic [ref=e96]:
+        - generic [ref=e100]:
+          - generic [ref=e103]: Customization
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - paragraph [ref=e106]: Your context
+              - generic [ref=e107]:
+                - generic [ref=e108]: Sales methodology
+                - generic [ref=e109]: Buyer personas
+                - generic [ref=e110]: Pricing & packaging
+                - generic [ref=e111]: Competitive landscape
+            - generic [ref=e112]: →
+            - generic [ref=e113]:
+              - paragraph [ref=e114]: Your simulation
+              - generic [ref=e115]:
+                - paragraph [ref=e116]: Enterprise renewal negotiation
+                - paragraph [ref=e117]: CFO pushes back on pricing using your competitor's offer, referencing your packaging structure by name...
+              - generic [ref=e118]:
+                - paragraph [ref=e119]: Discovery call — cold prospect
+                - paragraph [ref=e120]: VP of Ops has 15 minutes and no context. Qualify the opportunity using your methodology...
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - heading "Context & Objectives" [level=3] [ref=e123]
+            - paragraph [ref=e124]: Define the specific situation, tailor the experience to specific roles, and set clear, measurable learning outcomes.
+          - generic [ref=e125]:
+            - heading "AI Character" [level=3] [ref=e126]
+            - paragraph [ref=e127]: Choose the AI character’s exact personality, behavior, and pushback style to mirror the real people your team interacts with.
+          - generic [ref=e128]:
+            - heading "Real-World Inputs" [level=3] [ref=e129]
+            - paragraph [ref=e130]: Simply upload your company policies, product specs, or sales playbooks. Our platform instantly weaves them into the simulation, ensuring your teams are always working with the latest knowledge and best practice.
+    - generic [ref=e132]:
+      - heading "Built around your exact needs." [level=2] [ref=e134]:
+        - text: Built around your
+        - emphasis [ref=e135]: exact needs
+        - text: .
+      - generic [ref=e136]:
+        - generic [ref=e137]:
+          - generic [ref=e148]:
+            - generic [ref=e151]: Scenario Builder
+            - generic [ref=e152]:
+              - generic [ref=e153]:
+                - generic [ref=e154]: "1"
+                - generic [ref=e155]:
+                  - paragraph [ref=e156]: Scenario context
+                  - paragraph [ref=e157]: Performance review — underperforming team member
+                - generic [ref=e158]: ✓
+              - generic [ref=e159]:
+                - generic [ref=e160]: "2"
+                - generic [ref=e161]:
+                  - paragraph [ref=e162]: AI character behavior
+                  - paragraph [ref=e163]: Defensive, avoids direct answers, becomes emotional
+                - generic [ref=e164]: ✓
+              - generic [ref=e165]:
+                - generic [ref=e166]: "3"
+                - generic [ref=e167]:
+                  - paragraph [ref=e168]: Feedback criteria
+                  - paragraph [ref=e169]: Define what good looks like
+              - generic [ref=e170]:
+                - generic [ref=e171]: "4"
+                - paragraph [ref=e173]: Assign to team
+          - generic [ref=e175]:
+            - heading "Admin Customization" [level=3] [ref=e176]
+            - paragraph [ref=e177]: Easily create custom simulations yourself, directly in the platform. No technical skills required.
+        - generic [ref=e178]:
+          - generic [ref=e189]:
+            - generic [ref=e192]: Customization Service
+            - generic [ref=e193]:
+              - generic [ref=e195]: AB
+              - generic [ref=e196]:
+                - paragraph [ref=e197]: Brief received
+                - paragraph [ref=e198]: “We need scenarios for our Q2 sales kickoff covering new pricing...”
+            - generic [ref=e201]: 48 hours
+            - generic [ref=e203]:
+              - generic [ref=e204]:
+                - generic [ref=e205]: ✓
+                - generic [ref=e206]: Enterprise renewal — CFO pushback
+                - generic [ref=e207]: Ready
+              - generic [ref=e208]:
+                - generic [ref=e209]: ✓
+                - generic [ref=e210]: Discovery call — cold prospect
+                - generic [ref=e211]: Ready
+              - generic [ref=e212]:
+                - generic [ref=e213]: ○
+                - generic [ref=e214]: Competitive displacement — VP Ops
+                - generic [ref=e215]: In review
+          - generic [ref=e217]:
+            - heading "In-House Customization Service" [level=3] [ref=e218]
+            - paragraph [ref=e219]: Our expert team builds fully tailored simulations for you. Share a few minutes of context and we deliver scenarios that match your need.
+        - generic [ref=e220]:
+          - generic [ref=e231]:
+            - generic [ref=e234]: Create Scenario
+            - generic [ref=e235]:
+              - generic [ref=e236]:
+                - generic [ref=e237]: What conversation do you want to practice?
+                - generic [ref=e238]: I need to give feedback to a team member about missed deadlines
+              - generic [ref=e239]:
+                - generic [ref=e240]: What should the other person be like?
+                - generic [ref=e241]: Defensive at first, but ultimately open to feedback
+              - generic [ref=e242]:
+                - generic [ref=e243]: Any specific context?
+                - generic [ref=e244]: Optional — add details about your situation
+            - generic [ref=e245]:
+              - generic [ref=e246]: Private — only visible to you
+              - generic [ref=e247]: Start Conversation
+          - generic [ref=e249]:
+            - heading "Individual User Customization" [level=3] [ref=e250]
+            - paragraph [ref=e251]: Individual team members create their own private scenarios for specific upcoming conversations.
+    - generic [ref=e255]:
+      - generic [ref=e265]:
+        - generic [ref=e268]: Deployment Timeline
+        - generic [ref=e269]:
+          - generic [ref=e275]:
+            - paragraph [ref=e276]: Brief received
+            - paragraph [ref=e277]: Day 1
+          - generic [ref=e283]:
+            - paragraph [ref=e284]: Simulation built
+            - paragraph [ref=e285]: Day 3
+          - generic [ref=e289]:
+            - paragraph [ref=e290]: Team practicing
+            - paragraph [ref=e291]: Day 5
+      - generic [ref=e292]:
+        - img [ref=e293]
+        - paragraph [ref=e294]: Speed
+        - heading "Launch in days, not months." [level=2] [ref=e295]:
+          - text: Launch in
+          - emphasis [ref=e296]: days
+          - text: ", not months."
+        - paragraph [ref=e298]: From creation to deployment in under 48 hours. No lengthy onboarding, no implementation project, no waiting for the next release cycle.
+    - generic [ref=e302]:
+      - generic [ref=e303]:
+        - img [ref=e304]
+        - paragraph [ref=e305]: Evaluation
+        - heading "Feedback aligned to your frameworks." [level=2] [ref=e306]:
+          - text: Feedback aligned to your
+          - emphasis [ref=e307]: frameworks
+          - text: .
+        - paragraph [ref=e309]: "Every simulation delivers detailed feedback on tone, pacing, structure, and approach. That's the starting point. You can go further: anchor feedback to your organization's competency frameworks, rubrics, or assessment criteria. Sales teams can score against their real qualification methodology. L&D teams can align feedback to existing development frameworks."
+      - generic [ref=e319]:
+        - generic [ref=e322]: Evaluation Rubric
+        - generic [ref=e324]:
+          - generic [ref=e325]: Objection Handling
+          - generic [ref=e326]: 92%
+        - generic [ref=e330]:
+          - generic [ref=e331]: Product Knowledge
+          - generic [ref=e332]: 88%
+        - generic [ref=e336]:
+          - generic [ref=e337]: Empathy & Tone
+          - generic [ref=e338]: 95%
+        - generic [ref=e342]:
+          - generic [ref=e343]: Closing Methodology
+          - generic [ref=e344]: 85%
+        - paragraph [ref=e348]: Scored against your internal sales competency framework. Calibrated to your methodology and language.
+    - generic [ref=e352]:
+      - generic [ref=e353]:
+        - paragraph [ref=e354]: 93%
+        - paragraph [ref=e355]: of users report feeling better prepared for real conversations after using Ambr AI
+      - generic [ref=e356]:
+        - blockquote [ref=e357]:
+          - paragraph [ref=e358]: “We love it. It’s great that we can customize it for our needs.”
+          - generic [ref=e359]: L&D Manager, Professional Services Firm
+        - blockquote [ref=e360]:
+          - paragraph [ref=e361]: “We write scripts for managers but it’s not sustainable — Ambr AI gives them a self-sustaining skill.”
+          - generic [ref=e362]: Head of L&D, Logistics Company
+    - generic [ref=e366]:
+      - img [ref=e370]
+      - heading "A team behind the platform." [level=2] [ref=e374]:
+        - text: A team behind the
+        - emphasis [ref=e375]: platform
+        - text: .
+      - paragraph [ref=e376]: Every client works with a dedicated customer success manager who learns your business and your goals. We provide as much or as little support as you need. When you need new scenarios built, adjustments made, rollout support, you're working with real people who respond quickly and care about the details.
+    - generic [ref=e377]:
+      - img [ref=e381]
+      - generic [ref=e384]:
+        - heading "See what Ambr AI looks like for your team." [level=2] [ref=e386]:
+          - text: See what Ambr AI looks like for
+          - emphasis [ref=e387]: your
+          - text: team.
+        - paragraph [ref=e389]: We'll build a custom simulation using your real scenarios. No generic demos.
+        - generic [ref=e391]:
+          - link "Try for Free" [ref=e392] [cursor=pointer]:
+            - /url: /try-for-free
+          - link "Find Out More →" [ref=e393] [cursor=pointer]:
+            - /url: /find-out-more
+  - contentinfo [ref=e394]:
+    - generic [ref=e395]:
+      - generic [ref=e396]:
+        - link "Ambr AI home" [ref=e397] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e399]: Realistic AI voice simulations, custom-built for enterprise teams.
+      - generic [ref=e400]:
+        - generic [ref=e401]:
+          - paragraph [ref=e402]: Product
+          - list [ref=e403]:
+            - listitem [ref=e404]:
+              - link "How It Works" [ref=e405] [cursor=pointer]:
+                - /url: /product/how-it-works
+                - text: How It Works
+            - listitem [ref=e406]:
+              - link "AI Roleplay" [ref=e407] [cursor=pointer]:
+                - /url: /product/ai-roleplay
+                - text: AI Roleplay
+            - listitem [ref=e408]:
+              - link "Admin Experience" [ref=e409] [cursor=pointer]:
+                - /url: /product/admin-experience
+                - text: Admin Experience
+            - listitem [ref=e410]:
+              - link "Integrations" [ref=e411] [cursor=pointer]:
+                - /url: /product/integrations
+                - text: Integrations
+            - listitem [ref=e412]:
+              - link "Languages" [ref=e413] [cursor=pointer]:
+                - /url: /product/languages
+                - text: Languages
+        - generic [ref=e414]:
+          - paragraph [ref=e415]: Industries
+          - list [ref=e416]:
+            - listitem [ref=e417]:
+              - link "Consulting & Advisory" [ref=e418] [cursor=pointer]:
+                - /url: /industries/consulting-advisory
+                - text: Consulting & Advisory
+            - listitem [ref=e419]:
+              - link "Accounting & Tax" [ref=e420] [cursor=pointer]:
+                - /url: /industries/accounting-audit-tax
+                - text: Accounting & Tax
+            - listitem [ref=e421]:
+              - link "Legal" [ref=e422] [cursor=pointer]:
+                - /url: /industries/legal
+                - text: Legal
+            - listitem [ref=e423]:
+              - link "Retail & Hospitality" [ref=e424] [cursor=pointer]:
+                - /url: /industries/retail-hospitality
+                - text: Retail & Hospitality
+            - listitem [ref=e425]:
+              - link "Technology" [ref=e426] [cursor=pointer]:
+                - /url: /industries/technology
+                - text: Technology
+        - generic [ref=e427]:
+          - paragraph [ref=e428]: Company
+          - list [ref=e429]:
+            - listitem [ref=e430]:
+              - link "About" [ref=e431] [cursor=pointer]:
+                - /url: /company
+                - text: About
+            - listitem [ref=e432]:
+              - link "Blog" [ref=e433] [cursor=pointer]:
+                - /url: /blog
+                - text: Blog
+            - listitem [ref=e434]:
+              - link "FAQ" [ref=e435] [cursor=pointer]:
+                - /url: /faq
+                - text: FAQ
+            - listitem [ref=e436]:
+              - link "Contact" [ref=e437] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+        - generic [ref=e438]:
+          - paragraph [ref=e439]: Security
+          - list [ref=e440]:
+            - listitem [ref=e441]:
+              - link "Compliance" [ref=e442] [cursor=pointer]:
+                - /url: /security/compliance
+                - text: Compliance
+            - listitem [ref=e443]:
+              - link "Data Protection" [ref=e444] [cursor=pointer]:
+                - /url: /security/data-protection
+                - text: Data Protection
+            - listitem [ref=e445]:
+              - link "Responsible AI" [ref=e446] [cursor=pointer]:
+                - /url: /security/responsible-ai
+                - text: Responsible AI
+            - listitem [ref=e447]:
+              - link "DPA" [ref=e448] [cursor=pointer]:
+                - /url: /dpa
+                - text: DPA
+            - listitem [ref=e449]:
+              - link "Terms" [ref=e450] [cursor=pointer]:
+                - /url: /terms
+                - text: Terms
+    - generic [ref=e452]: © 2026 Ambr Technologies Limited

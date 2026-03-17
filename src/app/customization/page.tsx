@@ -118,7 +118,12 @@ export default function CustomisationPage() {
       />
 
       {/* ── 4. Three ways to customize ── */}
-      <Section className="bg-surface">
+      <Section className="bg-surface py-section-lg md:py-section-xl">
+        <Reveal>
+          <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-12 md:mb-14">
+            Built around your <em className="text-accent">exact needs</em>.
+          </h2>
+        </Reveal>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
