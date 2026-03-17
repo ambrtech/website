@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { Grain } from "@/components/grain";
 import { SVGFilters } from "@/components/svg-filters";
 import { Analytics, GTMNoScript, LinkedInNoScript, ClickCeaseNoScript } from "@/components/analytics";
+import { CookieConsent } from "@/components/cookie-consent";
 import "./globals.css";
 
 const lora = Lora({
@@ -80,6 +81,7 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body className="font-body bg-surface text-copy antialiased">
+        <CookieConsent />
         <SVGFilters />
         <Grain />
         <GTMNoScript />
