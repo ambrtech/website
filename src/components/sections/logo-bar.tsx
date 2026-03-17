@@ -3,26 +3,24 @@
 import Image from 'next/image'
 
 /**
- * Each logo gets an explicit width and height tuned for consistent visual
- * weight (~2400-2600 px² rendered area). The height is the primary lever;
- * width follows from the source aspect ratio. Outliers (very wide Viatek,
- * very square QS Group) are capped to stay visually balanced.
- *
- * AR = source aspect ratio (width / height)
+ * Each logo gets a height tuned for consistent perceived visual weight.
+ * Height is the dominant factor in how large a logo reads — not area.
+ * Bold/heavy type is scaled down; square logos are capped; very wide
+ * logos stay short. Width follows naturally via object-contain.
  */
-const logos: { src: string; alt: string; h: number; w: number }[] = [
-  /* Deloitte      AR 4.74 */ { src: '/logos/deloitte.png', alt: 'Deloitte', h: 22, w: 104 },
-  /* Skyscanner    AR 5.19 */ { src: '/logos/skyscanner.png', alt: 'Skyscanner', h: 21, w: 109 },
-  /* Astorg        AR 3.76 */ { src: '/logos/astorg.png', alt: 'Astorg', h: 24, w: 90 },
-  /* Berkeley P.   AR 3.37 */ { src: '/logos/berkeleypartnershuip.png', alt: 'Berkeley Partnership', h: 26, w: 88 },
-  /* Improvix      AR 3.05 */ { src: '/logos/improvix.png', alt: 'Improvix', h: 27, w: 82 },
-  /* Peabody       AR 4.27 */ { src: '/logos/peabody.png', alt: 'Peabody', h: 23, w: 98 },
-  /* QS Group      AR 1.27 */ { src: '/logos/qsgroup.svg', alt: 'QS Group', h: 44, w: 56 },
-  /* Smol          AR 2.84 */ { src: '/logos/smol.png', alt: 'Smol', h: 28, w: 80 },
-  /* Tidal Health  AR 5.33 */ { src: '/logos/tidalhealth.png', alt: 'Tidal Health', h: 20, w: 107 },
-  /* Vaultex       AR 2.72 */ { src: '/logos/vaultex.png', alt: 'Vaultex', h: 28, w: 76 },
-  /* Viatek        AR 11.1 */ { src: '/logos/viatek.png', alt: 'Viatek', h: 15, w: 150 },
-  /* Zego          AR 3.56 */ { src: '/logos/zego.png', alt: 'Zego', h: 25, w: 89 },
+const logos: { src: string; alt: string; h: number }[] = [
+  { src: '/logos/deloitte.png', alt: 'Deloitte', h: 24 },
+  { src: '/logos/skyscanner.png', alt: 'Skyscanner', h: 26 },
+  { src: '/logos/astorg.png', alt: 'Astorg', h: 28 },
+  { src: '/logos/berkeleypartnershuip.png', alt: 'Berkeley Partnership', h: 28 },
+  { src: '/logos/improvix.png', alt: 'Improvix', h: 32 },
+  { src: '/logos/peabody.png', alt: 'Peabody', h: 26 },
+  { src: '/logos/qsgroup.svg', alt: 'QS Group', h: 28 },
+  { src: '/logos/smol.png', alt: 'Smol', h: 24 },
+  { src: '/logos/tidalhealth.png', alt: 'Tidal Health', h: 26 },
+  { src: '/logos/vaultex.png', alt: 'Vaultex', h: 30 },
+  { src: '/logos/viatek.png', alt: 'Viatek', h: 14 },
+  { src: '/logos/zego.png', alt: 'Zego', h: 22 },
 ]
 
 function LogoSet() {
@@ -32,15 +30,15 @@ function LogoSet() {
         <div
           key={logo.alt}
           className="flex items-center justify-center shrink-0 mx-6 md:mx-10"
-          style={{ width: logo.w, height: 40 }}
+          style={{ height: 40 }}
         >
           <Image
             src={logo.src}
             alt={logo.alt}
-            width={logo.w}
-            height={logo.h}
-            className="object-contain grayscale opacity-40 mix-blend-multiply"
-            style={{ width: logo.w, height: logo.h }}
+            width={200}
+            height={60}
+            className="object-contain grayscale opacity-40 mix-blend-multiply w-auto"
+            style={{ height: logo.h }}
           />
         </div>
       ))}
