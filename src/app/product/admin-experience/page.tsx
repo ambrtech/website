@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
@@ -148,32 +149,60 @@ export default function AdminExperiencePage() {
       </SplitContent>
 
       {/* ── 5. Journeys & Certifications (white) ── */}
-      <ShowcaseSplit
+      <SplitContent
         className="bg-surface-white"
-        layout="left"
-        filter="duotone"
-        cropFocus="top-left"
-        textureImage="/textures/feature-texture-alt.jpg"
-        visualContent={<MockTrainingNudge />}
+        eyebrow="Structured learning"
         heading={
           <>
             Guide your teams from first simulation to{' '}
             <em className="text-accent">certified</em>
           </>
         }
-        features={[
-          {
-            heading: 'Journeys',
-            description:
-              'Create curated sequences of scenarios that build skills progressively. Assign journeys to individuals or groups, set due dates, and let automatic reminders keep people on track. All journey progress feeds directly into your analytics.',
-          },
-          {
-            heading: 'Certifications',
-            description:
-              'Set competency standards and verify that employees meet them. Certification can be automatic - based on simulation performance - or include a manual review step. Track completion, follow up with individuals, and give stakeholders clear evidence of capability.',
-          },
-        ]}
-      />
+        visualContent={
+          <div className="relative rounded-brand-lg overflow-hidden">
+            <Image
+              src="/images/photography/abstract-topo-charcoal-contours.jpeg"
+              alt=""
+              width={800}
+              height={600}
+              className="w-full h-auto object-cover filter-duotone"
+              sizes="(max-width: 768px) 100vw, 55vw"
+            />
+            <div className="absolute inset-0 pointer-events-none vignette-dark" />
+            <div className="absolute left-4 right-4 bottom-4 md:left-6 md:right-6 md:bottom-6">
+              <div className="bg-surface-white rounded-brand border border-border shadow-card p-5 md:p-6">
+                <MockTrainingNudge />
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div className="space-y-6">
+          <div>
+            <h3 className="font-heading text-label tracking-heading text-dark mb-2">
+              Journeys
+            </h3>
+            <p className="text-body-sm text-copy-mid leading-relaxed">
+              Create curated sequences of scenarios that build skills
+              progressively. Assign journeys to individuals or groups, set due
+              dates, and let automatic reminders keep people on track. All
+              journey progress feeds directly into your analytics.
+            </p>
+          </div>
+          <div className="border-t border-border pt-6">
+            <h3 className="font-heading text-label tracking-heading text-dark mb-2">
+              Certifications
+            </h3>
+            <p className="text-body-sm text-copy-mid leading-relaxed">
+              Set competency standards and verify that employees meet them.
+              Certification can be automatic - based on simulation performance
+              - or include a manual review step. Track completion, follow up
+              with individuals, and give stakeholders clear evidence of
+              capability.
+            </p>
+          </div>
+        </div>
+      </SplitContent>
 
       {/* ── 6. Engagement & Nudges (gray) ── */}
       <SplitContent
