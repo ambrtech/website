@@ -27,9 +27,7 @@ export function CookieConsent() {
             integrations: [
               { name: 'gtag', category: 'analytics' },
               { name: 'google-tag-manager', id: 'GTM-KX3GMKJ' },
-              { name: 'meta-pixel', pixelId: '3742356216051018' },
-              { name: 'posthog' },
-              { name: 'linkedin-insights' }
+              { name: 'meta-pixel', pixelId: '3742356216051018' }
             ],
             scripts: [
               {
