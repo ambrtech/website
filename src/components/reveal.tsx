@@ -35,7 +35,7 @@ export function Reveal({ children, className = '', slow, delay = 0 }: RevealProp
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-all ease-[cubic-bezier(0.16,1,0.3,1)] ${
+      className={`transition-all ease-reveal ${
         slow ? 'duration-[1.5s]' : 'duration-[1.2s]'
       } ${
         visible 

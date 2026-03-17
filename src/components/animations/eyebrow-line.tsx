@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { EASE_REVEAL } from '@/lib/easing'
 
 interface EyebrowLineProps {
   className?: string
@@ -45,7 +46,7 @@ export function EyebrowLine({
         viewport={{ once: true, margin: '-40px' }}
         transition={{
           duration: 0.8,
-          ease: [0.16, 1, 0.3, 1],
+          ease: EASE_REVEAL,
           delay: 0.1,
         }}
       />

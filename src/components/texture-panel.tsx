@@ -188,12 +188,12 @@ const EXPERIMENT_CSS = `
 
   html[data-exp-cinematic-slide] .duration-slow {
     transition-duration: 1200ms !important;
-    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition-timing-function: var(--ease-reveal) !important;
   }
 
   html[data-exp-cinematic-slide] .duration-reveal {
     transition-duration: 1600ms !important;
-    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition-timing-function: var(--ease-reveal) !important;
   }
 
   html[data-exp-cinematic-slide] [data-section] .opacity-0 {

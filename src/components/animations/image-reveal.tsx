@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsapRevealEase } from '@/lib/easing'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -57,7 +58,7 @@ export function ImageReveal({
         scale: 1,
         duration,
         delay,
-        ease: 'power3.out',
+        ease: gsapRevealEase,
       }
 
       if (!immediate) {

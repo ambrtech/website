@@ -102,7 +102,7 @@
   --duration-normal: 300ms;
   --duration-slow: 650ms;
   --duration-reveal: 900ms;
-  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-reveal: cubic-bezier(0.25, 0.85, 0.25, 1);
   --translate-reveal: 12px;
 }
 
@@ -173,7 +173,7 @@
 }
 
 .animate-fade-in {
-  animation: fadeIn 700ms ease both;
+  animation: fadeIn 700ms var(--ease-reveal) both;
 }
 
 @keyframes waveAnim {
@@ -227,7 +227,7 @@
 }
 
 .animate-clip-reveal {
-  animation: clipReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: clipReveal 1.5s var(--ease-reveal) both;
 }
 
 html,

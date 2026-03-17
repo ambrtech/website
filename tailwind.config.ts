@@ -88,7 +88,19 @@ export const brand = {
     durationNormal: '300ms',
     durationSlow: '650ms',
     durationReveal: '900ms',
-    easeReveal: 'cubic-bezier(0.16, 1, 0.3, 1)',
+    /**
+     * Brand reveal easing — the "voice" of all entrance animations.
+     * Change these values to update the feel site-wide.
+     *
+     * Alternatives to try:
+     *   [0.16, 1, 0.3, 1]       — expo-out: confident snap, tech-forward
+     *   [0.25, 0.85, 0.25, 1]   — soft-editorial: gentle emergence (current)
+     *   [0.33, 1, 0.68, 1]      — cubic-out: balanced, neutral
+     *   [0, 0, 0.2, 1]          — apple-decel: precision, premium
+     *   [0.22, 1, 0.36, 1]      — quint-out: material design
+     */
+    easeRevealArray: [0.25, 0.85, 0.25, 1] as const,
+    easeReveal: 'cubic-bezier(0.25, 0.85, 0.25, 1)',
     translateReveal: '12px',
   },
 } as const

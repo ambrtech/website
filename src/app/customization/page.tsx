@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { createMetadata } from '@/lib/metadata'
 import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { SplitContent } from '@/components/sections/split-content'
@@ -15,7 +16,6 @@ import { ShowcaseSplit } from '@/components/sections/showcase-split'
 import { TestimonialStat } from '@/components/sections/testimonial-stat'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
-import { ImageReveal } from '@/components/animations/image-reveal'
 
 export const metadata = createMetadata({
   title: 'Customization',
@@ -52,8 +52,19 @@ export default function CustomisationPage() {
                   they&apos;ll actually have.
                 </p>
               </div>
-              <div>
-                <ProductScreenshot tint>
+              <div className="relative p-6 md:p-10">
+                {/* Texture background with dulled overlay */}
+                <div className="absolute inset-0 rounded-brand-lg overflow-hidden -z-10">
+                  <Image
+                    src="/images/photography/abstract-fingerprint-ink-macro.jpeg"
+                    alt=""
+                    fill
+                    className="object-cover scale-[2] saturate-0 brightness-[1.3] contrast-[0.6] opacity-30"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-accent-whisper/80" />
+                </div>
+                <ProductScreenshot>
                   <MockCustomizationFlow />
                 </ProductScreenshot>
               </div>
@@ -146,7 +157,7 @@ export default function CustomisationPage() {
             },
           ].map((item, i) => (
             <div key={item.heading} className="space-y-6">
-              <ImageReveal direction="bottom" delay={i * 0.12}>
+              <Reveal delay={i * 100}>
                 <div className="h-[260px] overflow-hidden rounded-brand-lg">
                   <div className="transform scale-[0.65] origin-top-left w-[154%]">
                     <ProductScreenshot>
@@ -154,7 +165,7 @@ export default function CustomisationPage() {
                     </ProductScreenshot>
                   </div>
                 </div>
-              </ImageReveal>
+              </Reveal>
               <Reveal delay={i * 80 + 100}>
                 <div>
                   <h3 className="font-heading text-label tracking-heading text-dark mb-2">
