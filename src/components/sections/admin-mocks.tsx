@@ -3,52 +3,56 @@
  * Designed to be used as children of <ProductScreenshot>.
  */
 
-/** A mock usage analytics dashboard with temporal chart and module breakdown. */
+/** A mock usage analytics dashboard focused on outcomes and improvement. */
 export function MockUsageAnalytics() {
-  const modules = [
-    { label: 'Simulations', value: 412, pct: 100 },
-    { label: 'AI Coaching', value: 187, pct: 45 },
-    { label: 'Presentations', value: 94, pct: 23 },
-  ]
-
   return (
     <div className="space-y-5">
       <div className="flex items-center justify-between">
         <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-copy-light">
-          Usage Analytics
+          Team Performance
         </span>
-        <div className="flex items-center gap-2">
-          <span className="text-caption text-copy-faint px-2 py-1 rounded-brand-sm border border-border">
-            Last 90 days
-          </span>
-        </div>
+        <span className="text-caption text-copy-faint px-2 py-1 rounded-brand-sm border border-border">
+          Sales Team &middot; Q1 2026
+        </span>
       </div>
 
-      {/* Summary row */}
+      {/* Outcome-focused summary */}
       <div className="grid grid-cols-3 gap-3">
         {([
-          { label: 'Total sessions', value: '693' },
-          { label: 'Active users', value: '142' },
-          { label: 'Avg. completion', value: '87%' },
-        ] as const).map(({ label, value }) => (
+          { label: 'Avg. score', value: '74%', trend: '+8%' },
+          { label: 'Improving', value: '89%', trend: '' },
+          { label: 'Active users', value: '142', trend: '' },
+        ] as const).map(({ label, value, trend }) => (
           <div key={label} className="p-2.5 rounded-brand-sm bg-surface border border-border">
-            <p className="font-heading text-label tracking-heading text-dark leading-none mb-0.5">{value}</p>
-            <p className="text-detail text-copy-faint">{label}</p>
+            <div className="flex items-baseline gap-1.5">
+              <p className="font-heading text-label tracking-heading text-dark leading-none">{value}</p>
+              {trend && <span className="text-detail text-accent font-body-medium">{trend}</span>}
+            </div>
+            <p className="text-detail text-copy-faint mt-0.5">{label}</p>
           </div>
         ))}
       </div>
 
-      {/* Temporal chart */}
+      {/* Improvement over time chart */}
       <div>
-        <p className="text-caption font-body-medium text-copy-mid mb-2">Sessions over time</p>
-        <div className="flex items-end gap-[3px] h-14">
-          {[18, 24, 20, 32, 28, 38, 35, 42, 38, 48, 44, 52, 46, 55, 50, 58, 54, 62, 56, 65, 60, 68, 64, 72].map((h, i) => (
-            <div
-              key={i}
-              className="flex-1 rounded-sm bg-accent-soft/50"
-              style={{ height: `${h}%` }}
-            />
-          ))}
+        <p className="text-caption font-body-medium text-copy-mid mb-2">Average score over time</p>
+        <div className="relative h-16">
+          {/* Grid lines */}
+          <div className="absolute inset-0 flex flex-col justify-between">
+            {[0, 1, 2].map((i) => (
+              <div key={i} className="h-px bg-border" />
+            ))}
+          </div>
+          {/* Upward trend line approximation using bars */}
+          <div className="relative flex items-end gap-[3px] h-full">
+            {[38, 42, 40, 46, 48, 52, 50, 55, 54, 58, 60, 64, 62, 66, 68, 70, 72, 74, 73, 76, 78, 80, 79, 82].map((h, i) => (
+              <div
+                key={i}
+                className="flex-1 rounded-sm bg-accent-soft/60"
+                style={{ height: `${h}%` }}
+              />
+            ))}
+          </div>
         </div>
         <div className="flex justify-between text-detail text-copy-faint mt-1.5">
           <span>Jan</span>
@@ -57,19 +61,23 @@ export function MockUsageAnalytics() {
         </div>
       </div>
 
-      {/* Module breakdown */}
+      {/* Skills breakdown */}
       <div className="space-y-2">
-        <p className="text-caption font-body-medium text-copy-mid">By module</p>
-        {modules.map((mod) => (
-          <div key={mod.label} className="flex items-center gap-3">
-            <span className="text-caption text-copy-mid w-24 shrink-0">{mod.label}</span>
+        <p className="text-caption font-body-medium text-copy-mid">Skill performance</p>
+        {([
+          { label: 'Active listening', score: 82, change: '+6' },
+          { label: 'Objection handling', score: 68, change: '+11' },
+          { label: 'Closing', score: 59, change: '+4' },
+        ] as const).map((skill) => (
+          <div key={skill.label} className="flex items-center gap-3">
+            <span className="text-caption text-copy-mid w-28 shrink-0">{skill.label}</span>
             <div className="flex-1 h-1.5 rounded-full bg-surface-alt overflow-hidden">
               <div
                 className="h-full rounded-full bg-accent-soft"
-                style={{ width: `${mod.pct}%` }}
+                style={{ width: `${skill.score}%` }}
               />
             </div>
-            <span className="text-caption text-copy-faint w-8 text-right shrink-0">{mod.value}</span>
+            <span className="text-caption text-accent font-body-medium w-8 text-right shrink-0">{skill.change}</span>
           </div>
         ))}
       </div>

@@ -12,7 +12,6 @@ import { CustomizationColumns } from '@/components/sections/customization-column
 import { EyebrowLine } from '@/components/animations/eyebrow-line'
 import {
   ProductScreenshot,
-  MockJourneyGrid,
   MockTrainingNudge,
 } from '@/components/sections/product-screenshot'
 import {
@@ -54,7 +53,7 @@ export default function AdminExperiencePage() {
         subtitle="Ambr AI gives you a single dashboard to manage users, track engagement, surface learning insights, and roll out roleplay training across your entire organization - whether that is fifty people or fifty thousand."
       />
 
-      {/* ── 2. Stat bar ── */}
+      {/* ── 2. Stat bar (gray border band) ── */}
       <StatBar
         items={[
           {
@@ -72,8 +71,9 @@ export default function AdminExperiencePage() {
         ]}
       />
 
-      {/* ── 3. Usage Analytics ── */}
+      {/* ── 3. Usage Analytics (white) ── */}
       <SplitContent
+        className="bg-surface-white"
         eyebrow="Analytics"
         heading={
           <>
@@ -109,9 +109,8 @@ export default function AdminExperiencePage() {
         </ul>
       </SplitContent>
 
-      {/* ── 4. Learning Insights ── */}
+      {/* ── 4. Learning Insights (gray) ── */}
       <SplitContent
-        className="bg-surface-white"
         reversed
         eyebrow="Insights"
         heading={
@@ -148,13 +147,14 @@ export default function AdminExperiencePage() {
         </ul>
       </SplitContent>
 
-      {/* ── 5. Journeys & Certifications ── */}
+      {/* ── 5. Journeys & Certifications (white) ── */}
       <ShowcaseSplit
+        className="bg-surface-white"
         layout="left"
         filter="duotone"
         cropFocus="top-left"
         textureImage="/textures/feature-texture-alt.jpg"
-        visualContent={<MockJourneyGrid />}
+        visualContent={<MockTrainingNudge />}
         heading={
           <>
             Guide your teams from first simulation to{' '}
@@ -175,72 +175,60 @@ export default function AdminExperiencePage() {
         ]}
       />
 
-      {/* ── 6. Engagement & Nudges ── */}
-      <Section className="bg-surface-white">
-        <div className="grid gap-12 md:gap-20 items-start md:grid-cols-[1fr_1.2fr]">
-          <Reveal>
-            <div>
-              <EyebrowLine />
-              <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
-                Drive engagement
-              </p>
-              <h2 className="font-heading text-section leading-[1.2] tracking-heading mb-6">
-                Make sure nobody falls through the{' '}
-                <em className="text-accent">cracks</em>.
-              </h2>
-              <div className="text-body text-copy-mid leading-[1.75] space-y-4">
-                <p>
-                  See whether users have achieved simulation objectives or
-                  still have scenarios to complete. Easily identify who needs a
-                  nudge and send reminders directly from the dashboard.
-                </p>
-              </div>
-
-              <div className="mt-10 space-y-6 border-t border-border pt-8">
-                {[
-                  {
-                    title: 'Streaks',
-                    description:
-                      'Configure streaks to encourage regular engagement. Set the frequency, choose a target, and let automatic reminders do the rest via email, Slack, or Microsoft Teams.',
-                  },
-                  {
-                    title: 'Completion tracking',
-                    description:
-                      'Monitor progress against simulation objectives and journey milestones. Spot who is falling behind and send nudges in a few clicks.',
-                  },
-                  {
-                    title: 'Admin digest',
-                    description:
-                      'A regular summary email surfaces the most important insights and engagement data, so you stay informed without logging in.',
-                  },
-                ].map((feature) => (
-                  <div key={feature.title}>
-                    <h3 className="font-heading text-label tracking-heading text-dark mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-body-sm text-copy-light leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className="space-y-6">
-              <ProductScreenshot>
-                <MockStreaksConfig />
-              </ProductScreenshot>
-              <ProductScreenshot>
-                <MockTrainingNudge />
-              </ProductScreenshot>
-            </div>
-          </Reveal>
-        </div>
-      </Section>
-
-      {/* ── 7. User & Group Management ── */}
+      {/* ── 6. Engagement & Nudges (gray) ── */}
       <SplitContent
+        reversed
+        eyebrow="Drive engagement"
+        heading={
+          <>
+            Make sure nobody falls through the{' '}
+            <em className="text-accent">cracks</em>.
+          </>
+        }
+        visualContent={
+          <ProductScreenshot tint>
+            <MockStreaksConfig />
+          </ProductScreenshot>
+        }
+      >
+        <p>
+          See whether users have achieved simulation objectives or still have
+          scenarios to complete. Easily identify who needs a nudge and send
+          reminders directly from the dashboard.
+        </p>
+        <div className="space-y-5 mt-4 border-t border-border pt-5">
+          {[
+            {
+              title: 'Streaks',
+              description:
+                'Configure streaks to encourage regular engagement. Set the frequency, choose a target, and let automatic reminders do the rest via email, Slack, or Microsoft Teams.',
+            },
+            {
+              title: 'Completion tracking',
+              description:
+                'Monitor progress against simulation objectives and journey milestones. Spot who is falling behind and send nudges in a few clicks.',
+            },
+            {
+              title: 'Admin digest',
+              description:
+                'A regular summary email surfaces the most important insights and engagement data, so you stay informed without logging in.',
+            },
+          ].map((feature) => (
+            <div key={feature.title}>
+              <h3 className="font-heading text-label tracking-heading text-dark mb-1.5">
+                {feature.title}
+              </h3>
+              <p className="text-body-sm text-copy-light leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </SplitContent>
+
+      {/* ── 7. User & Group Management (white) ── */}
+      <SplitContent
+        className="bg-surface-white"
         eyebrow="Management"
         heading={
           <>
@@ -278,9 +266,8 @@ export default function AdminExperiencePage() {
         </div>
       </SplitContent>
 
-      {/* ── 7b. Module Management ── */}
+      {/* ── 7b. Module Management (gray) ── */}
       <ShowcaseSplit
-        className="bg-surface-white"
         layout="right"
         filter="duotone-blush"
         cropFocus="bottom-right"
@@ -310,8 +297,8 @@ export default function AdminExperiencePage() {
         ]}
       />
 
-      {/* ── 8. Use Cases ── */}
-      <Section>
+      {/* ── 8. Use Cases (white) ── */}
+      <Section className="bg-surface-white">
         <Reveal>
           <EyebrowLine />
           <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5">
@@ -323,60 +310,45 @@ export default function AdminExperiencePage() {
           </h2>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-px border-t border-b border-border">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {[
             {
               role: 'For L&D Leaders',
               heading: 'L&D Teams',
               description:
                 'Build capability frameworks, structure development journeys, and track skills progression at scale. Aggregated insights across the entire organization help you see where to invest and demonstrate impact to stakeholders.',
-              href: '/solutions/management-leadership',
             },
             {
               role: 'For Sales Enablement Managers',
               heading: 'Sales Enablement',
               description:
                 'Onboard new hires with structured roleplay sequences and upskill experienced reps with advanced scenarios. Track adoption and identify which conversation skills need the most attention across your team.',
-              href: '/solutions/sales-negotiations',
             },
             {
               role: 'For Customer Service Directors',
               heading: 'Customer Service',
               description:
                 'Drive consistency across frontline teams. Roll out standardized training, certify readiness, and use engagement data to ensure every team member is equipped for the conversations they face every day.',
-              href: '/solutions/customer-service',
             },
           ].map((useCase, i) => (
-            <Reveal key={useCase.heading}>
-              <Link
-                href={useCase.href}
-                className={`group flex flex-col h-full px-8 py-10 lg:px-8 lg:py-12 bg-surface-white hover:bg-surface transition-colors duration-normal ${
-                  i !== 0 ? 'border-l border-border' : ''
-                }`}
-              >
+            <Reveal key={useCase.heading} delay={i * 60}>
+              <div className="border-t border-border pt-8">
                 <p className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent mb-3">
                   {useCase.role}
                 </p>
-                <h3 className="font-heading text-label leading-[1.3] tracking-heading mb-4 text-dark group-hover:text-accent transition-colors duration-normal">
+                <h3 className="font-heading text-label leading-[1.3] tracking-heading mb-4 text-dark">
                   {useCase.heading}
                 </h3>
-                <p className="text-body-sm text-copy-mid leading-relaxed mb-8">
+                <p className="text-body-sm text-copy-mid leading-relaxed">
                   {useCase.description}
                 </p>
-
-                <div className="mt-auto flex items-center gap-2 text-label font-body-medium text-dark group-hover:gap-4 transition-all duration-normal">
-                  <span>Explore</span>
-                  <span className="text-accent">→</span>
-                </div>
-
-                <div className="h-0.5 bg-accent mt-8 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-slow origin-left" />
-              </Link>
+              </div>
             </Reveal>
           ))}
         </div>
       </Section>
 
-      {/* ── 9. Customization (reuse homepage component) ── */}
+      {/* ── 9. Customization (white — component has own bg) ── */}
       <CustomizationColumns />
 
       {/* ── 10. Integrations ── */}
