@@ -158,7 +158,7 @@ export default function AdminExperiencePage() {
           </>
         }
         visualContent={
-          <div className="relative rounded-brand-lg overflow-hidden aspect-[4/5]">
+          <div className="relative rounded-brand-lg overflow-hidden">
             <Image
               src="/images/photography/abstract-topo-charcoal-contours.jpeg"
               alt=""
@@ -167,7 +167,7 @@ export default function AdminExperiencePage() {
               sizes="(max-width: 768px) 100vw, 55vw"
             />
             <div className="absolute inset-0 pointer-events-none vignette-dark" />
-            <div className="absolute left-4 right-4 bottom-4 md:left-6 md:right-6 md:bottom-6">
+            <div className="relative pt-[25%] px-4 pb-4 md:px-6 md:pb-6">
               <div className="bg-surface-white rounded-brand border border-border shadow-card p-5 md:p-6">
                 <MockTrainingNudge />
               </div>
@@ -304,7 +304,7 @@ export default function AdminExperiencePage() {
           </>
         }
         visualContent={
-          <div className="relative rounded-brand-lg overflow-hidden aspect-[3/4] md:aspect-[4/5]">
+          <div className="relative rounded-brand-lg overflow-hidden">
             <Image
               src="/images/photography/v2-sand-waveform-c.jpeg"
               alt=""
@@ -313,7 +313,7 @@ export default function AdminExperiencePage() {
               sizes="(max-width: 768px) 100vw, 55vw"
             />
             <div className="absolute inset-0 pointer-events-none vignette-dark" />
-            <div className="absolute left-4 right-4 bottom-4 md:left-6 md:right-6 md:bottom-6">
+            <div className="relative pt-[20%] px-4 pb-4 md:px-6 md:pb-6">
               <div className="bg-surface-white rounded-brand border border-border shadow-card p-5 md:p-6">
                 <MockModuleManagement />
               </div>
