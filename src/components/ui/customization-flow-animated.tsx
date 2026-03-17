@@ -3,7 +3,6 @@
 import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { gsapRevealEase } from '@/lib/easing'
 
 /* ─────────────────────────────────────────────────────
    Visual context items — each a small artifact vignette
@@ -91,7 +90,7 @@ export function MockCustomizationFlowAnimated() {
       const tl = gsap.timeline({
         repeat: -1,
         repeatDelay: 2,
-        defaults: { ease: gsapRevealEase },
+        defaults: { ease: 'power2.out' },
       })
 
       /* Phase 1: Context items appear (staggered from left) */
