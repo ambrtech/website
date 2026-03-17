@@ -5,6 +5,7 @@ import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { LogoCloud } from '@/components/sections/logo-cloud'
 import { Reveal } from '@/components/reveal'
+import { ComplianceCard } from '@/components/compliance-card'
 
 export const metadata = createMetadata({
   title: 'Compliance',
@@ -127,56 +128,18 @@ export default function CompliancePage() {
           </Reveal>
 
           {/* Unified 3-column grid */}
-          <div className="grid md:grid-cols-3 gap-6 items-stretch">
+          <div className="grid md:grid-cols-3 gap-6">
             {secondaryCredentials.map((cert, i) => (
               <Reveal key={cert.title} delay={(i + 1) * 60} className="flex">
-                <div className="border border-border rounded-brand p-8 flex flex-col">
-                  <div className="flex items-start justify-between gap-3 mb-5">
-                    <div className="flex items-center gap-3">
-                      {cert.icon && (
-                        <div className={`${cert.wide ? 'w-14' : 'w-12'} h-12 relative shrink-0`}>
-                          <Image
-                            src={cert.icon}
-                            alt=""
-                            fill
-                            className="object-contain filter-badge-light"
-                            sizes="56px"
-                            unoptimized={cert.icon.endsWith('.svg')}
-                          />
-                        </div>
-                      )}
-                      <h2 className="font-heading text-label tracking-heading text-dark">
-                        {cert.title}
-                      </h2>
-                    </div>
-                    <span className="inline-block text-caption font-body-medium uppercase tracking-eyebrow text-accent border border-accent-soft rounded-brand-sm px-2.5 py-0.5 shrink-0">
-                      {cert.badge}
-                    </span>
-                  </div>
-
-                  <p className="text-body-sm text-copy-mid leading-[1.75] mb-4">
-                    {cert.body}
-                  </p>
-
-                  {cert.bullets && (
-                    <ul className="mb-4 space-y-2">
-                      {cert.bullets.map((item) => (
-                        <li
-                          key={item}
-                          className="text-caption text-copy-mid leading-[1.7] pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.55em] before:w-1 before:h-1 before:rounded-full before:bg-accent-soft"
-                        >
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-
-                  {cert.footnote && (
-                    <p className="text-caption text-copy-light leading-[1.7] mt-auto pt-4 border-t border-border">
-                      {cert.footnote}
-                    </p>
-                  )}
-                </div>
+                <ComplianceCard
+                  icon={cert.icon}
+                  wide={cert.wide}
+                  title={cert.title}
+                  badge={cert.badge}
+                  body={cert.body}
+                  bullets={cert.bullets}
+                  footnote={cert.footnote}
+                />
               </Reveal>
             ))}
           </div>

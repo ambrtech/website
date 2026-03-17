@@ -94,6 +94,7 @@ export default function CustomisationPage() {
           </>
         }
         subtitle="Building highly tailored simulations is fast and intuitive. You don't need technical skills to create scenarios that reflect your exact workplace reality."
+        textureImage="/images/photography/abstract-fingerprint-ridges-macro.png"
         filter="duotone"
         cropFocus="top-left"
         visualContent={<MockCustomizationFlow />}

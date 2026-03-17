@@ -239,6 +239,20 @@ export default function FaqPage() {
                 ),
               },
             ],
+            footer: (
+              <p className="text-body-sm text-copy-mid leading-[1.75]">
+                For further information on security and privacy, visit our{' '}
+                <a
+                  href="https://security.ambr.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline underline-offset-2 hover:text-accent/80"
+                >
+                  Trust Portal
+                </a>
+                .
+              </p>
+            ),
           },
           {
             title: 'Pricing and Getting Started',

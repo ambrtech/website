@@ -30,6 +30,7 @@ interface FaqItem {
 interface FaqCategory {
   title: string
   items: FaqItem[]
+  footer?: ReactNode
 }
 
 interface FaqSectionProps {
@@ -113,6 +114,11 @@ export function FaqSection({ categories }: FaqSectionProps) {
                 </div>
               )
             })}
+            {category.footer && (
+              <div className="mt-6 pt-6 border-t border-border">
+                {category.footer}
+              </div>
+            )}
           </div>
         ))}
       </div>

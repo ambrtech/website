@@ -1,0 +1,315 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Ambr AI home" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e7]:
+        - link "Customization" [ref=e8] [cursor=pointer]:
+          - /url: /customization
+        - button "Product" [ref=e9]:
+          - text: Product
+          - img [ref=e10]
+        - button "Industries" [ref=e12]:
+          - text: Industries
+          - img [ref=e13]
+        - button "Solutions" [ref=e15]:
+          - text: Solutions
+          - img [ref=e16]
+        - button "Security" [ref=e18]:
+          - text: Security
+          - img [ref=e19]
+        - link "Company" [ref=e21] [cursor=pointer]:
+          - /url: /company
+        - link "FAQ" [ref=e22] [cursor=pointer]:
+          - /url: /faq
+        - link "Try for free" [ref=e23] [cursor=pointer]:
+          - /url: /try-for-free
+  - main [ref=e24]:
+    - navigation "Breadcrumb" [ref=e25]:
+      - list [ref=e27]:
+        - listitem [ref=e28]:
+          - link "Home" [ref=e29] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e30]:
+          - generic [ref=e31]: /
+          - generic [ref=e32]: FAQ
+    - generic [ref=e35]:
+      - heading "Frequently asked questions" [level=1] [ref=e36]:
+        - text: Frequently asked
+        - emphasis [ref=e37]: questions
+      - paragraph [ref=e38]: Everything you need to know about Ambr AI and realistic AI roleplay training.
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - heading "About the Product" [level=2] [ref=e42]
+        - generic [ref=e43]:
+          - button "What is AI roleplay training?" [ref=e44]:
+            - generic [ref=e45]: What is AI roleplay training?
+            - img [ref=e46]
+          - paragraph [ref=e49]:
+            - text: AI roleplay is a training method where employees build conversation skills by speaking with an AI that responds naturally in real time via voice. It creates a safe, private environment to train on high-stakes conversations before they happen for real.
+            - link "Learn more about AI roleplay" [ref=e50] [cursor=pointer]:
+              - /url: /product/ai-roleplay
+        - generic [ref=e51]:
+          - button "How does Ambr AI work?" [ref=e52]:
+            - generic [ref=e53]: How does Ambr AI work?
+            - img [ref=e54]
+          - paragraph [ref=e57]:
+            - text: Choose a scenario from the pre-built library or use one customized for your organization. Have a realistic voice conversation with an AI character. Receive detailed, personalized feedback afterward. The AI adapts to tone, approach, and responses in real time.
+            - link "See how it works" [ref=e58] [cursor=pointer]:
+              - /url: /product/how-it-works
+        - generic [ref=e59]:
+          - button "What makes Ambr AI different from other AI training tools?" [ref=e60]:
+            - generic [ref=e61]: What makes Ambr AI different from other AI training tools?
+            - img [ref=e62]
+          - paragraph [ref=e65]:
+            - text: "Three things. First, deep customization: every simulation can be built around your organization's specific scenarios, language, and culture. Second, ultra-realistic voice interaction that creates genuine conversational pressure. Third, the service model: clients work with a dedicated team, not a self-serve dashboard."
+            - link "Explore customization" [ref=e66] [cursor=pointer]:
+              - /url: /customization
+        - generic [ref=e67]:
+          - button "What types of conversations can people train on?" [ref=e68]:
+            - generic [ref=e69]: What types of conversations can people train on?
+            - img [ref=e70]
+          - paragraph [ref=e73]:
+            - text: Management and leadership conversations, sales calls and negotiations, customer service interactions, presentations and pitches, onboarding scenarios, and more. If it involves a conversation, Ambr AI can simulate it.
+            - link "See all solutions" [ref=e74] [cursor=pointer]:
+              - /url: /solutions/management-leadership
+        - generic [ref=e75]:
+          - button "What kind of feedback do users receive?" [ref=e76]:
+            - generic [ref=e77]: What kind of feedback do users receive?
+            - img [ref=e78]
+          - paragraph [ref=e81]:
+            - text: After every conversation, users receive structured, personalized feedback covering conversation structure, word choice, approach, tone, pacing, and delivery. The platform also offers AI-powered guidance for additional support between sessions.
+            - link "See how feedback works" [ref=e82] [cursor=pointer]:
+              - /url: /product/how-it-works
+        - generic [ref=e83]:
+          - button "Can users train on presentations?" [ref=e84]:
+            - generic [ref=e85]: Can users train on presentations?
+            - img [ref=e86]
+          - paragraph [ref=e89]: Yes. Ambr AI includes Presentation Training where users rehearse presentations and pitches with an AI audience that provides feedback on delivery, structure, and impact.
+        - generic [ref=e90]:
+          - button "Does Ambr AI analyze body language?" [ref=e91]:
+            - generic [ref=e92]: Does Ambr AI analyze body language?
+            - img [ref=e93]
+          - paragraph [ref=e96]: Yes. Ambr AI includes body language analysis, providing insights on non-verbal communication alongside voice-based feedback. This is available in scenarios where the user's camera is active.
+      - generic [ref=e97]:
+        - heading "Customization and Setup" [level=2] [ref=e98]
+        - generic [ref=e99]:
+          - button "How customizable is the platform?" [ref=e100]:
+            - generic [ref=e101]: How customizable is the platform?
+            - img [ref=e102]
+          - paragraph [ref=e105]:
+            - text: "Highly. There are three ways to customize: admins can build and modify scenarios directly in the platform, the Ambr AI team can build tailored simulations on your behalf, and individual users can create their own personal scenarios. There is also an extensive pre-built scenario library available immediately."
+            - link "Learn about customization" [ref=e106] [cursor=pointer]:
+              - /url: /customization
+        - generic [ref=e107]:
+          - button "How long does it take to get started?" [ref=e108]:
+            - generic [ref=e109]: How long does it take to get started?
+            - img [ref=e110]
+          - paragraph [ref=e113]:
+            - text: Getting started is easy and quick. Customized scenarios can be created in minutes, and the Ambr AI team is on hand to support you through setup and rollout.
+            - link "Find out more" [ref=e114] [cursor=pointer]:
+              - /url: /find-out-more
+        - generic [ref=e115]:
+          - button "Can we integrate Ambr AI with our existing LMS?" [ref=e116]:
+            - generic [ref=e117]: Can we integrate Ambr AI with our existing LMS?
+            - img [ref=e118]
+          - paragraph [ref=e121]:
+            - text: Yes. Ambr AI integrates with major LMS platforms and other enterprise tools.
+            - link "See integrations" [ref=e122] [cursor=pointer]:
+              - /url: /product/integrations
+      - generic [ref=e123]:
+        - heading "Languages and Global Use" [level=2] [ref=e124]
+        - generic [ref=e125]:
+          - button "How many languages does Ambr AI support?" [ref=e126]:
+            - generic [ref=e127]: How many languages does Ambr AI support?
+            - img [ref=e128]
+          - paragraph [ref=e131]:
+            - text: Over 30 languages, with the list growing. Your teams can train in the language they actually work in.
+            - link "See all languages" [ref=e132] [cursor=pointer]:
+              - /url: /product/languages
+        - generic [ref=e133]:
+          - button "Is the platform suitable for global teams?" [ref=e134]:
+            - generic [ref=e135]: Is the platform suitable for global teams?
+            - img [ref=e136]
+          - paragraph [ref=e139]: Yes. Ambr AI is used by multinational organizations across regions. The combination of multilingual support, GDPR compliance, and EU AI Act alignment makes it well-suited for global deployment.
+      - generic [ref=e140]:
+        - heading "Security and Data" [level=2] [ref=e141]
+        - generic [ref=e142]:
+          - button "Is Ambr AI secure enough for enterprise use?" [ref=e143]:
+            - generic [ref=e144]: Is Ambr AI secure enough for enterprise use?
+            - img [ref=e145]
+          - paragraph [ref=e148]:
+            - text: Yes. Ambr AI is ISO 27001 certified, GDPR compliant, and aligned with the EU AI Act. Client data is fully isolated, never shared between customers, and never used to train external AI models.
+            - link "Review our security certifications" [ref=e149] [cursor=pointer]:
+              - /url: /trust/security-certifications
+        - generic [ref=e150]:
+          - button "Is my organization's data used to train AI models?" [ref=e151]:
+            - generic [ref=e152]: Is my organization's data used to train AI models?
+            - img [ref=e153]
+          - paragraph [ref=e156]:
+            - text: No. Your conversation data, scenarios, and organizational information are never used to train any AI model outside the Ambr AI platform. This is a contractual commitment.
+            - link "Read our data management approach" [ref=e157] [cursor=pointer]:
+              - /url: /trust/data-management
+        - generic [ref=e158]:
+          - button "Is Ambr AI GDPR compliant?" [ref=e159]:
+            - generic [ref=e160]: Is Ambr AI GDPR compliant?
+            - img [ref=e161]
+          - paragraph [ref=e164]:
+            - text: Yes. GDPR compliance is built into the platform architecture, data processing agreements, and operational processes.
+            - link "See full compliance details" [ref=e165] [cursor=pointer]:
+              - /url: /trust/security-certifications
+        - generic [ref=e166]:
+          - button "Where is my data stored and processed?" [ref=e167]:
+            - generic [ref=e168]: Where is my data stored and processed?
+            - img [ref=e169]
+          - paragraph [ref=e172]:
+            - text: Ambr AI processes data within the EU. Full details of data flows, sub-processors, and residency are available through our Data Processing Agreement.
+            - link "Learn more about data management" [ref=e173] [cursor=pointer]:
+              - /url: /trust/data-management
+        - paragraph [ref=e175]:
+          - text: For further information on security and privacy, visit our
+          - link "Trust Portal" [ref=e176] [cursor=pointer]:
+            - /url: https://security.ambr.ai
+          - text: .
+      - generic [ref=e177]:
+        - heading "Pricing and Getting Started" [level=2] [ref=e178]
+        - generic [ref=e179]:
+          - button "How is Ambr AI priced?" [ref=e180]:
+            - generic [ref=e181]: How is Ambr AI priced?
+            - img [ref=e182]
+          - paragraph [ref=e185]:
+            - text: Ambr AI uses a license-based pricing model, typically structured as an annual license based on your organization's scale and requirements. Contact us for a quote.
+            - link "Get a quote" [ref=e186] [cursor=pointer]:
+              - /url: /find-out-more
+        - generic [ref=e187]:
+          - button "Can I try Ambr AI before committing?" [ref=e188]:
+            - generic [ref=e189]: Can I try Ambr AI before committing?
+            - img [ref=e190]
+          - paragraph [ref=e193]:
+            - text: Yes. You can try the platform for free with example scenarios across management, sales, and customer service. No commitment required.
+            - link "Try for free" [ref=e194] [cursor=pointer]:
+              - /url: /try-for-free
+        - generic [ref=e195]:
+          - button "What does a typical engagement look like?" [ref=e196]:
+            - generic [ref=e197]: What does a typical engagement look like?
+            - img [ref=e198]
+          - paragraph [ref=e201]:
+            - text: We work around your timelines. The onboarding process is seamless, with the Ambr AI team managing customization and setup so your internal time investment is minimal.
+            - link "Find out more" [ref=e202] [cursor=pointer]:
+              - /url: /find-out-more
+    - generic [ref=e203]:
+      - img [ref=e207]
+      - generic [ref=e212]:
+        - heading "Still have questions?" [level=2] [ref=e214]:
+          - text: Still have
+          - emphasis [ref=e215]: questions
+          - text: "?"
+        - paragraph [ref=e217]: Get in touch with our team. We are happy to help.
+        - link "Find Out More" [ref=e220] [cursor=pointer]:
+          - /url: /find-out-more
+  - contentinfo [ref=e221]:
+    - generic [ref=e222]:
+      - generic [ref=e223]:
+        - link "Ambr AI home" [ref=e224] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e226]: Realistic AI voice simulations, custom-built for enterprise teams.
+      - generic [ref=e227]:
+        - generic [ref=e228]:
+          - paragraph [ref=e229]: Product
+          - list [ref=e230]:
+            - listitem [ref=e231]:
+              - link "How It Works" [ref=e232] [cursor=pointer]:
+                - /url: /product/how-it-works
+                - text: How It Works
+            - listitem [ref=e233]:
+              - link "AI Roleplay" [ref=e234] [cursor=pointer]:
+                - /url: /product/ai-roleplay
+                - text: AI Roleplay
+            - listitem [ref=e235]:
+              - link "Admin Experience" [ref=e236] [cursor=pointer]:
+                - /url: /product/admin-experience
+                - text: Admin Experience
+            - listitem [ref=e237]:
+              - link "Integrations" [ref=e238] [cursor=pointer]:
+                - /url: /product/integrations
+                - text: Integrations
+            - listitem [ref=e239]:
+              - link "Languages" [ref=e240] [cursor=pointer]:
+                - /url: /product/languages
+                - text: Languages
+        - generic [ref=e241]:
+          - paragraph [ref=e242]: Industries
+          - list [ref=e243]:
+            - listitem [ref=e244]:
+              - link "Consulting & Advisory" [ref=e245] [cursor=pointer]:
+                - /url: /industries/consulting-advisory
+                - text: Consulting & Advisory
+            - listitem [ref=e246]:
+              - link "Accounting & Tax" [ref=e247] [cursor=pointer]:
+                - /url: /industries/accounting-audit-tax
+                - text: Accounting & Tax
+            - listitem [ref=e248]:
+              - link "Legal" [ref=e249] [cursor=pointer]:
+                - /url: /industries/legal
+                - text: Legal
+            - listitem [ref=e250]:
+              - link "Retail & Hospitality" [ref=e251] [cursor=pointer]:
+                - /url: /industries/retail-hospitality
+                - text: Retail & Hospitality
+            - listitem [ref=e252]:
+              - link "Technology" [ref=e253] [cursor=pointer]:
+                - /url: /industries/technology
+                - text: Technology
+        - generic [ref=e254]:
+          - paragraph [ref=e255]: Company
+          - list [ref=e256]:
+            - listitem [ref=e257]:
+              - link "About" [ref=e258] [cursor=pointer]:
+                - /url: /company
+                - text: About
+            - listitem [ref=e259]:
+              - link "Blog" [ref=e260] [cursor=pointer]:
+                - /url: /blog
+                - text: Blog
+            - listitem [ref=e261]:
+              - link "FAQ" [ref=e262] [cursor=pointer]:
+                - /url: /faq
+                - text: FAQ
+            - listitem [ref=e263]:
+              - link "Contact" [ref=e264] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+        - generic [ref=e265]:
+          - paragraph [ref=e266]: Security
+          - list [ref=e267]:
+            - listitem [ref=e268]:
+              - link "Compliance" [ref=e269] [cursor=pointer]:
+                - /url: /security/compliance
+                - text: Compliance
+            - listitem [ref=e270]:
+              - link "Data Protection" [ref=e271] [cursor=pointer]:
+                - /url: /security/data-protection
+                - text: Data Protection
+            - listitem [ref=e272]:
+              - link "Responsible AI" [ref=e273] [cursor=pointer]:
+                - /url: /security/responsible-ai
+                - text: Responsible AI
+            - listitem [ref=e274]:
+              - link "DPA" [ref=e275] [cursor=pointer]:
+                - /url: /dpa
+                - text: DPA
+            - listitem [ref=e276]:
+              - link "Terms" [ref=e277] [cursor=pointer]:
+                - /url: /terms
+                - text: Terms
+    - generic [ref=e279]: © 2026 Ambr Technologies Limited
+  - generic [ref=e281]:
+    - generic [ref=e282]:
+      - heading "Choose your cookies" [level=2] [ref=e283]
+      - paragraph [ref=e285]:
+        - text: We use cookies to improve your experience and understand how our site is used.
+        - link "Learn more or manage" [ref=e286] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e287]:
+      - button "Accept" [ref=e288] [cursor=pointer]
+      - button "Reject non-essential cookies" [ref=e289] [cursor=pointer]

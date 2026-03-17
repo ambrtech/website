@@ -47,10 +47,14 @@ export default function HowItWorksPage() {
         subtitle="Realistic voice simulations. Structured feedback. Measurable improvement."
       />
 
-      {/* ── Step 1: Choose a scenario ── */}
+      {/* ── Step 1: Set up training (buyer-focused) ── */}
       <SplitContent
         eyebrow="Step 1"
-        heading="Choose a scenario"
+        heading={
+          <>
+            Design the <em className="text-accent">training</em>
+          </>
+        }
         visualContent={
           <ProductScreenshot tint>
             <MockScenarioCreator />
@@ -58,20 +62,27 @@ export default function HowItWorksPage() {
         }
       >
         <p>
-          Your team selects from a library of ready-made workplace scenarios, or
-          from simulations built specifically for your organization. Each
-          scenario defines who they&apos;ll be speaking with: a hesitant client,
-          a frustrated team member, a skeptical stakeholder. The character has a
-          role, a personality, and objectives of their own.
+          Select from a library of ready-made scenarios, build your own in
+          minutes, or brief our team to create them for you. Each simulation
+          defines the situation, the AI character&apos;s personality and
+          objectives, and the feedback criteria that matter to your organization.
+        </p>
+        <p>
+          Assign simulations to specific teams, departments, or individuals.
+          Structure them into guided learning paths with built-in progression.
         </p>
       </SplitContent>
 
-      {/* ── Step 2: Have the conversation ── */}
+      {/* ── Step 2: Have the conversation (user-focused) ── */}
       <SplitContent
         className="bg-surface-white"
         reversed
         eyebrow="Step 2"
-        heading="Have the conversation"
+        heading={
+          <>
+            Employees have the <em className="text-accent">conversation</em>
+          </>
+        }
         visualContent={
           <ProductScreenshot tint>
             <MockVoiceConversation />
@@ -79,15 +90,15 @@ export default function HowItWorksPage() {
         }
       >
         <p>
-          Your team member speaks out loud. The AI character responds in real
-          time with a natural voice, distinct accent, and realistic reactions.
+          Employees speak naturally with an AI character that responds in real
+          time — with a distinct voice, accent, and realistic reactions.
           There&apos;s no script. The conversation unfolds based on what they
           actually say. If they push back, change direction, or try a different
           approach, the AI follows.
         </p>
         <p>
-          Conversations typically last between five and fifteen minutes. Long
-          enough to feel real. Short enough to fit into a working day.
+          Sessions typically last five to fifteen minutes. Long enough to feel
+          real. Short enough to fit into a working day.
         </p>
       </SplitContent>
 
@@ -96,7 +107,7 @@ export default function HowItWorksPage() {
         eyebrow="Step 3"
         heading={
           <>
-            Get structured <em className="text-accent">feedback</em>
+            Structured <em className="text-accent">feedback</em>, instantly
           </>
         }
         visualContent={

@@ -55,6 +55,11 @@ const navigation: NavItem[] = [
         description: 'How AI-powered conversation simulations transform training',
       },
       {
+        label: 'Languages',
+        href: '/product/languages',
+        description: '30+ languages with cultural adaptation',
+      },
+      {
         label: 'How It Works',
         href: '/product/how-it-works',
         description: 'From setup to delivery in your organization',
@@ -68,11 +73,6 @@ const navigation: NavItem[] = [
         label: 'Integrations',
         href: '/product/integrations',
         description: 'Connect with your existing LMS and tools',
-      },
-      {
-        label: 'Languages',
-        href: '/product/languages',
-        description: '30+ languages with cultural adaptation',
       },
     ],
   },
