@@ -6,6 +6,7 @@ import { Grid } from '@/components/grid'
 import { LogoBar } from '@/components/sections/logo-bar'
 import { ImageReveal } from '@/components/animations/image-reveal'
 import { SimulationCard } from '@/components/ui/simulation-card'
+import { Reveal } from '@/components/reveal'
 
 /* ── Mic icon (inline, keeps hero self-contained) ── */
 
@@ -68,29 +69,35 @@ export function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-site px-container-mobile md:px-container flex-1 flex items-center">
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
-            <h1 className="font-heading text-headline leading-[1.05] tracking-heading mb-12 opacity-0 animate-[clipReveal_1.5s_var(--ease-reveal)_0.4s_both]">
-              Customized AI roleplays for the conversations that <em className="text-accent">matter most</em>
-            </h1>
-            <p className="text-body text-copy-mid max-w-[520px] leading-[1.7] mb-10 opacity-0 animate-[fadeIn_1.2s_var(--ease-reveal)_0.6s_both]">
-              Training platform for high-stakes workplace conversations. From
-              sales negotiations to management feedback, your teams build real
-              skills through ultra-realistic AI conversation simulations - all
-              easily customizable to meet your specific training needs.
-            </p>
+            <Reveal delay={400}>
+              <h1 className="font-heading text-headline leading-[1.05] tracking-heading mb-12">
+                Customized AI roleplays for the conversations that <em className="text-accent">matter most</em>
+              </h1>
+            </Reveal>
+            <Reveal delay={600}>
+              <p className="text-body text-copy-mid max-w-[520px] leading-[1.7] mb-10">
+                Training platform for high-stakes workplace conversations. From
+                sales negotiations to management feedback, your teams build real
+                skills through ultra-realistic AI conversation simulations - all
+                easily customizable to meet your specific training needs.
+              </p>
+            </Reveal>
 
             {/* Secondary link only — demo card is the primary CTA */}
-            <div className="opacity-0 animate-[fadeIn_1.2s_var(--ease-reveal)_0.8s_both]">
+            <Reveal delay={800}>
               <Link
                 href="/find-out-more"
                 className="text-sm font-body-medium text-copy-mid hover:text-accent transition-colors"
               >
                 Find Out More →
               </Link>
-            </div>
+            </Reveal>
 
             {/* Mobile: compact demo card below the text */}
-            <div className="lg:hidden mt-10 opacity-0 animate-[fadeIn_1.2s_var(--ease-reveal)_1s_both]">
-              <MobileDemoCard />
+            <div className="lg:hidden mt-10">
+              <Reveal delay={1000}>
+                <MobileDemoCard />
+              </Reveal>
             </div>
           </div>
 
