@@ -1,10 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { Grid } from '@/components/grid'
 import { LogoBar } from '@/components/sections/logo-bar'
 import { ImageReveal } from '@/components/animations/image-reveal'
+import { SimulationCard } from '@/components/ui/simulation-card'
 
 export function Hero() {
   return (
@@ -40,13 +40,16 @@ export function Hero() {
           </div>
 
           <ImageReveal direction="right" duration={1.6} delay={0.5} immediate className="hidden lg:block">
-            <Image
-              src="/images/photography/hero-quiet-reflection.jpeg"
-              alt="A woman at her desk in quiet reflection after a practice session, seen through indoor plant leaves with warm window light"
-              width={720}
-              height={480}
-              priority
-              className="w-full h-auto rounded-brand-lg"
+            <SimulationCard
+              layout="photo-warm"
+              characterName="Sarah"
+              characterRole="Team Lead"
+              characterInitials="SL"
+              characterImage="/images/team/zoe-headshot.png"
+              backgroundImage="/images/photography/glass-tower-pair-at-window.png"
+              title="Navigate a difficult performance conversation"
+              socialProof="2,847 conversations this week"
+              href="/try-for-free"
             />
           </ImageReveal>
         </div>

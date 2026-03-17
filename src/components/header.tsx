@@ -330,7 +330,7 @@ function DropdownContent({
                     <Link
                       href={item.href}
                       onClick={onNavigate}
-                      className="group block py-1.5 text-body-sm text-copy-mid hover:text-dark transition-colors"
+                      className="group block py-2.5 px-4 -mx-4 rounded-brand-sm text-body-sm text-copy-mid hover:text-dark hover:bg-surface-alt/50 transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -352,7 +352,7 @@ function DropdownContent({
                   <Link
                     href={item.href}
                     onClick={onNavigate}
-                    className="block py-1.5 text-body-sm text-copy-mid hover:text-dark transition-colors"
+                    className="block py-2.5 px-4 -mx-4 rounded-brand-sm text-body-sm text-copy-mid hover:text-dark hover:bg-surface-alt/50 transition-colors"
                   >
                     {item.label}
                   </Link>
