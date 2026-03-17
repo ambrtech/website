@@ -5,7 +5,6 @@ import { Breadcrumbs } from '@/components/sections/breadcrumbs'
 import { PageHero } from '@/components/sections/page-hero'
 import { StatBar } from '@/components/sections/stat-bar'
 import { SplitContent } from '@/components/sections/split-content'
-import { ShowcaseSplit } from '@/components/sections/showcase-split'
 import { Section } from '@/components/sections/section'
 import { Reveal } from '@/components/reveal'
 import { GrainCta } from '@/components/sections/grain-cta'
@@ -296,35 +295,67 @@ export default function AdminExperiencePage() {
       </SplitContent>
 
       {/* ── 7b. Module Management (gray) ── */}
-      <ShowcaseSplit
-        layout="right"
-        filter="duotone-blush"
-        cropFocus="bottom-right"
-        visualContent={<MockModuleManagement />}
+      <SplitContent
+        reversed
+        eyebrow="Access control"
         heading={
           <>
             Control what your teams can{' '}
             <em className="text-accent">access</em>
           </>
         }
-        features={[
-          {
-            heading: 'Module management',
-            description:
-              'Control which modules are available across your organization. Enable simulations, AI coaching, or presentation modules for all users or restrict them to specific groups.',
-          },
-          {
-            heading: 'Content visibility',
-            description:
-              'Choose which scenarios, journeys, and categories are visible to different teams. Give every group the training that is relevant to them.',
-          },
-          {
-            heading: 'SCORM and xAPI',
-            description:
-              'Deliver training through your existing LMS with full SCORM and xAPI compatibility. Completion data flows back into your reporting automatically.',
-          },
-        ]}
-      />
+        visualContent={
+          <div className="relative rounded-brand-lg overflow-hidden">
+            <Image
+              src="/images/photography/v2-sand-waveform-c.jpeg"
+              alt=""
+              width={800}
+              height={600}
+              className="w-full h-auto object-cover filter-duotone-blush"
+              sizes="(max-width: 768px) 100vw, 55vw"
+            />
+            <div className="absolute inset-0 pointer-events-none vignette-dark" />
+            <div className="absolute left-4 right-4 bottom-4 md:left-6 md:right-6 md:bottom-6">
+              <div className="bg-surface-white rounded-brand border border-border shadow-card p-5 md:p-6">
+                <MockModuleManagement />
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div className="space-y-6">
+          <div>
+            <h3 className="font-heading text-label tracking-heading text-dark mb-2">
+              Module management
+            </h3>
+            <p className="text-body-sm text-copy-mid leading-relaxed">
+              Control which modules are available across your organization.
+              Enable simulations, AI coaching, or presentation modules for all
+              users or restrict them to specific groups.
+            </p>
+          </div>
+          <div className="border-t border-border pt-6">
+            <h3 className="font-heading text-label tracking-heading text-dark mb-2">
+              Content visibility
+            </h3>
+            <p className="text-body-sm text-copy-mid leading-relaxed">
+              Choose which scenarios, journeys, and categories are visible to
+              different teams. Give every group the training that is relevant
+              to them.
+            </p>
+          </div>
+          <div className="border-t border-border pt-6">
+            <h3 className="font-heading text-label tracking-heading text-dark mb-2">
+              SCORM and xAPI
+            </h3>
+            <p className="text-body-sm text-copy-mid leading-relaxed">
+              Deliver training through your existing LMS with full SCORM and
+              xAPI compatibility. Completion data flows back into your
+              reporting automatically.
+            </p>
+          </div>
+        </div>
+      </SplitContent>
 
       {/* ── 8. Use Cases (white) ── */}
       <Section className="bg-surface-white">
