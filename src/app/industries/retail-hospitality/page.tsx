@@ -139,7 +139,7 @@ export default function RetailHospitalityPage() {
         className="bg-surface-white"
         compact
         imageSrc="/images/customers/Jesse Strot.jpg"
-        imageAlt="Jesse Strot, Soapy Joe's Car Wash"
+        imageAlt="Jesse Strot, Soapy Joe's"
         quote={
           <>
             <p>&ldquo;We used Ambr AI for role play and conversation feedback for our frontline workers for sales strategy, product knowledge, and resolution handling.</p>
@@ -147,7 +147,7 @@ export default function RetailHospitalityPage() {
           </>
         }
         name="Jesse Strot"
-        company="Soapy Joe&rsquo;s Car Wash"
+        company="Soapy Joe&rsquo;s"
       />
 
       {/* ── Closing CTA ── */}

@@ -128,7 +128,7 @@ export default function IntegrationsPage() {
       </Section>
 
       {/* ── Learning Standards ── */}
-      <Section className="!pt-0">
+      <Section>
         <Reveal>
           <div className="max-w-[720px] mb-10 md:mb-12">
             <p className="text-eyebrow font-body-medium uppercase tracking-eyebrow text-copy-light mb-5 eyebrow-hairline">

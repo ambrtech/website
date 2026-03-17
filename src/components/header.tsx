@@ -65,14 +65,14 @@ const navigation: NavItem[] = [
         description: 'From setup to delivery in your organization',
       },
       {
-        label: 'Admin Experience',
-        href: '/product/admin-experience',
-        description: 'Manage, track and measure across teams',
-      },
-      {
         label: 'Integrations',
         href: '/product/integrations',
         description: 'Connect with your existing LMS and tools',
+      },
+      {
+        label: 'Admin Experience',
+        href: '/product/admin-experience',
+        description: 'Manage, track and measure across teams',
       },
     ],
   },

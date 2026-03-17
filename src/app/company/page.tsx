@@ -101,7 +101,7 @@ export default function CompanyPage() {
                 Why we exist
               </p>
               <h2 className="font-heading text-quote leading-[1.4] tracking-heading italic text-dark">
-                Because soft skills are actually <em className="text-accent">hard</em> skills,{' '}
+                <em className="text-accent">Because soft skills are actually hard skills,</em>{' '}
                 and the ability to
                 communicate with empathy and clarity in high-pressure moments
                 shouldn&rsquo;t be reserved for those with access to expensive
