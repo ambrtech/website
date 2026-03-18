@@ -66,6 +66,9 @@
 - [x] Could: host our Security & Privacy Q&A on the website and link it from the FAQ *(Steph)* — added Trust Portal callout to Security & Data section
 - [ ] **Jamie to review FAQ for accuracy**
 
+### Blog
+- [ ] **Jamie to review initial blog posts** — 15 GEO-optimized posts published 2026-03-17. Need human review for: accuracy of cited stats/sources (several lack direct URLs), tone/voice consistency, Ambr AI positioning, and whether publication dates should be staggered for a more organic cadence. See Claude's initial review notes for specific flagged citations.
+
 ### Brand & Copy
 - [ ] Agree with S and Z the wording underneath logo in the footer (and anywhere else it's used): "Realistic AI voice simulations, custom-built for enterprise teams."
 - [ ] **Audit accent emphasis consistency** — Get Claude to extract every heading/sub-heading that uses `<em className="text-accent">` across the site into a consolidated markdown file, alongside the CLAUDE.md guidance on when emphasis should be used. Jamie to audit for consistency and cascade changes back out.

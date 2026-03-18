@@ -33,10 +33,9 @@ function getClipPath(direction: 'left' | 'right' | 'bottom') {
 }
 
 /**
- * Clip-path image reveal: photos unmask from one edge like a curtain pull,
- * with a subtle scale settle. Feels like analog photo development.
- *
- * Wraps any content (typically a next/image) in an overflow-hidden container.
+ * Clip-path image reveal with parallax: photos unmask from one edge like a
+ * curtain pull, with a subtle scale settle, and the inner content drifts at
+ * a slower scroll speed to create spatial depth.
  */
 export function ImageReveal({
   children,
@@ -47,12 +46,15 @@ export function ImageReveal({
   immediate = false,
 }: ImageRevealProps) {
   const ref = useRef<HTMLDivElement>(null)
+  const innerRef = useRef<HTMLDivElement>(null)
 
   useGSAP(
     () => {
       const el = ref.current
-      if (!el) return
+      const inner = innerRef.current
+      if (!el || !inner) return
 
+      // Clip-path reveal
       const toVars: gsap.TweenVars = {
         clipPath: 'inset(0 0% 0 0)',
         scale: 1,
@@ -77,13 +79,29 @@ export function ImageReveal({
         },
         toVars,
       )
+
+      // Parallax on inner content — image drifts slower than scroll
+      gsap.fromTo(
+        inner,
+        { y: '-8%' },
+        {
+          y: '8%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1,
+          },
+        },
+      )
     },
     { scope: ref },
   )
 
   return (
     <div ref={ref} className={`overflow-hidden ${className ?? ''}`}>
-      {children}
+      <div ref={innerRef}>{children}</div>
     </div>
   )
 }
