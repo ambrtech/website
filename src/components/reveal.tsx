@@ -38,9 +38,9 @@ export function Reveal({ children, className = '', slow, delay = 0 }: RevealProp
       className={`transition-all ease-reveal ${
         slow ? 'duration-[1.5s]' : 'duration-[1.2s]'
       } ${
-        visible 
-          ? 'opacity-100 translate-y-0 [clip-path:inset(-20%_-20%_-20%_-20%)]' 
-          : 'opacity-0 translate-y-[15px] [clip-path:inset(0_0_10%_0)]'
+        visible
+          ? 'opacity-100 translate-y-0 scale-100 [clip-path:inset(-20%_-20%_-20%_-20%)]'
+          : 'opacity-0 translate-y-[15px] scale-[0.98] [clip-path:inset(0_0_10%_0)]'
       } ${className}`}
     >
       {children}
