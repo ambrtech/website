@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import Image from 'next/image'
 import { gsapRevealEase } from '@/lib/easing'
 import { FileText, Users, CreditCard, Target } from 'lucide-react'
 
@@ -218,13 +219,13 @@ export function CustomizationFlowAnimatedC() {
           className="w-12 h-12 rounded-full bg-accent flex items-center justify-center"
           style={{ opacity: 0 }}
         >
-          {/* Ambr "A" mark — white, extracted from brand wordmark */}
-          <svg width="20" height="22" viewBox="0 0 20 22" fill="none" className="text-surface-white">
-            <path
-              d="M10 2L1 20h3.5l1.8-4h7.4l1.8 4H19L10 2Zm-2.4 11.5L10 7.2l2.4 6.3H7.6Z"
-              fill="currentColor"
-            />
-          </svg>
+          <Image
+            src="/ambr/a-mark-white.png"
+            alt="Ambr"
+            width={28}
+            height={30}
+            className="object-contain"
+          />
         </div>
       </div>
 

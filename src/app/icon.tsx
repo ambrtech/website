@@ -1,9 +1,15 @@
 import { ImageResponse } from 'next/og'
+import { readFileSync } from 'fs'
+import { join } from 'path'
 
 export const size = { width: 32, height: 32 }
 export const contentType = 'image/png'
 
 export default function Icon() {
+  const aMarkPath = join(process.cwd(), 'public', 'ambr', 'a-mark-white.png')
+  const aMarkBase64 = readFileSync(aMarkPath).toString('base64')
+  const aMarkSrc = `data:image/png;base64,${aMarkBase64}`
+
   return new ImageResponse(
     (
       <div
@@ -17,12 +23,14 @@ export default function Icon() {
           justifyContent: 'center',
         }}
       >
-        <svg width="20" height="22" viewBox="0 0 20 22" fill="none">
-          <path
-            d="M10 2L1 20h3.5l1.8-4h7.4l1.8 4H19L10 2ZM7.6 13.5L10 7.2l2.4 6.3H7.6Z"
-            fill="white"
-          />
-        </svg>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={aMarkSrc}
+          alt=""
+          width={22}
+          height={24}
+          style={{ objectFit: 'contain' }}
+        />
       </div>
     ),
     { ...size }
