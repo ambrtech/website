@@ -70,11 +70,9 @@ export function CustomizationCompact() {
 
                 {/* Scaled-down mock screenshot */}
                 <div className="mt-auto h-[200px] overflow-hidden rounded-t-brand">
-                  <div className="transform scale-[0.58] origin-top-left w-[172%]">
-                    <ProductScreenshot>
-                      {item.mock}
-                    </ProductScreenshot>
-                  </div>
+                  <ProductScreenshot compact>
+                    {item.mock}
+                  </ProductScreenshot>
                 </div>
               </div>
             </Reveal>

@@ -3,6 +3,13 @@ import { Reveal } from '@/components/reveal'
 interface ProductScreenshotProps {
   children: React.ReactNode
   tint?: boolean
+  /**
+   * Render a smaller version of the screenshot for constrained placements
+   * (e.g. 3-column grids). The outer shell (border, chrome bar) stays at
+   * native size so borders render at a consistent 1px. Only the inner
+   * content is scaled down.
+   */
+  compact?: boolean
 }
 
 /**
@@ -10,7 +17,7 @@ interface ProductScreenshotProps {
  * container — chrome bar, subtle shadow, optional warm tinted backdrop.
  * Designed to be passed as `visualContent` to SplitContent or used standalone.
  */
-export function ProductScreenshot({ children, tint }: ProductScreenshotProps) {
+export function ProductScreenshot({ children, tint, compact }: ProductScreenshotProps) {
   return (
     <div className={`relative ${tint ? 'p-6 md:p-10' : ''}`}>
       {/* Optional warm backdrop panel */}
@@ -20,16 +27,24 @@ export function ProductScreenshot({ children, tint }: ProductScreenshotProps) {
 
       <div className="rounded-brand-lg border border-border bg-surface-white overflow-hidden shadow-card">
         {/* Chrome bar */}
-        <div className="flex items-center gap-1.5 px-4 py-2.5 bg-dark/[0.02] border-b border-border">
-          <div className="w-2 h-2 rounded-full bg-dark/10" />
-          <div className="w-2 h-2 rounded-full bg-dark/10" />
-          <div className="w-2 h-2 rounded-full bg-dark/10" />
+        <div className={`flex items-center gap-1.5 border-b border-border ${compact ? 'px-3 py-1.5' : 'px-4 py-2.5'} bg-dark/[0.02]`}>
+          <div className={`rounded-full bg-dark/10 ${compact ? 'w-1.5 h-1.5' : 'w-2 h-2'}`} />
+          <div className={`rounded-full bg-dark/10 ${compact ? 'w-1.5 h-1.5' : 'w-2 h-2'}`} />
+          <div className={`rounded-full bg-dark/10 ${compact ? 'w-1.5 h-1.5' : 'w-2 h-2'}`} />
         </div>
 
         {/* Content area */}
-        <div className="p-6 md:p-8">
-          {children}
-        </div>
+        {compact ? (
+          <div className="p-4 overflow-hidden">
+            <div className="origin-top-left scale-[0.65] w-[154%]">
+              {children}
+            </div>
+          </div>
+        ) : (
+          <div className="p-6 md:p-8">
+            {children}
+          </div>
+        )}
       </div>
     </div>
   )

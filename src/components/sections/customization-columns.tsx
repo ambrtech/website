@@ -59,11 +59,9 @@ export function CustomizationColumns({ className }: CustomizationColumnsProps) {
             <div key={item.heading} className="space-y-6">
               <Reveal delay={i * 100}>
                 <div className="h-[260px] overflow-hidden rounded-brand-lg">
-                  <div className="transform scale-[0.65] origin-top-left w-[154%]">
-                    <ProductScreenshot>
-                      {item.mock}
-                    </ProductScreenshot>
-                  </div>
+                  <ProductScreenshot compact>
+                    {item.mock}
+                  </ProductScreenshot>
                 </div>
               </Reveal>
               <Reveal delay={i * 80 + 100}>

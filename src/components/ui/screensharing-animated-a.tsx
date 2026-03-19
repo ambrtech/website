@@ -167,7 +167,7 @@ export function ScreensharingAnimatedA() {
           </div>
         </div>
 
-        {/* Mock shared screen */}
+        {/* Mock shared screen — product demo */}
         <div className="relative rounded-brand-sm bg-surface-white border border-border overflow-hidden">
           {/* Browser-like header bar */}
           <div
@@ -181,76 +181,82 @@ export function ScreensharingAnimatedA() {
               <span className="w-2 h-2 rounded-full bg-copy-faint/30" />
             </div>
             <div className="flex-1 h-4 rounded bg-surface-alt mx-6 flex items-center px-2">
-              <span className="text-[8px] text-copy-faint">app.acmecorp.io/dashboard</span>
+              <span className="text-[8px] text-copy-faint">app.acmecorp.io/pricing</span>
             </div>
           </div>
 
-          {/* Screen content — mock dashboard */}
+          {/* Screen content — product pricing page */}
           <div
             data-screen-content=""
             className="relative px-4 py-4 min-h-[180px]"
             style={{ opacity: 0 }}
           >
-            {/* Nav tabs */}
+            {/* Product nav */}
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-2 w-16 rounded bg-dark/10" />
-              <div className="h-2 w-12 rounded bg-dark/5" />
-              <div className="h-2 w-14 rounded bg-dark/5" />
+              <div className="h-2 w-14 rounded bg-dark/10" />
+              <div className="h-2 w-10 rounded bg-dark/5" />
+              <div className="h-2 w-16 rounded bg-accent/20" />
             </div>
 
-            {/* Dashboard grid */}
+            {/* Pricing tiers */}
             <div className="grid grid-cols-3 gap-3">
-              {/* Card 1 — highlight target */}
+              {/* Starter tier */}
               <div className="relative">
                 <div
                   data-hl-1=""
                   className="absolute inset-0 rounded-brand-sm ring-2 ring-accent/50 bg-accent/[0.04]"
                   style={{ opacity: 0 }}
                 />
-                <div className="aspect-[4/3] rounded-brand-sm bg-accent-whisper border border-accent-soft/30 p-2.5 flex flex-col justify-between">
-                  <span className="text-[8px] font-body-medium text-copy-light">Revenue</span>
-                  <span className="font-heading text-caption text-dark">$2.4M</span>
-                  <div className="h-1 w-full rounded bg-accent-soft/30 overflow-hidden">
-                    <div className="h-full w-[72%] rounded bg-accent-soft" />
+                <div className="rounded-brand-sm bg-surface border border-border p-2.5">
+                  <span className="text-[7px] font-body-medium text-copy-light uppercase tracking-wide">Starter</span>
+                  <p className="font-heading text-caption text-dark mt-1">$49<span className="text-[8px] text-copy-faint">/mo</span></p>
+                  <div className="mt-2 space-y-1">
+                    <div className="h-1 w-full rounded bg-surface-alt" />
+                    <div className="h-1 w-3/4 rounded bg-surface-alt" />
                   </div>
                 </div>
               </div>
 
-              {/* Card 2 */}
-              <div className="aspect-[4/3] rounded-brand-sm bg-surface border border-border p-2.5 flex flex-col justify-between">
-                <span className="text-[8px] font-body-medium text-copy-light">Users</span>
-                <span className="font-heading text-caption text-dark">12.8k</span>
-                <div className="h-1 w-full rounded bg-surface-alt overflow-hidden">
-                  <div className="h-full w-[58%] rounded bg-copy-faint/40" />
+              {/* Pro tier — highlighted */}
+              <div className="rounded-brand-sm bg-accent-whisper border border-accent-soft/40 p-2.5">
+                <span className="text-[7px] font-body-medium text-accent uppercase tracking-wide">Pro</span>
+                <p className="font-heading text-caption text-dark mt-1">$149<span className="text-[8px] text-copy-faint">/mo</span></p>
+                <div className="mt-2 space-y-1">
+                  <div className="h-1 w-full rounded bg-accent-soft/30" />
+                  <div className="h-1 w-full rounded bg-accent-soft/30" />
+                  <div className="h-1 w-2/3 rounded bg-accent-soft/30" />
                 </div>
               </div>
 
-              {/* Card 3 — highlight target */}
+              {/* Enterprise tier */}
               <div className="relative">
                 <div
                   data-hl-2=""
                   className="absolute inset-0 rounded-brand-sm ring-2 ring-accent/50 bg-accent/[0.04]"
                   style={{ opacity: 0 }}
                 />
-                <div className="aspect-[4/3] rounded-brand-sm bg-surface border border-border p-2.5 flex flex-col justify-between">
-                  <span className="text-[8px] font-body-medium text-copy-light">Retention</span>
-                  <span className="font-heading text-caption text-dark">94.2%</span>
-                  <div className="h-1 w-full rounded bg-surface-alt overflow-hidden">
-                    <div className="h-full w-[94%] rounded bg-accent-soft" />
+                <div className="rounded-brand-sm bg-surface border border-border p-2.5">
+                  <span className="text-[7px] font-body-medium text-copy-light uppercase tracking-wide">Enterprise</span>
+                  <p className="font-heading text-caption text-dark mt-1">Custom</p>
+                  <div className="mt-2 space-y-1">
+                    <div className="h-1 w-full rounded bg-surface-alt" />
+                    <div className="h-1 w-full rounded bg-surface-alt" />
+                    <div className="h-1 w-full rounded bg-surface-alt" />
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Chart placeholder row */}
-            <div className="mt-3 flex items-end gap-1 h-10">
-              {[28, 42, 35, 52, 38, 48, 55, 60, 45, 52, 58, 64].map((h, i) => (
-                <div
-                  key={i}
-                  className="flex-1 rounded-t bg-accent-soft/25"
-                  style={{ height: `${h}%` }}
-                />
-              ))}
+            {/* Feature comparison row */}
+            <div className="mt-3 space-y-1.5">
+              <div className="flex items-center gap-2">
+                <div className="h-1 w-20 rounded bg-dark/8" />
+                <div className="flex gap-3 flex-1 justify-around">
+                  <span className="text-[7px] text-copy-faint">5 seats</span>
+                  <span className="text-[7px] text-accent font-body-medium">25 seats</span>
+                  <span className="text-[7px] text-copy-faint">Unlimited</span>
+                </div>
+              </div>
             </div>
 
             {/* Cursor */}
@@ -293,7 +299,7 @@ export function ScreensharingAnimatedA() {
               <span className="text-[8px] font-body-medium text-copy-mid">You</span>
             </div>
             <p className="text-caption text-copy-mid leading-relaxed">
-              &ldquo;So here you can see our revenue has hit $2.4M this quarter...&rdquo;
+              &ldquo;So the Starter plan is great for small teams, but let me show you Pro...&rdquo;
             </p>
           </div>
 
@@ -307,7 +313,7 @@ export function ScreensharingAnimatedA() {
               <span className="text-[8px] font-body-medium text-accent">AI</span>
             </div>
             <p className="text-caption text-copy-mid leading-relaxed">
-              &ldquo;Impressive retention at 94%. What&apos;s driving that number?&rdquo;
+              &ldquo;Interesting. How does Enterprise pricing work for a team our size?&rdquo;
             </p>
           </div>
         </div>

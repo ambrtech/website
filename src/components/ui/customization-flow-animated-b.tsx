@@ -14,11 +14,13 @@ import { gsapRevealEase } from '@/lib/easing'
    on the right half — a direct before → after metaphor.
    ───────────────────────────────────────────────────── */
 
+import { FileText, Users, CreditCard, Target } from 'lucide-react'
+
 const contextItems = [
-  { icon: '📄', label: 'Sales methodology', detail: 'MEDDPICC framework' },
-  { icon: '👥', label: 'Buyer personas', detail: '3 decision-makers' },
-  { icon: '💰', label: 'Pricing model', detail: '3-tier, usage-based' },
-  { icon: '⚔️', label: 'Competitors', detail: '4 mapped rivals' },
+  { Icon: FileText, label: 'Sales methodology', detail: 'MEDDPICC framework' },
+  { Icon: Users, label: 'Buyer personas', detail: '3 decision-makers' },
+  { Icon: CreditCard, label: 'Pricing model', detail: '3-tier, usage-based' },
+  { Icon: Target, label: 'Competitors', detail: '4 mapped rivals' },
 ]
 
 export function CustomizationFlowAnimatedB() {
@@ -182,9 +184,7 @@ export function CustomizationFlowAnimatedB() {
                   className="flex items-start gap-2.5 px-3 py-2 rounded-brand-sm bg-surface border border-border"
                   style={{ opacity: 0 }}
                 >
-                  <span className="text-caption shrink-0 mt-0.5" aria-hidden="true">
-                    {item.icon}
-                  </span>
+                  <item.Icon className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
                     <p className="text-caption font-body-medium text-dark leading-tight">
                       {item.label}

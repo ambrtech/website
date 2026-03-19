@@ -41,8 +41,6 @@ export function ScenarioCardDossier() {
       const nameChars = el.querySelectorAll('[data-char]')
       const role = el.querySelector('[data-role]')
       const title = el.querySelector('[data-title]')
-      const difficultyRing = el.querySelector('[data-ring]')
-      const difficultyLabel = el.querySelector('[data-difficulty-label]')
       const timeBadge = el.querySelector('[data-time]')
       const objectives = el.querySelectorAll('[data-objective]')
       const checks = el.querySelectorAll('[data-check]')
@@ -61,8 +59,6 @@ export function ScenarioCardDossier() {
       tl.set(nameChars, { opacity: 0, y: 8 })
       tl.set(role, { opacity: 0, y: 6 })
       tl.set(title, { opacity: 0, y: 16 })
-      tl.set(difficultyRing, { opacity: 0, scale: 0.5, rotation: -90 })
-      tl.set(difficultyLabel, { opacity: 0 })
       tl.set(timeBadge, { opacity: 0, scale: 0.8 })
       tl.set(objectives, { opacity: 0, x: -12 })
       tl.set(checks, { opacity: 0, scale: 0 })
@@ -119,23 +115,6 @@ export function ScenarioCardDossier() {
       })
 
       /* Phase 6: Details assemble around the card */
-      // Difficulty ring fills
-      tl.to(difficultyRing, {
-        opacity: 1,
-        scale: 1,
-        rotation: 0,
-        duration: 0.5,
-        ease: 'power2.out',
-      })
-      tl.to(
-        difficultyLabel,
-        {
-          opacity: 1,
-          duration: 0.3,
-        },
-        '-=0.2'
-      )
-
       // Time badge pops
       tl.to(
         timeBadge,
@@ -193,8 +172,6 @@ export function ScenarioCardDossier() {
           ...nameChars,
           role,
           title,
-          difficultyRing,
-          difficultyLabel,
           timeBadge,
           divider,
           ...objectives,
@@ -275,44 +252,8 @@ export function ScenarioCardDossier() {
             </p>
           </div>
 
-          {/* Metadata: difficulty + time — positioned top-right */}
+          {/* Metadata: time — positioned top-right */}
           <div className="flex flex-col items-end gap-2 shrink-0">
-            {/* Difficulty ring */}
-            <div className="relative" data-ring="" style={{ opacity: 0 }}>
-              <svg width="40" height="40" viewBox="0 0 40 40">
-                {/* Track */}
-                <circle
-                  cx="20"
-                  cy="20"
-                  r="16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  className="text-accent-soft/30"
-                />
-                {/* Fill — 60% for "Standard" */}
-                <circle
-                  cx="20"
-                  cy="20"
-                  r="16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeDasharray={`${0.6 * 2 * Math.PI * 16} ${2 * Math.PI * 16}`}
-                  strokeLinecap="round"
-                  className="text-accent"
-                  style={{ transformOrigin: 'center', transform: 'rotate(-90deg)' }}
-                />
-              </svg>
-              <span
-                data-difficulty-label=""
-                className="absolute inset-0 flex items-center justify-center text-[8px] font-body-medium text-accent uppercase tracking-wide"
-                style={{ opacity: 0 }}
-              >
-                Mid
-              </span>
-            </div>
-
             {/* Time badge */}
             <span
               data-time=""
@@ -341,7 +282,7 @@ export function ScenarioCardDossier() {
         />
 
         {/* Objectives as a checklist */}
-        <div className="space-y-2.5 mb-5">
+        <div className="space-y-2.5">
           {[
             'Address performance issues whilst acknowledging strengths',
             'Develop a plan to improve their meeting performance',

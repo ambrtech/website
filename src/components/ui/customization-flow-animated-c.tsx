@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { FileText, Users, CreditCard, Target } from 'lucide-react'
 
 /* ─────────────────────────────────────────────────────
    Concept C: "The Distillation"
@@ -16,10 +17,10 @@ import { gsapRevealEase } from '@/lib/easing'
    ───────────────────────────────────────────────────── */
 
 const ingredients = [
-  { label: 'Sales methodology', shorthand: 'MEDDPICC', position: 'top-left' },
-  { label: 'Buyer personas', shorthand: '3 DMs', position: 'top-right' },
-  { label: 'Pricing model', shorthand: '3 tiers', position: 'bottom-left' },
-  { label: 'Competitors', shorthand: '4 rivals', position: 'bottom-right' },
+  { Icon: FileText, label: 'Sales methodology', shorthand: 'MEDDPICC', position: 'top-left' },
+  { Icon: Users, label: 'Buyer personas', shorthand: '3 DMs', position: 'top-right' },
+  { Icon: CreditCard, label: 'Pricing model', shorthand: '3 tiers', position: 'bottom-left' },
+  { Icon: Target, label: 'Competitors', shorthand: '4 rivals', position: 'bottom-right' },
 ]
 
 /* Position offsets for the four corners around the center */
@@ -190,11 +191,14 @@ export function CustomizationFlowAnimatedC() {
           className="absolute left-1/2 top-1/2 z-10 -ml-[50px]"
           style={{ opacity: 0 }}
         >
-          <div className="px-3 py-2 rounded-brand-sm bg-surface border border-border shadow-card text-center min-w-[100px]">
-            <p className="text-[10px] font-body-medium text-dark leading-tight">
-              {item.label}
-            </p>
-            <p className="text-[9px] text-copy-faint mt-0.5">{item.shorthand}</p>
+          <div className="flex items-center gap-2 px-3 py-2 rounded-brand-sm bg-surface border border-border shadow-card min-w-[100px]">
+            <item.Icon className="w-3.5 h-3.5 text-accent shrink-0" />
+            <div>
+              <p className="text-[10px] font-body-medium text-dark leading-tight">
+                {item.label}
+              </p>
+              <p className="text-[9px] text-copy-faint mt-0.5">{item.shorthand}</p>
+            </div>
           </div>
         </div>
       ))}
@@ -214,9 +218,13 @@ export function CustomizationFlowAnimatedC() {
           className="w-12 h-12 rounded-full bg-accent flex items-center justify-center"
           style={{ opacity: 0 }}
         >
-          <span className="text-caption font-body-medium text-surface-white tracking-tight">
-            A
-          </span>
+          {/* Ambr "A" mark — white, extracted from brand wordmark */}
+          <svg width="20" height="22" viewBox="0 0 20 22" fill="none" className="text-surface-white">
+            <path
+              d="M10 2L1 20h3.5l1.8-4h7.4l1.8 4H19L10 2Zm-2.4 11.5L10 7.2l2.4 6.3H7.6Z"
+              fill="currentColor"
+            />
+          </svg>
         </div>
       </div>
 

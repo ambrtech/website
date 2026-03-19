@@ -189,7 +189,7 @@ export function FeedbackPanelAnimatedC() {
         />
 
         {/* Editorial summary */}
-        <div className="mb-6">
+        <div className="mb-4">
           <p
             data-summary-line=""
             className="font-heading text-body text-dark tracking-heading leading-[1.6] mb-1"
@@ -214,7 +214,7 @@ export function FeedbackPanelAnimatedC() {
         </div>
 
         {/* Two-column: Strengths + Growth */}
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-4">
           {/* Strengths */}
           <div>
             <p

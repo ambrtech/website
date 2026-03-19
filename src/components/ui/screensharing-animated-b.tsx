@@ -168,39 +168,35 @@ export function ScreensharingAnimatedB() {
                 <div className="flex-1 h-3 rounded bg-surface-white/[0.06] mx-3" />
               </div>
 
-              {/* Mini dashboard content */}
+              {/* Mini product demo content */}
               <div className="px-3 py-3 space-y-2.5">
-                {/* Header row */}
+                {/* Product nav */}
                 <div className="flex gap-2">
-                  <div className="h-1.5 w-12 rounded bg-surface-white/10" />
-                  <div className="h-1.5 w-8 rounded bg-surface-white/[0.06]" />
+                  <div className="h-1.5 w-10 rounded bg-surface-white/10" />
+                  <div className="h-1.5 w-8 rounded bg-accent/20" />
+                  <div className="h-1.5 w-6 rounded bg-surface-white/[0.06]" />
                 </div>
 
-                {/* Mini cards */}
+                {/* Pricing tiers */}
                 <div className="grid grid-cols-3 gap-2">
-                  <div className="h-10 rounded bg-accent/10 border border-accent/15 p-1.5">
-                    <div className="h-1 w-6 rounded bg-surface-white/15 mb-1" />
-                    <div className="h-1.5 w-8 rounded bg-accent/30" />
-                  </div>
                   <div className="h-10 rounded bg-surface-white/[0.04] border border-surface-white/[0.06] p-1.5">
                     <div className="h-1 w-5 rounded bg-surface-white/10 mb-1" />
-                    <div className="h-1.5 w-7 rounded bg-surface-white/10" />
+                    <div className="h-1.5 w-6 rounded bg-surface-white/10" />
+                  </div>
+                  <div className="h-10 rounded bg-accent/10 border border-accent/15 p-1.5">
+                    <div className="h-1 w-4 rounded bg-accent/25 mb-1" />
+                    <div className="h-1.5 w-7 rounded bg-accent/30" />
                   </div>
                   <div className="h-10 rounded bg-surface-white/[0.04] border border-surface-white/[0.06] p-1.5">
                     <div className="h-1 w-7 rounded bg-surface-white/10 mb-1" />
-                    <div className="h-1.5 w-6 rounded bg-surface-white/10" />
+                    <div className="h-1.5 w-5 rounded bg-surface-white/10" />
                   </div>
                 </div>
 
-                {/* Mini chart */}
-                <div className="flex items-end gap-0.5 h-6">
-                  {[35, 50, 40, 60, 45, 55, 65, 70, 50, 58].map((h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 rounded-t bg-surface-white/[0.08]"
-                      style={{ height: `${h}%` }}
-                    />
-                  ))}
+                {/* Feature rows */}
+                <div className="space-y-1">
+                  <div className="h-1 w-full rounded bg-surface-white/[0.06]" />
+                  <div className="h-1 w-3/4 rounded bg-surface-white/[0.06]" />
                 </div>
               </div>
 
@@ -236,7 +232,7 @@ export function ScreensharingAnimatedB() {
               <circle cx="6" cy="6" r="1.5" fill="currentColor" />
             </svg>
             <p className="text-[11px] text-surface-white/70 leading-relaxed">
-              Revenue dashboard visible — $2.4M quarterly
+              Pricing page visible — 3-tier model with Pro highlighted
             </p>
           </div>
 
@@ -250,7 +246,7 @@ export function ScreensharingAnimatedB() {
               <circle cx="6" cy="6" r="1.5" fill="currentColor" />
             </svg>
             <p className="text-[11px] text-surface-white/70 leading-relaxed">
-              User base at 12.8k — growth trend positive
+              Presenter skipped feature comparison — prospect may want detail
             </p>
           </div>
 
@@ -264,7 +260,7 @@ export function ScreensharingAnimatedB() {
               <circle cx="6" cy="6" r="1.5" fill="currentColor" />
             </svg>
             <p className="text-[11px] text-accent/90 leading-relaxed">
-              94% retention — strong differentiator for pricing
+              Enterprise tier not explained — high-value opportunity missed
             </p>
           </div>
         </div>
@@ -279,7 +275,7 @@ export function ScreensharingAnimatedB() {
             <span className="text-[8px] font-body-medium text-accent">AI</span>
           </div>
           <p className="text-caption text-surface-white/80 leading-relaxed">
-            &ldquo;That retention figure is impressive. Can you show me the churn breakdown?&rdquo;
+            &ldquo;You mentioned custom pricing — can you walk me through what Enterprise includes?&rdquo;
           </p>
         </div>
       </div>

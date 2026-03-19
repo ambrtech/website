@@ -15,10 +15,12 @@ import { gsapRevealEase } from '@/lib/easing'
    it's being composed by hand — warm, crafted, deliberate.
    --------------------------------------------------------- */
 
+import { HelpCircle, ListChecks, Cpu } from 'lucide-react'
+
 const traits = [
-  { label: 'Skeptical', emoji: '🤔' },
-  { label: 'Demanding', emoji: '📋' },
-  { label: 'Technical', emoji: '🔬' },
+  { label: 'Skeptical', Icon: HelpCircle },
+  { label: 'Demanding', Icon: ListChecks },
+  { label: 'Technical', Icon: Cpu },
 ]
 
 const behaviorPatterns = [
@@ -214,7 +216,7 @@ export function ContextSelectorAnimatedA() {
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-white border border-border text-caption font-body-medium text-dark"
                 style={{ opacity: 0 }}
               >
-                <span className="text-[11px]">{trait.emoji}</span>
+                <trait.Icon className="w-3.5 h-3.5 text-accent" />
                 {trait.label}
               </span>
             ))}

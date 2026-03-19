@@ -194,9 +194,7 @@ export function CustomizationPinned() {
             {items.map((item) => (
               <div key={item.heading} className="space-y-5">
                 <div className="h-[240px] overflow-hidden rounded-brand-lg">
-                  <div className="transform scale-[0.65] origin-top-left w-[154%]">
-                    <ProductScreenshot>{item.mock}</ProductScreenshot>
-                  </div>
+                  <ProductScreenshot compact>{item.mock}</ProductScreenshot>
                 </div>
                 <div>
                   <h3 className="font-heading text-label tracking-heading text-dark mb-2">

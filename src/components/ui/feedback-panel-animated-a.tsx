@@ -75,6 +75,8 @@ export function FeedbackPanelAnimatedA() {
       const divider = el.querySelector('[data-divider]')
       const insightIcon = el.querySelector('[data-insight-icon]')
       const insightText = el.querySelector('[data-insight-text]')
+      const insightIcon2 = el.querySelector('[data-insight-icon-2]')
+      const insightText2 = el.querySelector('[data-insight-text-2]')
 
       const tl = gsap.timeline({
         repeat: -1,
@@ -94,6 +96,8 @@ export function FeedbackPanelAnimatedA() {
       tl.set(divider, { scaleX: 0 })
       tl.set(insightIcon, { opacity: 0, scale: 0 })
       tl.set(insightText, { opacity: 0, y: 6 })
+      tl.set(insightIcon2, { opacity: 0, scale: 0 })
+      tl.set(insightText2, { opacity: 0, y: 6 })
 
       /* Phase 1: Background card */
       tl.to(bg, { opacity: 1, duration: 0.5, ease: 'power1.out' })
@@ -139,15 +143,17 @@ export function FeedbackPanelAnimatedA() {
       /* Phase 5: Divider draws */
       tl.to(divider, { scaleX: 1, duration: 0.5, ease: 'power2.inOut' })
 
-      /* Phase 6: Coaching insight */
+      /* Phase 6: Coaching insights */
       tl.to(insightIcon, { opacity: 1, scale: 1, duration: 0.3, ease: 'back.out(2.5)' })
       tl.to(insightText, { opacity: 1, y: 0, duration: 0.5 }, '-=0.15')
+      tl.to(insightIcon2, { opacity: 1, scale: 1, duration: 0.3, ease: 'back.out(2.5)' })
+      tl.to(insightText2, { opacity: 1, y: 0, duration: 0.5 }, '-=0.15')
 
       /* Phase 7: Hold for reading */
       tl.to({}, { duration: 3.2 })
 
       /* Phase 8: Fade out */
-      tl.to(el.querySelectorAll('[data-bg], [data-eyebrow], [data-title], [data-tl-track], [data-tl-arc], [data-tl-label], [data-tl-value], [data-tl-caption], [data-pace-track], [data-pace-arc], [data-pace-label], [data-pace-value], [data-pace-caption], [data-divider], [data-insight-icon], [data-insight-text]'), {
+      tl.to(el.querySelectorAll('[data-bg], [data-eyebrow], [data-title], [data-tl-track], [data-tl-arc], [data-tl-label], [data-tl-value], [data-tl-caption], [data-pace-track], [data-pace-arc], [data-pace-label], [data-pace-value], [data-pace-caption], [data-divider], [data-insight-icon], [data-insight-text], [data-insight-icon-2], [data-insight-text-2]'), {
         opacity: 0,
         duration: 0.9,
         ease: 'power1.inOut',
@@ -281,30 +287,57 @@ export function FeedbackPanelAnimatedA() {
           style={{ transform: 'scaleX(0)' }}
         />
 
-        {/* Coaching insight */}
-        <div className="flex items-start gap-3">
-          <div
-            data-insight-icon=""
-            className="shrink-0 w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center mt-0.5"
-            style={{ opacity: 0 }}
-          >
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="text-accent">
-              <path
-                d="M5 1.5C3.067 1.5 1.5 3.067 1.5 5S3.067 8.5 5 8.5 8.5 6.933 8.5 5 6.933 1.5 5 1.5Z"
-                stroke="currentColor"
-                strokeWidth="0.9"
-              />
-              <path d="M5 3.5V5.5M5 7V7.01" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
-            </svg>
+        {/* Coaching insights */}
+        <div className="space-y-3">
+          <div className="flex items-start gap-3">
+            <div
+              data-insight-icon=""
+              className="shrink-0 w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center mt-0.5"
+              style={{ opacity: 0 }}
+            >
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="text-accent">
+                <path
+                  d="M5 1.5C3.067 1.5 1.5 3.067 1.5 5S3.067 8.5 5 8.5 8.5 6.933 8.5 5 6.933 1.5 5 1.5Z"
+                  stroke="currentColor"
+                  strokeWidth="0.9"
+                />
+                <path d="M5 3.5V5.5M5 7V7.01" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+              </svg>
+            </div>
+            <p
+              data-insight-text=""
+              className="text-caption text-copy-mid leading-relaxed"
+              style={{ opacity: 0 }}
+            >
+              You listened attentively and gave space for the other person to respond.
+              Consider pausing a beat longer after their answers to build trust.
+            </p>
           </div>
-          <p
-            data-insight-text=""
-            className="text-caption text-copy-mid leading-relaxed"
-            style={{ opacity: 0 }}
-          >
-            You listened attentively and gave space for the other person to respond.
-            Consider pausing a beat longer after their answers to build trust.
-          </p>
+
+          <div className="flex items-start gap-3">
+            <div
+              data-insight-icon-2=""
+              className="shrink-0 w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center mt-0.5"
+              style={{ opacity: 0 }}
+            >
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="text-accent">
+                <path
+                  d="M5 1.5C3.067 1.5 1.5 3.067 1.5 5S3.067 8.5 5 8.5 8.5 6.933 8.5 5 6.933 1.5 5 1.5Z"
+                  stroke="currentColor"
+                  strokeWidth="0.9"
+                />
+                <path d="M5 3.5V5.5M5 7V7.01" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+              </svg>
+            </div>
+            <p
+              data-insight-text-2=""
+              className="text-caption text-copy-mid leading-relaxed"
+              style={{ opacity: 0 }}
+            >
+              Your opening acknowledged their strengths before raising the issue — this
+              set a collaborative rather than confrontational tone.
+            </p>
+          </div>
         </div>
       </div>
     </div>
