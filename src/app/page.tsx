@@ -7,10 +7,11 @@ import {
 } from '@/components/sections/split-content'
 import {
   ProductScreenshot,
-  MockVoiceConversation,
-  MockBodyLanguage,
-  MockFeedbackPanel,
 } from '@/components/sections/product-screenshot'
+import { VoiceConversationAnimatedA } from '@/components/ui/voice-conversation-animated-a'
+import { VoiceConversationAnimatedB } from '@/components/ui/voice-conversation-animated-b'
+import { FeedbackPanelAnimatedA } from '@/components/ui/feedback-panel-animated-a'
+import { BodyLanguageAnimatedA } from '@/components/ui/body-language-animated-a'
 import { TestimonialGrid } from '@/components/sections/testimonial-grid'
 import { UseCaseCards } from '@/components/sections/use-case-cards'
 import { PullQuote } from '@/components/sections/pull-quote'
@@ -163,7 +164,7 @@ export default function Home() {
         body="Voice AI responses are near-instant. No awkward pauses. The pacing feels natural, just like a real conversation."
         visualContent={
           <ProductScreenshot tint>
-            <MockVoiceConversation />
+            <VoiceConversationAnimatedA />
           </ProductScreenshot>
         }
       />
@@ -180,7 +181,7 @@ export default function Home() {
         body="AI characters respond to what your team members actually say and how they say it. Push back, change direction, try a different tactic, and the AI follows."
         visualContent={
           <ProductScreenshot tint>
-            <MockFeedbackPanel />
+            <FeedbackPanelAnimatedA />
           </ProductScreenshot>
         }
       />
@@ -195,7 +196,7 @@ export default function Home() {
         body="Your team has to think on their feet, read the tone, and respond in the moment. That is where real skills are built."
         visualContent={
           <ProductScreenshot tint>
-            <MockVoiceConversation />
+            <VoiceConversationAnimatedB />
           </ProductScreenshot>
         }
       />
@@ -212,7 +213,7 @@ export default function Home() {
         badge="Optional add-on"
         visualContent={
           <ProductScreenshot tint>
-            <MockBodyLanguage />
+            <BodyLanguageAnimatedA />
           </ProductScreenshot>
         }
       />
