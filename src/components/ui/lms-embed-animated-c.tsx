@@ -134,49 +134,49 @@ export function LmsEmbedAnimatedC() {
         {/* Nav */}
         <div
           data-nav=""
-          className="flex items-center justify-between px-5 py-3 border-b border-border"
+          className="flex items-center justify-between px-4 py-2 border-b border-border"
           style={{ opacity: 0 }}
         >
           <div className="flex items-center gap-2">
-            <div className="w-5 h-5 rounded bg-dark/10" />
-            <span className="text-caption font-body-medium text-copy-light">Learning Portal</span>
+            <div className="w-4 h-4 rounded bg-dark/10" />
+            <span className="text-[11px] font-body-medium text-copy-light">Learning Portal</span>
           </div>
-          <span className="text-caption text-copy-faint">My Courses</span>
+          <span className="text-[11px] text-copy-faint">My Courses</span>
         </div>
 
         {/* Search bar */}
-        <div className="px-5 pt-3 pb-2">
+        <div className="px-4 pt-2 pb-1.5">
           <div
             data-search=""
-            className="flex items-center gap-2 px-3 py-2 rounded-brand-sm bg-surface border border-border"
+            className="flex items-center gap-2 px-2.5 py-1.5 rounded-brand-sm bg-surface border border-border"
             style={{ opacity: 0 }}
           >
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-copy-faint">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" className="text-copy-faint">
               <circle cx="5" cy="5" r="3.5" stroke="currentColor" strokeWidth="1.2" />
               <path d="M8 8l2.5 2.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
             </svg>
-            <span className="text-[10px] text-copy-faint">Search modules...</span>
+            <span className="text-[9px] text-copy-faint">Search modules...</span>
           </div>
         </div>
 
         {/* Module list */}
-        <div className="px-5 py-2 space-y-1.5">
+        <div className="px-4 py-1.5 space-y-1">
           {/* Static completed modules */}
           {staticModules.map((mod) => (
             <div
               key={mod.num}
               data-module=""
-              className="flex items-center gap-3 px-3 py-2.5 rounded-brand-sm border border-border bg-surface/50"
+              className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-brand-sm border border-border bg-surface/50"
               style={{ opacity: 0 }}
             >
-              <span className="text-[9px] font-body-medium text-copy-faint w-4 text-center">{mod.num}</span>
-              <div className="w-4 h-4 rounded-full border-2 border-copy-faint/40 bg-copy-faint/10 flex items-center justify-center shrink-0">
-                <svg width="8" height="6" viewBox="0 0 8 6" fill="none">
+              <span className="text-[9px] font-body-medium text-copy-faint w-3 text-center">{mod.num}</span>
+              <div className="w-3.5 h-3.5 rounded-full border-2 border-copy-faint/40 bg-copy-faint/10 flex items-center justify-center shrink-0">
+                <svg width="7" height="5" viewBox="0 0 8 6" fill="none">
                   <path d="M1 3L3 5L7 1" stroke="currentColor" strokeWidth="1" strokeLinecap="round" className="text-copy-faint" />
                 </svg>
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-caption text-copy-mid">{mod.title}</p>
+                <p className="text-[11px] text-copy-mid">{mod.title}</p>
                 <p className="text-[8px] text-copy-faint">{mod.type}</p>
               </div>
               <span className="text-[8px] text-copy-faint shrink-0">{mod.status}</span>
@@ -188,19 +188,19 @@ export function LmsEmbedAnimatedC() {
             {/* Glow behind */}
             <div
               data-target-glow=""
-              className="absolute -inset-1.5 rounded-brand bg-accent-soft/15 blur-sm"
+              className="absolute -inset-1 rounded-brand bg-accent-soft/15 blur-sm"
               style={{ opacity: 0 }}
             />
 
             {/* Static row (visible initially, fades when expanded appears) */}
             <div
               data-target-row=""
-              className="relative flex items-center gap-3 px-3 py-2.5 rounded-brand-sm border border-border bg-surface/50"
+              className="relative flex items-center gap-2.5 px-2.5 py-1.5 rounded-brand-sm border border-border bg-surface/50"
             >
-              <span className="text-[9px] font-body-medium text-copy-faint w-4 text-center">4</span>
-              <div className="w-4 h-4 rounded-full border-2 border-copy-faint/30 shrink-0" />
+              <span className="text-[9px] font-body-medium text-copy-faint w-3 text-center">4</span>
+              <div className="w-3.5 h-3.5 rounded-full border-2 border-copy-faint/30 shrink-0" />
               <div className="flex-1 min-w-0">
-                <p className="text-caption text-copy-mid">Performance Feedback Skills</p>
+                <p className="text-[11px] text-copy-mid">Performance Feedback Skills</p>
                 <p className="text-[8px] text-copy-faint">Module</p>
               </div>
               <span className="text-[8px] text-copy-faint shrink-0">Not started</span>
@@ -212,21 +212,21 @@ export function LmsEmbedAnimatedC() {
               className="relative rounded-brand-sm border border-accent-soft/50 bg-accent-whisper overflow-hidden"
               style={{ opacity: 0, height: 0 }}
             >
-              <div className="p-3.5 space-y-2.5">
+              <div className="p-3 space-y-2">
                 {/* Top row: logo + title */}
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2">
                   <div
                     data-ambr-logo=""
-                    className="w-6 h-6 rounded-brand-sm bg-accent-soft/40 flex items-center justify-center shrink-0"
+                    className="w-5 h-5 rounded-brand-sm bg-accent-soft/40 flex items-center justify-center shrink-0"
                     style={{ opacity: 0 }}
                   >
-                    <span className="text-[8px] font-body-medium text-accent">A</span>
+                    <span className="text-[7px] font-body-medium text-accent">A</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-[9px] font-body-medium text-copy-faint w-4 text-center">4</span>
+                    <span className="text-[9px] font-body-medium text-copy-faint w-3 text-center">4</span>
                     <span
                       data-target-title=""
-                      className="text-caption font-body-medium text-dark"
+                      className="text-[11px] font-body-medium text-dark"
                       style={{ opacity: 0 }}
                     >
                       Performance Feedback — AI Simulation
@@ -235,24 +235,24 @@ export function LmsEmbedAnimatedC() {
                 </div>
 
                 {/* Character + description */}
-                <div className="flex items-start gap-2.5">
+                <div className="flex items-start gap-2">
                   <div
                     data-target-avatar=""
-                    className="w-8 h-8 rounded-full bg-accent-soft/30 flex items-center justify-center shrink-0"
+                    className="w-7 h-7 rounded-full bg-accent-soft/30 flex items-center justify-center shrink-0"
                     style={{ opacity: 0 }}
                   >
-                    <span className="text-[9px] font-body-medium text-accent">SC</span>
+                    <span className="text-[8px] font-body-medium text-accent">SC</span>
                   </div>
                   <div
                     data-target-meta=""
                     className="flex-1"
                     style={{ opacity: 0 }}
                   >
-                    <p className="text-[10px] text-copy-mid leading-relaxed">
+                    <p className="text-[10px] text-copy-mid leading-snug">
                       Practice a difficult performance conversation with Sarah Chen,
                       an AI team lead who responds to your actual words.
                     </p>
-                    <div className="flex items-center gap-2 mt-1.5">
+                    <div className="flex items-center gap-2 mt-1">
                       <span className="text-[8px] font-body-medium uppercase tracking-eyebrow text-accent bg-accent/10 px-1.5 py-0.5 rounded">
                         Interactive
                       </span>
@@ -263,15 +263,15 @@ export function LmsEmbedAnimatedC() {
                 </div>
 
                 {/* Progress */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-1 h-1.5 rounded-full bg-surface-white overflow-hidden">
+                <div className="flex items-center gap-2">
+                  <div className="flex-1 h-1 rounded-full bg-surface-white overflow-hidden">
                     <div
                       data-target-progress=""
                       className="h-full rounded-full bg-accent-soft origin-left"
                       style={{ width: '0%', transform: 'scaleX(0)' }}
                     />
                   </div>
-                  <span className="text-[9px] text-copy-faint shrink-0">Not started</span>
+                  <span className="text-[8px] text-copy-faint shrink-0">Not started</span>
                 </div>
 
                 {/* CTA */}
@@ -279,7 +279,7 @@ export function LmsEmbedAnimatedC() {
                   data-target-cta=""
                   style={{ opacity: 0 }}
                 >
-                  <span className="inline-block rounded-brand-sm bg-accent text-surface-white px-4 py-1.5 text-caption font-body-medium">
+                  <span className="inline-block rounded-brand-sm bg-accent text-surface-white px-3.5 py-1 text-[11px] font-body-medium">
                     Begin simulation
                   </span>
                 </div>
@@ -290,13 +290,13 @@ export function LmsEmbedAnimatedC() {
           {/* Module 5 — stays static */}
           <div
             data-module=""
-            className="flex items-center gap-3 px-3 py-2.5 rounded-brand-sm border border-border bg-surface/50"
+            className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-brand-sm border border-border bg-surface/50"
             style={{ opacity: 0 }}
           >
-            <span className="text-[9px] font-body-medium text-copy-faint w-4 text-center">5</span>
-            <div className="w-4 h-4 rounded-full border-2 border-copy-faint/30 shrink-0" />
+            <span className="text-[9px] font-body-medium text-copy-faint w-3 text-center">5</span>
+            <div className="w-3.5 h-3.5 rounded-full border-2 border-copy-faint/30 shrink-0" />
             <div className="flex-1 min-w-0">
-              <p className="text-caption text-copy-mid">Anti-Money Laundering Basics</p>
+              <p className="text-[11px] text-copy-mid">Anti-Money Laundering Basics</p>
               <p className="text-[8px] text-copy-faint">Video + Quiz</p>
             </div>
             <span className="text-[8px] text-copy-faint shrink-0">Not started</span>

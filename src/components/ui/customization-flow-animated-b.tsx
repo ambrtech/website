@@ -166,30 +166,30 @@ export function CustomizationFlowAnimatedB() {
           />
         </div>
 
-        <div className="grid grid-cols-2 min-h-[320px]">
+        <div className="grid grid-cols-2 min-h-[280px]">
           {/* ── Before half ── */}
-          <div data-before className="p-5 border-r border-border/50 flex flex-col">
+          <div data-before className="p-3.5 border-r border-border/50 flex flex-col">
             <p
               data-before-label
-              className="text-[10px] font-body-medium uppercase tracking-eyebrow text-copy-light mb-4"
+              className="text-[10px] font-body-medium uppercase tracking-eyebrow text-copy-light mb-2.5"
               style={{ opacity: 0 }}
             >
               Your context
             </p>
-            <div className="space-y-2.5 flex-1">
+            <div className="space-y-1.5 flex-1">
               {contextItems.map((item, i) => (
                 <div
                   key={i}
                   data-before-item
-                  className="flex items-start gap-2.5 px-3 py-2 rounded-brand-sm bg-surface border border-border"
+                  className="flex items-start gap-2 px-2.5 py-1.5 rounded-brand-sm bg-surface border border-border"
                   style={{ opacity: 0 }}
                 >
                   <item.Icon className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <p className="text-caption font-body-medium text-dark leading-tight">
+                    <p className="text-[11px] font-body-medium text-dark leading-tight">
                       {item.label}
                     </p>
-                    <p className="text-[10px] text-copy-faint leading-tight mt-0.5">
+                    <p className="text-[9px] text-copy-faint leading-tight mt-0.5">
                       {item.detail}
                     </p>
                   </div>
@@ -201,31 +201,31 @@ export function CustomizationFlowAnimatedB() {
           {/* ── After half ── */}
           <div
             data-after
-            className="p-5 flex flex-col bg-accent-whisper/30"
+            className="p-3.5 flex flex-col bg-accent-whisper/30"
             style={{ opacity: 0 }}
           >
             <p
               data-after-label
-              className="text-[10px] font-body-medium uppercase tracking-eyebrow text-accent mb-4"
+              className="text-[10px] font-body-medium uppercase tracking-eyebrow text-accent mb-2.5"
               style={{ opacity: 0 }}
             >
               Your simulation
             </p>
 
             {/* Character */}
-            <div className="flex items-center gap-2 mb-3">
+            <div className="flex items-center gap-2 mb-2">
               <div className="w-7 h-7 rounded-full bg-accent-soft/40 border border-accent-soft flex items-center justify-center">
                 <span className="text-[9px] font-body-medium text-accent">CFO</span>
               </div>
               <div>
-                <p className="text-caption font-body-medium text-dark leading-tight">David Chen</p>
+                <p className="text-[11px] font-body-medium text-dark leading-tight">David Chen</p>
                 <p className="text-[9px] text-copy-faint">Chief Financial Officer</p>
               </div>
             </div>
 
             <p
               data-after-title
-              className="text-caption font-heading tracking-heading text-dark leading-snug mb-2"
+              className="text-[11px] font-heading tracking-heading text-dark leading-snug mb-1.5"
               style={{ opacity: 0 }}
             >
               Enterprise renewal negotiation
@@ -233,7 +233,7 @@ export function CustomizationFlowAnimatedB() {
 
             <p
               data-after-desc
-              className="text-[11px] text-copy-mid leading-relaxed mb-4 flex-1"
+              className="text-[10px] text-copy-mid leading-relaxed mb-3 flex-1"
               style={{ opacity: 0 }}
             >
               CFO pushes back on pricing using your competitor&apos;s offer,
@@ -242,7 +242,7 @@ export function CustomizationFlowAnimatedB() {
             </p>
 
             {/* Source tags */}
-            <div className="flex flex-wrap gap-1.5 pt-3 border-t border-accent-soft/20">
+            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-accent-soft/20">
               {['Methodology', 'Personas', 'Pricing'].map((tag, i) => (
                 <span
                   key={i}

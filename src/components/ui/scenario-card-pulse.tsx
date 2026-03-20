@@ -150,26 +150,26 @@ export function ScenarioCardPulse() {
         style={{ opacity: 0 }}
       >
         {/* Top bar */}
-        <div className="flex items-center justify-between px-5 pt-4">
+        <div className="flex items-center justify-between px-4 pt-3">
           <span
             data-timer=""
-            className="text-[11px] font-body-medium text-surface-white/50 bg-surface-white/[0.06] px-3 py-1 rounded tabular-nums"
+            className="text-[11px] font-body-medium text-surface-white/50 bg-surface-white/[0.06] px-3 py-0.5 rounded tabular-nums"
             style={{ opacity: 0 }}
           >
             00:00
           </span>
-          <span className="text-[10px] text-surface-white/30 bg-surface-white/[0.06] px-2.5 py-1 rounded">
+          <span className="text-[10px] text-surface-white/30 bg-surface-white/[0.06] px-2.5 py-0.5 rounded">
             Camera off
           </span>
         </div>
 
         {/* Main content: character + transcripts + nudges */}
-        <div className="px-5 pt-3 pb-4">
+        <div className="px-4 pt-2 pb-2">
           {/* Character with pulsing ring */}
-          <div data-character="" className="flex flex-col items-center mb-4" style={{ opacity: 0 }}>
+          <div data-character="" className="flex flex-col items-center mb-2" style={{ opacity: 0 }}>
             <div
               data-ring=""
-              className="w-[72px] h-[72px] rounded-full overflow-hidden border-[2.5px] border-accent mb-2"
+              className="w-[52px] h-[52px] rounded-full overflow-hidden border-[2.5px] border-accent mb-1.5"
               style={{
                 opacity: 0,
                 boxShadow: '0 0 12px 3px rgba(212, 114, 52, 0.1)',
@@ -178,29 +178,29 @@ export function ScenarioCardPulse() {
               <Image
                 src="/images/team/jamie-headshot.png"
                 alt="Character"
-                width={72}
-                height={72}
+                width={52}
+                height={52}
                 className="w-full h-full object-cover"
               />
             </div>
-            <p className="text-caption font-body-medium text-surface-white">Sarah Chen</p>
-            <p className="text-[10px] text-surface-white/35 mt-0.5">Team Lead</p>
+            <p className="text-[11px] font-body-medium text-surface-white">Sarah Chen</p>
+            <p className="text-[9px] text-surface-white/35 mt-0.5">Team Lead</p>
           </div>
 
           {/* Voice waveform */}
-          <div className="flex justify-center mb-4">
-            <VoiceWave width={140} height={28} />
+          <div className="flex justify-center mb-2">
+            <VoiceWave width={120} height={22} />
           </div>
 
           {/* Transcript area — overlapping moments */}
-          <div className="relative min-h-[40px] mb-3">
+          <div className="relative min-h-[36px] mb-2">
             {/* Moment 1 transcript */}
             <div
               data-transcript-1=""
-              className="absolute inset-x-0 top-0 bg-surface-white/[0.05] rounded-brand-sm px-3.5 py-2.5"
+              className="absolute inset-x-0 top-0 bg-surface-white/[0.05] rounded-brand-sm px-3 py-2"
               style={{ opacity: 0 }}
             >
-              <p className="text-caption text-surface-white/80 leading-relaxed">
+              <p className="text-[11px] text-surface-white/80 leading-snug">
                 <span className="text-accent/70 font-body-medium">Sarah:</span>{' '}
                 &ldquo;I hear what you&apos;re saying about the deadlines, and I appreciate you
                 raising this with me directly...&rdquo;
@@ -210,10 +210,10 @@ export function ScenarioCardPulse() {
             {/* Moment 2 transcript */}
             <div
               data-transcript-2=""
-              className="absolute inset-x-0 top-0 bg-surface-white/[0.05] rounded-brand-sm px-3.5 py-2.5"
+              className="absolute inset-x-0 top-0 bg-surface-white/[0.05] rounded-brand-sm px-3 py-2"
               style={{ opacity: 0 }}
             >
-              <p className="text-caption text-surface-white/80 leading-relaxed">
+              <p className="text-[11px] text-surface-white/80 leading-snug">
                 <span className="text-surface-white/50 font-body-medium">You:</span>{' '}
                 &ldquo;Could you walk me through what happened with last week&apos;s
                 client meeting?&rdquo;
@@ -222,16 +222,16 @@ export function ScenarioCardPulse() {
           </div>
 
           {/* Coaching nudge area — overlapping moments */}
-          <div className="relative min-h-[44px] mb-3">
+          <div className="relative min-h-[36px] mb-2">
             {/* Nudge 1 */}
             <div
               data-nudge-1=""
-              className="absolute inset-x-0 top-0 flex items-start gap-2 bg-accent/[0.08] border border-accent/15 rounded-brand-sm px-3.5 py-2.5"
+              className="absolute inset-x-0 top-0 flex items-start gap-2 bg-accent/[0.08] border border-accent/15 rounded-brand-sm px-3 py-2"
               style={{ opacity: 0 }}
             >
               <svg
-                width="14"
-                height="14"
+                width="12"
+                height="12"
                 viewBox="0 0 14 14"
                 fill="none"
                 className="text-accent shrink-0 mt-0.5"
@@ -244,7 +244,7 @@ export function ScenarioCardPulse() {
                   strokeLinecap="round"
                 />
               </svg>
-              <p className="text-[11px] text-accent/90 leading-relaxed">
+              <p className="text-[10px] text-accent/90 leading-snug">
                 Acknowledge their perspective before giving direct feedback on the missed deadlines.
               </p>
             </div>
@@ -252,12 +252,12 @@ export function ScenarioCardPulse() {
             {/* Nudge 2 */}
             <div
               data-nudge-2=""
-              className="absolute inset-x-0 top-0 flex items-start gap-2 bg-accent/[0.08] border border-accent/15 rounded-brand-sm px-3.5 py-2.5"
+              className="absolute inset-x-0 top-0 flex items-start gap-2 bg-accent/[0.08] border border-accent/15 rounded-brand-sm px-3 py-2"
               style={{ opacity: 0 }}
             >
               <svg
-                width="14"
-                height="14"
+                width="12"
+                height="12"
                 viewBox="0 0 14 14"
                 fill="none"
                 className="text-accent shrink-0 mt-0.5"
@@ -270,7 +270,7 @@ export function ScenarioCardPulse() {
                   strokeLinecap="round"
                 />
               </svg>
-              <p className="text-[11px] text-accent/90 leading-relaxed">
+              <p className="text-[10px] text-accent/90 leading-snug">
                 Good open question — let them share their perspective before proposing solutions.
               </p>
             </div>
@@ -279,20 +279,20 @@ export function ScenarioCardPulse() {
           {/* Key Details sidebar — compact version */}
           <div
             data-key-details=""
-            className="bg-surface-white/[0.04] border border-surface-white/[0.06] rounded-brand-sm px-3.5 py-2.5"
+            className="bg-surface-white/[0.04] border border-surface-white/[0.06] rounded-brand-sm px-3 py-2"
             style={{ opacity: 0 }}
           >
-            <p className="text-[9px] font-body-medium text-surface-white/40 uppercase tracking-eyebrow mb-1.5">
+            <p className="text-[9px] font-body-medium text-surface-white/40 uppercase tracking-eyebrow mb-1">
               Key Details
             </p>
-            <div className="space-y-1">
-              <p className="text-[10px] text-surface-white/50 leading-relaxed">
+            <div className="space-y-0.5">
+              <p className="text-[10px] text-surface-white/50 leading-snug">
                 1. Missed two deadlines on a critical project
               </p>
-              <p className="text-[10px] text-surface-white/50 leading-relaxed">
+              <p className="text-[10px] text-surface-white/50 leading-snug">
                 2. Non-deadline work remains excellent
               </p>
-              <p className="text-[10px] text-surface-white/50 leading-relaxed">
+              <p className="text-[10px] text-surface-white/50 leading-snug">
                 3. Goal: improve performance without damaging rapport
               </p>
             </div>
@@ -300,7 +300,7 @@ export function ScenarioCardPulse() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex items-center gap-2.5 px-4 pb-4">
+        <div className="flex items-center gap-2.5 px-4 pb-3">
           {/* Mic button */}
           <div className="w-9 h-9 rounded-full bg-[#22C55E] flex items-center justify-center shrink-0">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">

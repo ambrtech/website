@@ -156,10 +156,10 @@ export function CustomizationFlowAnimatedA() {
             </span>
           </div>
         ))}
-        {/* Blinking cursor */}
+        {/* Blinking cursor — invisible, used only for animation timing */}
         <div
           data-cursor
-          className="ml-3 mt-1 w-[2px] h-4 bg-accent rounded-full"
+          className="w-0 h-0 overflow-hidden"
           style={{ opacity: 0 }}
         />
       </div>

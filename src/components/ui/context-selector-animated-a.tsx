@@ -148,19 +148,19 @@ export function ContextSelectorAnimatedA() {
     <MockFrame ref={containerRef} height="standard">
       <div
         data-card=""
-        className="absolute inset-0 rounded-brand bg-accent-whisper bg-noise-fine px-6 py-7 md:px-8"
+        className="absolute inset-0 rounded-brand bg-accent-whisper bg-noise-fine px-5 py-5 md:px-6"
         style={{ opacity: 0, backgroundBlendMode: 'overlay' }}
       >
         {/* Top: Avatar + Identity */}
-        <div className="flex items-center gap-4 mb-4">
+        <div className="flex items-center gap-3 mb-3">
           <div
             data-avatar=""
-            className="w-14 h-14 rounded-full bg-accent/15 border-2 border-accent-soft flex items-center justify-center shrink-0"
+            className="w-11 h-11 rounded-full bg-accent/15 border-2 border-accent-soft flex items-center justify-center shrink-0"
             style={{ opacity: 0 }}
           >
             <span
               data-avatar-initial=""
-              className="font-heading text-body text-accent"
+              className="font-heading text-caption text-accent"
               style={{ opacity: 0 }}
             >
               L
@@ -169,12 +169,12 @@ export function ContextSelectorAnimatedA() {
 
           <div className="flex-1 min-w-0">
             {/* Name — typed character by character */}
-            <div className="flex items-baseline gap-px mb-1">
+            <div className="flex items-baseline gap-px mb-0.5">
               {name.split('').map((char, i) => (
                 <span
                   key={i}
                   data-name-char=""
-                  className="font-heading text-body tracking-heading text-dark inline-block"
+                  className="font-heading text-caption tracking-heading text-dark inline-block"
                   style={{ opacity: 0 }}
                 >
                   {char === ' ' ? '\u00A0' : char}
@@ -185,7 +185,7 @@ export function ContextSelectorAnimatedA() {
             {/* Role badge */}
             <span
               data-role=""
-              className="text-caption text-copy-light font-body leading-tight"
+              className="text-[11px] text-copy-light font-body leading-tight"
               style={{ opacity: 0 }}
             >
               {role}
@@ -196,28 +196,28 @@ export function ContextSelectorAnimatedA() {
         {/* Divider */}
         <div
           data-divider=""
-          className="h-px bg-gradient-to-r from-accent-soft via-accent-soft/40 to-transparent mb-5 origin-left"
+          className="h-px bg-gradient-to-r from-accent-soft via-accent-soft/40 to-transparent mb-3.5 origin-left"
           style={{ transform: 'scaleX(0)' }}
         />
 
         {/* Personality traits */}
-        <div className="mb-5">
+        <div className="mb-3.5">
           <p
             data-trait-label=""
-            className="text-[10px] font-body-medium uppercase tracking-eyebrow text-copy-light mb-2.5"
+            className="text-[10px] font-body-medium uppercase tracking-eyebrow text-copy-light mb-2"
             style={{ opacity: 0 }}
           >
             Personality
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5">
             {traits.map((trait) => (
               <span
                 key={trait.label}
                 data-trait=""
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-white border border-border text-caption font-body-medium text-dark"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-white border border-border text-[11px] font-body-medium text-dark"
                 style={{ opacity: 0 }}
               >
-                <trait.Icon className="w-3.5 h-3.5 text-accent" />
+                <trait.Icon className="w-3 h-3 text-accent" />
                 {trait.label}
               </span>
             ))}
@@ -225,20 +225,20 @@ export function ContextSelectorAnimatedA() {
         </div>
 
         {/* Behavior patterns */}
-        <div className="mb-5">
+        <div className="mb-3.5">
           <p
             data-behavior-label=""
-            className="text-[10px] font-body-medium uppercase tracking-eyebrow text-copy-light mb-2.5"
+            className="text-[10px] font-body-medium uppercase tracking-eyebrow text-copy-light mb-2"
             style={{ opacity: 0 }}
           >
             Behavior Patterns
           </p>
-          <div className="space-y-1.5">
+          <div className="space-y-1">
             {behaviorPatterns.map((pattern, i) => (
               <div
                 key={i}
                 data-behavior=""
-                className="flex items-start gap-2 text-caption text-copy-mid leading-relaxed"
+                className="flex items-start gap-2 text-[11px] text-copy-mid leading-snug"
                 style={{ opacity: 0 }}
               >
                 <span className="text-accent/60 mt-px shrink-0">&bull;</span>
@@ -249,7 +249,7 @@ export function ContextSelectorAnimatedA() {
         </div>
 
         {/* Completeness meter */}
-        <div className="mb-3">
+        <div className="mb-2">
           <div className="flex items-center justify-between mb-1.5">
             <span className="text-[10px] font-body-medium text-copy-light uppercase tracking-eyebrow">
               Character completeness

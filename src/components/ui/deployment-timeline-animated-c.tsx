@@ -141,9 +141,9 @@ export function DeploymentTimelineAnimatedC() {
         if (i < days.length - 1) {
           tl.to({}, { duration: 0.2 })
 
-          /* Previous page fades slightly */
+          /* Previous page fades out completely so pages don't stack */
           tl.to(dayPages[i], {
-            opacity: 0.3,
+            opacity: 0,
             y: -4,
             scale: 0.97,
             duration: 0.3,
@@ -177,8 +177,8 @@ export function DeploymentTimelineAnimatedC() {
   return (
     <MockFrame ref={containerRef} height="compact">
       {/* Header */}
-      <div data-header="" className="mb-4" style={{ opacity: 0 }}>
-        <div className="flex items-center gap-2 mb-1">
+      <div data-header="" className="mb-3" style={{ opacity: 0 }}>
+        <div className="flex items-center gap-2 mb-0.5">
           <span className="w-1.5 h-1.5 rounded-full bg-accent" />
           <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
             Your First Week
@@ -215,7 +215,7 @@ export function DeploymentTimelineAnimatedC() {
         </div>
 
         {/* Day pages stack */}
-        <div className="relative p-4" style={{ minHeight: '240px' }}>
+        <div className="relative p-3" style={{ minHeight: '180px' }}>
           {days.map((day) => {
             if (day.milestone) milestoneIdx++
             const currentMilestoneIdx = day.milestone ? milestoneIdx : -1
@@ -224,15 +224,15 @@ export function DeploymentTimelineAnimatedC() {
               <div
                 key={day.day}
                 data-day-page=""
-                className="absolute inset-x-4 top-4"
+                className="absolute inset-x-3 top-3"
                 style={{ opacity: 0, perspective: '400px' }}
               >
-                <div className="p-4 rounded-brand-sm bg-accent-whisper/50 border border-accent/5">
+                <div className="p-3 rounded-brand-sm bg-accent-whisper/50 border border-accent/5">
                   {/* Day number + weekday */}
-                  <div className="flex items-baseline gap-2 mb-3">
+                  <div className="flex items-baseline gap-2 mb-2">
                     <span
                       data-day-num=""
-                      className="font-heading text-section tracking-heading text-accent leading-none"
+                      className="font-heading text-body tracking-heading text-accent leading-none"
                       style={{ opacity: 0 }}
                     >
                       {day.day}
@@ -261,7 +261,7 @@ export function DeploymentTimelineAnimatedC() {
                   {/* Headline */}
                   <h4
                     data-day-headline=""
-                    className="font-heading text-body tracking-heading text-dark leading-snug mb-1.5"
+                    className="font-heading text-caption tracking-heading text-dark leading-snug mb-1"
                     style={{ opacity: 0 }}
                   >
                     {day.headline}
@@ -270,14 +270,14 @@ export function DeploymentTimelineAnimatedC() {
                   {/* Detail */}
                   <p
                     data-day-detail=""
-                    className="text-caption text-copy-mid leading-relaxed"
+                    className="text-[11px] text-copy-mid leading-snug"
                     style={{ opacity: 0 }}
                   >
                     {day.detail}
                   </p>
 
                   {/* Visual accent line */}
-                  <div className="mt-3 h-px bg-gradient-to-r from-accent-soft/30 to-transparent" />
+                  <div className="mt-2 h-px bg-gradient-to-r from-accent-soft/30 to-transparent" />
                 </div>
               </div>
             )
@@ -288,7 +288,7 @@ export function DeploymentTimelineAnimatedC() {
       {/* Closing line */}
       <div
         data-closing=""
-        className="mt-4 text-center"
+        className="mt-3 text-center"
         style={{ opacity: 0 }}
       >
         <p className="text-caption text-copy-mid">

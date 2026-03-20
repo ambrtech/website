@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import Image from 'next/image'
 import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
@@ -160,8 +161,14 @@ export function TrainingNudgeAnimatedC() {
             className="flex items-center gap-2.5"
             style={{ opacity: 0 }}
           >
-            <div className="w-8 h-8 rounded-full bg-accent-soft/30 flex items-center justify-center shrink-0">
-              <span className="text-caption font-body-medium text-accent">A</span>
+            <div className="w-8 h-8 rounded-full overflow-hidden shrink-0">
+              <Image
+                src="/ambr/a-mark-accent.png"
+                alt="Ambr AI"
+                width={32}
+                height={32}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <p className="text-caption font-body-medium text-dark">Ambr AI</p>

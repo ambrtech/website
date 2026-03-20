@@ -75,7 +75,7 @@ export function VoiceWave({
     const h = height
 
     // Advance time — fast enough for speech-like movement
-    const baseSpeed = 0.011
+    const baseSpeed = 0.007
     timeRef.current += baseSpeed * (0.05 + intensity * 0.95)
 
     const time = timeRef.current

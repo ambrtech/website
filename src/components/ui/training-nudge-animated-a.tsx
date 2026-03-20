@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import Image from 'next/image'
 import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
@@ -179,7 +180,7 @@ export function TrainingNudgeAnimatedA() {
             <div className="w-5 h-5 rounded-brand-sm bg-accent-soft/30 flex items-center justify-center">
               <span className="text-[8px] font-body-medium text-accent">A</span>
             </div>
-            <span className="text-caption font-body-medium text-dark">ambr-training</span>
+            <span className="text-caption font-body-medium text-dark">learning-and-development</span>
             <span className="text-[9px] text-copy-faint ml-1">via Ambr AI</span>
           </div>
 
@@ -193,10 +194,16 @@ export function TrainingNudgeAnimatedA() {
               {/* Bot avatar */}
               <div
                 data-bot-avatar=""
-                className="w-8 h-8 rounded-brand-sm bg-accent-soft/40 flex items-center justify-center shrink-0"
+                className="w-8 h-8 rounded-brand-sm overflow-hidden shrink-0"
                 style={{ opacity: 0 }}
               >
-                <span className="text-caption font-body-medium text-accent">A</span>
+                <Image
+                  src="/ambr/a-mark-accent.png"
+                  alt="Ambr AI"
+                  width={32}
+                  height={32}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div className="flex-1 min-w-0">

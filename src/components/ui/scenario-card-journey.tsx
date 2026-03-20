@@ -178,26 +178,55 @@ export function ScenarioCardJourney() {
     <MockFrame ref={containerRef} height="standard">
       {/* ── Layer 1: Category Grid ── */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="grid grid-cols-2 gap-3 w-full max-w-[360px]">
+        <div className="grid grid-cols-2 gap-3.5 w-full max-w-[380px]">
           {(
             [
-              { label: 'Performance Feedback', type: 'feedback' as const, active: true },
-              { label: 'Sales & Negotiation', type: 'sales' as const, active: false },
-              { label: 'Customer Service', type: 'service' as const, active: false },
-              { label: 'Leadership', type: 'leadership' as const, active: false },
+              {
+                label: 'Sales & Negotiations',
+                type: 'sales' as const,
+                active: true,
+                scenarios: ['Objection handling', 'Discovery calls', 'Closing techniques'],
+              },
+              {
+                label: 'Management & Leadership',
+                type: 'leadership' as const,
+                active: false,
+                scenarios: ['Performance reviews', 'Delivering feedback', 'Difficult conversations'],
+              },
+              {
+                label: 'Customer Service',
+                type: 'service' as const,
+                active: false,
+                scenarios: ['De-escalation', 'Complaint resolution', 'Empathetic responses'],
+              },
+              {
+                label: 'Other Solutions',
+                type: 'feedback' as const,
+                active: false,
+                scenarios: ['HR conversations', 'Compliance training'],
+              },
             ]
           ).map((cat) => (
             <div
               key={cat.label}
               data-category=""
               {...(cat.active ? { 'data-category-active': '' } : {})}
-              className="flex items-center gap-2.5 px-4 py-3.5 rounded-brand-sm bg-surface-white border border-border"
+              className="flex flex-col gap-2 px-4 py-4 rounded-brand-sm bg-surface-white border border-border"
               style={{ opacity: 0 }}
             >
-              <CategoryIcon type={cat.type} />
-              <span className="text-caption font-body-medium text-dark leading-tight">
-                {cat.label}
-              </span>
+              <div className="flex items-center gap-2.5">
+                <CategoryIcon type={cat.type} />
+                <span className="text-caption font-body-medium text-dark leading-tight">
+                  {cat.label}
+                </span>
+              </div>
+              <ul className="pl-[30px] space-y-0.5">
+                {cat.scenarios.map((s) => (
+                  <li key={s} className="text-[10px] text-copy-light leading-snug">
+                    {s}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
@@ -210,14 +239,14 @@ export function ScenarioCardJourney() {
           <div data-briefing-item="" className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
-              Performance Feedback
+              Sales & Negotiations
             </span>
           </div>
 
           {/* Title + character row */}
           <div data-briefing-item="">
             <h3 className="font-heading text-body tracking-heading text-dark mb-3 leading-snug">
-              Navigate a difficult performance conversation
+              Handle a price objection from a key prospect
             </h3>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-accent-soft shrink-0">
@@ -230,8 +259,8 @@ export function ScenarioCardJourney() {
                 />
               </div>
               <div>
-                <p className="text-caption font-body-medium text-dark">Sarah Chen</p>
-                <p className="text-[10px] text-copy-light">Team Lead · 10 minutes</p>
+                <p className="text-caption font-body-medium text-dark">Alex Morgan</p>
+                <p className="text-[10px] text-copy-light">VP Procurement · 10 minutes</p>
               </div>
             </div>
           </div>
@@ -252,9 +281,9 @@ export function ScenarioCardJourney() {
               Context
             </p>
             <p className="text-caption text-copy-mid leading-relaxed">
-              Your direct report has missed two consecutive deadlines on a critical project.
-              Their non-deadline work remains excellent. Address performance while maintaining
-              the relationship.
+              A qualified prospect has expressed strong interest but is pushing back on
+              pricing. They&apos;ve compared your offering to a lower-cost competitor.
+              Defend value without discounting.
             </p>
           </div>
 
@@ -265,10 +294,10 @@ export function ScenarioCardJourney() {
             </p>
             <div className="space-y-1">
               <p className="text-caption text-copy-mid">
-                1. Address performance issues whilst acknowledging strengths
+                1. Reframe the conversation around value, not price
               </p>
               <p className="text-caption text-copy-mid">
-                2. Develop a plan to improve their meeting performance
+                2. Identify the prospect&apos;s true concern and address it directly
               </p>
             </div>
           </div>
@@ -319,7 +348,7 @@ export function ScenarioCardJourney() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-caption font-body-medium text-surface-white">Sarah Chen</p>
+              <p className="text-caption font-body-medium text-surface-white">Alex Morgan</p>
               <p className="text-[10px] text-surface-white/35 mt-0.5 flex items-center gap-1">
                 <span className="inline-block w-0 h-0 border-l-[5px] border-l-surface-white/35 border-y-[3px] border-y-transparent" />
                 Live transcript

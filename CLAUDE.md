@@ -154,6 +154,17 @@ src/
 - `NEXT_PUBLIC_SITE_URL` — canonical site URL (defaults to `https://ambr.ai`)
 - Public env vars must be prefixed with `NEXT_PUBLIC_`
 
+## Workflow Rules
+
+### Design changes
+Before making any design-related changes, re-read the brand guidelines above and the existing page styles. Present your implementation plan — including layout approach (grid vs flex), spacing values, and color choices — and wait for approval before writing code.
+
+### Sub-agent coordination
+Before spawning sub-agents for parallel work:
+1. Commit all current changes with the message `checkpoint before parallel work`
+2. List exactly which files each agent will touch and confirm there are no overlaps
+3. After all agents complete, show a summary diff of all changes before committing
+
 ## Content System
 - Marketing pages are bespoke JSX files assembled from reusable section components
 - No content abstraction layer — each page is built directly as a page component

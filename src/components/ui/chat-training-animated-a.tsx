@@ -120,33 +120,33 @@ export function ChatTrainingAnimatedA() {
         {/* Header */}
         <div
           data-header=""
-          className="flex items-center gap-3 px-4 py-3 border-b border-border"
+          className="flex items-center gap-2.5 px-3.5 py-2 border-b border-border"
           style={{ opacity: 0 }}
         >
-          <div className="w-8 h-8 rounded-full bg-surface-alt border border-border flex items-center justify-center">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-copy-light">
+          <div className="w-7 h-7 rounded-full bg-surface-alt border border-border flex items-center justify-center">
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" className="text-copy-light">
               <path d="M4 10V7a5 5 0 0110 0v3" stroke="currentColor" strokeWidth="1.2" transform="translate(-2, -1) scale(0.85)" />
               <rect x="2" y="7" width="2.5" height="4" rx="0.8" stroke="currentColor" strokeWidth="1" />
               <rect x="9.5" y="7" width="2.5" height="4" rx="0.8" stroke="currentColor" strokeWidth="1" />
             </svg>
           </div>
           <div className="flex-1">
-            <p className="text-caption font-body-medium text-dark">Customer Service Simulation</p>
-            <p className="text-[10px] text-copy-light">Refund escalation scenario</p>
+            <p className="text-[11px] font-body-medium text-dark">Customer Service Simulation</p>
+            <p className="text-[9px] text-copy-light">Refund escalation scenario</p>
           </div>
           <span className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            <span className="text-[10px] text-copy-faint">Live</span>
+            <span className="text-[9px] text-copy-faint">Live</span>
           </span>
         </div>
 
         {/* Messages area */}
-        <div className="flex-1 px-4 py-3 space-y-2.5 overflow-hidden">
+        <div className="flex-1 px-3 py-2 space-y-1.5 overflow-hidden">
           {/* Customer message 1 */}
           <div data-msg-1="" className="flex justify-start" style={{ opacity: 0 }}>
-            <div className="max-w-[78%] px-3.5 py-2.5 rounded-brand-sm bg-surface border border-border">
-              <p className="text-eyebrow-sm font-body-medium text-copy-light mb-1">Customer</p>
-              <p className="text-caption text-copy-mid leading-relaxed">
+            <div className="max-w-[80%] px-3 py-2 rounded-brand-sm bg-surface border border-border">
+              <p className="text-[9px] font-body-medium text-copy-light mb-0.5">Customer</p>
+              <p className="text-[11px] text-copy-mid leading-snug">
                 I&apos;ve been waiting 3 days for a response about my refund. This is completely
                 unacceptable.
               </p>
@@ -155,18 +155,18 @@ export function ChatTrainingAnimatedA() {
 
           {/* Typing indicator 1 */}
           <div data-typing-1="" className="flex justify-end" style={{ opacity: 0 }}>
-            <div className="px-3.5 py-1.5 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
+            <div className="px-3 py-1 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
               <TypingDots />
             </div>
           </div>
 
           {/* Agent message 1 */}
           <div data-msg-2="" className="flex justify-end" style={{ opacity: 0 }}>
-            <div className="max-w-[78%] px-3.5 py-2.5 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
-              <p className="text-eyebrow-sm font-body-medium text-copy-light mb-1">You</p>
-              <p className="text-caption text-copy-mid leading-relaxed">
-                I completely understand your frustration, and I sincerely apologize for the delay.
-                Let me look into this for you right now.
+            <div className="max-w-[80%] px-3 py-2 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
+              <p className="text-[9px] font-body-medium text-copy-light mb-0.5">You</p>
+              <p className="text-[11px] text-copy-mid leading-snug">
+                I completely understand your frustration. I apologize for the delay.
+                Let me look into this right now.
               </p>
             </div>
           </div>
@@ -174,12 +174,12 @@ export function ChatTrainingAnimatedA() {
           {/* Coaching nudge */}
           <div
             data-nudge=""
-            className="flex items-start gap-2 bg-accent/[0.06] border-l-2 border-accent/30 rounded-r-brand-sm px-3 py-2 ml-4"
+            className="flex items-start gap-1.5 bg-accent/[0.06] border-l-2 border-accent/30 rounded-r-brand-sm px-2.5 py-1.5 ml-4"
             style={{ opacity: 0 }}
           >
             <svg
-              width="12"
-              height="12"
+              width="11"
+              height="11"
               viewBox="0 0 12 12"
               fill="none"
               className="text-accent shrink-0 mt-0.5"
@@ -187,16 +187,16 @@ export function ChatTrainingAnimatedA() {
               <circle cx="6" cy="6" r="5" stroke="currentColor" strokeWidth="1.1" />
               <path d="M6 3.5v3M6 8v.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
             </svg>
-            <p className="text-[11px] text-accent/80 leading-relaxed">
+            <p className="text-[10px] text-accent/80 leading-snug">
               Good empathy. Now offer a specific resolution with a timeline.
             </p>
           </div>
 
           {/* Customer message 2 */}
           <div data-msg-3="" className="flex justify-start" style={{ opacity: 0 }}>
-            <div className="max-w-[78%] px-3.5 py-2.5 rounded-brand-sm bg-surface border border-border">
-              <p className="text-eyebrow-sm font-body-medium text-copy-light mb-1">Customer</p>
-              <p className="text-caption text-copy-mid leading-relaxed">
+            <div className="max-w-[80%] px-3 py-2 rounded-brand-sm bg-surface border border-border">
+              <p className="text-[9px] font-body-medium text-copy-light mb-0.5">Customer</p>
+              <p className="text-[11px] text-copy-mid leading-snug">
                 I&apos;ve already explained the issue twice to different agents.
               </p>
             </div>
@@ -204,18 +204,18 @@ export function ChatTrainingAnimatedA() {
 
           {/* Typing indicator 2 */}
           <div data-typing-2="" className="flex justify-end" style={{ opacity: 0 }}>
-            <div className="px-3.5 py-1.5 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
+            <div className="px-3 py-1 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
               <TypingDots />
             </div>
           </div>
 
           {/* Agent message 2 */}
           <div data-msg-4="" className="flex justify-end" style={{ opacity: 0 }}>
-            <div className="max-w-[78%] px-3.5 py-2.5 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
-              <p className="text-eyebrow-sm font-body-medium text-copy-light mb-1">You</p>
-              <p className="text-caption text-copy-mid leading-relaxed">
+            <div className="max-w-[80%] px-3 py-2 rounded-brand-sm bg-accent-whisper border border-accent-soft/30">
+              <p className="text-[9px] font-body-medium text-copy-light mb-0.5">You</p>
+              <p className="text-[11px] text-copy-mid leading-snug">
                 I can see the full history here, so you won&apos;t need to repeat anything.
-                Your refund of $89.99 has been processed and will arrive within 2 business days.
+                Your refund of $89.99 will arrive within 2 business days.
               </p>
             </div>
           </div>
@@ -224,20 +224,20 @@ export function ChatTrainingAnimatedA() {
         {/* Input bar */}
         <div
           data-input=""
-          className="flex items-center gap-2 px-4 py-3 border-t border-border"
+          className="flex items-center gap-2 px-3 py-2 border-t border-border"
           style={{ opacity: 0 }}
         >
-          <div className="flex-1 h-9 rounded-brand-sm bg-surface border border-border flex items-center px-3">
-            <span className="text-caption text-copy-faint flex-1">Type your response...</span>
+          <div className="flex-1 h-8 rounded-brand-sm bg-surface border border-border flex items-center px-3">
+            <span className="text-[11px] text-copy-faint flex-1">Type your response...</span>
             <span
               data-input-text=""
-              className="text-caption text-copy-mid absolute"
+              className="text-[11px] text-copy-mid absolute"
               style={{ opacity: 0 }}
             >
               I can see the full history...
             </span>
           </div>
-          <span className="text-caption font-body-medium text-accent px-2">Send</span>
+          <span className="text-[11px] font-body-medium text-accent px-2">Send</span>
         </div>
       </div>
     </MockFrame>

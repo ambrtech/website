@@ -1,0 +1,3 @@
+[  487739ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3002/?_rsc=fsnpp:0
+[  489336ms] [WARNING] Image with src "/images/photography/glass-tower-pair-at-window.png" was detected as the Largest Contentful Paint (LCP). Please add the "priority" property if this image is above the fold.
+Read more: https://nextjs.org/docs/api-reference/next/image#priority @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15

@@ -1,0 +1,273 @@
+[    1190ms] [WARNING] GSAP target undefined not found. https://gsap.com @ webpack-internal:///(app-pages-browser)/./node_modules/gsap/gsap-core.js:127
+[    1198ms] [WARNING] GSAP target undefined not found. https://gsap.com @ webpack-internal:///(app-pages-browser)/./node_modules/gsap/gsap-core.js:127
+[   51636ms] [WARNING] Hotjar not launching due to suspicious userAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.0.0 Safari/537.36 @ https://static.hotjar.com/c/hotjar-2839593.js?sv=6:2
+[  420530ms] [WARNING] GSAP target undefined not found. https://gsap.com @ webpack-internal:///(app-pages-browser)/./node_modules/gsap/gsap-core.js:127
+[  420537ms] [WARNING] GSAP target undefined not found. https://gsap.com @ webpack-internal:///(app-pages-browser)/./node_modules/gsap/gsap-core.js:127
+[  420547ms] Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="preview/an...">
+      <SegmentTrieNode>
+      <AnimatedMocksPage>
+        <div className="min-h-scre...">
+          <div className="mx-auto ma...">
+            <h1>
+            <p>
+            <p>
+            <section>
+            <section>
+            <section>
+            <section>
+            <section>
+            <section>
+            <section>
+            <section>
+            <section>
+            ...
+              <ProductScreenshot>
+                <div className={"relative "}>
+                  ...
+                    <MockDisplay>
+                      <div ref={{current:null}} className={"overflow..."}>
+                        <div style={undefined}>
+                          <PresentationTrainingAnimatedA>
+                            <MockFrame ref={{current:null}} height="tall">
+                              <div ref={{current:null}} className="relative m...">
+                                <div data-panel="" className="absolute i..." style={{opacity:0}}>
+                                  <div
+                                    data-top-bar=""
++                                   className="flex items-center justify-between px-5 pt-4 pb-3 border-b border-border"
+-                                   className="flex items-center justify-between px-4 pt-3 pb-2 border-b border-border"
+                                    style={{opacity:0}}
+                                  >
+                                    <div className="flex items...">
+                                      <span>
+                                      <span
++                                       className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-ac..."
+-                                       className="text-[9px] font-body-medium uppercase tracking-eyebrow text-accent"
+                                      >
++                                       Presentation Mode
+                                    <div
++                                     className="flex items-center gap-3"
+-                                     className="flex items-center gap-2"
+                                    >
+                                      <span
+                                        data-timer=""
++                                       className="text-caption font-body-medium text-copy-light tabular-nums"
+-                                       className="text-[11px] font-body-medium text-copy-light tabular-nums"
+                                      >
++                                       4:32
+                                      <span
++                                       className="text-caption text-copy-faint"
+-                                       className="text-[11px] text-copy-faint"
+                                      >
++                                       /
+                                      <span
++                                       className="text-caption text-copy-faint"
+-                                       className="text-[11px] text-copy-faint"
+                                      >
++                                       15:00
+                                  <div
++                                   className="px-5 pt-4 pb-4"
+-                                   className="px-4 pt-3 pb-3"
+                                  >
+                                    <div
++                                     className="relative aspect-[16/9] rounded-brand-sm bg-dark/[0.03] border border-..."
+-                                     className="relative aspect-[16/9] rounded-brand-sm bg-dark/[0.03] border border-..."
+                                    >
+                                    <div
++                                     className="relative min-h-[52px] mb-3"
+-                                     className="relative min-h-[44px] mb-2"
+                                    >
+                                      <div
+                                        data-notes-1=""
++                                       className="absolute inset-x-0 top-0 px-3.5 py-2.5 rounded-brand-sm bg-surface ..."
+-                                       className="absolute inset-x-0 top-0 px-3 py-2 rounded-brand-sm bg-surface bord..."
+                                        style={{opacity:0}}
+                                      >
+                                        <p
++                                         className="text-[9px] font-body-medium text-copy-faint uppercase tracking-ey..."
+-                                         className="text-[9px] font-body-medium text-copy-faint uppercase tracking-ey..."
+                                        >
++                                         Speaker Notes
+                                        <p
++                                         className="text-caption text-copy-mid leading-relaxed"
+-                                         className="text-[11px] text-copy-mid leading-snug"
+                                        >
++                                         Emphasize the 24% quarter-over-quarter growth. Pause before the revenue figur...
+                                      <div
+                                        data-notes-2=""
++                                       className="absolute inset-x-0 top-0 px-3.5 py-2.5 rounded-brand-sm bg-surface ..."
+-                                       className="absolute inset-x-0 top-0 px-3 py-2 rounded-brand-sm bg-surface bord..."
+                                        style={{opacity:0}}
+                                      >
+                                        <p
++                                         className="text-[9px] font-body-medium text-copy-faint uppercase tracking-ey..."
+-                                         className="text-[9px] font-body-medium text-copy-faint uppercase tracking-ey..."
+                                        >
++                                         Speaker Notes
+                                        <p
++                                         className="text-caption text-copy-mid leading-relaxed"
+-                                         className="text-[11px] text-copy-mid leading-snug"
+                                        >
++                                         Walk through each phase deliberately. Mark will likely ask about Phase 2 reso...
+                                    <div
++                                     className="grid grid-cols-3 gap-2 mb-3"
+-                                     className="grid grid-cols-3 gap-1.5 mb-2"
+                                    >
+                                      <div
+                                        data-reaction=""
++                                       className="flex items-center gap-2 px-2.5 py-2 rounded-brand-sm bg-surface bor..."
+-                                       className="flex items-center gap-1.5 px-2 py-1.5 rounded-brand-sm bg-surface b..."
+                                        style={{opacity:0}}
+                                      >
+                                        <div
++                                         className="w-5 h-5 rounded-full bg-accent-soft/30 shrink-0"
+-                                         className="w-4 h-4 rounded-full bg-accent-soft/30 shrink-0"
+                                        >
+                                        <div className="min-w-0">
+                                          <p
++                                           className="text-[9px] font-body-medium text-copy-mid truncate"
+-                                           className="text-[8px] font-body-medium text-copy-mid truncate"
+                                          >
++                                           Sarah (CFO)
+                                          <p
++                                           className="text-[8px] text-copy-faint"
+-                                           className="text-[7px] text-copy-faint"
+                                          >
++                                           Nodding
+                                      <div
+                                        data-reaction=""
++                                       className="flex items-center gap-2 px-2.5 py-2 rounded-brand-sm bg-surface bor..."
+-                                       className="flex items-center gap-1.5 px-2 py-1.5 rounded-brand-sm bg-surface b..."
+                                        style={{opacity:0}}
+                                      >
+                                        <div
++                                         className="w-5 h-5 rounded-full bg-accent-soft/30 shrink-0"
+-                                         className="w-4 h-4 rounded-full bg-accent-soft/30 shrink-0"
+                                        >
+                                        <div className="min-w-0">
+                                          <p
++                                           className="text-[9px] font-body-medium text-copy-mid truncate"
+-                                           className="text-[8px] font-body-medium text-copy-mid truncate"
+                                          >
++                                           Mark (CTO)
+                                          <p
++                                           className="text-[8px] text-copy-faint"
+-                                           className="text-[7px] text-copy-faint"
+                                          >
++                                           Attentive
+                                      <div
+                                        data-reaction=""
++                                       className="flex items-center gap-2 px-2.5 py-2 rounded-brand-sm bg-surface bor..."
+-                                       className="flex items-center gap-1.5 px-2 py-1.5 rounded-brand-sm bg-surface b..."
+                                        style={{opacity:0}}
+                                      >
+                                        <div
++                                         className="w-5 h-5 rounded-full bg-accent-soft/30 shrink-0"
+-                                         className="w-4 h-4 rounded-full bg-accent-soft/30 shrink-0"
+                                        >
+                                        <div className="min-w-0">
+                                          <p
++                                           className="text-[9px] font-body-medium text-copy-mid truncate"
+-                                           className="text-[8px] font-body-medium text-copy-mid truncate"
+                                          >
++                                           Lisa (VP Ops)
+                                          <p
++                                           className="text-[8px] text-copy-faint"
+-                                           className="text-[7px] text-copy-faint"
+                                          >
++                                           Taking notes
+                                    <div
+                                      data-coach-tip=""
++                                     className="flex items-start gap-2 px-3.5 py-2.5 rounded-brand-sm bg-accent-whisp..."
+-                                     className="flex items-start gap-2 px-3 py-2 rounded-brand-sm bg-accent-whisper b..."
+                                      style={{opacity:0}}
+                                    >
+                                      <svg
++                                       width="14"
+-                                       width="12"
++                                       height="14"
+-                                       height="12"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        className="text-accent shrink-0 mt-0.5"
+                                      >
+                                      <p
++                                       className="text-[11px] text-accent/90 leading-relaxed"
+-                                       className="text-[10px] text-accent/90 leading-snug"
+                                      >
++                                       Slow down before the timeline slide. Let each phase land before moving on.
+            ...
+              <div className="max-w-[540px]">
+                <p>
+                <ProductScreenshot>
+                  <div className={"relative "}>
+                    ...
+                      <MockDisplay>
+                        <div ref={{current:null}} className={"overflow..."}>
+                          <div style={undefined}>
+                            <ScenarioCreatorAnimatedA>
+                              <MockFrame ref={{current:null}} height="standard">
+                                <div ref={{current:null}} className="relative m...">
+                                  <div
++                                   className="absolute inset-0 flex"
+-                                   className="absolute inset-0 flex flex-col"
+                                  >
+                                    <div
++                                     className="flex-1 flex flex-col px-5 py-5"
+-                                     className="flex items-center gap-2.5 px-5 pt-5 pb-3 shrink-0"
+-                                     data-header=""
+-                                     style={{opacity:"0"}}
+                                    >
+                                      <div
++                                       data-header=""
+-                                       data-header={null}
++                                       className="flex items-center gap-2 mb-5"
+-                                       className="w-7 h-7 rounded-full overflow-hidden shrink-0"
++                                       style={{opacity:0}}
+-                                       style={{}}
+                                      >
++                                       <div
++                                         className="w-7 h-7 rounded-full bg-accent/10 flex items-center justify-center"
++                                       >
+-                                       <img
+-                                         alt="Ambr AI"
+-                                         loading="lazy"
+-                                         width="28"
+-                                         height="28"
+-                                         decoding="async"
+-                                         data-nimg="1"
+-                                         className="w-full h-full object-contain"
+-                                         style={{color:"transparent"}}
+-                                         srcset={"/_next/image?url=%2Fambr%2Fa-mark-accent.png&w=32&q=75 1x, /_next/..."}
+-                                         src={"/_next/image?url=%2Fambr%2Fa-mark-accent.png&w=64&q=75"}
+-                                       >
+                                        ...
+                                      ...
+                                    ...
+            ...
+
+    at throwOnHydrationMismatch (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:4506:11)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:11107:17)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:872:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15727:22)
+    at workLoopConcurrentByScheduler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15721:9)
+    at renderRootConcurrent (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15696:15)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14990:13)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16816:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
+[  420616ms] [WARNING] GSAP target undefined not found. https://gsap.com @ webpack-internal:///(app-pages-browser)/./node_modules/gsap/gsap-core.js:127
+[  420620ms] [WARNING] GSAP target undefined not found. https://gsap.com @ webpack-internal:///(app-pages-browser)/./node_modules/gsap/gsap-core.js:127
+[  420653ms] [WARNING] Hotjar not launching due to suspicious userAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.0.0 Safari/537.36 @ https://static.hotjar.com/c/hotjar-2839593.js?sv=6:2
+[  499559ms] [WARNING] Image with src "/ambr/a-mark-white.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15

@@ -28,10 +28,10 @@ interface TeamMember {
 }
 
 const members: TeamMember[] = [
-  { initials: 'SK', name: 'S. Kapoor', competency: 'Empathetic delivery', before: 38, after: 74, level: 'Proficient' },
-  { initials: 'JR', name: 'J. Reeves', competency: 'De-escalation', before: 45, after: 82, level: 'Advanced' },
-  { initials: 'ML', name: 'M. Liu', competency: 'Active listening', before: 52, after: 78, level: 'Proficient' },
-  { initials: 'AT', name: 'A. Torres', competency: 'Constructive framing', before: 30, after: 65, level: 'Developing' },
+  { initials: 'ES', name: 'Enterprise Sales', competency: 'Objection handling', before: 38, after: 74, level: 'Proficient' },
+  { initials: 'MM', name: 'Mid-Market', competency: 'Discovery technique', before: 45, after: 82, level: 'Advanced' },
+  { initials: 'SD', name: 'SDR/BDR Team', competency: 'Opening & rapport', before: 52, after: 78, level: 'Proficient' },
+  { initials: 'AM', name: 'Account Mgmt', competency: 'Renewal conversations', before: 30, after: 65, level: 'Developing' },
 ]
 
 const insights = [
@@ -273,7 +273,7 @@ export function DashboardAnimatedB() {
         style={{ opacity: 0 }}
       >
         <p className="text-caption text-copy-mid">
-          <span className="font-body-medium text-dark">4 of 4 team members improved</span>{' '}
+          <span className="font-body-medium text-dark">4 of 4 teams improved</span>{' '}
           across all measured competencies.
         </p>
       </div>

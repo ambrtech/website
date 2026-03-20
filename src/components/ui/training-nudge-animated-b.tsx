@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import Image from 'next/image'
 import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
@@ -194,10 +195,16 @@ export function TrainingNudgeAnimatedB() {
               {/* Avatar */}
               <div
                 data-msg-avatar=""
-                className="w-8 h-8 rounded bg-accent-soft/40 flex items-center justify-center shrink-0"
+                className="w-8 h-8 rounded overflow-hidden shrink-0"
                 style={{ opacity: 0 }}
               >
-                <span className="text-caption font-body-medium text-accent">A</span>
+                <Image
+                  src="/ambr/a-mark-accent.png"
+                  alt="Ambr AI"
+                  width={32}
+                  height={32}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div className="flex-1 min-w-0">

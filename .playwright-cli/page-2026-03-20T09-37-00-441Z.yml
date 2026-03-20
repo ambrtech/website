@@ -1,0 +1,501 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Ambr AI home" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e7]:
+        - link "Customization" [ref=e8] [cursor=pointer]:
+          - /url: /customization
+        - button "Product" [ref=e9]:
+          - text: Product
+          - img [ref=e10]
+        - button "Industries" [ref=e12]:
+          - text: Industries
+          - img [ref=e13]
+        - button "Solutions" [ref=e15]:
+          - text: Solutions
+          - img [ref=e16]
+        - button "Security" [ref=e18]:
+          - text: Security
+          - img [ref=e19]
+        - link "Company" [ref=e21] [cursor=pointer]:
+          - /url: /company
+        - link "FAQ" [ref=e22] [cursor=pointer]:
+          - /url: /faq
+        - link "Try for free" [ref=e23] [cursor=pointer]:
+          - /url: /try-for-free
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - heading "Customized AI roleplays for the conversations that matter most" [level=1] [ref=e30]:
+            - text: Customized AI roleplays for the conversations that
+            - emphasis [ref=e31]: matter most
+          - paragraph [ref=e33]: Training platform for high-stakes workplace conversations. From sales negotiations to management feedback, your teams build real skills through ultra-realistic AI conversation simulations - all easily customizable to meet your specific training needs.
+          - link "Find Out More →" [ref=e35] [cursor=pointer]:
+            - /url: /find-out-more
+        - link "Sarah Sarah is waiting Navigate a difficult performance conversation Connect and start talking No account required · Just 5 minutes 2,847 conversations this week" [ref=e38] [cursor=pointer]:
+          - /url: /try-for-free
+          - generic [ref=e43]:
+            - img "Sarah" [ref=e47]
+            - paragraph [ref=e49]: Sarah is waiting
+            - paragraph [ref=e50]: Navigate a difficult performance conversation
+            - generic [ref=e51]:
+              - img [ref=e52]
+              - generic [ref=e55]: Connect and start talking
+            - paragraph [ref=e57]: No account required · Just 5 minutes
+            - generic [ref=e59]: 2,847 conversations this week
+      - generic [ref=e63]:
+        - img "Deloitte" [ref=e65]
+        - img "Skyscanner" [ref=e67]
+        - img "Astorg" [ref=e69]
+        - img "Berkeley Partnership" [ref=e71]
+        - img "Improvix" [ref=e73]
+        - img "Peabody" [ref=e75]
+        - img "QS Group" [ref=e77]
+        - img "Smol" [ref=e79]
+        - img "Tidal Health" [ref=e81]
+        - img "Vaultex" [ref=e83]
+        - img "Viatek" [ref=e85]
+        - img "Zego" [ref=e87]
+        - img "Deloitte" [ref=e89]
+        - img "Skyscanner" [ref=e91]
+        - img "Astorg" [ref=e93]
+        - img "Berkeley Partnership" [ref=e95]
+        - img "Improvix" [ref=e97]
+        - img "Peabody" [ref=e99]
+        - img "QS Group" [ref=e101]
+        - img "Smol" [ref=e103]
+        - img "Tidal Health" [ref=e105]
+        - img "Vaultex" [ref=e107]
+        - img "Viatek" [ref=e109]
+        - img "Zego" [ref=e111]
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - img [ref=e115]
+        - paragraph [ref=e116]: Results that speak for themselves
+      - generic [ref=e117]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: 93%
+          - paragraph [ref=e122]: feel better prepared for real conversations
+        - generic [ref=e124]:
+          - generic [ref=e125]: 85%
+          - paragraph [ref=e127]: would recommend Ambr AI to peers
+        - generic [ref=e129]:
+          - generic [ref=e130]: 740ms
+          - paragraph [ref=e132]: ultra-fast response time feels just like speaking to a real human
+    - generic [ref=e135]:
+      - generic [ref=e136]:
+        - img [ref=e137]
+        - paragraph [ref=e138]: Customization
+        - heading "Training built around your exact needs" [level=2] [ref=e139]:
+          - text: Training built around your
+          - emphasis [ref=e140]: exact
+          - text: needs
+        - paragraph [ref=e141]: Ambr AI is fully customizable to match your specific training goals — and can be done easily, with minimal effort and without huge investment.
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e154]:
+            - generic [ref=e157]: Scenario Builder
+            - generic [ref=e158]:
+              - generic [ref=e159]:
+                - generic [ref=e160]: "1"
+                - generic [ref=e161]:
+                  - paragraph [ref=e162]: Scenario context
+                  - paragraph [ref=e163]: Performance review — underperforming team member
+                - generic [ref=e164]: ✓
+              - generic [ref=e165]:
+                - generic [ref=e166]: "2"
+                - generic [ref=e167]:
+                  - paragraph [ref=e168]: AI character behavior
+                  - paragraph [ref=e169]: Defensive, avoids direct answers, becomes emotional
+                - generic [ref=e170]: ✓
+              - generic [ref=e171]:
+                - generic [ref=e172]: "3"
+                - generic [ref=e173]:
+                  - paragraph [ref=e174]: Feedback criteria
+                  - paragraph [ref=e175]: Define what good looks like
+              - generic [ref=e176]:
+                - generic [ref=e177]: "4"
+                - paragraph [ref=e179]: Assign to team
+          - generic [ref=e181]:
+            - heading "Admin Customization" [level=3] [ref=e182]
+            - paragraph [ref=e183]: Easily create custom simulations yourself, directly in the platform. No technical skills required.
+        - generic [ref=e184]:
+          - generic [ref=e195]:
+            - generic [ref=e198]: Customization Service
+            - generic [ref=e199]:
+              - generic [ref=e201]: AB
+              - generic [ref=e202]:
+                - paragraph [ref=e203]: Brief received
+                - paragraph [ref=e204]: “We need scenarios for our Q2 sales kickoff covering new pricing...”
+            - generic [ref=e207]: 48 hours
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - generic [ref=e211]: ✓
+                - generic [ref=e212]: Enterprise renewal — CFO pushback
+                - generic [ref=e213]: Ready
+              - generic [ref=e214]:
+                - generic [ref=e215]: ✓
+                - generic [ref=e216]: Discovery call — cold prospect
+                - generic [ref=e217]: Ready
+              - generic [ref=e218]:
+                - generic [ref=e219]: ○
+                - generic [ref=e220]: Competitive displacement — VP Ops
+                - generic [ref=e221]: In review
+          - generic [ref=e223]:
+            - heading "In-House Customization Service" [level=3] [ref=e224]
+            - paragraph [ref=e225]: Our expert team builds fully tailored simulations for you. Share a few minutes of context and we deliver scenarios that match your need.
+        - generic [ref=e226]:
+          - generic [ref=e237]:
+            - generic [ref=e240]: Create Scenario
+            - generic [ref=e241]:
+              - generic [ref=e242]:
+                - generic [ref=e243]: What conversation do you want to practice?
+                - generic [ref=e244]: I need to give feedback to a team member about missed deadlines
+              - generic [ref=e245]:
+                - generic [ref=e246]: What should the other person be like?
+                - generic [ref=e247]: Defensive at first, but ultimately open to feedback
+              - generic [ref=e248]:
+                - generic [ref=e249]: Any specific context?
+                - generic [ref=e250]: Optional — add details about your situation
+            - generic [ref=e251]:
+              - generic [ref=e252]: Private — only visible to you
+              - generic [ref=e253]: Start Conversation
+          - generic [ref=e255]:
+            - heading "Individual User Customization" [level=3] [ref=e256]
+            - paragraph [ref=e257]: Individual team members create their own private scenarios for specific upcoming conversations.
+      - link "See how customization works →" [ref=e260] [cursor=pointer]:
+        - /url: /customization
+        - text: See how customization works
+        - generic [ref=e261]: →
+    - generic [ref=e264]:
+      - blockquote [ref=e266]:
+        - paragraph [ref=e267]: “Weirdly human. I said a few things to try to catch the AI out and it was able to answer in the right way.”
+        - paragraph [ref=e269]: Consulting Firm
+      - blockquote [ref=e271]:
+        - paragraph [ref=e272]: “What truly sets it apart is the quality of its feedback - it's detailed, actionable, and feels like having a personal coach.”
+        - paragraph [ref=e274]: Scale-Up
+      - blockquote [ref=e276]:
+        - paragraph [ref=e277]: “We write scripts for managers but it's not sustainable - Ambr AI gives them a self-sustaining skill.”
+        - paragraph [ref=e279]: Head of Learning & Development, Logistics Company
+      - blockquote [ref=e281]:
+        - paragraph [ref=e282]: “We love it. It's great that we can customize it for our needs.”
+        - paragraph [ref=e284]: Professional Services Firm
+    - generic [ref=e286]:
+      - generic [ref=e287]:
+        - generic [ref=e288]:
+          - generic [ref=e289]:
+            - img [ref=e290]
+            - paragraph [ref=e291]: Use cases
+          - heading "One platform for every conversation that matters" [level=2] [ref=e293]:
+            - text: One platform for every conversation that
+            - emphasis [ref=e294]: matters
+          - paragraph [ref=e296]: One training solution across every function - with unified reporting and administration.
+        - img "Two professionals in a client meeting across a table" [ref=e300]
+      - generic [ref=e301]:
+        - link "Management & Leadership Performance reviews. Team restructures. Sensitive feedback. Give your managers the skills to lead with confidence. Explore →" [ref=e303] [cursor=pointer]:
+          - /url: /solutions/management-leadership
+          - heading "Management & Leadership" [level=3] [ref=e304]
+          - paragraph [ref=e305]: Performance reviews. Team restructures. Sensitive feedback. Give your managers the skills to lead with confidence.
+          - generic [ref=e306]:
+            - generic [ref=e307]: Explore
+            - generic [ref=e308]: →
+        - link "Sales & Negotiations Discovery calls. Objection handling. Contract negotiations. Onboard and upskill your sales teams faster. Explore →" [ref=e310] [cursor=pointer]:
+          - /url: /solutions/sales-negotiations
+          - heading "Sales & Negotiations" [level=3] [ref=e311]
+          - paragraph [ref=e312]: Discovery calls. Objection handling. Contract negotiations. Onboard and upskill your sales teams faster.
+          - generic [ref=e313]:
+            - generic [ref=e314]: Explore
+            - generic [ref=e315]: →
+        - link "Customer Service Escalations. Retention calls. Complex inquiries. Drive consistency across every customer interaction. Explore →" [ref=e317] [cursor=pointer]:
+          - /url: /solutions/customer-service
+          - heading "Customer Service" [level=3] [ref=e318]
+          - paragraph [ref=e319]: Escalations. Retention calls. Complex inquiries. Drive consistency across every customer interaction.
+          - generic [ref=e320]:
+            - generic [ref=e321]: Explore
+            - generic [ref=e322]: →
+        - link "And more Presentations, onboarding, interviewing. If it matters to your business, it's in our product. Explore →" [ref=e324] [cursor=pointer]:
+          - /url: /solutions/other
+          - heading "And more" [level=3] [ref=e325]
+          - paragraph [ref=e326]: Presentations, onboarding, interviewing. If it matters to your business, it's in our product.
+          - generic [ref=e327]:
+            - generic [ref=e328]: Explore
+            - generic [ref=e329]: →
+    - generic [ref=e332]:
+      - img [ref=e333]
+      - paragraph [ref=e334]: Voice AI
+      - heading "Ultra-realistic AI roleplays" [level=2] [ref=e335]:
+        - text: Ultra-realistic AI
+        - emphasis [ref=e336]: roleplays
+      - paragraph [ref=e337]: Ambr AI delivers conversation simulations that feel genuinely human - without the real-world consequences. AI characters listen, adapt to tone and approach, and respond just like a real person would.
+    - generic [ref=e341]:
+      - generic [ref=e342]:
+        - img [ref=e343]
+        - paragraph [ref=e344]: Ultra-low latency
+        - heading "Responses in milliseconds" [level=2] [ref=e345]:
+          - text: Responses in
+          - emphasis [ref=e346]: milliseconds
+        - paragraph [ref=e348]: Voice AI responses are near-instant. No awkward pauses. The pacing feels natural, just like a real conversation.
+      - generic [ref=e358]:
+        - generic [ref=e359]:
+          - generic [ref=e361]: Live Conversation
+          - generic [ref=e364]: 2:34
+        - generic [ref=e386]:
+          - generic [ref=e387]:
+            - generic [ref=e389]: AI
+            - paragraph [ref=e391]: “I appreciate you raising this, but I don't think my performance has dropped. I've been handling a lot of additional work.”
+          - paragraph [ref=e394]: “I hear you, and I want to understand. Let's talk about the workload first...”
+        - generic [ref=e395]:
+          - generic [ref=e396]: "Response time:"
+          - generic [ref=e397]: 340ms
+    - generic [ref=e401]:
+      - generic [ref=e411]:
+        - generic [ref=e414]: Session Feedback
+        - generic [ref=e416]:
+          - generic [ref=e417]: Conversation structure
+          - generic [ref=e418]: Strong
+        - generic [ref=e422]:
+          - generic [ref=e423]: Tone and delivery
+          - generic [ref=e424]: Good
+        - generic [ref=e428]:
+          - generic [ref=e429]: Word choice
+          - generic [ref=e430]: Developing
+        - generic [ref=e434]:
+          - generic [ref=e435]: Listening and empathy
+          - generic [ref=e436]: Strong
+        - paragraph [ref=e440]: You opened with empathy and established rapport well. Consider pausing more after the other person responds — allowing silence builds trust.
+      - generic [ref=e441]:
+        - img [ref=e442]
+        - paragraph [ref=e443]: Adaptive AI characters
+        - heading "Characters that listen" [level=2] [ref=e444]:
+          - text: Characters that
+          - emphasis [ref=e445]: listen
+        - paragraph [ref=e447]: AI characters respond to what your team members actually say and how they say it. Push back, change direction, try a different tactic, and the AI follows.
+    - generic [ref=e451]:
+      - generic [ref=e452]:
+        - img [ref=e453]
+        - paragraph [ref=e454]: Genuine conversational pressure
+        - heading "Think on your feet" [level=2] [ref=e455]:
+          - text: Think on your
+          - emphasis [ref=e456]: feet
+        - paragraph [ref=e458]: Your team has to think on their feet, read the tone, and respond in the moment. That is where real skills are built.
+      - generic [ref=e468]:
+        - generic [ref=e469]:
+          - generic [ref=e471]: Live Conversation
+          - generic [ref=e474]: 2:34
+        - generic [ref=e496]:
+          - generic [ref=e497]:
+            - generic [ref=e499]: AI
+            - paragraph [ref=e501]: “I appreciate you raising this, but I don't think my performance has dropped. I've been handling a lot of additional work.”
+          - paragraph [ref=e504]: “I hear you, and I want to understand. Let's talk about the workload first...”
+        - generic [ref=e505]:
+          - generic [ref=e506]: "Response time:"
+          - generic [ref=e507]: 340ms
+    - generic [ref=e511]:
+      - generic [ref=e521]:
+        - generic [ref=e524]: Body Language Analysis
+        - generic [ref=e530]: Analyzing...
+        - generic [ref=e531]:
+          - generic [ref=e532]:
+            - generic [ref=e533]: Eye contact
+            - generic [ref=e534]: 85%
+          - paragraph [ref=e537]: Consistent and confident
+        - generic [ref=e538]:
+          - generic [ref=e539]:
+            - generic [ref=e540]: Posture
+            - generic [ref=e541]: 72%
+          - paragraph [ref=e544]: Open but consider leaning in
+        - generic [ref=e545]:
+          - generic [ref=e546]:
+            - generic [ref=e547]: Gestures
+            - generic [ref=e548]: 68%
+          - paragraph [ref=e551]: Use more hand movement for emphasis
+        - generic [ref=e552]:
+          - generic [ref=e553]:
+            - generic [ref=e554]: Facial expression
+            - generic [ref=e555]: 90%
+          - paragraph [ref=e558]: Warm and engaged throughout
+      - generic [ref=e559]:
+        - img [ref=e560]
+        - paragraph [ref=e561]: Body language analysis
+        - heading "Beyond words" [level=2] [ref=e562]:
+          - text: Beyond
+          - emphasis [ref=e563]: words
+        - paragraph [ref=e565]: Ambr AI can read how people come across visually alongside their voice, providing feedback on the non-verbal signals that shape every interaction.
+        - generic [ref=e566]: Optional add-on
+    - blockquote [ref=e569]:
+      - generic: “
+      - paragraph [ref=e571]: “Incredibly realistic, providing a safe and convenient environment.”
+      - generic [ref=e575]: Director, Media Company
+    - generic [ref=e577]:
+      - generic [ref=e579]:
+        - heading "Why teams choose Ambr AI" [level=2] [ref=e580]:
+          - text: Why teams choose
+          - emphasis [ref=e581]: Ambr AI
+        - paragraph [ref=e582]: One platform. Every conversation that matters.
+      - generic [ref=e583]:
+        - generic [ref=e585]:
+          - heading "Customization" [level=3] [ref=e586]
+          - paragraph [ref=e587]: Simulations built around your specific scenarios, language, and training goals. Start with our pre-built library or create something entirely new. Customize easily and instantly.
+        - generic [ref=e589]:
+          - heading "One platform, every use case" [level=3] [ref=e590]
+          - paragraph [ref=e591]: Management, sales, customer service and more. One admin experience, one set of reporting, one platform. No need to manage multiple solutions.
+        - generic [ref=e593]:
+          - heading "Actionable feedback" [level=3] [ref=e594]
+          - paragraph [ref=e595]: Every simulation ends with structured, personalized insights on tone, pacing, word choice, structure, and approach. Feed insights back into your training strategy.
+        - generic [ref=e597]:
+          - heading "Admin dashboard & reporting" [level=3] [ref=e598]
+          - paragraph [ref=e599]: Track usage, monitor engagement, view aggregated learning insights, and identify capability gaps across your organization.
+        - generic [ref=e601]:
+          - heading "Global training" [level=3] [ref=e602]
+          - paragraph [ref=e603]: 30+ languages. Deploy consistent, structured conversation training across every region your teams operate in, all from a single platform.
+      - link "See all supported languages →" [ref=e606] [cursor=pointer]:
+        - /url: /product/languages
+        - text: See all supported languages
+        - generic [ref=e607]: →
+    - generic [ref=e610]:
+      - generic [ref=e611]:
+        - heading "Enterprise-grade security." [level=2] [ref=e612]
+        - generic [ref=e613]:
+          - paragraph [ref=e614]: Data is isolated, never shared, and never used to train external models.
+          - link "More About Security" [ref=e615] [cursor=pointer]:
+            - /url: /security/compliance
+      - generic [ref=e616]:
+        - generic [ref=e617]:
+          - paragraph [ref=e620]: ISO 27001
+          - link "Details" [ref=e621] [cursor=pointer]:
+            - /url: /security/compliance
+            - text: Details
+            - generic [ref=e622]: ↗
+        - generic [ref=e623]:
+          - paragraph [ref=e626]: GDPR
+          - link "Details" [ref=e627] [cursor=pointer]:
+            - /url: /security/compliance
+            - text: Details
+            - generic [ref=e628]: ↗
+        - generic [ref=e629]:
+          - paragraph [ref=e632]: EU AI Act
+          - link "Details" [ref=e633] [cursor=pointer]:
+            - /url: /security/compliance
+            - text: Details
+            - generic [ref=e634]: ↗
+    - generic [ref=e635]:
+      - img [ref=e639]
+      - generic [ref=e642]:
+        - heading "Enabling human connection, not replacing it." [level=2] [ref=e644]:
+          - text: Enabling human
+          - emphasis [ref=e645]: connection
+          - text: ", not replacing it."
+        - paragraph [ref=e647]: Ambr AI makes structured, realistic conversation training available to every employee, across every team, in over 30 languages - so when the real conversation happens, they are ready.
+        - generic [ref=e649]:
+          - link "Try for Free" [ref=e650] [cursor=pointer]:
+            - /url: /try-for-free
+          - link "Find Out More →" [ref=e651] [cursor=pointer]:
+            - /url: /find-out-more
+  - contentinfo [ref=e652]:
+    - generic [ref=e653]:
+      - generic [ref=e654]:
+        - link "Ambr AI home" [ref=e655] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e657]: Realistic AI voice simulations, custom-built for enterprise teams.
+      - generic [ref=e658]:
+        - generic [ref=e659]:
+          - paragraph [ref=e660]: Product
+          - list [ref=e661]:
+            - listitem [ref=e662]:
+              - link "How It Works" [ref=e663] [cursor=pointer]:
+                - /url: /product/how-it-works
+                - text: How It Works
+            - listitem [ref=e664]:
+              - link "AI Roleplay" [ref=e665] [cursor=pointer]:
+                - /url: /product/ai-roleplay
+                - text: AI Roleplay
+            - listitem [ref=e666]:
+              - link "Admin Experience" [ref=e667] [cursor=pointer]:
+                - /url: /product/admin-experience
+                - text: Admin Experience
+            - listitem [ref=e668]:
+              - link "Integrations" [ref=e669] [cursor=pointer]:
+                - /url: /product/integrations
+                - text: Integrations
+            - listitem [ref=e670]:
+              - link "Languages" [ref=e671] [cursor=pointer]:
+                - /url: /product/languages
+                - text: Languages
+        - generic [ref=e672]:
+          - paragraph [ref=e673]: Industries
+          - list [ref=e674]:
+            - listitem [ref=e675]:
+              - link "Consulting & Advisory" [ref=e676] [cursor=pointer]:
+                - /url: /industries/consulting-advisory
+                - text: Consulting & Advisory
+            - listitem [ref=e677]:
+              - link "Accounting & Tax" [ref=e678] [cursor=pointer]:
+                - /url: /industries/accounting-audit-tax
+                - text: Accounting & Tax
+            - listitem [ref=e679]:
+              - link "Legal" [ref=e680] [cursor=pointer]:
+                - /url: /industries/legal
+                - text: Legal
+            - listitem [ref=e681]:
+              - link "Retail & Hospitality" [ref=e682] [cursor=pointer]:
+                - /url: /industries/retail-hospitality
+                - text: Retail & Hospitality
+            - listitem [ref=e683]:
+              - link "Technology" [ref=e684] [cursor=pointer]:
+                - /url: /industries/technology
+                - text: Technology
+        - generic [ref=e685]:
+          - paragraph [ref=e686]: Company
+          - list [ref=e687]:
+            - listitem [ref=e688]:
+              - link "About" [ref=e689] [cursor=pointer]:
+                - /url: /company
+                - text: About
+            - listitem [ref=e690]:
+              - link "Blog" [ref=e691] [cursor=pointer]:
+                - /url: /blog
+                - text: Blog
+            - listitem [ref=e692]:
+              - link "FAQ" [ref=e693] [cursor=pointer]:
+                - /url: /faq
+                - text: FAQ
+            - listitem [ref=e694]:
+              - link "Contact" [ref=e695] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+        - generic [ref=e696]:
+          - paragraph [ref=e697]: Security
+          - list [ref=e698]:
+            - listitem [ref=e699]:
+              - link "Compliance" [ref=e700] [cursor=pointer]:
+                - /url: /security/compliance
+                - text: Compliance
+            - listitem [ref=e701]:
+              - link "Data Protection" [ref=e702] [cursor=pointer]:
+                - /url: /security/data-protection
+                - text: Data Protection
+            - listitem [ref=e703]:
+              - link "Responsible AI" [ref=e704] [cursor=pointer]:
+                - /url: /security/responsible-ai
+                - text: Responsible AI
+            - listitem [ref=e705]:
+              - link "DPA" [ref=e706] [cursor=pointer]:
+                - /url: /dpa
+                - text: DPA
+            - listitem [ref=e707]:
+              - link "Terms" [ref=e708] [cursor=pointer]:
+                - /url: /terms
+                - text: Terms
+    - generic [ref=e710]: © 2026 Ambr Technologies Limited
+  - generic [ref=e712]:
+    - generic [ref=e713]:
+      - heading "Choose your cookies" [level=2] [ref=e714]
+      - paragraph [ref=e716]:
+        - text: We use cookies to improve your experience and understand how our site is used.
+        - link "Learn more or manage" [ref=e717] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e718]:
+      - button "Accept" [ref=e719] [cursor=pointer]
+      - button "Reject non-essential cookies" [ref=e720] [cursor=pointer]

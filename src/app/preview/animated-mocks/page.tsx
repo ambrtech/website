@@ -22,12 +22,10 @@ import { JourneyGridAnimatedC } from '@/components/ui/journey-grid-animated-c'
 
 /* ── Context Selector (Character Design) ── */
 import { ContextSelectorAnimatedA } from '@/components/ui/context-selector-animated-a'
-import { ContextSelectorAnimatedB } from '@/components/ui/context-selector-animated-b'
 import { ContextSelectorAnimatedC } from '@/components/ui/context-selector-animated-c'
 
 /* ── Screen Sharing ── */
 import { ScreensharingAnimatedA } from '@/components/ui/screensharing-animated-a'
-import { ScreensharingAnimatedB } from '@/components/ui/screensharing-animated-b'
 import { ScreensharingAnimatedC } from '@/components/ui/screensharing-animated-c'
 
 /* ── Body Language ── */
@@ -88,7 +86,6 @@ import { EvaluationRubricAnimatedC } from '@/components/ui/evaluation-rubric-ani
 /* ── Dashboard ── */
 import { DashboardAnimatedA } from '@/components/ui/dashboard-animated-a'
 import { DashboardAnimatedB } from '@/components/ui/dashboard-animated-b'
-import { DashboardAnimatedC } from '@/components/ui/dashboard-animated-c'
 
 /* ─────────────────────────────────────────────────────
    Helper: renders a section with 3 concepts (A/B/C)
@@ -218,7 +215,6 @@ export default function AnimatedMocksPage() {
           description="Designing an AI character: personality, role, behavior patterns."
           concepts={[
             { label: 'A — The Persona Emerges', component: <ContextSelectorAnimatedA /> },
-            { label: 'B — The Slider Board', component: <ContextSelectorAnimatedB /> },
             { label: 'C — The Character Dossier', component: <ContextSelectorAnimatedC /> },
           ]}
         />
@@ -229,7 +225,6 @@ export default function AnimatedMocksPage() {
           description="Screen sharing during a simulation — the AI responds to what it sees."
           concepts={[
             { label: 'A — The Demo in Motion', component: <ScreensharingAnimatedA /> },
-            { label: 'B — The AI&apos;s Perspective', component: <ScreensharingAnimatedB /> },
             { label: 'C — The Training Feedback Overlay', component: <ScreensharingAnimatedC /> },
           ]}
         />
@@ -362,7 +357,6 @@ export default function AnimatedMocksPage() {
           concepts={[
             { label: 'A — The Competency Bloom', component: <DashboardAnimatedA /> },
             { label: 'B — The Growth Ladder', component: <DashboardAnimatedB /> },
-            { label: 'C — The Garden', component: <DashboardAnimatedC /> },
           ]}
         />
       </div>

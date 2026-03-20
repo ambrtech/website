@@ -127,31 +127,31 @@ export function PresentationTrainingAnimatedA() {
         {/* Top bar */}
         <div
           data-top-bar=""
-          className="flex items-center justify-between px-5 pt-4 pb-3 border-b border-border"
+          className="flex items-center justify-between px-4 pt-3 pb-2 border-b border-border"
           style={{ opacity: 0 }}
         >
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
+            <span className="text-[9px] font-body-medium uppercase tracking-eyebrow text-accent">
               Presentation Mode
             </span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <span
               data-timer=""
-              className="text-caption font-body-medium text-copy-light tabular-nums"
+              className="text-[11px] font-body-medium text-copy-light tabular-nums"
             >
               4:32
             </span>
-            <span className="text-caption text-copy-faint">/</span>
-            <span className="text-caption text-copy-faint">15:00</span>
+            <span className="text-[11px] text-copy-faint">/</span>
+            <span className="text-[11px] text-copy-faint">15:00</span>
           </div>
         </div>
 
         {/* Content area */}
-        <div className="px-5 pt-4 pb-4">
+        <div className="px-4 pt-3 pb-3">
           {/* Slide area — stacked, only one visible at a time */}
-          <div className="relative aspect-[16/9] rounded-brand-sm bg-dark/[0.03] border border-border mb-3 overflow-hidden">
+          <div className="relative aspect-[16/9] rounded-brand-sm bg-dark/[0.03] border border-border mb-2 overflow-hidden">
             {/* Slide 1: Q3 Revenue Overview */}
             <div
               data-slide-1=""
@@ -217,35 +217,35 @@ export function PresentationTrainingAnimatedA() {
           </div>
 
           {/* Speaker notes — stacked, only one visible at a time */}
-          <div className="relative min-h-[52px] mb-3">
+          <div className="relative min-h-[44px] mb-2">
             <div
               data-notes-1=""
-              className="absolute inset-x-0 top-0 px-3.5 py-2.5 rounded-brand-sm bg-surface border border-border"
+              className="absolute inset-x-0 top-0 px-3 py-2 rounded-brand-sm bg-surface border border-border"
               style={{ opacity: 0 }}
             >
-              <p className="text-[9px] font-body-medium text-copy-faint uppercase tracking-eyebrow mb-1">
+              <p className="text-[9px] font-body-medium text-copy-faint uppercase tracking-eyebrow mb-0.5">
                 Speaker Notes
               </p>
-              <p className="text-caption text-copy-mid leading-relaxed">
+              <p className="text-[11px] text-copy-mid leading-snug">
                 Emphasize the 24% quarter-over-quarter growth. Pause before the revenue figure for impact.
               </p>
             </div>
             <div
               data-notes-2=""
-              className="absolute inset-x-0 top-0 px-3.5 py-2.5 rounded-brand-sm bg-surface border border-border"
+              className="absolute inset-x-0 top-0 px-3 py-2 rounded-brand-sm bg-surface border border-border"
               style={{ opacity: 0 }}
             >
-              <p className="text-[9px] font-body-medium text-copy-faint uppercase tracking-eyebrow mb-1">
+              <p className="text-[9px] font-body-medium text-copy-faint uppercase tracking-eyebrow mb-0.5">
                 Speaker Notes
               </p>
-              <p className="text-caption text-copy-mid leading-relaxed">
+              <p className="text-[11px] text-copy-mid leading-snug">
                 Walk through each phase deliberately. Mark will likely ask about Phase 2 resourcing.
               </p>
             </div>
           </div>
 
           {/* Audience reactions */}
-          <div className="grid grid-cols-3 gap-2 mb-3">
+          <div className="grid grid-cols-3 gap-1.5 mb-2">
             {[
               { name: 'Sarah (CFO)', state: 'Nodding' },
               { name: 'Mark (CTO)', state: 'Attentive' },
@@ -254,13 +254,13 @@ export function PresentationTrainingAnimatedA() {
               <div
                 key={person.name}
                 data-reaction=""
-                className="flex items-center gap-2 px-2.5 py-2 rounded-brand-sm bg-surface border border-border"
+                className="flex items-center gap-1.5 px-2 py-1.5 rounded-brand-sm bg-surface border border-border"
                 style={{ opacity: 0 }}
               >
-                <div className="w-5 h-5 rounded-full bg-accent-soft/30 shrink-0" />
+                <div className="w-4 h-4 rounded-full bg-accent-soft/30 shrink-0" />
                 <div className="min-w-0">
-                  <p className="text-[9px] font-body-medium text-copy-mid truncate">{person.name}</p>
-                  <p className="text-[8px] text-copy-faint">{person.state}</p>
+                  <p className="text-[8px] font-body-medium text-copy-mid truncate">{person.name}</p>
+                  <p className="text-[7px] text-copy-faint">{person.state}</p>
                 </div>
               </div>
             ))}
@@ -269,14 +269,14 @@ export function PresentationTrainingAnimatedA() {
           {/* Coaching tip */}
           <div
             data-coach-tip=""
-            className="flex items-start gap-2 px-3.5 py-2.5 rounded-brand-sm bg-accent-whisper border border-accent-soft/30"
+            className="flex items-start gap-2 px-3 py-2 rounded-brand-sm bg-accent-whisper border border-accent-soft/30"
             style={{ opacity: 0 }}
           >
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-accent shrink-0 mt-0.5">
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" className="text-accent shrink-0 mt-0.5">
               <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.2" />
               <path d="M7 4v3.5M7 9.5v.01" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
             </svg>
-            <p className="text-[11px] text-accent/90 leading-relaxed">
+            <p className="text-[10px] text-accent/90 leading-snug">
               Slow down before the timeline slide. Let each phase land before moving on.
             </p>
           </div>

@@ -177,12 +177,12 @@ export function ScenarioCreatorAnimatedC() {
       {/* ── Crystallized scenario card ── */}
       <div
         data-card=""
-        className="absolute inset-0 px-5 py-6 md:px-7"
+        className="absolute inset-0 px-4 py-4 md:px-5"
         style={{ opacity: 0 }}
       >
-        <div className="rounded-brand bg-accent-whisper bg-noise-fine p-5" style={{ backgroundBlendMode: 'overlay' }}>
+        <div className="rounded-brand bg-accent-whisper bg-noise-fine p-4" style={{ backgroundBlendMode: 'overlay' }}>
           {/* Eyebrow */}
-          <div data-card-item="" className="flex items-center gap-2 mb-3" style={{ opacity: 0 }}>
+          <div data-card-item="" className="flex items-center gap-2 mb-2" style={{ opacity: 0 }}>
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             <span className="text-eyebrow-sm font-body-medium uppercase tracking-eyebrow text-accent">
               Your Scenario
@@ -192,19 +192,19 @@ export function ScenarioCreatorAnimatedC() {
           {/* Title */}
           <h3
             data-card-item=""
-            className="font-heading text-body tracking-heading text-dark mb-4 leading-snug"
+            className="font-heading text-caption tracking-heading text-dark mb-3 leading-snug"
             style={{ opacity: 0 }}
           >
             Giving constructive feedback on missed deadlines
           </h3>
 
           {/* Character */}
-          <div data-card-item="" className="flex items-center gap-3 mb-4" style={{ opacity: 0 }}>
-            <div className="w-9 h-9 rounded-full bg-accent/10 border border-accent-soft flex items-center justify-center">
-              <span className="font-heading text-caption text-accent">J</span>
+          <div data-card-item="" className="flex items-center gap-2.5 mb-3" style={{ opacity: 0 }}>
+            <div className="w-8 h-8 rounded-full bg-accent/10 border border-accent-soft flex items-center justify-center">
+              <span className="font-heading text-[11px] text-accent">J</span>
             </div>
             <div>
-              <p className="text-caption font-body-medium text-dark">Jordan</p>
+              <p className="text-[11px] font-body-medium text-dark">Jordan</p>
               <p className="text-[10px] text-copy-light">
                 Defensive initially, opens up when heard
               </p>
@@ -212,37 +212,37 @@ export function ScenarioCreatorAnimatedC() {
           </div>
 
           {/* Context */}
-          <div data-card-item="" className="p-3 rounded-brand-sm bg-surface-white/60 border border-border mb-4" style={{ opacity: 0 }}>
-            <p className="text-[10px] font-body-medium uppercase tracking-eyebrow text-copy-light mb-1">
+          <div data-card-item="" className="p-2.5 rounded-brand-sm bg-surface-white/60 border border-border mb-3" style={{ opacity: 0 }}>
+            <p className="text-[10px] font-body-medium uppercase tracking-eyebrow text-copy-light mb-0.5">
               Context
             </p>
-            <p className="text-caption text-copy-mid leading-relaxed">
+            <p className="text-[11px] text-copy-mid leading-snug">
               Your direct report has missed two consecutive deadlines on a critical project.
               You value the relationship and want to address it constructively.
             </p>
           </div>
 
           {/* Objectives */}
-          <div data-card-item="" className="space-y-1.5 mb-4" style={{ opacity: 0 }}>
+          <div data-card-item="" className="space-y-1 mb-3" style={{ opacity: 0 }}>
             <p className="text-[10px] font-body-medium uppercase tracking-eyebrow text-copy-light">
               Objectives
             </p>
             <div className="flex items-start gap-2">
               <span className="text-accent/60 mt-0.5 shrink-0">1.</span>
-              <span className="text-caption text-copy-mid leading-relaxed">
+              <span className="text-[11px] text-copy-mid leading-snug">
                 Address performance concerns while preserving trust
               </span>
             </div>
             <div className="flex items-start gap-2">
               <span className="text-accent/60 mt-0.5 shrink-0">2.</span>
-              <span className="text-caption text-copy-mid leading-relaxed">
+              <span className="text-[11px] text-copy-mid leading-snug">
                 Co-create an improvement plan
               </span>
             </div>
           </div>
 
           {/* Ready state */}
-          <div data-card-item="" className="flex items-center justify-between pt-3 border-t border-accent-soft/30" style={{ opacity: 0 }}>
+          <div data-card-item="" className="flex items-center justify-between pt-2.5 border-t border-accent-soft/30" style={{ opacity: 0 }}>
             <span className="text-[10px] text-copy-faint flex items-center gap-1">
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                 <rect x="2" y="5" width="6" height="4" rx="1" stroke="currentColor" strokeWidth="0.8" />
@@ -250,7 +250,7 @@ export function ScenarioCreatorAnimatedC() {
               </svg>
               Private practice
             </span>
-            <span className="inline-block text-caption font-body-medium text-surface-white bg-accent px-4 py-1.5 rounded-full">
+            <span className="inline-block text-[11px] font-body-medium text-surface-white bg-accent px-3.5 py-1 rounded-full">
               Start Conversation
             </span>
           </div>
