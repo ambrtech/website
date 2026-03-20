@@ -87,6 +87,31 @@ import { EvaluationRubricAnimatedC } from '@/components/ui/evaluation-rubric-ani
 import { DashboardAnimatedA } from '@/components/ui/dashboard-animated-a'
 import { DashboardAnimatedB } from '@/components/ui/dashboard-animated-b'
 
+/* ── Admin: Usage Analytics ── */
+import { UsageAnalyticsAnimatedA } from '@/components/ui/usage-analytics-animated-a'
+import { UsageAnalyticsAnimatedB } from '@/components/ui/usage-analytics-animated-b'
+import { UsageAnalyticsAnimatedC } from '@/components/ui/usage-analytics-animated-c'
+
+/* ── Admin: Learning Insights ── */
+import { LearningInsightsAnimatedA } from '@/components/ui/learning-insights-animated-a'
+import { LearningInsightsAnimatedB } from '@/components/ui/learning-insights-animated-b'
+import { LearningInsightsAnimatedC } from '@/components/ui/learning-insights-animated-c'
+
+/* ── Admin: Streaks Config ── */
+import { StreaksConfigAnimatedA } from '@/components/ui/streaks-config-animated-a'
+import { StreaksConfigAnimatedB } from '@/components/ui/streaks-config-animated-b'
+import { StreaksConfigAnimatedC } from '@/components/ui/streaks-config-animated-c'
+
+/* ── Admin: User Groups ── */
+import { UserGroupsAnimatedA } from '@/components/ui/user-groups-animated-a'
+import { UserGroupsAnimatedB } from '@/components/ui/user-groups-animated-b'
+import { UserGroupsAnimatedC } from '@/components/ui/user-groups-animated-c'
+
+/* ── Admin: Module Management ── */
+import { ModuleManagementAnimatedA } from '@/components/ui/module-management-animated-a'
+import { ModuleManagementAnimatedB } from '@/components/ui/module-management-animated-b'
+import { ModuleManagementAnimatedC } from '@/components/ui/module-management-animated-c'
+
 /* ─────────────────────────────────────────────────────
    Helper: renders a section with 3 concepts (A/B/C)
    ───────────────────────────────────────────────────── */
@@ -357,6 +382,73 @@ export default function AnimatedMocksPage() {
           concepts={[
             { label: 'A — The Competency Bloom', component: <DashboardAnimatedA /> },
             { label: 'B — The Growth Ladder', component: <DashboardAnimatedB /> },
+          ]}
+        />
+        {/* ══════════════════════════════════════════════
+            ADMIN MOCKS
+            ══════════════════════════════════════════════ */}
+
+        <div className="mt-24 mb-16 border-t border-border pt-16">
+          <h2 className="font-heading text-headline tracking-heading text-dark mb-2">
+            Admin Mocks
+          </h2>
+          <p className="text-body-sm text-copy-light">
+            Admin dashboard components — analytics, insights, engagement, users, modules.
+          </p>
+        </div>
+
+        {/* ── MockUsageAnalytics ── */}
+        <MockSection
+          title="MockUsageAnalytics"
+          description="Team performance and improvement over time."
+          concepts={[
+            { label: 'A — Competency Radar', component: <UsageAnalyticsAnimatedA /> },
+            { label: 'B — Before & After Bars', component: <UsageAnalyticsAnimatedB /> },
+            { label: 'C — Team Leaderboard', component: <UsageAnalyticsAnimatedC /> },
+          ]}
+        />
+
+        {/* ── MockLearningInsights ── */}
+        <MockSection
+          title="MockLearningInsights"
+          description="Aggregated team strengths and development gaps."
+          concepts={[
+            { label: 'A — Strength & Gap Cards', component: <LearningInsightsAnimatedA /> },
+            { label: 'B — Skills Heatmap', component: <LearningInsightsAnimatedB /> },
+            { label: 'C — The Team Report', component: <LearningInsightsAnimatedC /> },
+          ]}
+        />
+
+        {/* ── MockStreaksConfig ── */}
+        <MockSection
+          title="MockStreaksConfig"
+          description="Engagement settings — streaks, reminders, admin digest."
+          concepts={[
+            { label: 'A — Toggle Configuration', component: <StreaksConfigAnimatedA /> },
+            { label: 'B — Notification Preview', component: <StreaksConfigAnimatedB /> },
+            { label: 'C — Step-by-Step Setup', component: <StreaksConfigAnimatedC /> },
+          ]}
+        />
+
+        {/* ── MockUserGroups ── */}
+        <MockSection
+          title="MockUserGroups"
+          description="User and group management for admins."
+          concepts={[
+            { label: 'A — Team Roster Assembly', component: <UserGroupsAnimatedA /> },
+            { label: 'B — Group Buckets', component: <UserGroupsAnimatedB /> },
+            { label: 'C — Org Chart Assembly', component: <UserGroupsAnimatedC /> },
+          ]}
+        />
+
+        {/* ── MockModuleManagement ── */}
+        <MockSection
+          title="MockModuleManagement"
+          description="Enable, disable, and scope training modules."
+          concepts={[
+            { label: 'A — Toggle Dashboard', component: <ModuleManagementAnimatedA /> },
+            { label: 'B — Content Library', component: <ModuleManagementAnimatedB /> },
+            { label: 'C — Curriculum Builder', component: <ModuleManagementAnimatedC /> },
           ]}
         />
       </div>
