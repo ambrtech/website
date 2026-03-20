@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Visual context items — each a small artifact vignette
@@ -212,7 +213,7 @@ export function MockCustomizationFlowAnimated() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[380px] flex items-center">
+    <MockFrame ref={containerRef} height="standard" className="flex items-center">
       {/* ── Left: Context items ── */}
       <div className="absolute left-0 top-0 bottom-0 w-[42%] flex flex-col justify-center gap-4 pl-2">
         {/* Sales methodology */}
@@ -396,6 +397,6 @@ export function MockCustomizationFlowAnimated() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Dashboard C: "The Garden"
@@ -160,7 +161,7 @@ export function DashboardAnimatedC() {
   const maxStemH = 130
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="tall">
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <span
@@ -380,6 +381,6 @@ export function DashboardAnimatedC() {
           5 competency areas measured, all showing meaningful growth.
         </p>
       </div>
-    </div>
+    </MockFrame>
   )
 }

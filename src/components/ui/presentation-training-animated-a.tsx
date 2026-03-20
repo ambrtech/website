@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Presentation Training A: "The Slide & Speaker View"
@@ -116,7 +117,7 @@ export function PresentationTrainingAnimatedA() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="tall">
       {/* Panel background */}
       <div
         data-panel=""
@@ -281,6 +282,6 @@ export function PresentationTrainingAnimatedA() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

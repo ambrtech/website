@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Concept A: "The Typewriter"
@@ -134,7 +135,7 @@ export function CustomizationFlowAnimatedA() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px] flex items-center">
+    <MockFrame ref={containerRef} height="standard" className="flex items-center">
       {/* ── Left: Context fragments (typed document) ── */}
       <div className="absolute left-0 top-0 bottom-0 w-[44%] flex flex-col justify-center gap-2 pl-2">
         <p className="text-[10px] font-body-medium uppercase tracking-eyebrow text-copy-light mb-2">
@@ -219,6 +220,6 @@ export function CustomizationFlowAnimatedA() {
           ))}
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

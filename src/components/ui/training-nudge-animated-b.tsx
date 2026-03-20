@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Training Nudge B: "Teams Notification"
@@ -98,7 +99,7 @@ export function TrainingNudgeAnimatedB() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="compact">
       {/* ── Desktop background (subtle, represents a workspace) ── */}
       <div
         data-desktop-bg=""
@@ -259,6 +260,6 @@ export function TrainingNudgeAnimatedB() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

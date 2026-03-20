@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Concept B: "The Silhouette Blueprint"
@@ -121,7 +122,7 @@ export function BodyLanguageAnimatedB() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef}>
       {/* Background */}
       <div
         data-bg=""
@@ -346,6 +347,6 @@ export function BodyLanguageAnimatedB() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Image from 'next/image'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 import { VoiceWave } from '@/components/ui/voice-wave'
 
 /* ─────────────────────────────────────────────────────
@@ -174,7 +175,7 @@ export function ScenarioCardJourney() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="standard">
       {/* ── Layer 1: Category Grid ── */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="grid grid-cols-2 gap-3 w-full max-w-[360px]">
@@ -367,6 +368,6 @@ export function ScenarioCardJourney() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

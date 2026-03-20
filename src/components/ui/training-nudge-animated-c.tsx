@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Training Nudge C: "Email Notification"
@@ -94,7 +95,7 @@ export function TrainingNudgeAnimatedC() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="compact">
       {/* ── Phone notification banner (centered top) ── */}
       <div className="absolute inset-0 flex justify-center pt-16 pointer-events-none">
         <div
@@ -233,6 +234,6 @@ export function TrainingNudgeAnimatedC() {
           </p>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

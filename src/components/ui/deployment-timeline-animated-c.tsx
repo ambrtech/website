@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Deployment Timeline C: "The Calendar Pages"
@@ -174,7 +175,7 @@ export function DeploymentTimelineAnimatedC() {
   let milestoneIdx = -1
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="compact">
       {/* Header */}
       <div data-header="" className="mb-4" style={{ opacity: 0 }}>
         <div className="flex items-center gap-2 mb-1">
@@ -295,6 +296,6 @@ export function DeploymentTimelineAnimatedC() {
           From your brief to your team practicing real conversations.
         </p>
       </div>
-    </div>
+    </MockFrame>
   )
 }

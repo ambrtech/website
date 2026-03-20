@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Concept B: "The AI's Perspective"
@@ -107,7 +108,7 @@ export function ScreensharingAnimatedB() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="tall">
       {/* Background */}
       <div
         data-bg=""
@@ -168,35 +169,39 @@ export function ScreensharingAnimatedB() {
                 <div className="flex-1 h-3 rounded bg-surface-white/[0.06] mx-3" />
               </div>
 
-              {/* Mini product demo content */}
+              {/* Mini dashboard content */}
               <div className="px-3 py-3 space-y-2.5">
-                {/* Product nav */}
+                {/* Header row */}
                 <div className="flex gap-2">
-                  <div className="h-1.5 w-10 rounded bg-surface-white/10" />
-                  <div className="h-1.5 w-8 rounded bg-accent/20" />
-                  <div className="h-1.5 w-6 rounded bg-surface-white/[0.06]" />
+                  <div className="h-1.5 w-12 rounded bg-surface-white/10" />
+                  <div className="h-1.5 w-8 rounded bg-surface-white/[0.06]" />
                 </div>
 
-                {/* Pricing tiers */}
+                {/* Mini cards */}
                 <div className="grid grid-cols-3 gap-2">
+                  <div className="h-10 rounded bg-accent/10 border border-accent/15 p-1.5">
+                    <div className="h-1 w-6 rounded bg-surface-white/15 mb-1" />
+                    <div className="h-1.5 w-8 rounded bg-accent/30" />
+                  </div>
                   <div className="h-10 rounded bg-surface-white/[0.04] border border-surface-white/[0.06] p-1.5">
                     <div className="h-1 w-5 rounded bg-surface-white/10 mb-1" />
-                    <div className="h-1.5 w-6 rounded bg-surface-white/10" />
-                  </div>
-                  <div className="h-10 rounded bg-accent/10 border border-accent/15 p-1.5">
-                    <div className="h-1 w-4 rounded bg-accent/25 mb-1" />
-                    <div className="h-1.5 w-7 rounded bg-accent/30" />
+                    <div className="h-1.5 w-7 rounded bg-surface-white/10" />
                   </div>
                   <div className="h-10 rounded bg-surface-white/[0.04] border border-surface-white/[0.06] p-1.5">
                     <div className="h-1 w-7 rounded bg-surface-white/10 mb-1" />
-                    <div className="h-1.5 w-5 rounded bg-surface-white/10" />
+                    <div className="h-1.5 w-6 rounded bg-surface-white/10" />
                   </div>
                 </div>
 
-                {/* Feature rows */}
-                <div className="space-y-1">
-                  <div className="h-1 w-full rounded bg-surface-white/[0.06]" />
-                  <div className="h-1 w-3/4 rounded bg-surface-white/[0.06]" />
+                {/* Mini chart */}
+                <div className="flex items-end gap-0.5 h-6">
+                  {[35, 50, 40, 60, 45, 55, 65, 70, 50, 58].map((h, i) => (
+                    <div
+                      key={i}
+                      className="flex-1 rounded-t bg-surface-white/[0.08]"
+                      style={{ height: `${h}%` }}
+                    />
+                  ))}
                 </div>
               </div>
 
@@ -279,6 +284,6 @@ export function ScreensharingAnimatedB() {
           </p>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

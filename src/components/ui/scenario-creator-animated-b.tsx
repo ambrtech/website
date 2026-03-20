@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ---------------------------------------------------------
    Concept B: "The Thought-to-Scenario"
@@ -121,7 +122,7 @@ export function ScenarioCreatorAnimatedB() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="standard">
       <div className="absolute inset-0 px-5 py-6 md:px-7 flex flex-col">
         {/* Eyebrow */}
         <div data-eyebrow="" className="flex items-center gap-2 mb-4" style={{ opacity: 0 }}>
@@ -241,6 +242,6 @@ export function ScenarioCreatorAnimatedB() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

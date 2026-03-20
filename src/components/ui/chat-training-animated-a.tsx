@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Chat Training A: "The Chat Window"
@@ -109,7 +110,7 @@ export function ChatTrainingAnimatedA() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="fill">
       {/* Chat panel */}
       <div
         data-panel=""
@@ -239,6 +240,6 @@ export function ChatTrainingAnimatedA() {
           <span className="text-caption font-body-medium text-accent px-2">Send</span>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

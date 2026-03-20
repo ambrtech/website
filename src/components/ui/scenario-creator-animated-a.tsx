@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ---------------------------------------------------------
    Concept A: "The Chat Creation"
@@ -107,7 +108,7 @@ export function ScenarioCreatorAnimatedA() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="standard">
       <div className="absolute inset-0 flex">
         {/* ── Main chat area ── */}
         <div className="flex-1 flex flex-col px-5 py-5">
@@ -222,6 +223,6 @@ export function ScenarioCreatorAnimatedA() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

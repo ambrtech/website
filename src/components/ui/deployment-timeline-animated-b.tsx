@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Deployment Timeline B: "The Conveyor"
@@ -164,7 +165,7 @@ export function DeploymentTimelineAnimatedB() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="compact">
       {/* Header */}
       <div data-header="" className="mb-6" style={{ opacity: 0 }}>
         <div className="flex items-center gap-2 mb-1">
@@ -274,6 +275,6 @@ export function DeploymentTimelineAnimatedB() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

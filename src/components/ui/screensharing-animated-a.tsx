@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Concept A: "The Demo in Motion"
@@ -140,7 +141,7 @@ export function ScreensharingAnimatedA() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="tall">
       {/* Background */}
       <div
         data-bg=""
@@ -167,7 +168,7 @@ export function ScreensharingAnimatedA() {
           </div>
         </div>
 
-        {/* Mock shared screen — product demo */}
+        {/* Mock shared screen */}
         <div className="relative rounded-brand-sm bg-surface-white border border-border overflow-hidden">
           {/* Browser-like header bar */}
           <div
@@ -318,6 +319,6 @@ export function ScreensharingAnimatedA() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

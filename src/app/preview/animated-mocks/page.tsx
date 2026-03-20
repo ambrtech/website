@@ -1,4 +1,5 @@
 import { ProductScreenshot } from '@/components/sections/product-screenshot'
+import { MockDisplay } from '@/components/ui/mock-display'
 import { ScenarioCardJourney } from '@/components/ui/scenario-card-journey'
 import { ScenarioCardDossier } from '@/components/ui/scenario-card-dossier'
 import { ScenarioCardPulse } from '@/components/ui/scenario-card-pulse'
@@ -114,12 +115,14 @@ function MockSection({ title, description, concepts }: MockSectionProps) {
 
       <div className="space-y-16">
         {concepts.map((concept) => (
-          <div key={concept.label}>
+          <div key={concept.label} className="max-w-[540px]">
             <p className="text-caption font-body-medium text-copy-mid mb-4 uppercase tracking-eyebrow">
               {concept.label}
             </p>
             <ProductScreenshot>
-              {concept.component}
+              <MockDisplay>
+                {concept.component}
+              </MockDisplay>
             </ProductScreenshot>
           </div>
         ))}

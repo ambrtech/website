@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    LMS Embed B: "Before & After"
@@ -106,7 +107,7 @@ export function LmsEmbedAnimatedB() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="tall">
       {/* Background */}
       <div
         data-bg=""
@@ -288,6 +289,6 @@ export function LmsEmbedAnimatedB() {
           </p>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

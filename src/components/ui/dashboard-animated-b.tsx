@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Dashboard B: "The Growth Ladder"
@@ -147,7 +148,7 @@ export function DashboardAnimatedB() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="tall">
       {/* Header */}
       <div className="mb-4">
         <div className="flex items-center justify-between">
@@ -276,6 +277,6 @@ export function DashboardAnimatedB() {
           across all measured competencies.
         </p>
       </div>
-    </div>
+    </MockFrame>
   )
 }

@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Concept C: "The Progress Board"
@@ -164,7 +165,7 @@ export function CustomizationDeliveryAnimatedC() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="standard">
       <div className="px-2 py-4">
         {/* ── Header ── */}
         <div
@@ -292,6 +293,6 @@ export function CustomizationDeliveryAnimatedC() {
           </span>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Deployment Timeline A: "The Letter Exchange"
@@ -191,7 +192,7 @@ export function DeploymentTimelineAnimatedA() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="compact">
       {/* Header */}
       <div data-header="" className="mb-5" style={{ opacity: 0 }}>
         <div className="flex items-center gap-2 mb-1">
@@ -292,6 +293,6 @@ export function DeploymentTimelineAnimatedA() {
           </div>
         ))}
       </div>
-    </div>
+    </MockFrame>
   )
 }

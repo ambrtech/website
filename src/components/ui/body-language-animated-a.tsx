@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Concept A: "SVG Face Mesh"
@@ -168,7 +169,7 @@ export function BodyLanguageAnimatedA() {
   ]
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="fill">
       {/* Background */}
       <div
         data-bg=""
@@ -353,6 +354,6 @@ export function BodyLanguageAnimatedA() {
           </span>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

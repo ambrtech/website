@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Presentation Training C: "The Audience Grid"
@@ -131,7 +132,7 @@ export function PresentationTrainingAnimatedC() {
   ]
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="tall">
       <div
         data-panel=""
         className="absolute inset-0 rounded-brand bg-surface-white border border-border overflow-hidden"
@@ -266,6 +267,6 @@ export function PresentationTrainingAnimatedC() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

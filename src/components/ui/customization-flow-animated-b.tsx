@@ -4,6 +4,8 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
+import { FileText, Users, CreditCard, Target } from 'lucide-react'
 
 /* ─────────────────────────────────────────────────────
    Concept B: "The Split Reveal"
@@ -13,8 +15,6 @@ import { gsapRevealEase } from '@/lib/easing'
    to reveal the "after" state (generated simulation)
    on the right half — a direct before → after metaphor.
    ───────────────────────────────────────────────────── */
-
-import { FileText, Users, CreditCard, Target } from 'lucide-react'
 
 const contextItems = [
   { Icon: FileText, label: 'Sales methodology', detail: 'MEDDPICC framework' },
@@ -144,7 +144,7 @@ export function CustomizationFlowAnimatedB() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px] flex items-center justify-center px-4">
+    <MockFrame ref={containerRef} height="standard" className="flex items-center justify-center px-4">
       <div
         data-card
         className="relative w-full max-w-[520px] rounded-brand border border-border bg-surface-white overflow-hidden"
@@ -257,6 +257,6 @@ export function CustomizationFlowAnimatedB() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

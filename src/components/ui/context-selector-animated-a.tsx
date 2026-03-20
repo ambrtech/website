@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ---------------------------------------------------------
    Concept A: "The Persona Emerges"
@@ -144,7 +145,7 @@ export function ContextSelectorAnimatedA() {
   const role = 'Cost-Conscious Procurement Manager'
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="standard">
       <div
         data-card=""
         className="absolute inset-0 rounded-brand bg-accent-whisper bg-noise-fine px-6 py-7 md:px-8"
@@ -278,6 +279,6 @@ export function ContextSelectorAnimatedA() {
           </span>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

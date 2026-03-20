@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ---------------------------------------------------------
    Concept C: "Thought Bubble to Scenario"
@@ -134,7 +135,7 @@ export function ScenarioCreatorAnimatedC() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="standard">
       {/* ── Thought cloud: scattered words ── */}
       <div
         data-thought-cloud=""
@@ -255,6 +256,6 @@ export function ScenarioCreatorAnimatedC() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

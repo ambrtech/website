@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Concept C: "The Training Feedback Overlay"
@@ -135,7 +136,7 @@ export function ScreensharingAnimatedC() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="tall">
       {/* Background */}
       <div
         data-bg=""
@@ -349,6 +350,6 @@ export function ScreensharingAnimatedC() {
           </p>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }

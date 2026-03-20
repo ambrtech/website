@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Journey Grid C: "The Horizon Line"
@@ -141,7 +142,7 @@ export function JourneyGridAnimatedC() {
   const positions = [10, 33, 58, 85] /* % from left */
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="standard">
       {/* Header */}
       <div className="mb-6">
         <h3
@@ -293,6 +294,6 @@ export function JourneyGridAnimatedC() {
           11-week streak &middot; Keep it going!
         </span>
       </div>
-    </div>
+    </MockFrame>
   )
 }

@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Image from 'next/image'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Concept B: "The Dossier" — Editorial Briefing Card
@@ -192,7 +193,7 @@ export function ScenarioCardDossier() {
   const name = 'Sarah Chen'
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="standard">
       {/* ── Background card with paper texture ── */}
       <div
         data-bg=""
@@ -254,7 +255,6 @@ export function ScenarioCardDossier() {
 
           {/* Metadata: time — positioned top-right */}
           <div className="flex flex-col items-end gap-2 shrink-0">
-            {/* Time badge */}
             <span
               data-time=""
               className="text-[9px] font-body-medium text-copy-light bg-surface-white px-2 py-1 rounded-full border border-border"
@@ -307,6 +307,6 @@ export function ScenarioCardDossier() {
         </div>
 
       </div>
-    </div>
+    </MockFrame>
   )
 }

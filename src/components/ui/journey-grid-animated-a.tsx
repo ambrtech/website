@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { gsapRevealEase } from '@/lib/easing'
+import { MockFrame } from '@/components/ui/mock-frame'
 
 /* ─────────────────────────────────────────────────────
    Journey Grid A: "The Pathway"
@@ -165,7 +166,7 @@ export function JourneyGridAnimatedA() {
   )
 
   return (
-    <div ref={containerRef} className="relative min-h-[420px]">
+    <MockFrame ref={containerRef} height="standard">
       <div className="space-y-4">
         {/* Header */}
         <div data-header="" style={{ opacity: 0 }}>
@@ -297,6 +298,6 @@ export function JourneyGridAnimatedA() {
           </div>
         </div>
       </div>
-    </div>
+    </MockFrame>
   )
 }
